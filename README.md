@@ -1,4 +1,4 @@
-<h1 align="center">BPMN Visualization - R</h1>
+<h1 align="center">BPMN Visualization - R Package</h1>
 <div align="center">
     <p align="center">
         <a href="https://github.com/process-analytics/bpmn-visualization-r/releases">
