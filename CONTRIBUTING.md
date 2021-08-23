@@ -42,9 +42,6 @@ A good branch name would be (where issue #25 is the ticket you're working on): *
 git checkout -b 25-customize_overlays
 ```
 
-### IDE configuration
-To know how to configure your development environment, see [IDE configuration](https://github.com/process-analytics/bpmn-visualization-js/blob/master/docs/development/ide-configuration.md)
-
 ### Commit in the Pull Request
 There is no convention for the commit message in the Pull Request.
 The most important part is the title of the Pull Request, because:
