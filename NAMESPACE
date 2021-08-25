@@ -1,1 +1,1 @@
-export("JB.fake.fun")
+export(bpmnVisualization)

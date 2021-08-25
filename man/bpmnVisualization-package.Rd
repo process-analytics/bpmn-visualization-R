@@ -1,25 +1,25 @@
-\name{bpmn-visualization-r-package}
-\alias{bpmn-visualization-r-package}
-\alias{bpmn-visualization-r}
+\name{bpmnVisualization-package}
+\alias{bpmnVisualization-package}
+\alias{bpmnVisualization}
 \docType{package}
 \title{
-\packageTitle{bpmn-visualization-r}
+\packageTitle{bpmnVisualization}
 }
 \description{
-\packageDescription{bpmn-visualization-r}
+\packageDescription{bpmnVisualization}
 }
 \details{
 
 The DESCRIPTION file:
-\packageDESCRIPTION{bpmn-visualization-r}
-\packageIndices{bpmn-visualization-r}
+\packageDESCRIPTION{bpmnVisualization}
+\packageIndices{bpmnVisualization}
 ~~ An overview of how to use the package, including the most important ~~
 ~~ functions ~~
 }
 \author{
-\packageAuthor{bpmn-visualization-r}
+\packageAuthor{bpmnVisualization}
 
-Maintainer: \packageMaintainer{bpmn-visualization-r}
+Maintainer: \packageMaintainer{bpmnVisualization}
 }
 \references{
 ~~ Literature or other references for background information ~~

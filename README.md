@@ -33,7 +33,7 @@ library(bpmn)
 
 ### Initialize the R package
 ```r
-bpmn-visualization()
+bpmnVisualization::bpmnVisualization()
 ```
 
 ## 🔧 Contributing
