@@ -3,4 +3,3 @@ dependencies:
     version: "0.19.0"
     src: htmlwidgets/lib/bpmn-visualization/
     script: bpmn-visualization.min.js
-    stylesheet: assets/diagram-js.css
