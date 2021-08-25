@@ -28,7 +28,7 @@ This project is an R interface to the [BPMN Visualization](https://github.com/pr
 Install from GitHub:
 ```r
 devtools::install_github("process-analytics/bpmn-visualization-R")
-library(bpmn)
+library(bpmnVisualization)
 ```
 
 ### Initialize the R package
