@@ -8,7 +8,7 @@ HTMLWidgets.widget({
         return {
             renderValue: function(data) {
             //    const bpmnContent = data.bpmnContent;
-             /*   const bpmnContent = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+                const bpmnContent = '<?xml version="1.0" encoding="UTF-8"?>\n' +
                     '<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0wdqriz" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="6.3.0">\n' +
                     '  <bpmn:collaboration id="Collaboration_186ohra">\n' +
                     '    <bpmn:participant id="Participant_18khpiz" name="pool" processRef="Process_0wpi11d" />\n' +
@@ -75,7 +75,7 @@ HTMLWidgets.widget({
                     '    </bpmndi:BPMNPlane>\n' +
                     '  </bpmndi:BPMNDiagram>\n' +
                     '</bpmn:definitions>\n';
-                bpmnVisualization.load(bpmnContent, { fit: {type: bpmnvisu.FitType.Center, margin: 30} });*/
+                bpmnVisualization.load(bpmnContent, { fit: {type: bpmnvisu.FitType.Center, margin: 30} });
             },
             resize: function(width, height) {
                 // TODO: forward resize
