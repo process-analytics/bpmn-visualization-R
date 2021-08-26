@@ -19,7 +19,9 @@
 
 # RStudio files
 .Rproj.user/
-*.Rproj
+/.Rbuildignore
+/.Rhistory
+/*.Rproj
 
 # produced vignettes
 vignettes/*.html
@@ -39,4 +41,5 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 /.idea/
-*.iml
+/*.iml
+
