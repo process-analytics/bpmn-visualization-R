@@ -3,6 +3,8 @@
 #' Display BPMN diagram based on BPMN definition in XML format
 #'
 #' @param bpmnXML A file name or xml document or string in BPMN XML format
+#' @param overlays A list of elements to be added to the diagram's existing elements.
+#'      Use overlay function to create an overlay object with content and relative position.
 #' @param width The width used to display the widget
 #' @param height The height used to display the widget
 #' @param elementId The id of the HTML element to enclose the widget
@@ -11,7 +13,7 @@
 #' @import xml2
 #'
 #' @export
-display <- function(bpmnXML, width = NULL, height = NULL, elementId = NULL) {
+display <- function(bpmnXML, overlays = NULL, width = NULL, height = NULL, elementId = NULL) {
   # load bpmn content
   if (inherits(bpmnXML, "xml_document")) {
     bpmnContent <- as.character(bpmnXML)
@@ -29,7 +31,10 @@ display <- function(bpmnXML, width = NULL, height = NULL, elementId = NULL) {
   }
 
   # widget parameters
-  x <- bpmnContent
+  x <- list(bpmnContent = bpmnContent)
+  if(length(overlays)) {
+    x$overlays <- overlays
+  }
 
   # create widget
   htmlwidgets::createWidget(
@@ -68,4 +73,30 @@ bpmnVisualizationOutput <- function(outputId, width = '100%', height = '400px') 
 renderBpmnVisualization <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
   htmlwidgets::shinyRenderWidget(expr, bpmnVisualizationOutput, env, quoted = TRUE)
+}
+
+#' Overlay
+#'
+#' An overlay can be added to existing elements in the diagram.
+#' See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
+#' Use this structure to create correct overlay structure.
+#'
+#' @param elementId The bpmn element id to which the overlay will be attached
+#' @param label HTML element to use as an overlay to use as an overlay
+#'
+#' @return An overlay object
+#'
+#' @export
+overlay <- function(elementId, label) {
+  ret <-
+    .not_null_list(
+      elementId = elementId,
+      label = label
+    )
+}
+
+.not_null_list <- function(...) {
+  ret <- list(...)
+  ret[lengths(ret) == 0] <- NULL
+  ret
 }

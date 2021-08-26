@@ -2,6 +2,7 @@
 
 export(bpmnVisualizationOutput)
 export(display)
+export(overlay)
 export(renderBpmnVisualization)
 import(htmlwidgets)
 import(xml2)

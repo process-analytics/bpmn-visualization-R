@@ -4,10 +4,19 @@
 \alias{display}
 \title{display}
 \usage{
-display(bpmnXML, width = NULL, height = NULL, elementId = NULL)
+display(
+  bpmnXML,
+  overlays = NULL,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
 }
 \arguments{
 \item{bpmnXML}{A file name or xml document or string in BPMN XML format}
+
+\item{overlays}{A list of elements to be added to the diagram's existing elements.
+Use overlay function to create an overlay object with content and relative position.}
 
 \item{width}{The width used to display the widget}
 

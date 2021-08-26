@@ -59,6 +59,13 @@ bpmn_file <- "<?xml version="1.0" encoding="UTF-8"?> ...xml_content"
 bpmnVisualization::display(bpmn_file)
 ```
 
+
+### Initialize the R package and load the BPMN diagram with overlays
+```r
+overlays <- list(overlay("bpmn_element_id_1", "42"), overlay("bpmn_element_id_2", "9"))
+bpmnVisualization::display(bpmn_file, overlays)
+```
+
 ## 🔧 Contributing
 
 To contribute to `bpmn-visualization-R`, fork and clone this repository locally and commit your code on a separate branch. \
