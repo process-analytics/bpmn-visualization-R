@@ -1,7 +1,7 @@
 Package: bpmnVisualization
 Type: Package
 Title: BPMN Visualization - R package
-Version: 1.0
+Version: 0.1.0
 Date: 2021-08-25
 Authors@R: c(person("Céline Souchet", "Developer", role = c("aut", "cre"), email = "celine.souchet@bonitasoft.com"),
              person("Thomas Bouffard", "Developer", role = "aut"))
