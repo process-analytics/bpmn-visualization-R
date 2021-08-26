@@ -4,8 +4,8 @@
         <a href="https://github.com/process-analytics/bpmn-visualization-R/releases">
           <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/process-analytics/bpmn-visualization-R?label=changelog&include_prereleases"> 
         </a>
-        <a href="https://github.com/process-analytics/bpmn-visualization-R/actions">
-          <img alt="Build" src="https://github.com/process-analytics/bpmn-visualization-R/workflows/Build/badge.svg"> 
+        <a href="https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml">
+          <img alt="Build" src="https://github.com/process-analytics/bpmn-visualization-R/workflows/R-CMD-check/badge.svg"> 
         </a>
         <br>
         <a href="CONTRIBUTING.md">
