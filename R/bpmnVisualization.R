@@ -6,7 +6,7 @@ NULL
 NULL
 
 ####
-#' function list gateway : detect and create a list of gateways
+#' function bpmn visualization: entry point
 #'
 #' @return 'hello'
 #'
