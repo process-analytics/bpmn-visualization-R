@@ -6,3 +6,5 @@ Authors@R: c(person("Celine", "Souchet", role = c("aut", "cre"), email = "celine
              person("Thomas", "Bouffard", role = "aut"))
 Description: A R package which embeds BPMN VisualizationLicense: Apache-2.0
 Copyright: Bonitasoft S.A.
+URL: https://github.com/process-analytics/bpmn-visualization-R
+BugReports: https://github.com/process-analytics/bpmn-visualization-R/issues
