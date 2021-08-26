@@ -4,7 +4,7 @@
 \alias{bpmnVisualization}
 \title{<Add Title>}
 \usage{
-bpmnVisualization(message, width = NULL, height = NULL, elementId = NULL)
+bpmnVisualization(bpmn_xml, width = NULL, height = NULL, elementId = NULL)
 }
 \description{
 <Add Description>
