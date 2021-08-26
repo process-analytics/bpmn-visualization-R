@@ -2,8 +2,7 @@ Package: bpmnVisualization
 Type: Package
 Title: BPMN Visualization - R package
 Version: 0.1.0
-Authors@R: c(person("Céline Souchet", "Developer", role = c("aut", "cre"), email = "celine.souchet@bonitasoft.com"),
-             person("Thomas Bouffard", "Developer", role = "aut"))
-Description: A R package which embeds BPMN Visualization
-License: Apache-2.0
+Authors@R: c(person("Celine", "Souchet", role = c("aut", "cre"), email = "celine.souchet@bonitasoft.com"),
+             person("Thomas", "Bouffard", role = "aut"))
+Description: A R package which embeds BPMN VisualizationLicense: Apache-2.0
 Copyright: Bonitasoft S.A.
