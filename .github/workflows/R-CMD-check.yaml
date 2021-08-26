@@ -14,15 +14,18 @@ name: R-CMD-check
 jobs:
   R-CMD-check:
     runs-on: ${{ matrix.config.os }}
-
+# TODO matrix.config.os --> runner.os
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
     strategy:
       fail-fast: false
       matrix:
         config:
-          - {os: ubuntu-20.04, r: 'release'}
+          # - {os: ubuntu-20.04, r: 'release'}
           
+          - {os: ubuntu-20.04, r: '4.1.1'}
+
+
           # - {os: ubuntu-18.04,   r: '3.6'}
           # - {os: ubuntu-18.04,   r: '3.5'}
           # - {os: ubuntu-18.04,   r: '3.4'}
