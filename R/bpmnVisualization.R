@@ -5,12 +5,25 @@
 #' @import htmlwidgets
 #'
 #' @export
-bpmnVisualization <- function(message, width = NULL, height = NULL, elementId = NULL) {
+bpmnVisualization <- function(bpmn_xml, width = NULL, height = NULL, elementId = NULL) {
+  # load bpmn content
+  if (inherits(bpmn_xml, "xml_document")) {
+    bpmnContent <- as.character(bpmn_xml)
+  } else if (inherits(bpmn_xml, "character")) {
+    if (substring(bpmn_xml, 1, 38) == "<?xml version=\"1.0\" encoding=\"UTF-8\"?>") {
+      # this must be a string corresponding to the BPMN content of a file
+      bpmnContent <- bpmn_xml
+    } else {
+      # this must be a file name
+      xml <- xml2::read_xml(bpmn_xml)
+      bpmnContent <- as.character(xml)
+    }
+  } else {
+    stop("bpmn_xml must be a absolute path of BPMN file or the string of the BPMN content !!")
+  }
 
-  # forward options using x
-  x = list(
-    message = message
-  )
+  # widget parameters
+  x <- bpmnContent
 
   # create widget
   htmlwidgets::createWidget(
@@ -40,7 +53,7 @@ bpmnVisualization <- function(message, width = NULL, height = NULL, elementId = 
 #' @name bpmnVisualization-shiny
 #'
 #' @export
-bpmnVisualizationOutput <- function(outputId, width = '100%', height = '400px'){
+bpmnVisualizationOutput <- function(outputId, width = '100%', height = '400px') {
   htmlwidgets::shinyWidgetOutput(outputId, 'bpmnVisualization', width, height, package = 'bpmnVisualization')
 }
 
