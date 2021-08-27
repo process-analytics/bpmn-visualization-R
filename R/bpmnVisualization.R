@@ -1,8 +1,14 @@
-#' <Add Title>
+#' display
 #'
-#' <Add Description>
+#' Display BPMN diagram based on BPMN definition in XML format
+#'
+#' @param bpmnXML A file name or xml document or string in BPMN XML format
+#' @param width The width used to display the widget
+#' @param height The height used to display the widget
+#' @param elementId The id of the HTML element to enclose the widget
 #'
 #' @import htmlwidgets
+#' @import xml2
 #'
 #' @export
 display <- function(bpmnXML, width = NULL, height = NULL, elementId = NULL) {

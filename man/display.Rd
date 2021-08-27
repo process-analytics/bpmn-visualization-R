@@ -2,10 +2,19 @@
 % Please edit documentation in R/bpmnVisualization.R
 \name{display}
 \alias{display}
-\title{<Add Title>}
+\title{display}
 \usage{
 display(bpmnXML, width = NULL, height = NULL, elementId = NULL)
 }
+\arguments{
+\item{bpmnXML}{A file name or xml document or string in BPMN XML format}
+
+\item{width}{The width used to display the widget}
+
+\item{height}{The height used to display the widget}
+
+\item{elementId}{The id of the HTML element to enclose the widget}
+}
 \description{
-<Add Description>
+Display BPMN diagram based on BPMN definition in XML format
 }
