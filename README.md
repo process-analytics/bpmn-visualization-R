@@ -34,7 +34,7 @@ library(bpmnVisualization)
 ### Load the BPMN file
 `bpmn` widget accepts a BPMN file (or an XML document):
 ```r
-bpmn_file <- system.file("examples/Email Voting.bpmn", package = "bpmnVisualization")
+bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization")
 ```
 
 Or
