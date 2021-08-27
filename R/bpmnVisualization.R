@@ -5,17 +5,17 @@
 #' @import htmlwidgets
 #'
 #' @export
-bpmnVisualization <- function(bpmn_xml, width = NULL, height = NULL, elementId = NULL) {
+display <- function(bpmnXML, width = NULL, height = NULL, elementId = NULL) {
   # load bpmn content
-  if (inherits(bpmn_xml, "xml_document")) {
-    bpmnContent <- as.character(bpmn_xml)
-  } else if (inherits(bpmn_xml, "character")) {
-    if (substring(bpmn_xml, 1, 38) == "<?xml version=\"1.0\" encoding=\"UTF-8\"?>") {
+  if (inherits(bpmnXML, "xml_document")) {
+    bpmnContent <- as.character(bpmnXML)
+  } else if (inherits(bpmnXML, "character")) {
+    if (substring(bpmnXML, 1, 38) == "<?xml version=\"1.0\" encoding=\"UTF-8\"?>") {
       # this must be a string corresponding to the BPMN content of a file
-      bpmnContent <- bpmn_xml
+      bpmnContent <- bpmnXML
     } else {
       # this must be a file name
-      xml <- xml2::read_xml(bpmn_xml)
+      xml <- xml2::read_xml(bpmnXML)
       bpmnContent <- as.character(xml)
     }
   } else {

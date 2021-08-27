@@ -54,7 +54,7 @@ bpmn_file <- "<?xml version="1.0" encoding="UTF-8"?> ...xml_content"
 
 ### Initialize the R package and load the BPMN diagram
 ```r
-bpmnVisualization::bpmnVisualization(bpmn_file)
+bpmnVisualization::display(bpmn_file)
 ```
 
 ## 🔧 Contributing

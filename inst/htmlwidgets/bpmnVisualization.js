@@ -13,10 +13,8 @@ HTMLWidgets.widget({
                 // TODO: forward resize
             },
 
-            // Make the bpmnVisualization object available as a property on the widget
-            // instance we're returning from factory(). This is generally a
-            // good idea for extensibility--it helps users of this widget
-            // interact directly with bpmnVisualization, if needed.
+            // Make the bpmnVisualization object available as a property on the widget instance we're returning from factory().
+            // This is generally a good idea for extensibility--it helps users of this widget interact directly with bpmnVisualization, if needed.
             s: bpmnVisualization
         };
     }
