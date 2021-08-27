@@ -25,7 +25,7 @@ display <- function(bpmnXML, width = NULL, height = NULL, elementId = NULL) {
       bpmnContent <- as.character(xml)
     }
   } else {
-    stop("bpmn_xml must be a absolute path of BPMN file or the string of the BPMN content !!")
+    stop("bpmnXML must be a absolute path of BPMN file or the string of the BPMN content !!")
   }
 
   # widget parameters
