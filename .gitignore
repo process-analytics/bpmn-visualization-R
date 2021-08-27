@@ -19,7 +19,6 @@
 
 # RStudio files
 .Rproj.user/
-/.Rbuildignore
 /.Rhistory
 /*.Rproj
 
