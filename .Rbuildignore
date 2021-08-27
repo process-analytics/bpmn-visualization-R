@@ -1,0 +1,5 @@
+^\.github$
+^.*\.Rproj$
+^\.Rproj\.user$
+^CONTRIBUTING\.md$
+^LICENSE$
