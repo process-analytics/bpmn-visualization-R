@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  # TODO tmp to check gh_token permissions
+  pull_request:
+    branches:
+      - main
 
 jobs:
   update_release_draft:
