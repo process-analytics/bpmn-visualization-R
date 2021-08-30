@@ -2,13 +2,13 @@
 % Please edit documentation in R/bpmnVisualization.R
 \name{bpmnVisualization-shiny}
 \alias{bpmnVisualization-shiny}
-\alias{bpmn_visualization_output}
-\alias{render_bpmn_visualization}
+\alias{bpmnVisualizationOutput}
+\alias{renderBpmnVisualization}
 \title{Shiny bindings for bpmnVisualization}
 \usage{
-bpmn_visualization_output(outputId, width = "100\%", height = "400px")
+bpmnVisualizationOutput(outputId, width = "100\%", height = "400px")
 
-render_bpmn_visualization(expr, env = parent.frame(), quoted = FALSE)
+renderBpmnVisualization(expr, env = parent.frame(), quoted = FALSE)
 }
 \arguments{
 \item{outputId}{output variable to read from}
