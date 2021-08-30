@@ -1,6 +1,6 @@
 Package: bpmnVisualization
 Type: Package
-Title: BPMN Visualization - R package
+Title: BPMN Visualization - R Package
 Version: 0.1.0
 Authors@R: c(person("Celine", "Souchet", role = c("aut", "cre"), email = "celine.souchet@bonitasoft.com"),
              person("Thomas", "Bouffard", role = "aut"))
@@ -9,3 +9,7 @@ License: Apache License (== 2)
 Copyright: Bonitasoft S.A.
 URL: https://github.com/process-analytics/bpmn-visualization-R
 BugReports: https://github.com/process-analytics/bpmn-visualization-R/issues
+RoxygenNote: 7.1.1
+Imports:
+    htmlwidgets,
+    xml2

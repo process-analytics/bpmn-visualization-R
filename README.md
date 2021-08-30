@@ -31,9 +31,32 @@ devtools::install_github("process-analytics/bpmn-visualization-R")
 library(bpmnVisualization)
 ```
 
-### Initialize the R package
+### Load the BPMN file
+`bpmnVisualization` accepts a BPMN file (or an XML document):
+
+Load an BPMN example provided by the package
 ```r
-bpmnVisualization::bpmnVisualization()
+bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization")
+```
+
+Or
+```r
+bpmn_file <- file.choose()
+```
+
+Or
+```r
+bpmn_file <- "path_to_bpmn_file"
+```
+
+Or
+```r
+bpmn_file <- "<?xml version="1.0" encoding="UTF-8"?> ...xml_content"
+```
+
+### Initialize the R package and load the BPMN diagram
+```r
+bpmnVisualization::display(bpmn_file)
 ```
 
 ## 🔧 Contributing

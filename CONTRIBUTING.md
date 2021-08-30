@@ -1,6 +1,6 @@
 # Contributing
 
-You are here to help on `bpmn-visualization-r`? Awesome, feel welcome and read the following guidelines in order to know how to contribute, to ask questions and to make `bpmn-visualization-r` such a great tool.
+You are here to help on `bpmn-visualization-R`? Awesome, feel welcome and read the following guidelines in order to know how to contribute, to ask questions and to make `bpmn-visualization-R` such a great tool.
 
 All members of our community are expected to follow our [Code of Conduct](https://github.com/process-analytics/.github/blob/main/CODE_OF_CONDUCT.md). Please make sure you are welcoming and friendly in all of our spaces.
 
@@ -8,16 +8,16 @@ All members of our community are expected to follow our [Code of Conduct](https:
 
 There are many ways to contribute:
 
-- help people with the questions they ask on the [Github Issues](https://github.com/process-analytics/bpmn-visualization-r/issues)
-- submitting bug reports and feature requests in the [Github Issues](https://github.com/process-analytics/bpmn-visualization-r/issues/new)
+- help people with the questions they ask on the [Github Issues](https://github.com/process-analytics/bpmn-visualization-R/issues)
+- submitting bug reports and feature requests in the [Github Issues](https://github.com/process-analytics/bpmn-visualization-R/issues/new)
 - improving the README & documentation
-- writing code which can be incorporated into `bpmn-visualization-r` itself
+- writing code which can be incorporated into `bpmn-visualization-R` itself
 
 ## Code and documentation changes guidelines
 
 For all contributions, please respect the following guidelines:
 
-1. If you've noticed a bug or have a feature request, let us know in the [GitHub Issue tracker](https://github.com/process-analytics/bpmn-visualization-r/issues/new )! So we can confirm the bug or approve your feature, and provide feedback, before starting to code :slightly_smiling_face:
+1. If you've noticed a bug or have a feature request, let us know in the [GitHub Issue tracker](https://github.com/process-analytics/bpmn-visualization-R/issues/new )! So we can confirm the bug or approve your feature, and provide feedback, before starting to code :slightly_smiling_face:
 
 2. Do the changes in your own [fork](CONTRIBUTING.md#fork--create-a-branch) of the code
 
@@ -34,7 +34,7 @@ For all contributions, please respect the following guidelines:
 
 ### Fork & create a branch
 
-[Fork bpmn-visualization-r](https://help.github.com/articles/fork-a-repo) and create a branch with a descriptive name. 
+[Fork bpmn-visualization-R](https://help.github.com/articles/fork-a-repo) and create a branch with a descriptive name. 
 
 A good branch name would be (where issue #25 is the ticket you're working on): **25-customize_overlays**
 
@@ -51,11 +51,11 @@ The most important part is the title of the Pull Request, because:
 
 ### Open a Pull Request
 
-At this point, you should switch back to your master branch and make sure it's up to date with `bpmn-visualization-r`
+At this point, you should switch back to your master branch and make sure it's up to date with `bpmn-visualization-R`
 `master` branch:
 
 ```sh
-git remote add upstream git@github.com:process-analytics/bpmn-visualization-r.git
+git remote add upstream git@github.com:process-analytics/bpmn-visualization-R.git
 git checkout master
 git pull upstream master
 ```
@@ -68,11 +68,11 @@ git rebase master
 git push --set-upstream origin 25-customize_overlays
 ```
 
-Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) ​with labels :smile:
+Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) with labels :smile:
 For the title, follow the directives of the Pull Request template.
 Add a screenshot of the rendering of your examples/bpmn-file. 
 
-:warning: ​We care about quality. So your PR won't be merged until all tests pass.
+:warning: We care about quality. So your PR won't be merged until all tests pass.
 
 ### Sign the Contributor License Agreement
 

@@ -1,4 +1,6 @@
 ^\.github$
+^\.idea$
+^.*\.iml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^CONTRIBUTING\.md$

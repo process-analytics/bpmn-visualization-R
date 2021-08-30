@@ -16,10 +16,16 @@
 
 # Output files from R CMD check
 /*.Rcheck/
+/check/
 
 # RStudio files
 .Rproj.user/
-*.Rproj
+/.Rhistory
+/*.Rproj
+
+# IntelliJ config files
+/.idea/
+/*.iml
 
 # produced vignettes
 vignettes/*.html
@@ -38,5 +44,3 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
-/.idea/
-*.iml
