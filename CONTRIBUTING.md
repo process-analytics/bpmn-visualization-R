@@ -68,11 +68,11 @@ git rebase master
 git push --set-upstream origin 25-customize_overlays
 ```
 
-Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) ​with labels :smile:
+Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) with labels :smile:
 For the title, follow the directives of the Pull Request template.
 Add a screenshot of the rendering of your examples/bpmn-file. 
 
-:warning: ​We care about quality. So your PR won't be merged until all tests pass.
+:warning: We care about quality. So your PR won't be merged until all tests pass.
 
 ### Sign the Contributor License Agreement
 
