@@ -47,6 +47,26 @@ display <- function(bpmnXML, overlays = NULL, width = NULL, height = NULL, eleme
   )
 }
 
+#' create_overlay
+#'
+#' An overlay can be added to existing elements in the diagram.
+#' See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
+#' Use this structure to create correct overlay structure.
+#'
+#' @param elementId The bpmn element id to which the overlay will be attached
+#' @param label HTML element to use as an overlay to use as an overlay
+#'
+#' @return An overlay object
+#'
+#' @export
+create_overlay <- function(elementId, label) {
+  ret <-
+    .not_null_list(
+      elementId = elementId,
+      label = label
+    )
+}
+
 #' Shiny bindings for bpmnVisualization
 #'
 #' Output and render functions for using bpmnVisualization within Shiny
@@ -75,25 +95,7 @@ renderBpmnVisualization <- function(expr, env = parent.frame(), quoted = FALSE) 
   htmlwidgets::shinyRenderWidget(expr, bpmnVisualizationOutput, env, quoted = TRUE)
 }
 
-#' Overlay
-#'
-#' An overlay can be added to existing elements in the diagram.
-#' See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
-#' Use this structure to create correct overlay structure.
-#'
-#' @param elementId The bpmn element id to which the overlay will be attached
-#' @param label HTML element to use as an overlay to use as an overlay
-#'
-#' @return An overlay object
-#'
-#' @export
-overlay <- function(elementId, label) {
-  ret <-
-    .not_null_list(
-      elementId = elementId,
-      label = label
-    )
-}
+
 
 .not_null_list <- function(...) {
   ret <- list(...)

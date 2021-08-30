@@ -54,15 +54,16 @@ Or
 bpmn_file <- "<?xml version="1.0" encoding="UTF-8"?> ...xml_content"
 ```
 
-### Initialize the R package and load the BPMN diagram
+### Display the BPMN diagram
 ```r
 bpmnVisualization::display(bpmn_file)
 ```
 
 
-### Initialize the R package and load the BPMN diagram with overlays
+### Display the BPMN diagram with overlays
+
 ```r
-overlays <- list(overlay("bpmn_element_id_1", "42"), overlay("bpmn_element_id_2", "9"))
+overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn_element_id_2", "9"))
 bpmnVisualization::display(bpmn_file, overlays)
 ```
 
