@@ -26,14 +26,13 @@ exclude-labels:
   - skip-changelog
   - reverted
   - wontfix
+
 template: |
   **TODO: add a short description about the release content - important for url preview**
   This new release focuses on .... **or something similar**
 
-
   **TODO: review the contributors list (remove ALL bots and avoid duplicates)**
   Thanks to all the contributors of this release 🌈: $CONTRIBUTORS
-
 
   # Highlights
 
@@ -41,3 +40,4 @@ template: |
 
   # What's Changed
   $CHANGES
+
