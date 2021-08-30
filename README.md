@@ -32,7 +32,7 @@ library(bpmnVisualization)
 ```
 
 ### Load the BPMN file
-`bpmn` widget accepts a BPMN file (or an XML document):
+`bpmnVisualization` accepts a BPMN file (or an XML document):
 
 Load an BPMN example provided by the package
 ```r
