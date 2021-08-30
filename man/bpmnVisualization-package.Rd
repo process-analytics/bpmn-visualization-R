@@ -24,13 +24,12 @@ Maintainer: \packageMaintainer{bpmnVisualization}
 \references{
 ~~ Literature or other references for background information ~~
 }
-\keyword{ 
+\keyword{
 ~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~
 ~~ the R documentation directory ~~
 }
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+~~ Optional links to other man pages ~~
 }
 \examples{
 # simple examples of the most important functions
