@@ -6,8 +6,8 @@ HTMLWidgets.widget({
         const bpmnVisualization = new bpmnvisu.BpmnVisualization({ container: containerElt, navigation: { enabled: true } });
 
         return {
-            renderValue: function(bpmnContent) {
-                bpmnVisualization.load(bpmnContent, { fit: {type: bpmnvisu.FitType.Center, margin: 30} });
+            renderValue: function(x) {
+                bpmnVisualization.load(x.bpmnContent, { fit: {type: bpmnvisu.FitType.Center, margin: 30} });
 
                 // Add overlays
                 x.overlays.map(overlay => {
