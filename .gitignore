@@ -42,3 +42,4 @@ vignettes/*.pdf
 /.idea/
 /*.iml
 
+/check/
