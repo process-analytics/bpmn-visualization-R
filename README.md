@@ -35,6 +35,13 @@ library(bpmnVisualization)
 `bpmnVisualization` accepts a BPMN file (or an XML document):
 
 Load an BPMN example provided by the package
+
+The diagrams files are taken from the [BPMN 2.0 examples non-normative machine readable files](https://www.omg.org/spec/BPMN/2.0)
+- Email_Voting.bpmn
+- Nobel_Prize_Process.bpmn
+- Order_Process_for_Pizza_V4.bpmn
+- Travel_Booking.bpmn
+
 ```r
 bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization")
 ```
