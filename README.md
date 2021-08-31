@@ -21,7 +21,8 @@
 </div>  
 <br>
 
-This R package is an interface to the [BPMN Visualization](https://github.com/process-analytics/bpmn-visualization-js) library (TypeScript).
+This R package is an interface to the [BPMN Visualization](https://github.com/process-analytics/bpmn-visualization-js) library (TypeScript). \
+It enables to visualize the execution data of the processes on BPMN diagrams, using overlays, style customization and interactions.
 
 ## ♻️ Usage
 ### Installation
