@@ -26,7 +26,7 @@ HTMLWidgets.widget({
                 bpmnVisualization.load(x.bpmnContent, { fit: {type: bpmnvisu.FitType.Center, margin: 30} });
 
                 // Add overlays
-                x.overlays.map(overlay => {
+                x.overlays && x.overlays.map(overlay => {
                     const elementsByIds = bpmnVisualization.bpmnElementsRegistry.getElementsByIds(overlay.elementId);
 
                     if (elementsByIds) {
