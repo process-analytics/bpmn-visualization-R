@@ -100,9 +100,9 @@ git push --force-with-lease 25-customize_overlays
 
 At this point, you're ready to make your changes! Feel free to ask for help. Everyone is a beginner at first :smile_cat:
 
-## BPMN Visualization update
+## bpmn-visualization-js update
 
-- Change [bpmn-visualization.min.js](inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js)
+- Change [bpmn-visualization.min.js](inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js). The file can be retrieved from [jsdelivr](https://www.jsdelivr.com/package/npm/bpmn-visualization) or [unpkg](https://unpkg.com/browse/bpmn-visualization/).
 - Update the version of `bpmn-visualization` in [bpmnVisualization.yaml](inst/htmlwidgets/bpmnVisualization.yaml)
 
 ## Maintainers
