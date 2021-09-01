@@ -103,7 +103,7 @@ server = function(input, output) {
     output$bpmnContainer <- renderBpmnVisualization({ displayBpmn() })
 }
 
-shinyApp(ui = ui, server = server)
+shinyApp(ui, server)
 ```
 
 ## 🔧 Contributing
