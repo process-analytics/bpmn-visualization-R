@@ -13,7 +13,7 @@ There are many ways to contribute:
 - improving the README & documentation
 - writing code which can be incorporated into `bpmn-visualization-R` itself
 
-## Code and documentation changes guidelines
+### Code and documentation changes guidelines
 
 For all contributions, please respect the following guidelines:
 
@@ -100,6 +100,10 @@ git push --force-with-lease 25-customize_overlays
 
 At this point, you're ready to make your changes! Feel free to ask for help. Everyone is a beginner at first :smile_cat:
 
+## BPMN Visualization update
+
+- Change [bpmn-visualization.min.js](inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js)
+- Update the version of `bpmn-visualization` in [bpmnVisualization.yaml](inst/htmlwidgets/bpmnVisualization.yaml)
 
 ## Maintainers
 
@@ -111,3 +115,63 @@ A PR can only be merged into master by a maintainer, if all of these conditions 
 * It has been approved by at least two maintainers. If it was a maintainer who opened the PR, only one extra approval is needed.
 * It has no requested changes.
 * It is up to date with current master.
+
+### Release process
+
+Maintainers need to perform the following actions **in the order described here** to push out a release.
+
+#### Verify the version in [DESCRIPTION](./DESCRIPTION) file
+
+Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION) file is not good.
+
+#### GitHub issues and milestones
+
+**Note:** we always put issues related to a version in a Milestone whose name matches the version.
+
+- Ensure the name of the milestone used for the new release version matches the name of the tag/version that has just been pushed. Renamed it if needed.
+- Clean this opened milestone if some issues are still opened (move them to a new one or discard milestone from them)
+- Close the milestone
+
+#### Prepare the GitHub Release Notes
+
+- Open [github releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
+- Create a new draft release and name it `Next` (the name is not relevant and will be replaced automatically later).
+  This ensures that development can continue without impacting the writing of the content of the in progress release. That way,
+  if a PR is merged, `release-drafter` will update the `Next` draft release keeping the in-progress release untouched.
+- The draft release for the newly tagged version should already exist:
+   - [release-drafter](https://github.com/release-drafter/release-drafter) creates or updates draft release for the
+     next version each time a pull request is merged to the `master` branch.
+   - create a new release if it is missing or rename the existing one to match .
+- Assign the new tag as release target and save the draft (this should have already been managed by `release-drafter`)
+- Ensure that `This is a pre-release` is unchecked (except if we are releasing alpha, beta, rc, ...)
+- In the release description (check previous releases as a source of inspiration)
+   - at least add/update a link to the related milestone
+   - put screenshots/gif of the new features
+- At any time, you can save the draft.
+
+#### Release on GitHub (tag)
+
+- Open the draft release note in [github releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
+- Verify the tag version as the same as the release note.
+- Published the release **only when you are done** with the release content. 
+
+#### Publish the new version on CRAN
+
+- Pull the new version created by the release workflow: `git pull origin`
+- Ensure you are on the last tag locally: `git checkout vX.Y.Z`
+- :warning: TODO: Explain the procedure to publish on CRAN
+
+### Communicate about the release
+
+#### Twitter
+
+You can use this template:
+
+> 📣 BPMN Visualization - R package {version} is out! 🎉
+>
+> ===> some short description here <===
+>
+> #bpmnvisualization #bpmn #visualization #R #opensource
+>
+> https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v{version}
+
