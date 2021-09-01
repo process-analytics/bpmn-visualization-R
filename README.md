@@ -1,6 +1,6 @@
 <h1 align="center">BPMN Visualization - R Package</h1>
 <div align="center">
-    <p align="center"> <img title="Email Voting BPMN Diagram with overlays" src="img/readme.png" alt="Email Voting BPMN Diagram with overlays"></p>
+    <p align="center"> <img title="Email Voting BPMN Diagram with overlays" src="doc/readme.png" alt="Email Voting BPMN Diagram with overlays"></p>
     <p align="center">
         <a href="https://github.com/process-analytics/bpmn-visualization-R/releases">
           <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/process-analytics/bpmn-visualization-R?label=changelog&include_prereleases"> 
