@@ -75,7 +75,7 @@ bpmnVisualization::display(bpmn_file, overlays)
 ```
 
 
-### Integrate in Shinny Applications
+### Integrate in Shiny Applications
 
 The following displays a BPMN diagram provided as example by the package with an overlay on top of a BPMN element.
 
