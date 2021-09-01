@@ -161,7 +161,7 @@ You can use this template:
 >
 > ===> some short description here <===
 >
-> #bpmnvisualization #bpmn #visualization #R #opensource
+> #bpmnvisualization #bpmn #visualization #R #RLang #programming #opensource
 >
 > https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v{version}
 
