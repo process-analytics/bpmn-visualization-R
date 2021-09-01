@@ -29,7 +29,7 @@ HTMLWidgets.widget({
                 x.overlays && x.overlays.map(overlay => {
                     const elementsByIds = bpmnVisualization.bpmnElementsRegistry.getElementsByIds(overlay.elementId);
 
-                    if (elementsByIds) {
+                    if (elementsByIds.length) {
                         const overlayConfig = elementsByIds[0].bpmnSemantic.isShape ? {
                             position: 'top-center',
                             label: overlay.label,
