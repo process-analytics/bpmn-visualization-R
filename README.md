@@ -74,6 +74,38 @@ overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn
 bpmnVisualization::display(bpmn_file, overlays)
 ```
 
+
+### Integrate in Shiny Applications
+
+The following displays a BPMN diagram provided as example by the package with an overlay on top of a BPMN element.
+
+```r
+# Install and load packages
+install.packages("shiny")
+library(shiny)
+devtools::install_github("process-analytics/bpmn-visualization-R")
+library(bpmnVisualization)
+
+displayBpmn <- function() {
+    bpmn_file <- system.file("examples/Travel_Booking.bpmn", package = "bpmnVisualization")
+    overlays <- list(bpmnVisualization::create_overlay("_6-203", "9"))
+    bpmnVisualization::display(bpmn_file, overlays)
+}
+
+ui <- shinyUI(fluidPage(
+    titlePanel("Display bpmn diagrams with execution data"),
+    bpmnVisualizationOutput('bpmnContainer')
+  )
+)
+
+server = function(input, output) {
+    # renderBpmnVisualization is the R bridge function to the html widgets
+    output$bpmnContainer <- renderBpmnVisualization({ displayBpmn() })
+}
+
+shinyApp(ui, server)
+```
+
 ## 🔧 Contributing
 
 To contribute to `bpmn-visualization-R`, fork and clone this repository locally and commit your code on a separate branch. \
