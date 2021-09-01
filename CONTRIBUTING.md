@@ -124,14 +124,6 @@ Maintainers need to perform the following actions **in the order described here*
 
 Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION) file is not good.
 
-#### GitHub issues and milestones
-
-**Note:** we always put issues related to a version in a Milestone whose name matches the version.
-
-- Ensure the name of the milestone used for the new release version matches the name of the tag/version that has just been pushed. Renamed it if needed.
-- Clean this opened milestone if some issues are still opened (move them to a new one or discard milestone from them)
-- Close the milestone
-
 #### Prepare the GitHub Release Notes
 
 - Open [github releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
@@ -141,12 +133,10 @@ Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION)
 - The draft release for the newly tagged version should already exist:
    - [release-drafter](https://github.com/release-drafter/release-drafter) creates or updates draft release for the
      next version each time a pull request is merged to the `master` branch.
-   - create a new release if it is missing or rename the existing one to match .
+   - create a new release if it is missing or rename the existing one to match.
 - Assign the new tag as release target and save the draft (this should have already been managed by `release-drafter`)
 - Ensure that `This is a pre-release` is unchecked (except if we are releasing alpha, beta, rc, ...)
-- In the release description (check previous releases as a source of inspiration)
-   - at least add/update a link to the related milestone
-   - put screenshots/gif of the new features
+- In the release description (check previous releases as a source of inspiration), put screenshots/gif of the new features.
 - At any time, you can save the draft.
 
 #### Release on GitHub (tag)
