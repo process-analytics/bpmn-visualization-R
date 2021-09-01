@@ -77,7 +77,7 @@ bpmnVisualization::display(bpmn_file, overlays)
 
 ### Integrate in Shinny Applications
 
-The following displays a BPMN diagram provided as example by the package with an overlay on top of a BPMN element
+The following displays a BPMN diagram provided as example by the package with an overlay on top of a BPMN element.
 
 ```r
 # Install and load packages
@@ -89,7 +89,7 @@ library(bpmnVisualization)
 displayBpmn <- function() {
     bpmn_file <- system.file("examples/Travel_Booking.bpmn", package = "bpmnVisualization")
     overlays <- list(bpmnVisualization::create_overlay("_6-203", "9"))
-    bpmnVisualization::display(bpmn_file, overlays = overlays)
+    bpmnVisualization::display(bpmn_file, overlays)
 }
 
 ui <- shinyUI(fluidPage(
