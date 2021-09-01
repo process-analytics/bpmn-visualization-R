@@ -22,7 +22,9 @@
 </div>  
 <br>
 
-This project is an R interface to the [BPMN Visualization](https://github.com/process-analytics/bpmn-visualization-js) library.
+This project is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
+
+It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provides an easy-to-use framework for bringing together R and the [BPMN Visualization](https://github.com/process-analytics/bpmn-visualization-js) TypeScript library.
 
 ## ♻️ Usage
 ### Installation
@@ -35,16 +37,8 @@ library(bpmnVisualization)
 ### Load the BPMN file
 `bpmnVisualization` accepts a BPMN file (or an XML document):
 
-Load an BPMN example provided by the package
-
-The diagrams files are taken from the [BPMN 2.0 examples non-normative machine readable files](https://www.omg.org/spec/BPMN/2.0)
-- Email_Voting.bpmn
-- Nobel_Prize_Process.bpmn
-- Order_Process_for_Pizza_V4.bpmn
-- Travel_Booking.bpmn
-
 ```r
-bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization")
+bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization") # File from the package
 ```
 
 Or
@@ -61,6 +55,13 @@ Or
 ```r
 bpmn_file <- "<?xml version="1.0" encoding="UTF-8"?> ...xml_content"
 ```
+
+💡 The package provides some [BPMN examples](./inst/examples). \
+They are taken from the [BPMN 2.0 examples non-normative machine readable files](https://www.omg.org/spec/BPMN/2.0).
+- Email_Voting.bpmn
+- Nobel_Prize_Process.bpmn
+- Order_Process_for_Pizza_V4.bpmn
+- Travel_Booking.bpmn
 
 ### Display the BPMN diagram
 ```r

@@ -1,10 +1,10 @@
 Package: bpmnVisualization
 Type: Package
-Title: BPMN Visualization - R Package
+Title: Visualize process execution data on BPMN diagrams
 Version: 0.1.0
 Authors@R: c(person("Celine", "Souchet", role = c("aut", "cre"), email = "celine.souchet@bonitasoft.com"),
              person("Thomas", "Bouffard", role = "aut"))
-Description: A R package which embeds BPMN Visualization.
+Description: To visualize the execution data of the processes on BPMN diagrams, using overlays, style customization and interactions, with BPMN Visualization.
 License: Apache License (== 2)
 Copyright: Bonitasoft S.A.
 URL: https://github.com/process-analytics/bpmn-visualization-R
