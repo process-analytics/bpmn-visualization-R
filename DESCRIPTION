@@ -1,6 +1,6 @@
 Package: bpmnVisualization
 Type: Package
-Title: BPMN Visualization for R
+Title: Visualize process execution data on BPMN diagrams
 Version: 0.1.0
 Authors@R: c(person("Celine", "Souchet", role = c("aut", "cre"), email = "celine.souchet@bonitasoft.com"),
              person("Thomas", "Bouffard", role = "aut"))
