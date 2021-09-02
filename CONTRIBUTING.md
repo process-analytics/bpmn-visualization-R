@@ -150,7 +150,7 @@ Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION)
 - Pull the new version created by the release workflow: `git pull origin`
 - Ensure you are on the last tag locally: `git checkout vX.Y.Z`
 - Open the project in the R Studio
-- On the **Build** tab, click on **More** > **Build Binary Package**
+- On the **Build** tab, click on **More** > **Build Source Package**
 <p align="center"><img title="Build Binary Package" src="./doc/r-studio-binary-build.png" alt="Build Binary Package"></p>
 
 - Go to the parent folder of the project. You should find a file named like `bpmnVisualization_X.Y.Z.tgz`.
