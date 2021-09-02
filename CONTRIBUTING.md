@@ -149,14 +149,16 @@ Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION)
 
 - Pull the new version created by the release workflow: `git pull origin`
 - Ensure you are on the last tag locally: `git checkout vX.Y.Z`
-- Open the project in the R Studio
-- On the **Build** tab, click on **More** > **Build Source Package**
-<p align="center"><img title="Build Binary Package" src="./doc/r-studio-binary-build.png" alt="Build Binary Package"></p>
-
-- Go to the parent folder of the project. You should find a file named like `bpmnVisualization_X.Y.Z.tgz`.
-- Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualization_X.Y.Z.tgz` file.
-- Submit
-<p align="center"><img title="Submitting to CRAN" src="./doc/cran-submitting.png" alt="Submitting to CRAN"></p>
+- Build the source package. Please read [the CRAN Submission policies first](https://cran.r-project.org/web/packages/policies.html#Submission)
+  - Solution 1: Build the source package with RStudio 
+    - Open the project in RStudio
+    - On the **Build** tab, click on **More** > **Build Source Package**
+    - Go to the parent folder of the project. You should find a file named like `bpmnVisualization_X.Y.Z.tgz`.
+  - Solution 2. TODO more details
+    - run `R CMD build`
+- Do the actual submission
+  - Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualization_X.Y.Z.tgz` file.
+  - Submit
 
 ### Communicate about the release
 
