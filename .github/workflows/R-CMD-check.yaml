@@ -95,6 +95,11 @@ jobs:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package
           path: bpmnVisualization_*.tar.gz
 
+
+      #  Sets up LaTeX with tinytex
+      # not needed before as the checks on the repo sources are done with --no-manual
+      - uses: r-lib/actions/setup-tinytex@v1
+
 # TODO no hard coded file name, as it depends on the package version
       - name: Check the source package
         run: |
