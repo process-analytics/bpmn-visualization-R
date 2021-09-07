@@ -85,6 +85,10 @@ jobs:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-check-results
           path: check
 
+# ######################################################################################################################
+# Package submission checks
+# https://cran.r-project.org/web/packages/policies.html#Submission
+# ######################################################################################################################
       - name: Build the source package
         run: |
           R CMD build .
@@ -102,15 +106,13 @@ jobs:
 
 # TODO no hard coded file name, as it depends on the package version
       - name: Check the source package
+        id: source_package_checks
         run: |
           rm -rf check
           R CMD check --as-cran bpmnVisualization_0.1.0.tar.gz
 
-      - name: Tmp list folder content
-        if: always()
-        run: ls -la
       - name: Upload source package check results
-        if: failure() # TODO only if previous fail
+        if: steps.source_package_checks.outcome == 'failure'
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package-check-results
