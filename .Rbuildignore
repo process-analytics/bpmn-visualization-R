@@ -3,5 +3,6 @@
 ^.*\.iml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^CONTRIBUTING\.md$
+^.*\.md$
+^doc$
 ^LICENSE$
