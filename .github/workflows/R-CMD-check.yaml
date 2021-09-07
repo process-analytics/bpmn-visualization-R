@@ -100,10 +100,13 @@ jobs:
         run: |
           rm -rf check
           R CMD check --as-cran bpmnVisualization_0.1.0.tar.gz
-          ls -la
-#      - name: Upload source package check results
-#        if: failure() # TODO only if previous fail
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package-check-results
-#          path: check
+
+      - name: Tmp list folder content
+        if: always()
+        run: ls -la
+      - name: Upload source package check results
+        if: failure() # TODO only if previous fail
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package-check-results
+          path: bpmnVisualization.Rcheck
