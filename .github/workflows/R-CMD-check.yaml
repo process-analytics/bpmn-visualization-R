@@ -104,10 +104,9 @@ jobs:
       # not needed before as the checks on the repo sources are done with --no-manual
       - uses: r-lib/actions/setup-tinytex@v1
 
-# TODO no hard coded file name, as it depends on the package version
       - name: Check the source package
         id: source_package_checks
-        run: R CMD check --as-cran bpmnVisualization_0.1.0.tar.gz
+        run: R CMD check --as-cran bpmnVisualization_*.tar.gz
 
       - name: Upload source package check results
         if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
