@@ -107,9 +107,7 @@ jobs:
 # TODO no hard coded file name, as it depends on the package version
       - name: Check the source package
         id: source_package_checks
-        run: |
-          rm -rf check
-          R CMD check --as-cran bpmnVisualization_0.1.0.tar.gz
+        run: R CMD check --as-cran bpmnVisualization_0.1.0.tar.gz
 
       - name: Upload source package check results
         if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
