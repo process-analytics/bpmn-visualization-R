@@ -100,7 +100,7 @@ jobs:
           path: bpmnVisualization_*.tar.gz
 
 
-      #  Sets up LaTeX with tinytex
+      #  Sets up LaTeX with tinytex, for PDF generation
       # not needed before as the checks on the repo sources are done with --no-manual
       - uses: r-lib/actions/setup-tinytex@v1
 
