@@ -113,7 +113,7 @@ jobs:
           exit 12
 
       - name: Upload source package check results
-        if: steps.source_package_checks.outcome == 'failure'
+        if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package-check-results
