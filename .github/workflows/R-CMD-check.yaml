@@ -110,7 +110,6 @@ jobs:
         run: |
           rm -rf check
           R CMD check --as-cran bpmnVisualization_0.1.0.tar.gz
-          exit 12
 
       - name: Upload source package check results
         if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
