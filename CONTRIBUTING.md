@@ -154,8 +154,8 @@ Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION)
     - Open the project in RStudio
     - On the **Build** tab, click on **More** > **Build Source Package**
     - Go to the parent folder of the project. You should find a file named like `bpmnVisualization_X.Y.Z.tgz`.
-  - Solution 2. **TODO more details**
-    - from the project directory, run `R CMD build .` **TODO this may require more command to run first**
+  - Solution 2.
+    - from the project directory, run `R CMD build .
     - You should find a file named like `bpmnVisualization_X.Y.Z.tgz` in the project directory.
 - Do the actual submission
   - Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualization_X.Y.Z.tgz` file.
