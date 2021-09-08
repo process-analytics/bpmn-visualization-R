@@ -13,20 +13,29 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{bpmnVisualization}
 \packageIndices{bpmnVisualization}
-~~ An overview of how to use the package, including the most important ~~
-~~ functions ~~
 }
 \author{
 \packageAuthor{bpmnVisualization}
 
 Maintainer: \packageMaintainer{bpmnVisualization}
 }
-\references{
-~~ Literature or other references for background information ~~
-}
-\seealso{
-~~ Optional links to other man pages ~~
-}
 \examples{
-# simple examples of the most important functions
+\dontrun{
+
+bpmnVisualization::display(bpmn_xml)
+
+}
+
+}
+
+\section{More examples}{
+
+
+  See \url{https://github.com/process-analytics/bpmn-visualization-R#readme} for more usage examples.
+}
+
+\section{Support}{
+
+
+  Use \url{https://github.com/process-analytics/bpmn-visualization-R/issues} for bug reports
 }
