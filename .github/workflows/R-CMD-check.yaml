@@ -109,7 +109,7 @@ jobs:
         run: R CMD check --as-cran bpmnVisualization_*.tar.gz
 
       - name: Upload source package check results
-        if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
+#        if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package-check-results
