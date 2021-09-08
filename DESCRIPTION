@@ -9,6 +9,8 @@ License: Apache License (== 2)
 Copyright: Bonitasoft S.A.
 URL: https://github.com/process-analytics/bpmn-visualization-R
 BugReports: https://github.com/process-analytics/bpmn-visualization-R/issues
+Encoding: UTF-8
+LazyData: true
 RoxygenNote: 7.1.1
 Imports:
     htmlwidgets,
