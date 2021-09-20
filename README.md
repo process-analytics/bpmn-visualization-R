@@ -72,7 +72,7 @@ bpmnVisualization::display(bpmn_file)
 ### Display the BPMN diagram with overlays
 
 ```r
-overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn_element_id_2", "9"))
+overlays <- list(bpmnVisualization::create_overlay("bpmn_element_id_1", "42"), bpmnVisualization::create_overlay("bpmn_element_id_2", "9"))
 bpmnVisualization::display(bpmn_file, overlays)
 ```
 
