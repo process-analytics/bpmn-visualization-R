@@ -72,14 +72,14 @@ bpmnVisualization::display(bpmn_file)
 ### Display the BPMN diagram with overlays
 
 ```r
-overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn_element_id_2", "9"))
+overlays <- list(bpmnVisualization::create_overlay("bpmn_element_id_1", "42"), bpmnVisualization::create_overlay("bpmn_element_id_2", "9"))
 bpmnVisualization::display(bpmn_file, overlays)
 ```
 
 
 ### Integrate in Shiny Applications
 
-The following displays a BPMN diagram provided as example by the package with an overlay on top of a BPMN element.
+The following displays a BPMN diagram provided as an example by the package with an overlay on top of a BPMN element.
 
 ```r
 # Install and load packages
