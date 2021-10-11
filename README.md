@@ -124,12 +124,6 @@ You can find more detail in our [Contributing guide](CONTRIBUTING.md). Participa
 
 ✨ A BIG thanks to all our contributors 🙂
 
-## ⚒️ Development
-### Installation
-```r
-devtools::install()
-```
-
 ## 📃 License
 
 `bpmn-visualization-R` is released under the [Apache 2.0](LICENSE) license. \
