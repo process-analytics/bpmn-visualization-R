@@ -100,7 +100,20 @@ git push --force-with-lease 25-customize_overlays
 
 At this point, you're ready to make your changes! Feel free to ask for help. Everyone is a beginner at first :smile_cat:
 
-## bpmn-visualization-js update
+## ⚒️ Development
+### Installation
+```r
+devtools::install()
+```
+
+### Regenerate the R documentation
+The **R documentation** (.Rd) format is generated from the function comments thanks to [roxygen2](https://roxygen2.r-lib.org/). \
+To regenerate this documentation after function comment updating, run this command:
+```r
+devtools::document()
+```
+
+### bpmn-visualization-js update
 
 - Change [bpmn-visualization.min.js](inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js). The file can be retrieved from [jsdelivr](https://www.jsdelivr.com/package/npm/bpmn-visualization) or [unpkg](https://unpkg.com/browse/bpmn-visualization/).
 - Update the version of `bpmn-visualization` in [bpmnVisualization.yaml](inst/htmlwidgets/bpmnVisualization.yaml)
