@@ -68,7 +68,7 @@ display <- function(bpmnXML, overlays = NULL, width = NULL, height = NULL, eleme
 #' Use this structure to create correct overlay structure.
 #'
 #' @param elementId The bpmn element id to which the overlay will be attached
-#' @param label HTML element to use as an overlay to use as an overlay
+#' @param label HTML element to use as an overlay
 #'
 #' @return An overlay object
 #'
