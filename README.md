@@ -28,14 +28,14 @@ It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provide
 
 ## ♻️ Usage
 ### Installation
-Install devtools:  
-[Devtools](https://www.rdocumentation.org/packages/devtools) is a R package used to ease the installation and the development of other R packages.  
+#### Install _devtools_  
+[Devtools](https://www.rdocumentation.org/packages/devtools) is an R package used to ease the installation and the development of other R packages.  
 It can be installed from the R console: 
 ```r
 install.packages('devtools')
 ```
 
-Install **BPMN Visualization - R Package** from GitHub:
+#### Install _BPMN Visualization - R Package_ from GitHub
 ```r
 devtools::install_github("process-analytics/bpmn-visualization-R")
 library(bpmnVisualization)
