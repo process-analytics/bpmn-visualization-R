@@ -35,7 +35,7 @@ It can be installed from the R console:
 install.packages('devtools')
 ```
 
-Install process analytics package from GitHub:
+Install **BPMN Visualization - R Package** from GitHub:
 ```r
 devtools::install_github("process-analytics/bpmn-visualization-R")
 library(bpmnVisualization)
