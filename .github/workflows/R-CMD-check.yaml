@@ -24,8 +24,6 @@ jobs:
           - {os: ubuntu-20.04, r: '4.1.1'}
           # CRAN submission required to use this R version
           - {os: ubuntu-20.04, r: 'release'}
-          # To catch errors with upcoming R version
-          - {os: ubuntu-20.04, r: 'devel'}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
