@@ -9,7 +9,7 @@ create_overlay(elementId, label)
 \arguments{
 \item{elementId}{The bpmn element id to which the overlay will be attached}
 
-\item{label}{HTML element to use as an overlay to use as an overlay}
+\item{label}{HTML element to use as an overlay}
 }
 \value{
 An overlay object
