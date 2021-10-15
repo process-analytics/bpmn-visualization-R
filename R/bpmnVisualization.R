@@ -17,7 +17,7 @@
 #' Display BPMN diagram based on BPMN definition in XML format
 #'
 #' @param bpmnXML A file name or xml document or string in BPMN XML format
-#' @param overlays A list of elements to be added to the diagram's existing elements.
+#' @param overlays An element or a list of elements to be added to the diagram's existing elements.
 #'      Use overlay function to create an overlay object with content and relative position.
 #' @param width The width used to display the widget
 #' @param height The height used to display the widget
