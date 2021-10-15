@@ -15,7 +15,7 @@ display(
 \arguments{
 \item{bpmnXML}{A file name or xml document or string in BPMN XML format}
 
-\item{overlays}{A list of elements to be added to the diagram's existing elements.
+\item{overlays}{An element or a list of elements to be added to the diagram's existing elements.
 Use overlay function to create an overlay object with content and relative position.}
 
 \item{width}{The width used to display the widget}
