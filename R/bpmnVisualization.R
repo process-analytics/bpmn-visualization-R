@@ -17,7 +17,7 @@
 #' Display BPMN diagram based on BPMN definition in XML format
 #'
 #' @param bpmnXML A file name or xml document or string in BPMN XML format
-#' @param overlays A list of elements to be added to the diagram's existing elements.
+#' @param overlays An element or a list of elements to be added to the diagram's existing elements.
 #'      Use overlay function to create an overlay object with content and relative position.
 #' @param width The width used to display the widget
 #' @param height The height used to display the widget
@@ -47,7 +47,12 @@ display <- function(bpmnXML, overlays = NULL, width = NULL, height = NULL, eleme
   # widget parameters
   x <- list(bpmnContent = bpmnContent)
   if(length(overlays)) {
-    x$overlays <- overlays
+    # In case the user passes a single parameter as overlays (instead of a list), we wrap it into a list so the js can work
+    x$overlays <- if (is.list(overlays[[1]])) {
+      overlays
+    } else {
+      list(overlays)
+    }
   }
 
   # create widget
