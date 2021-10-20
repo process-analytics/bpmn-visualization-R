@@ -89,11 +89,10 @@ bpmnVisualization::display(bpmn_file, overlays)
 The following displays a BPMN diagram provided as an example by the package with an overlay on top of a BPMN element.
 
 ```r
-# Install and load packages
+# Install and load the shiny package
 install.packages("shiny")
 library(shiny)
-devtools::install_github("process-analytics/bpmn-visualization-R")
-library(bpmnVisualization)
+
 
 displayBpmn <- function() {
     bpmn_file <- system.file("examples/Travel_Booking.bpmn", package = "bpmnVisualization")
