@@ -102,13 +102,13 @@ displayBpmn <- function() {
 
 ui <- shinyUI(fluidPage(
     titlePanel("Display bpmn diagrams with execution data"),
-    bpmnVisualizationOutput('bpmnContainer')
+    bpmnVisualization::bpmnVisualizationOutput('bpmnContainer')
   )
 )
 
 server = function(input, output) {
     # renderBpmnVisualization is the R bridge function to the html widgets
-    output$bpmnContainer <- renderBpmnVisualization({ displayBpmn() })
+    output$bpmnContainer <- bpmnVisualization::renderBpmnVisualization({ displayBpmn() })
 }
 
 shinyApp(ui, server)
