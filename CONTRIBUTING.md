@@ -137,6 +137,15 @@ Maintainers need to perform the following actions **in the order described here*
 
 Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION) file is not good.
 
+#### GitHub issues and milestones update
+
+**Note:** we always put issues related to a version in a Milestone whose name matches the version.
+
+- Ensure the name of the milestone used for the new release version matches the name of the tag/version that is going to be released. Renamed it if needed.
+- Clean this opened milestone if some issues are still opened (move them to a new one or discard milestone from them).
+- Close the milestone.
+- Create a new milestone for the next version if it does not already exist.
+
 #### Prepare the GitHub Release Notes
 
 - Open [github releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
@@ -159,6 +168,8 @@ Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION)
 - Published the release **only when you are done** with the release content. 
 
 #### Publish the new version on CRAN
+
+**NOTE**: we cannot publish on CRAN for now, see [#10](https://github.com/process-analytics/bpmn-visualization-R/issues/10)
 
 - Pull the new version created by the release workflow: `git pull origin`
 - Ensure you are on the last tag locally: `git checkout vX.Y.Z`
