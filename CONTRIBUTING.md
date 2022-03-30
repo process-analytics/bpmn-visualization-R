@@ -133,9 +133,13 @@ A PR can only be merged into master by a maintainer, if all of these conditions 
 
 Maintainers need to perform the following actions **in the order described here** to push out a release.
 
-#### Verify the version in [DESCRIPTION](./DESCRIPTION) file
+#### Verify the version in files
 
-Create a new PR and merge it, if the version in the [DESCRIPTION](./DESCRIPTION) file is not good.
+Check that the files are using the version to be released:
+- [DESCRIPTION](./DESCRIPTION)
+- [README](./README.md)
+
+Create a new PR and merge it, if some files require changes.
 
 #### GitHub issues and milestones update
 
