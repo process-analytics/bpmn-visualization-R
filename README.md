@@ -36,8 +36,19 @@ install.packages('devtools')
 ```
 
 #### Install _BPMN Visualization - R Package_ from GitHub
+
+To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
+```r
+devtools::install_github("process-analytics/bpmn-visualization-R@v0.1.1")
+```
+
+Or install the development version:
 ```r
 devtools::install_github("process-analytics/bpmn-visualization-R")
+```
+
+Then, make the library available to the current R project:
+```r
 library(bpmnVisualization)
 ```
 
