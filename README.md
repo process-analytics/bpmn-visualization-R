@@ -52,7 +52,6 @@ Then make the library available to the current R project
 library(bpmnVisualization)
 ```
 
-
 ### Load the BPMN file
 `bpmnVisualization` accepts a BPMN file (or an XML document):
 
