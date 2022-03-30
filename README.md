@@ -47,7 +47,7 @@ Or install the development version:
 devtools::install_github("process-analytics/bpmn-visualization-R")
 ```
 
-Then make the library available to the current R project
+Then, make the library available to the current R project:
 ```r
 library(bpmnVisualization)
 ```
