@@ -690,7 +690,7 @@
                 </bpmndi:BPMNLabel>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Trisotech.Visio__6_sequence_flow_2" bpmnElement="sequence_flow_2">
-                <di:waypoint x="453" y="867"/>
+                <di:waypoint x="465" y="867"/>
                 <di:waypoint x="541" y="867"/>
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
@@ -869,7 +869,7 @@
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Trisotech.Visio__6_sequence_flow_48" bpmnElement="sequence_flow_48">
-                <di:waypoint x="2179" y="640"/>
+                <di:waypoint x="2206" y="640"/>
                 <di:waypoint x="2516" y="641"/>
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
@@ -938,7 +938,7 @@
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Trisotech.Visio__6_sequence_flow_37" bpmnElement="sequence_flow_37">
-                <di:waypoint x="2007" y="869"/>
+                <di:waypoint x="2017" y="869"/>
                 <di:waypoint x="2110" y="869"/>
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
@@ -1061,7 +1061,7 @@
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Trisotech.Visio__6_sequence_flow_35" bpmnElement="sequence_flow_35">
-                <di:waypoint x="1183" y="880"/>
+                <di:waypoint x="1200" y="880"/>
                 <di:waypoint x="1232" y="880"/>
                 <di:waypoint x="1232" y="939"/>
                 <bpmndi:BPMNLabel/>
@@ -1114,7 +1114,7 @@
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Trisotech.Visio__6_sequence_flow_26" bpmnElement="sequence_flow_26">
-                <di:waypoint x="792" y="873"/>
+                <di:waypoint x="792" y="883"/>
                 <di:waypoint x="792" y="1110"/>
                 <di:waypoint x="856" y="1110"/>
                 <bpmndi:BPMNLabel/>
