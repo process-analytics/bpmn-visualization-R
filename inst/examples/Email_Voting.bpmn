@@ -1061,7 +1061,7 @@
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Trisotech.Visio__6_sequence_flow_35" bpmnElement="sequence_flow_35">
-                <di:waypoint x="1183" y="880"/>
+                <di:waypoint x="1200" y="880"/>
                 <di:waypoint x="1232" y="880"/>
                 <di:waypoint x="1232" y="939"/>
                 <bpmndi:BPMNLabel/>
@@ -1114,7 +1114,7 @@
                 <bpmndi:BPMNLabel/>
             </bpmndi:BPMNEdge>
             <bpmndi:BPMNEdge id="Trisotech.Visio__6_sequence_flow_26" bpmnElement="sequence_flow_26">
-                <di:waypoint x="792" y="873"/>
+                <di:waypoint x="792" y="883"/>
                 <di:waypoint x="792" y="1110"/>
                 <di:waypoint x="856" y="1110"/>
                 <bpmndi:BPMNLabel/>
