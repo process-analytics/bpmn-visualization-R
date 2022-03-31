@@ -139,7 +139,7 @@ Check that the files are using the version to be released:
 - [DESCRIPTION](./DESCRIPTION)
 - [README](./README.md)
 
-Create a new PR and merge it, if some files require changes.
+Create a new PR and merge it, if some files require changes. The PR/commit message should be `[RELEASE] Set version to x.y.z`.
 
 #### GitHub issues and milestones update
 
