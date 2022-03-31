@@ -1,339 +1,1736 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 770">
-    <g fill="#fff" transform="translate(0 -27.642694)">
-        <rect width="100%" height="100%" y="27.642694"/>
-        <g class="bpmn-sub-process" data-bpmn-id="sub_process_1">
-            <rect width="798.90997" height="636.29999" x="451.89999" y="111.45" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.52"
-                  d="M845.55 738.11c-2.94-2.6-3.59-6.94-1.53-10.29 2.06-3.34 6.23-4.72 9.88-3.26 3.65 1.46 5.72 5.33 4.91 9.18-.82 3.84-4.28 6.54-8.21 6.39"/>
-            <path fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="m847.57 733.06-1.77 5.05-5.8-2.02z"/>
-            <text x="746.59088" y="135.22728" fill="#000" font-family="Arial, Helvetica" font-size="11">Discussion Cycle</text>
-        </g>
-        <g class="bpmn-send-task" data-bpmn-id="send_task_1">
-            <rect width="93.93" height="78.779999" x="510.48001" y="348.79999" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="#000" stroke="#000" d="M517.54999 355.87h18.790001v12.45H517.54999z"/>
-            <path fill="none" stroke="#fff" stroke-miterlimit="10" d="m517.55 355.87 9.39 7.47 9.39-7.47m-18.78 12.45 6.26-6.85m12.52 6.85-6.26-6.85"/>
-            <text xml:space="preserve" x="552.37146" y="385.22726" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:center;white-space:pre;inline-size:78.2737" text-anchor="middle" transform="translate(6.4090909 -.5454545)"><tspan x="552.37146" y="385.22726">Announce
-</tspan>
-                <tspan x="552.37146" y="398.97727">Issues for
-</tspan>
-                <tspan x="552.37146" y="412.72727">Discussion</tspan></text>
-        </g>
-        <g class="bpmn-user-task" data-bpmn-id="user_task_2">
-            <rect width="101" height="75.75" x="611.47998" y="471.01001" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="#000"
-                  d="m626.35 486.67-1.95-.73c-.19-.07-.32-.26-.32-.47v-.35c1.17-.67 1.89-1.92 1.89-3.27v-1.42c0-1.16-.53-2.26-1.45-2.97.02-.12.03-.24.03-.36-.02-1.28-1.07-2.3-2.34-2.3-1.28 0-2.33 1.02-2.35 2.3 0 .12.01.24.03.36-.92.71-1.45 1.8-1.45 2.97v1.42c0 1.35.72 2.6 1.9 3.27v.35c0 .21-.14.4-.33.47l-1.96.73c-.91.35-1.51 1.22-1.51 2.19v4.39c-.01.16.07.32.21.4.14.08.32.08.46 0s.22-.24.21-.4v-4.39c0-.07.01-.15.02-.22l.71.7c.18.19.29.44.29.7v3.21c-.01.16.07.32.21.4.14.08.32.08.46 0s.22-.24.21-.4v-3.21c.01-.49-.19-.97-.54-1.32l-.9-.9c.14-.14.3-.25.49-.32l1.61-.6 1.78 1.78v4.57c-.01.16.08.32.22.4.14.08.31.08.45 0s.23-.24.22-.4v-4.57l1.78-1.78 1.61.6c.19.08.35.18.5.32l-.91.9c-.35.35-.54.83-.54 1.32v3.21c-.01.16.07.32.21.4.14.09.32.09.46 0 .14-.08.22-.24.22-.4v-3.21c-.01-.26.1-.51.28-.69l.71-.71c.01.08.02.15.02.23v4.38c.01.24.2.43.44.43s.44-.19.45-.43v-4.39c-.01-.97-.62-1.84-1.53-2.19zm-4.14-11.03c.74.01 1.36.57 1.44 1.31-.92-.39-1.97-.39-2.89 0 .08-.74.7-1.3 1.45-1.31zm-2.89 4.79c0-1.6 1.29-2.88 2.89-2.88 1.59 0 2.88 1.28 2.88 2.88v.48c-2.07-.15-4.06-1.33-4.08-1.34-.11-.06-.23-.08-.35-.05-.12.04-.22.12-.28.23-.2.4-.66.73-1.06.94zm0 1.42v-.17c.41-.18 1.14-.55 1.61-1.14.72.38 2.39 1.15 4.16 1.26v.05c0 1.59-1.29 2.88-2.88 2.88-1.6 0-2.89-1.29-2.89-2.88zm2.89 6.02-1.41-1.4c.26-.26.42-.61.42-.98.65.17 1.32.17 1.97 0 0 .37.16.72.42.98z"/>
-            <text xml:space="preserve" x="625" y="507" fill="#000" font-family="Arial, Helvetica" font-size="11" style="white-space:pre;inline-size:80"><tspan x="625" y="507">Check Calendar
-</tspan>
-                <tspan x="625" y="520.75">for Conference
-</tspan>
-                <tspan x="625" y="534.49997">Call</tspan></text>
-        </g>
-        <g class="bpmn-user-task" data-bpmn-id="user_task_3">
-            <rect width="101" height="75.75" x="783.17999" y="211.44" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="#000"
-                  d="m798.05 227.1-1.95-.73c-.19-.07-.32-.26-.32-.47v-.35c1.17-.67 1.89-1.92 1.89-3.27v-1.42c0-1.16-.53-2.26-1.45-2.97.02-.12.03-.24.03-.36-.02-1.28-1.07-2.3-2.34-2.3-1.28 0-2.33 1.02-2.35 2.3 0 .12.01.24.03.36-.92.71-1.45 1.8-1.45 2.97v1.42c0 1.35.72 2.6 1.9 3.27v.35c0 .21-.14.4-.33.47l-1.96.73c-.91.35-1.51 1.22-1.51 2.19v4.39c-.01.16.07.32.21.4.14.08.32.08.46 0s.22-.24.21-.4v-4.39c0-.07.01-.15.02-.22l.71.7c.18.19.29.44.29.7v3.21c-.01.16.07.32.21.4.14.08.32.08.46 0s.22-.24.21-.4v-3.21c.01-.49-.19-.97-.54-1.32l-.9-.9c.14-.14.3-.25.49-.32l1.61-.6 1.78 1.78v4.57c-.01.16.08.32.22.4.14.08.31.08.45 0s.23-.24.22-.4v-4.57l1.78-1.78 1.61.6c.19.08.35.18.5.32l-.91.9c-.35.35-.54.83-.54 1.32v3.21c-.01.16.07.32.21.4.14.09.32.09.46 0 .14-.08.22-.24.22-.4v-3.21c-.01-.26.1-.51.28-.69l.71-.71c.01.08.02.15.02.23v4.38c.01.24.2.43.44.43s.44-.19.45-.43v-4.39c-.01-.97-.62-1.84-1.53-2.19zm-4.14-11.03c.74.01 1.36.57 1.44 1.31-.92-.39-1.97-.39-2.89 0 .08-.74.7-1.3 1.45-1.31zm-2.89 4.79c0-1.6 1.29-2.88 2.89-2.88 1.59 0 2.88 1.28 2.88 2.88v.48c-2.07-.15-4.06-1.33-4.08-1.34-.11-.06-.23-.08-.35-.05-.12.04-.22.12-.28.23-.2.4-.66.73-1.06.94zm0 1.42v-.17c.41-.18 1.14-.55 1.61-1.14.72.38 2.39 1.15 4.16 1.26v.05c0 1.59-1.29 2.88-2.88 2.88-1.6 0-2.89-1.29-2.89-2.88zm2.89 6.02-1.41-1.4c.26-.26.42-.61.42-.98.65.17 1.32.17 1.97 0 0 .37.16.72.42.98z"
-                  pointer-events="all"/>
-            <text xml:space="preserve" x="870" y="240" fill="#000" font-family="Arial, Helvetica" font-size="11" style="white-space:pre;inline-size:60.68"
-                  text-anchor="middle" transform="translate(-35.227273 2.2727273)"><tspan x="870" y="240">Moderate
-</tspan>
-                <tspan x="870" y="253.75">E-mail
-</tspan>
-                <tspan x="870" y="267.5">Discussion</tspan></text>
-        </g>
-        <g class="bpmn-boundary-event" data-bpmn-id="boundary_event_1">
-            <circle cx="884.17999" cy="256.89001" r="16.16" stroke="#000" stroke-width="2.02"/>
-            <circle cx="884.17999" cy="256.89001" r="12.4836" fill="transparent" stroke="#000" stroke-width="2.02"/>
-            <path stroke="#000" stroke-miterlimit="10"
-                  d="M884.26 250.38c.24 0 .43-.19.43-.42v-.21c0-.43-.19-.43-.43-.43-.23 0-.42.19-.42.43v.21c0 .23.19.42.42.42zm0 13.19c-.23 0-.42.19-.42.42v.21c0 .24.19.43.42.43.24 0 .43-.19.43-.43v-.21c0-.23-.19-.42-.43-.42zm-7.01-7.02h-.22c-.23 0-.42.19-.42.43 0 .23.19.42.42.42h.22c.23 0 .9-.19.42-.42 0-.24-.19-.43-.42-.43zm14.24 0h-.21c-.23 0-.42.19-.42.43 0 .23.19.42.42.42h.21c.24 0 .43-.19.43-.42 0-.24-.19-.43-.43-.43m-12.03-4.98c-.17-.17-.43-.17-.6 0-.17.17-.17.43 0 .6l.15.15c.09.08.19.13.3.13.11 0 .19-.05.3-.13.17-.17.17-.43 0-.6l-.15-.15m-.45 10.06-.15.15c-.17.17-.17.43 0 .6.09.08.19.12.3.12.11 0 .21-.04.3-.12l.15-.15c.17-.17.17-.43 0-.6-.17-.17-.43-.17-.6 0m10.06-10.06-.15.15c-.17.17-.17.43 0 .6.09.08.19.13.3.13.1 0 .21-.05.3-.13l.14-.15c.17-.17.17-.43 0-.6-.17-.17-.42-.17-.59 0m-4.38 5.24v-3.87c0-.24-.19-.43-.43-.43-.23 0-.42.19-.42.43v4.04c0 .1.04.21.13.29l4.65 4.66c.09.08.19.13.3.13.11 0 .21-.05.3-.13.17-.17.17-.43 0-.6l-4.53-4.52m-.43-9.62c-5.4 0-9.78 4.38-9.78 9.79 0 5.4 4.38 9.78 9.78 9.78 5.4 0 9.78-4.38 9.78-9.78 0-5.41-4.38-9.79-9.78-9.79m0 18.72c-4.93 0-8.93-4-8.93-8.93 0-4.94 4-8.94 8.93-8.94 4.94 0 8.93 4 8.93 8.94 0 4.93-3.99 8.93-8.93 8.93"/>
-            <text x="1017.9526" y="210.99808" stroke-width="1.11595" font-family="Arial, Helvetica" font-size="11" text-anchor="middle"
-                  transform="scale(.8961 1.11596)">7 Days
-            </text>
-        </g>
-        <g class="bpmn-exclusive-gateway" data-bpmn-id="exclusive_gateway_2">
-            <path stroke="#000" stroke-miterlimit="10" stroke-width="2.02" d="m805.4 484.14 21.21 21.21-21.21 21.21-21.21-21.21z"/>
-            <path fill="#000" stroke="#000" stroke-miterlimit="10"
-                  d="m811.09220959 496.05154583 3.59917351 3.59917351L808.99210245 505.35l5.69928065 5.69928066-3.59917351 3.59917351-5.69928066-5.69928065-5.69928065 5.69928065-3.59917352-3.59917351L801.79375542 505.35l-5.69928066-5.69928066 3.59917352-3.59917351 5.69928065 5.69928065z"/>
-            <text xml:space="preserve" x="776" y="543" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:center;white-space:pre;inline-size:86.97" text-anchor="middle" transform="translate(30)"><tspan x="776" y="543">Conference Call
-</tspan>
-                <tspan x="776" y="556.74997">in Discussion
-</tspan>
-                <tspan x="776" y="570.49997">Week?</tspan></text>
-        </g>
-        <g class="bpmn-intermediate-catch-event" data-bpmn-id="intermediate_catch_event_1">
-            <circle cx="805.40002" cy="424.54999" r="16.16" stroke="#000" stroke-width="2.02"/>
-            <circle cx="805.40002" cy="424.54999" r="12.4836" fill="transparent" stroke="#000" stroke-width="2.02"/>
-            <path stroke="#000" stroke-miterlimit="10"
-                  d="M805.48 418.04c.24 0 .43-.19.43-.42v-.21c0-.43-.19-.43-.43-.43-.23 0-.42.19-.42.43v.21c0 .23.19.42.42.42zm0 13.19c-.23 0-.42.19-.42.42v.21c0 .24.19.43.42.43.24 0 .43-.19.43-.43v-.21c0-.23-.19-.42-.43-.42zm-7.01-7.02h-.22c-.23 0-.42.19-.42.43 0 .23.19.42.42.42h.22c.23 0 .9-.19.42-.42 0-.24-.19-.43-.42-.43zm14.24 0h-.21c-.23 0-.42.19-.42.43 0 .23.19.42.42.42h.21c.24 0 .43-.19.43-.42 0-.24-.19-.43-.43-.43m-12.03-4.98c-.17-.17-.43-.17-.6 0-.17.17-.17.43 0 .6l.15.15c.09.08.19.13.3.13.11 0 .19-.05.3-.13.17-.17.17-.43 0-.6l-.15-.15m-.45 10.06-.15.15c-.17.17-.17.43 0 .6.09.08.19.12.3.12.11 0 .21-.04.3-.12l.15-.15c.17-.17.17-.43 0-.6-.17-.17-.43-.17-.6 0m10.06-10.06-.15.15c-.17.17-.17.43 0 .6.09.08.19.13.3.13.1 0 .21-.05.3-.13l.14-.15c.17-.17.17-.43 0-.6-.17-.17-.42-.17-.59 0m-4.38 5.24v-3.87c0-.24-.19-.43-.43-.43-.23 0-.42.19-.42.43v4.04c0 .1.04.21.13.29l4.65 4.66c.09.08.19.13.3.13.11 0 .21-.05.3-.13.17-.17.17-.43 0-.6l-4.53-4.52m-.43-9.62c-5.4 0-9.78 4.38-9.78 9.79 0 5.4 4.38 9.78 9.78 9.78 5.4 0 9.78-4.38 9.78-9.78 0-5.41-4.38-9.79-9.78-9.79m0 18.72c-4.93 0-8.93-4-8.93-8.93 0-4.94 4-8.94 8.93-8.94 4.94 0 8.93 4 8.93 8.94 0 4.93-3.99 8.93-8.93 8.93"/>
-            <text xml:space="preserve" x="745" y="379" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:center;white-space:pre;inline-size:95.4878" transform="translate(10 3)"><tspan x="745" y="379">Wait until </tspan>
-                <tspan x="745" y="392.75">Thursday, 9 am</tspan></text>
-        </g>
-        <g class="bpmn-intermediate-catch-event" data-bpmn-id="intermediate_catch_event_2">
-            <circle cx="653.90002" cy="656.84998" r="16.16" stroke="#000" stroke-width="2.02"/>
-            <circle cx="653.90002" cy="656.84998" r="12.4836" fill="transparent" stroke="#000" stroke-width="2.02"/>
-            <path stroke="#000" stroke-miterlimit="10"
-                  d="M653.98 650.34c.24 0 .43-.19.43-.42v-.21c0-.43-.19-.43-.43-.43-.23 0-.42.19-.42.43v.21c0 .23.19.42.42.42zm0 13.19c-.23 0-.42.19-.42.42v.21c0 .24.19.43.42.43.24 0 .43-.19.43-.43v-.21c0-.23-.19-.42-.43-.42zm-7.01-7.02h-.22c-.23 0-.42.19-.42.43 0 .23.19.42.42.42h.22c.23 0 .9-.19.42-.42 0-.24-.19-.43-.42-.43zm14.24 0H661c-.23 0-.42.19-.42.43 0 .23.19.42.42.42h.21c.24 0 .43-.19.43-.42 0-.24-.19-.43-.43-.43m-12.03-4.98c-.17-.17-.43-.17-.6 0-.17.17-.17.43 0 .6l.15.15c.09.08.19.13.3.13.11 0 .19-.05.3-.13.17-.17.17-.43 0-.6l-.15-.15m-.45 10.06-.15.15c-.17.17-.17.43 0 .6.09.08.19.12.3.12.11 0 .21-.04.3-.12l.15-.15c.17-.17.17-.43 0-.6-.17-.17-.43-.17-.6 0m10.06-10.06-.15.15c-.17.17-.17.43 0 .6.09.08.19.13.3.13.1 0 .21-.05.3-.13l.14-.15c.17-.17.17-.43 0-.6-.17-.17-.42-.17-.59 0m-4.38 5.24v-3.87c0-.24-.19-.43-.43-.43-.23 0-.42.19-.42.43v4.04c0 .1.04.21.13.29l4.65 4.66c.09.08.19.13.3.13.11 0 .21-.05.3-.13.17-.17.17-.43 0-.6l-4.53-4.52m-.43-9.62c-5.4 0-9.78 4.38-9.78 9.79 0 5.4 4.38 9.78 9.78 9.78 5.4 0 9.78-4.38 9.78-9.78 0-5.41-4.38-9.79-9.78-9.79m0 18.72c-4.93 0-8.93-4-8.93-8.93 0-4.94 4-8.94 8.93-8.94 4.94 0 8.93 4 8.93 8.94 0 4.93-3.99 8.93-8.93 8.93"/>
-            <text xml:space="preserve" x="593" y="614" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:left;white-space:pre;inline-size:92.2695" transform="translate(19 77)"><tspan x="593" y="614">Delay 6 days from
-</tspan>
-                <tspan x="593" y="627.74997">Announcement</tspan></text>
-        </g>
-        <g class="bpmn-user-task" data-bpmn-id="user_task_4">
-            <rect width="101" height="70.699997" x="884.17999" y="390.20999" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="#000"
-                  d="m898.4 404.83-1.82-.68c-.19-.07-.31-.25-.31-.45v-.32c1.1-.63 1.77-1.79 1.77-3.05V399c0-1.08-.5-2.11-1.35-2.77.02-.11.03-.22.03-.34-.03-1.19-1-2.14-2.19-2.14-1.2 0-2.17.95-2.19 2.14 0 .12.01.23.02.34-.85.66-1.35 1.68-1.35 2.77v1.33c0 1.26.68 2.42 1.77 3.05v.32c0 .2-.12.38-.3.45l-1.83.68c-.85.32-1.41 1.13-1.41 2.04v4.1c-.01.15.07.29.2.37.13.08.29.08.42 0s.21-.22.2-.37v-4.1c.01-.07.01-.14.02-.21l.66.66c.17.17.27.41.27.65v3c-.01.15.07.29.2.37.13.08.3.08.43 0s.2-.22.2-.37v-3c0-.46-.18-.9-.51-1.23l-.84-.84c.13-.13.28-.23.46-.3l1.5-.56 1.66 1.66v4.27c0 .15.07.29.2.37.14.08.3.08.43 0s.21-.22.2-.37v-4.26l1.67-1.67 1.5.56c.17.07.33.17.46.3l-.84.84c-.33.33-.51.77-.51 1.23v3c-.01.15.07.29.2.37.13.08.29.08.42 0s.21-.22.21-.37v-3c-.01-.24.09-.47.26-.64l.66-.66c.01.07.02.14.02.21v4.09c.01.22.19.4.41.4.23 0 .41-.18.42-.4v-4.1c-.01-.91-.57-1.72-1.42-2.04zm-3.87-10.29c.69 0 1.27.52 1.35 1.21-.87-.36-1.84-.36-2.7 0 .07-.69.65-1.21 1.35-1.21zm-2.69 4.46c0-1.49 1.2-2.69 2.69-2.69 1.48 0 2.69 1.2 2.69 2.69v.45c-1.94-.14-3.79-1.24-3.81-1.25-.1-.06-.22-.08-.33-.04-.11.03-.2.11-.25.21-.19.37-.62.68-.99.88zm0 1.33v-.16c.38-.17 1.06-.52 1.49-1.07.68.36 2.23 1.08 3.89 1.18v.05c0 1.48-1.21 2.69-2.69 2.69-1.49 0-2.69-1.21-2.69-2.69zm2.69 5.62-1.31-1.31c.24-.24.38-.57.39-.92.6.17 1.23.17 1.83 0 .01.35.15.68.4.92z"/>
-            <text xml:space="preserve" x="900" y="420" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:center;white-space:pre;inline-size:82.8811"><tspan x="900" y="420">Moderate
-</tspan>
-                <tspan x="900" y="433.75">Conference Call
-</tspan>
-                <tspan x="900" y="447.5">Discussion</tspan></text>
-        </g>
-        <g class="bpmn-send-task" data-bpmn-id="send_task_2">
-            <rect width="101" height="75.75" x="732.67999" y="622.51001" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="#000" stroke="#000" d="M739.75 629.58002h20.200001v13.39H739.75z"/>
-            <path fill="none" stroke="#fff" stroke-miterlimit="10" d="m739.75 629.58 10.1 8.03 10.1-8.03m-20.2 13.39 6.73-7.36m13.47 7.36-6.73-7.36"/>
-            <text xml:space="preserve" x="751.72412" y="660.91956" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:left;white-space:pre;inline-size:81.9559" transform="translate(13.793103 -14.942529)"><tspan x="751.72412" y="660.91956">E-mail
-</tspan>
-                <tspan x="751.72412" y="674.66953">discussion
-</tspan>
-                <tspan x="751.72412" y="688.41953">Deadline
-</tspan>
-                <tspan x="751.72412" y="702.16953">Warning</tspan></text>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" class="bpmn-exclusive-gateway" data-bpmn-id="exclusive_gateway_3" pointer-events="all">
-            <path stroke-width="2.02" d="m1017.5 484.14 21.21 21.21-21.21 21.21-21.21-21.21z"/>
-            <path fill="#000"
-                  d="m1023.19220959 496.05154583 3.59917351 3.59917351L1021.09210245 505.35l5.69928065 5.69928066-3.59917351 3.59917351-5.69928066-5.69928065-5.69928065 5.69928065-3.59917352-3.59917351L1013.89375542 505.35l-5.69928066-5.69928066 3.59917352-3.59917351 5.69928065 5.69928065z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" class="bpmn-parallel-gateway" data-bpmn-id="parallel_gateway_2" pointer-events="all">
-            <path stroke-width="2.02" d="m1088.2 361.93 21.21 21.21-21.21 21.21-21.21-21.21z"/>
-            <path fill="#000" d="M1085.65 372.54h5.09v8.06h8.06v5.09h-8.06v8.06h-5.09v-8.06h-8.06v-5.09h8.06z"/>
-        </g>
-        <g class="bpmn-task" data-bpmn-id="task_1">
-            <rect width="83.830002" height="68.68" x="1146.78" y="348.79999" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <text xml:space="preserve" x="1159.7701" y="370.11493" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:left;white-space:pre;inline-size:70.8398" transform="translate(1.1494253 3.4482759)"><tspan x="1159.7701" y="370.11493">Evaluate
-</tspan>
-                <tspan x="1159.7701" y="383.86493">Discussion
-</tspan>
-                <tspan x="1159.7701" y="397.61493">Progress</tspan></text>
-        </g>
-        <g class="bpmn-text-annotation" data-bpmn-id="text_annotation_1">
-            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2.02" d="M873.07 574.03h-10.1v36.36h10.1"/>
-            <text x="874.71265" y="595.40228" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible" style="text-align:left">Conference
-                Calls are every two weeks
-            </text>
-        </g>
-        <g class="bpmn-text-annotation" data-bpmn-id="text_annotation_2">
-            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2.02" d="M1148.8 547.77h-10.1v87.87h10.1" pointer-events="all"/>
-            <text xml:space="preserve" x="1136.3636" y="562.55627" fill="#000" font-family="Arial, Helvetica" font-size="11" pointer-events="none"
-                  style="white-space:pre;inline-size:89.7432" transform="translate(13.636363 4.5454545)"><tspan x="1136.3636" y="562.55627">The Process will </tspan>
-                <tspan x="1136.3636" y="576.30625">loop if there is no </tspan>
-                <tspan x="1136.3636" y="590.05625">discussion of the </tspan>
-                <tspan x="1136.3636" y="603.80625">issues or </tspan>
-                <tspan x="1136.3636" y="617.55625">sufficient solutions</tspan></text>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_36">
-            <path fill="none" d="M1038.36 505H1085.48q2.52 0 2.52-2.52v-83" pointer-events="stroke"/>
-            <path fill="#000" d="m1088 405.85 4.55 13.63h-9.09z" pointer-events="all"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_35">
-            <path fill="none" d="M985.18 425h29.3q2.52 0 2.52 2.52v41.79"/>
-            <path fill="#000" d="m1017 482.95-4.54-13.64h9.08z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_34">
-            <path fill="none" d="M900.34 257h185.14q2.52 0 2.52 2.52v87.28" pointer-events="stroke"/>
-            <path fill="#000" d="m1088 360.44-4.54-13.64h9.09z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_33">
-            <path fill="none" d="M821.55 425h47.3"/>
-            <path fill="#000" d="m882.48 425-13.63 4.55v-9.1z"/>
-        </g>
-        <g class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_32">
-            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="M805 484.54v-.27q0-.27.02-2.79l.24-25.44"/>
-            <path fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="m805.38 442.4 4.42 13.68-9.09-.08z"/>
-            <text x="770.11493" y="481.60922" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible" style="text-align:left">Yes</text>
-        </g>
-        <g class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_31">
-            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="M826.26 505h167.22q2.52 0 0 0h-6.54" pointer-events="stroke"/>
-            <path fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="m995.57 505-8.63 2.88v-5.76z"/>
-            <text x="841.37933" y="494.25287" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible" style="text-align:left">No</text>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_30">
-            <path fill="none" d="M712.48 508.89h59.91"/>
-            <path fill="#000" d="m786.03 508.89-13.64 4.54v-9.09z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_29">
-            <path fill="none" d="M1109.41 383.14h22.04"/>
-            <path fill="#000" d="m1145.08 383.14-13.63 4.55v-9.09z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_28">
-            <path fill="none" d="M833.68 657h251.8q2.52 0 2.52-2.52v-235"/>
-            <path fill="#000" d="m1088 405.85 4.55 13.63h-9.09z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_27">
-            <path fill="none" d="M670.06 656.85h47.29"/>
-            <path fill="#000" d="m730.98 656.85-13.63 4.55v-9.09z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_26">
-            <path fill="none" d="M573 427.58v226.9q0 2.52 2.52 2.52h46.89"/>
-            <path fill="#000" d="m636.05 657-13.64 4.55v-9.09z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_25">
-            <path fill="none" d="M604.41 394h47.07q2.52 0 2.52 2.52v59.16"/>
-            <path fill="#000" d="m654 469.32-4.54-13.64h9.08z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_24">
-            <path fill="none" d="M573 348.8V248.53q0-2.53 2.52-2.53h192.33"/>
-            <path fill="#000" d="m781.48 246-13.63 4.54v-9.09z"/>
-        </g>
-        <path fill="none" stroke="#000" stroke-dasharray="1.515, 3.03" stroke-miterlimit="10" stroke-width="1.52" d="M1177.08 547.77V417.48"
-              class="bpmn-association" data-bpmn-id="association_1"/>
-        <path fill="none" stroke="#000" stroke-dasharray="1.515, 3.03" stroke-miterlimit="10" stroke-width="1.52"
-              d="M916.5 574.03v-45.95q0-2.53-2.51-2.84l-92.96-11.5-2.5-.31" class="bpmn-association" data-bpmn-id="association_2"/>
-        <g class="bpmn-send-task" data-bpmn-id="send_task_3">
-            <rect width="93.93" height="68.68" x="1377.0601" y="377.07999" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="#000" stroke="#000" d="M1384.13 384.14999h18.790001v12.45H1384.13z"/>
-            <path fill="none" stroke="#fff" stroke-miterlimit="10" d="m1384.13 384.15 9.39 7.47 9.39-7.47m-18.78 12.45 6.26-6.85m12.52 6.85-6.26-6.85"/>
-            <text xml:space="preserve" x="1397.7012" y="413.79309" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="white-space:pre;inline-size:73.2889" transform="translate(-6.8965517 1.1494253)"><tspan x="1397.7012" y="413.79309">Announce
-</tspan>
-                <tspan x="1397.7012" y="427.54309">Issues for Vote</tspan></text>
-        </g>
-        <g class="bpmn-start-event" data-bpmn-id="start_event_1">
-            <circle cx="58" cy="411.42001" r="15.15" stroke="#000" stroke-width="2.02"/>
-            <path stroke="#000" stroke-miterlimit="10"
-                  d="M58.08 405.32c.22 0 .4-.18.4-.4v-.2c0-.4-.18-.4-.4-.4-.22 0-.4.18-.4.4v.2c0 .22.18.4.4.4zm0 12.36c-.22 0-.4.18-.4.4v.2c0 .22.18.4.4.4.22 0 .4-.18.4-.4v-.2c0-.22-.18-.4-.4-.4zm-6.58-6.58h-.2c-.22 0-.4.18-.4.4 0 .22.18.4.4.4h.2c.22 0 .85-.18.4-.4 0-.22-.18-.4-.4-.4zm13.36 0h-.2c-.22 0-.4.18-.4.4 0 .22.18.4.4.4h.2c.22 0 .39-.18.39-.4 0-.22-.17-.4-.39-.4m-11.29-4.66c-.16-.16-.4-.16-.55 0-.16.16-.16.4 0 .55l.13.14c.08.08.18.12.28.12.1 0 .18-.04.28-.12.16-.15.16-.39 0-.55l-.14-.14m-.42 9.43-.13.14c-.16.15-.16.39 0 .55.07.08.17.12.27.12s.2-.04.28-.12l.14-.14c.16-.16.16-.39 0-.55-.16-.16-.4-.16-.56 0m9.43-9.43-.14.14c-.16.16-.16.4 0 .55.09.08.18.12.28.12.1 0 .2-.04.28-.12l.14-.14c.16-.15.16-.39 0-.55-.16-.16-.4-.16-.56 0m-4.1 4.9v-3.63c0-.22-.18-.4-.4-.4-.22 0-.4.18-.4.4v3.79c0 .1.04.2.12.28l4.36 4.36c.08.08.18.12.28.12.1 0 .2-.04.28-.12.16-.15.16-.39 0-.55l-4.24-4.25m-.4-9.01c-5.06 0-9.17 4.11-9.17 9.17s4.11 9.17 9.17 9.17 9.17-4.11 9.17-9.17-4.11-9.17-9.17-9.17m0 17.54c-4.63 0-8.37-3.75-8.37-8.37 0-4.62 3.74-8.37 8.37-8.37 4.62 0 8.37 3.75 8.37 8.37 0 4.62-3.75 8.37-8.37 8.37"/>
-            <text x="43.678162" y="443.67816" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible" style="text-align:left">Friday</text>
-        </g>
-        <g class="bpmn-user-task" data-bpmn-id="user_task_1">
-            <rect width="95.950867" height="68.68" x="146.88" y="377.07999" stroke="#000" stroke-width="2.02" rx="10.1" ry="10.1"/>
-            <path fill="#000"
-                  d="m160.58 391.28-1.76-.66c-.18-.07-.3-.24-.3-.43v-.32c1.06-.6 1.72-1.74 1.72-2.96v-1.29c0-1.05-.49-2.05-1.32-2.7.02-.1.03-.21.03-.32-.02-1.16-.97-2.09-2.13-2.09s-2.1.93-2.12 2.09c0 .11.01.22.02.32-.83.65-1.31 1.64-1.31 2.7v1.29c0 1.22.65 2.35 1.72 2.96v.32c0 .19-.12.36-.3.43l-1.77.66c-.83.31-1.37 1.1-1.38 1.99v3.97c0 .15.07.29.2.37.13.07.28.07.41 0 .13-.08.2-.22.2-.37v-3.97c0-.07 0-.14.01-.21l.64.64c.17.17.27.4.27.63v2.91c-.01.15.06.29.19.37.13.07.29.07.41 0 .13-.08.21-.22.2-.37v-2.9c0-.45-.18-.89-.5-1.2l-.81-.82c.13-.13.28-.22.44-.29l1.46-.54 1.62 1.61v4.14c-.01.15.07.29.2.37.12.07.28.07.41 0 .13-.08.2-.22.2-.37v-4.13l1.61-1.62 1.46.55c.17.06.32.16.45.28l-.82.82c-.32.32-.5.75-.49 1.2v2.91c-.01.14.06.28.19.36.13.07.29.07.41 0 .13-.08.21-.22.2-.36v-2.91c0-.24.09-.47.26-.63l.64-.64c.01.06.02.13.02.2v3.98c.01.21.18.38.4.38.22 0 .39-.17.4-.38v-3.98c0-.89-.55-1.68-1.38-1.99zm-3.76-10c.68 0 1.24.51 1.32 1.18-.84-.35-1.79-.35-2.63 0 .07-.67.64-1.18 1.31-1.18zm-2.61 4.34c0-1.45 1.17-2.61 2.61-2.61 1.45 0 2.62 1.16 2.62 2.61v.44c-1.88-.14-3.68-1.21-3.7-1.22-.1-.06-.21-.07-.32-.04-.11.03-.2.11-.25.21-.18.36-.6.65-.96.85zm0 1.29v-.16c.37-.16 1.03-.5 1.45-1.03.66.34 2.17 1.04 3.78 1.15v.04c0 .93-.5 1.79-1.31 2.26-.81.47-1.8.47-2.61 0-.81-.47-1.31-1.33-1.31-2.26zm2.61 5.46-1.27-1.28c.24-.23.38-.55.38-.88.59.16 1.2.16 1.78 0 .01.33.15.65.39.88z"/>
-            <text xml:space="preserve" x="170" y="415" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible"
-                  style="text-align:left;white-space:pre;inline-size:81.9105" transform="translate(3.4482759 -3.4482759)"><tspan x="170" y="415">Review
-</tspan>
-                <tspan x="170" y="428.75">Issue List</tspan></text>
-        </g>
-        <g class="bpmn-exclusive-gateway" data-bpmn-id="exclusive_gateway_1">
-            <path stroke="#000" stroke-miterlimit="10" stroke-width="2.02" d="m340.8 390.21 21.21 21.21-21.21 21.21-21.21-21.21z"/>
-            <path fill="#000" stroke="#000" stroke-miterlimit="10"
-                  d="m346.49220959 402.12154583 3.59917351 3.59917351L344.39210245 411.42l5.69928065 5.69928066-3.59917351 3.59917351-5.69928066-5.69928065-5.69928065 5.69928065-3.59917352-3.59917351L337.19375542 411.42l-5.69928066-5.69928066 3.59917352-3.59917351 5.69928065 5.69928065z"/>
-            <text x="297.70114" y="375.86206" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible" style="text-align:left">Are issues
-                ready?
-            </text>
-        </g>
-        <circle cx="340.79999" cy="515.45001" r="16.16" stroke="#000" stroke-width="5.05" class="bpmn-end-event" data-bpmn-id="end_event_1"
-                transform="translate(.5 .5)"/>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_22">
-            <path fill="none" d="M1423 81.60801V-27.026026 360.63695" transform="matrix(1 0 0 .86405 0 51.035832)"/>
-            <path fill="#000" d="m1423 375.39-4.55-13.64h9.1z" transform="matrix(1 0 0 .86405 0 51.035832)"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_22">
-            <path fill="none" d="M970.73181 109.47694V28.13016" transform="matrix(1.00226 0 0 .97834 -2.1981423 .12176773)"/>
-            <path fill="#000" d="m970.73181 109.47727-4.55-13.639994h9.1z" transform="matrix(1.00226 0 0 .97834 -2.1981423 .12176773)"/>
-        </g>
-        <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="M1470.0352 412.72749h34.3855" class="bpmn-type-flow bpmn-sequence-flow"
-              data-bpmn-id="sequence_flow_12"/>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_5">
-            <path fill="none" d="M1250.81 411H1361.73"/>
-            <path fill="#000" d="m1375.36 411-13.63 4.55v-9.1z"/>
-        </g>
-        <g class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_4">
-            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="M362.01 411.42h74.56"/>
-            <path fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="m450.2 411.42-13.63 4.55v-9.09z"/>
-            <text x="360.91953" y="433.33334" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible" style="text-align:left">Yes</text>
-        </g>
-        <g class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_3">
-            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="M341 432.43v.28q0 .29-.01 2.81l-.14 48.44M344.28 435.71l-6.56 6.57"/>
-            <path fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="1.52" d="m340.8 497.6-4.5-13.65 9.09.03z"/>
-            <text x="311.49426" y="442.52872" fill="#000" font-family="Arial, Helvetica" font-size="11" overflow="visible" style="text-align:left">No</text>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_2">
-            <path fill="none" d="M242.83 411.42h61.43"/>
-            <path fill="#000" d="m317.89 411.42-13.63 4.55v-9.09z"/>
-        </g>
-        <g stroke="#000" stroke-miterlimit="10" stroke-width="1.52" class="bpmn-sequence-flow" data-bpmn-id="sequence_flow_1">
-            <path fill="none" d="M73.15 411.42h58.4"/>
-            <path fill="#000" d="m145.18 411.42-13.63 4.55v-9.09z"/>
-        </g>
-        <g stroke="#000" stroke-width="1.52" class="bpmn-message-flow" data-bpmn-id="message_flow_1">
-            <path fill="none" stroke-dasharray="12.12, 7.575" stroke-miterlimit="10" d="M552 430.77778v-1.21606V800"/>
-            <circle cx="552" cy="427.57999" r="4.04"/>
-        </g>
-        <g stroke="#000" stroke-width="1.52" class="bpmn-message-flow" data-bpmn-id="message_flow_2">
-            <path fill="none" stroke-dasharray="12.12, 7.575" stroke-miterlimit="10" d="M783.18 702.3v100"/>
-            <circle cx="783.17999" cy="698.26001" r="4.04"/>
-        </g>
-        <g stroke="#000" stroke-width="1.52" class="bpmn-message-flow" data-bpmn-id="message_flow_3">
-            <path fill="none" stroke-dasharray="12.12, 7.575" stroke-miterlimit="10" d="M1418 448.87119v-1.25042V800"/>
-            <circle cx="1418" cy="445.76001" r="4.04"/>
-        </g>
-        <g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_3" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M329 450h24v21h-24z"/>
-                <text x="341" y="467">26</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_4" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M385 402h24v21h-24z"/>
-                <text x="397" y="419.07999">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sub_process_1" font-family="Arial, Helvetica" font-size="14.14" text-anchor="middle">
-                <path fill="#36a036" stroke="#36a036" stroke-width="1.01" d="M841 104h19v16h-19z"/>
-                <text x="851" y="117.06">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="send_task_1" font-family="Arial, Helvetica" font-size="14.14" text-anchor="middle">
-                <path fill="#36a036" stroke="#36a036" stroke-width="1.01" d="M547 342h19v16h-19z"/>
-                <text x="557" y="355.06">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="user_task_2" font-family="Arial, Helvetica" font-size="14.14" text-anchor="middle">
-                <path fill="#36a036" stroke="#36a036" stroke-width="1.01" d="M652 464h19v16h-19z"/>
-                <text x="662" y="477.06">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_34" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M1076 248h24v21h-24z"/>
-                <text x="1088" y="265.07999">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="user_task_3" font-family="Arial, Helvetica" font-size="14.14" text-anchor="middle">
-                <path fill="#36a036" stroke="#36a036" stroke-width="1.01" d="M824 204h19v16h-19z"/>
-                <text x="834" y="217.06">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_31" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M900 496h24v21h-24z"/>
-                <text x="912" y="513.08002">30</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_32" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M793 455h24v21h-24z"/>
-                <text x="805" y="472">39</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_36" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M1075 496h24v21h-24z"/>
-                <text x="1087" y="513.08002">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="intermediate_catch_event_2" font-family="Arial, Helvetica" font-size="14.14" text-anchor="middle">
-                <path fill="#36a036" stroke="#36a036" stroke-width="1.01" d="M644 634h19v16h-19z"/>
-                <text x="654" y="647.06">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="send_task_2" font-family="Arial, Helvetica" font-size="14.14" text-anchor="middle">
-                <path fill="#36a036" stroke="#36a036" stroke-width="1.01" d="M773 616h19v16h-19z"/>
-                <text x="783" y="629.06">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_28" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M1075 648h24v21h-24z"/>
-                <text x="1087" y="665.08002">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="sequence_flow_28" font-family="Arial, Helvetica" font-size="18.18" text-anchor="middle">
-                <path fill="#aa6bd1" stroke="#aa6bd1" stroke-width="1.01" d="M1300 400h24v21h-24z"/>
-                <text x="1312" y="417">69</text>
-            </g>
-            <g class="overlay-badge" data-bpmn-id="task_1" font-family="Arial, Helvetica" font-size="14.14" text-anchor="middle">
-                <path fill="#36a036" stroke="#36a036" stroke-width="1.01" d="M1179 342h19v16h-19z"/>
-                <text x="1189" y="355.06">69</text>
-            </g>
-        </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1500"
+   height="770"
+   version="1.1"
+   id="svg13090"
+   sodipodi:docname="example_email_voting_with_overlays.svg"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   inkscape:export-filename="/Users/csouchet/Downloads/test.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs270" />
+  <sodipodi:namedview
+     id="namedview13092"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.59"
+     inkscape:cx="422.88136"
+     inkscape:cy="322.0339"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="1680"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g112852"
+     inkscape:snap-bbox="false"
+     inkscape:snap-object-midpoints="true" />
+  <g
+     id="g13088"
+     fill="#ffffff"
+     inkscape:export-filename="/Users/csouchet/Downloads/test.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     transform="translate(0,-27.642694)">
+    <rect
+       width="100%"
+       height="100%"
+       fill="#ffffff"
+       id="rect12"
+       x="0"
+       y="27.642694" />
+    <g
+       id="g12964">
+      <g
+         class="bpmn-sub-process"
+         data-bpmn-id="sub_process_1"
+         id="g271927">
+        <rect
+           x="451.89999"
+           y="111.45"
+           width="798.90997"
+           height="636.29999"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect271919" />
+        <path
+           d="m 845.55,738.11 c -2.94,-2.6 -3.59,-6.94 -1.53,-10.29 2.06,-3.34 6.23,-4.72 9.88,-3.26 3.65,1.46 5.72,5.33 4.91,9.18 -0.82,3.84 -4.28,6.54 -8.21,6.39"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path271921" />
+        <path
+           d="m 847.57,733.06 -1.77,5.05 -5.8,-2.02 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path271923" />
+        <text
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="746.59088"
+           y="135.22728"
+           id="text271925"
+           fill="#000000">Discussion Cycle</text>
+      </g>
+      <g
+         class="bpmn-send-task"
+         data-bpmn-id="send_task_1"
+         id="g271937">
+        <rect
+           x="510.48001"
+           y="348.79999"
+           width="93.93"
+           height="78.779999"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect271929" />
+        <rect
+           x="517.54999"
+           y="355.87"
+           width="18.790001"
+           height="12.45"
+           fill="#000000"
+           stroke="#000000"
+           id="rect271931" />
+        <path
+           d="m 517.55,355.87 9.39,7.47 9.39,-7.47 m -18.78,12.45 6.26,-6.85 m 12.52,6.85 -6.26,-6.85"
+           fill="none"
+           stroke="#ffffff"
+           stroke-miterlimit="10"
+           id="path271933" />
+        <text
+           style="text-align:center;text-anchor:middle;white-space:pre;inline-size:78.2737;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="552.37146"
+           y="385.22726"
+           transform="translate(6.4090909,-0.5454545)"
+           id="text271935"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="552.37146"
+             y="385.22726"
+             id="tspan1389">Announce
+</tspan><tspan
+             x="552.37146"
+             y="398.97727"
+             id="tspan1391">Issues for
+</tspan><tspan
+             x="552.37146"
+             y="412.72727"
+             id="tspan1393">Discussion</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-user-task"
+         data-bpmn-id="user_task_2"
+         id="g271945">
+        <rect
+           x="611.47998"
+           y="471.01001"
+           width="101"
+           height="75.75"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect271939" />
+        <path
+           d="m 626.35,486.67 -1.95,-0.73 c -0.19,-0.07 -0.32,-0.26 -0.32,-0.47 v -0.35 c 1.17,-0.67 1.89,-1.92 1.89,-3.27 v -1.42 c 0,-1.16 -0.53,-2.26 -1.45,-2.97 0.02,-0.12 0.03,-0.24 0.03,-0.36 -0.02,-1.28 -1.07,-2.3 -2.34,-2.3 -1.28,0 -2.33,1.02 -2.35,2.3 0,0.12 0.01,0.24 0.03,0.36 -0.92,0.71 -1.45,1.8 -1.45,2.97 v 1.42 c 0,1.35 0.72,2.6 1.9,3.27 v 0.35 c 0,0.21 -0.14,0.4 -0.33,0.47 l -1.96,0.73 c -0.91,0.35 -1.51,1.22 -1.51,2.19 v 4.39 c -0.01,0.16 0.07,0.32 0.21,0.4 0.14,0.08 0.32,0.08 0.46,0 0.14,-0.08 0.22,-0.24 0.21,-0.4 v -4.39 c 0,-0.07 0.01,-0.15 0.02,-0.22 l 0.71,0.7 c 0.18,0.19 0.29,0.44 0.29,0.7 v 3.21 c -0.01,0.16 0.07,0.32 0.21,0.4 0.14,0.08 0.32,0.08 0.46,0 0.14,-0.08 0.22,-0.24 0.21,-0.4 v -3.21 c 0.01,-0.49 -0.19,-0.97 -0.54,-1.32 l -0.9,-0.9 c 0.14,-0.14 0.3,-0.25 0.49,-0.32 l 1.61,-0.6 1.78,1.78 v 4.57 c -0.01,0.16 0.08,0.32 0.22,0.4 0.14,0.08 0.31,0.08 0.45,0 0.14,-0.08 0.23,-0.24 0.22,-0.4 v -4.57 l 1.78,-1.78 1.61,0.6 c 0.19,0.08 0.35,0.18 0.5,0.32 l -0.91,0.9 c -0.35,0.35 -0.54,0.83 -0.54,1.32 v 3.21 c -0.01,0.16 0.07,0.32 0.21,0.4 0.14,0.09 0.32,0.09 0.46,0 0.14,-0.08 0.22,-0.24 0.22,-0.4 v -3.21 c -0.01,-0.26 0.1,-0.51 0.28,-0.69 l 0.71,-0.71 c 0.01,0.08 0.02,0.15 0.02,0.23 v 4.38 c 0.01,0.24 0.2,0.43 0.44,0.43 0.24,0 0.44,-0.19 0.45,-0.43 v -4.39 c -0.01,-0.97 -0.62,-1.84 -1.53,-2.19 z m -4.14,-11.03 c 0.74,0.01 1.36,0.57 1.44,1.31 -0.92,-0.39 -1.97,-0.39 -2.89,0 0.08,-0.74 0.7,-1.3 1.45,-1.31 z m -2.89,4.79 c 0,-1.6 1.29,-2.88 2.89,-2.88 1.59,0 2.88,1.28 2.88,2.88 v 0.48 c -2.07,-0.15 -4.06,-1.33 -4.08,-1.34 -0.11,-0.06 -0.23,-0.08 -0.35,-0.05 -0.12,0.04 -0.22,0.12 -0.28,0.23 -0.2,0.4 -0.66,0.73 -1.06,0.94 z m 0,1.42 v -0.17 c 0.41,-0.18 1.14,-0.55 1.61,-1.14 0.72,0.38 2.39,1.15 4.16,1.26 v 0.05 c 0,1.59 -1.29,2.88 -2.88,2.88 -1.6,0 -2.89,-1.29 -2.89,-2.88 z m 2.89,6.02 -1.41,-1.4 c 0.26,-0.26 0.42,-0.61 0.42,-0.98 0.65,0.17 1.32,0.17 1.97,0 0,0.37 0.16,0.72 0.42,0.98 z"
+           fill="#000000"
+           stroke="none"
+           id="path271941" />
+        <text
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="625"
+           y="507"
+           text-align="center"
+           style="white-space:pre;inline-size:80"
+           id="text271943"
+           xml:space="preserve"
+           fill="#000000"><tspan
+             x="625"
+             y="507"
+             id="tspan1395">Check Calendar
+</tspan><tspan
+             x="625"
+             y="520.75"
+             id="tspan1397">for Conference
+</tspan><tspan
+             x="625"
+             y="534.49997"
+             id="tspan1399">Call</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-user-task"
+         data-bpmn-id="user_task_3"
+         id="g271953">
+        <rect
+           x="783.17999"
+           y="211.44"
+           width="101"
+           height="75.75"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect271947" />
+        <path
+           d="m 798.05,227.1 -1.95,-0.73 c -0.19,-0.07 -0.32,-0.26 -0.32,-0.47 v -0.35 c 1.17,-0.67 1.89,-1.92 1.89,-3.27 v -1.42 c 0,-1.16 -0.53,-2.26 -1.45,-2.97 0.02,-0.12 0.03,-0.24 0.03,-0.36 -0.02,-1.28 -1.07,-2.3 -2.34,-2.3 -1.28,0 -2.33,1.02 -2.35,2.3 0,0.12 0.01,0.24 0.03,0.36 -0.92,0.71 -1.45,1.8 -1.45,2.97 v 1.42 c 0,1.35 0.72,2.6 1.9,3.27 v 0.35 c 0,0.21 -0.14,0.4 -0.33,0.47 l -1.96,0.73 c -0.91,0.35 -1.51,1.22 -1.51,2.19 v 4.39 c -0.01,0.16 0.07,0.32 0.21,0.4 0.14,0.08 0.32,0.08 0.46,0 0.14,-0.08 0.22,-0.24 0.21,-0.4 v -4.39 c 0,-0.07 0.01,-0.15 0.02,-0.22 l 0.71,0.7 c 0.18,0.19 0.29,0.44 0.29,0.7 v 3.21 c -0.01,0.16 0.07,0.32 0.21,0.4 0.14,0.08 0.32,0.08 0.46,0 0.14,-0.08 0.22,-0.24 0.21,-0.4 v -3.21 c 0.01,-0.49 -0.19,-0.97 -0.54,-1.32 l -0.9,-0.9 c 0.14,-0.14 0.3,-0.25 0.49,-0.32 l 1.61,-0.6 1.78,1.78 v 4.57 c -0.01,0.16 0.08,0.32 0.22,0.4 0.14,0.08 0.31,0.08 0.45,0 0.14,-0.08 0.23,-0.24 0.22,-0.4 v -4.57 l 1.78,-1.78 1.61,0.6 c 0.19,0.08 0.35,0.18 0.5,0.32 l -0.91,0.9 c -0.35,0.35 -0.54,0.83 -0.54,1.32 v 3.21 c -0.01,0.16 0.07,0.32 0.21,0.4 0.14,0.09 0.32,0.09 0.46,0 0.14,-0.08 0.22,-0.24 0.22,-0.4 v -3.21 c -0.01,-0.26 0.1,-0.51 0.28,-0.69 l 0.71,-0.71 c 0.01,0.08 0.02,0.15 0.02,0.23 v 4.38 c 0.01,0.24 0.2,0.43 0.44,0.43 0.24,0 0.44,-0.19 0.45,-0.43 v -4.39 c -0.01,-0.97 -0.62,-1.84 -1.53,-2.19 z m -4.14,-11.03 c 0.74,0.01 1.36,0.57 1.44,1.31 -0.92,-0.39 -1.97,-0.39 -2.89,0 0.08,-0.74 0.7,-1.3 1.45,-1.31 z m -2.89,4.79 c 0,-1.6 1.29,-2.88 2.89,-2.88 1.59,0 2.88,1.28 2.88,2.88 v 0.48 c -2.07,-0.15 -4.06,-1.33 -4.08,-1.34 -0.11,-0.06 -0.23,-0.08 -0.35,-0.05 -0.12,0.04 -0.22,0.12 -0.28,0.23 -0.2,0.4 -0.66,0.73 -1.06,0.94 z m 0,1.42 v -0.17 c 0.41,-0.18 1.14,-0.55 1.61,-1.14 0.72,0.38 2.39,1.15 4.16,1.26 v 0.05 c 0,1.59 -1.29,2.88 -2.88,2.88 -1.6,0 -2.89,-1.29 -2.89,-2.88 z m 2.89,6.02 -1.41,-1.4 c 0.26,-0.26 0.42,-0.61 0.42,-0.98 0.65,0.17 1.32,0.17 1.97,0 0,0.37 0.16,0.72 0.42,0.98 z"
+           fill="#000000"
+           stroke="none"
+           pointer-events="all"
+           id="path271949" />
+        <text
+           x="870"
+           y="240"
+           text-anchor="middle"
+           font-size="11px"
+           style="white-space:pre;inline-size:60.68"
+           transform="translate(-35.227273,2.2727273)"
+           font-family="Arial, Helvetica"
+           id="text271951"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="870"
+             y="240"
+             id="tspan1401">Moderate 
+</tspan><tspan
+             x="870"
+             y="253.75"
+             id="tspan1403">E-mail
+</tspan><tspan
+             x="870"
+             y="267.5"
+             id="tspan1405">Discussion</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-boundary-event"
+         data-bpmn-id="boundary_event_1"
+         id="g271963">
+        <circle
+           cx="884.17999"
+           cy="256.89001"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="ellipse271955"
+           r="16.16" />
+        <circle
+           cx="884.17999"
+           cy="256.89001"
+           fill="transparent"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="ellipse271957"
+           r="12.4836" />
+        <path
+           d="m 884.26,250.38 c 0.24,0 0.43,-0.19 0.43,-0.42 v -0.21 c 0,-0.43 -0.19,-0.43 -0.43,-0.43 -0.23,0 -0.42,0.19 -0.42,0.43 v 0.21 c 0,0.23 0.19,0.42 0.42,0.42 z m 0,13.19 c -0.23,0 -0.42,0.19 -0.42,0.42 v 0.21 c 0,0.24 0.19,0.43 0.42,0.43 0.24,0 0.43,-0.19 0.43,-0.43 v -0.21 c 0,-0.23 -0.19,-0.42 -0.43,-0.42 z m -7.01,-7.02 h -0.22 c -0.23,0 -0.42,0.19 -0.42,0.43 0,0.23 0.19,0.42 0.42,0.42 h 0.22 c 0.23,0 0.9,-0.19 0.42,-0.42 0,-0.24 -0.19,-0.43 -0.42,-0.43 z m 14.24,0 h -0.21 c -0.23,0 -0.42,0.19 -0.42,0.43 0,0.23 0.19,0.42 0.42,0.42 h 0.21 c 0.24,0 0.43,-0.19 0.43,-0.42 0,-0.24 -0.19,-0.43 -0.43,-0.43 m -12.03,-4.98 c -0.17,-0.17 -0.43,-0.17 -0.6,0 -0.17,0.17 -0.17,0.43 0,0.6 l 0.15,0.15 c 0.09,0.08 0.19,0.13 0.3,0.13 0.11,0 0.19,-0.05 0.3,-0.13 0.17,-0.17 0.17,-0.43 0,-0.6 l -0.15,-0.15 m -0.45,10.06 -0.15,0.15 c -0.17,0.17 -0.17,0.43 0,0.6 0.09,0.08 0.19,0.12 0.3,0.12 0.11,0 0.21,-0.04 0.3,-0.12 l 0.15,-0.15 c 0.17,-0.17 0.17,-0.43 0,-0.6 -0.17,-0.17 -0.43,-0.17 -0.6,0 m 10.06,-10.06 -0.15,0.15 c -0.17,0.17 -0.17,0.43 0,0.6 0.09,0.08 0.19,0.13 0.3,0.13 0.1,0 0.21,-0.05 0.3,-0.13 l 0.14,-0.15 c 0.17,-0.17 0.17,-0.43 0,-0.6 -0.17,-0.17 -0.42,-0.17 -0.59,0 m -4.38,5.24 v -3.87 c 0,-0.24 -0.19,-0.43 -0.43,-0.43 -0.23,0 -0.42,0.19 -0.42,0.43 v 4.04 c 0,0.1 0.04,0.21 0.13,0.29 l 4.65,4.66 c 0.09,0.08 0.19,0.13 0.3,0.13 0.11,0 0.21,-0.05 0.3,-0.13 0.17,-0.17 0.17,-0.43 0,-0.6 l -4.53,-4.52 m -0.43,-9.62 c -5.4,0 -9.78,4.38 -9.78,9.79 0,5.4 4.38,9.78 9.78,9.78 5.4,0 9.78,-4.38 9.78,-9.78 0,-5.41 -4.38,-9.79 -9.78,-9.79 m 0,18.72 c -4.93,0 -8.93,-4 -8.93,-8.93 0,-4.94 4,-8.94 8.93,-8.94 4.94,0 8.93,4 8.93,8.94 0,4.93 -3.99,8.93 -8.93,8.93"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           id="path271959" />
+        <text
+           x="1017.9526"
+           y="210.99808"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="11px"
+           transform="scale(0.89609276,1.1159559)"
+           style="stroke-width:1.11595"
+           id="text271961">7 Days</text>
+      </g>
+      <g
+         class="bpmn-exclusive-gateway"
+         data-bpmn-id="exclusive_gateway_2"
+         style="visibility:visible"
+         id="g271971">
+        <path
+           d="m 805.4,484.14 21.21,21.21 -21.21,21.21 -21.21,-21.21 z"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           stroke-miterlimit="10"
+           id="path271965" />
+        <path
+           d="m 802.85,494.75 h 5.09 v 8.06 H 816 v 5.09 h -8.06 v 8.06 h -5.09 v -8.06 h -8.06 v -5.09 h 8.06 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           transform="rotate(45,805.4,505.35)"
+           id="path271967" />
+        <text
+           font-size="11px"
+           style="text-align:center;text-anchor:middle;white-space:pre;inline-size:86.97;overflow:visible"
+           x="776"
+           y="543"
+           font-family="Arial, Helvetica"
+           id="text271969"
+           transform="translate(30)"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="776"
+             y="543"
+             id="tspan1407">Conference Call
+</tspan><tspan
+             x="776"
+             y="556.74997"
+             id="tspan1409">in Discussion
+</tspan><tspan
+             x="776"
+             y="570.49997"
+             id="tspan1411">Week?</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-intermediate-catch-event"
+         data-bpmn-id="intermediate_catch_event_1"
+         id="g271983">
+        <circle
+           cx="805.40002"
+           cy="424.54999"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="ellipse271973"
+           r="16.16" />
+        <circle
+           cx="805.40002"
+           cy="424.54999"
+           fill="transparent"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="ellipse271975"
+           r="12.4836" />
+        <path
+           d="m 805.48,418.04 c 0.24,0 0.43,-0.19 0.43,-0.42 v -0.21 c 0,-0.43 -0.19,-0.43 -0.43,-0.43 -0.23,0 -0.42,0.19 -0.42,0.43 v 0.21 c 0,0.23 0.19,0.42 0.42,0.42 z m 0,13.19 c -0.23,0 -0.42,0.19 -0.42,0.42 v 0.21 c 0,0.24 0.19,0.43 0.42,0.43 0.24,0 0.43,-0.19 0.43,-0.43 v -0.21 c 0,-0.23 -0.19,-0.42 -0.43,-0.42 z m -7.01,-7.02 h -0.22 c -0.23,0 -0.42,0.19 -0.42,0.43 0,0.23 0.19,0.42 0.42,0.42 h 0.22 c 0.23,0 0.9,-0.19 0.42,-0.42 0,-0.24 -0.19,-0.43 -0.42,-0.43 z m 14.24,0 h -0.21 c -0.23,0 -0.42,0.19 -0.42,0.43 0,0.23 0.19,0.42 0.42,0.42 h 0.21 c 0.24,0 0.43,-0.19 0.43,-0.42 0,-0.24 -0.19,-0.43 -0.43,-0.43 m -12.03,-4.98 c -0.17,-0.17 -0.43,-0.17 -0.6,0 -0.17,0.17 -0.17,0.43 0,0.6 l 0.15,0.15 c 0.09,0.08 0.19,0.13 0.3,0.13 0.11,0 0.19,-0.05 0.3,-0.13 0.17,-0.17 0.17,-0.43 0,-0.6 l -0.15,-0.15 m -0.45,10.06 -0.15,0.15 c -0.17,0.17 -0.17,0.43 0,0.6 0.09,0.08 0.19,0.12 0.3,0.12 0.11,0 0.21,-0.04 0.3,-0.12 l 0.15,-0.15 c 0.17,-0.17 0.17,-0.43 0,-0.6 -0.17,-0.17 -0.43,-0.17 -0.6,0 m 10.06,-10.06 -0.15,0.15 c -0.17,0.17 -0.17,0.43 0,0.6 0.09,0.08 0.19,0.13 0.3,0.13 0.1,0 0.21,-0.05 0.3,-0.13 l 0.14,-0.15 c 0.17,-0.17 0.17,-0.43 0,-0.6 -0.17,-0.17 -0.42,-0.17 -0.59,0 m -4.38,5.24 v -3.87 c 0,-0.24 -0.19,-0.43 -0.43,-0.43 -0.23,0 -0.42,0.19 -0.42,0.43 v 4.04 c 0,0.1 0.04,0.21 0.13,0.29 l 4.65,4.66 c 0.09,0.08 0.19,0.13 0.3,0.13 0.11,0 0.21,-0.05 0.3,-0.13 0.17,-0.17 0.17,-0.43 0,-0.6 l -4.53,-4.52 m -0.43,-9.62 c -5.4,0 -9.78,4.38 -9.78,9.79 0,5.4 4.38,9.78 9.78,9.78 5.4,0 9.78,-4.38 9.78,-9.78 0,-5.41 -4.38,-9.79 -9.78,-9.79 m 0,18.72 c -4.93,0 -8.93,-4 -8.93,-8.93 0,-4.94 4,-8.94 8.93,-8.94 4.94,0 8.93,4 8.93,8.94 0,4.93 -3.99,8.93 -8.93,8.93"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           id="path271977" />
+        <text
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           style="text-align:center;white-space:pre;inline-size:95.4878;overflow:visible"
+           x="745"
+           y="379"
+           id="text271981"
+           transform="translate(10,3)"
+           xml:space="preserve"
+           fill="#000000"><tspan
+             x="745"
+             y="379"
+             id="tspan1413">Wait until </tspan><tspan
+             x="745"
+             y="392.75"
+             id="tspan1415">Thursday, 9 am</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-intermediate-catch-event"
+         data-bpmn-id="intermediate_catch_event_2"
+         id="g271990">
+        <circle
+           cx="653.90002"
+           cy="656.84998"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="ellipse112666"
+           r="16.16" />
+        <circle
+           cx="653.90002"
+           cy="656.84998"
+           fill="transparent"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="ellipse112668"
+           r="12.4836" />
+        <path
+           d="m 653.98,650.34 c 0.24,0 0.43,-0.19 0.43,-0.42 v -0.21 c 0,-0.43 -0.19,-0.43 -0.43,-0.43 -0.23,0 -0.42,0.19 -0.42,0.43 v 0.21 c 0,0.23 0.19,0.42 0.42,0.42 z m 0,13.19 c -0.23,0 -0.42,0.19 -0.42,0.42 v 0.21 c 0,0.24 0.19,0.43 0.42,0.43 0.24,0 0.43,-0.19 0.43,-0.43 v -0.21 c 0,-0.23 -0.19,-0.42 -0.43,-0.42 z m -7.01,-7.02 h -0.22 c -0.23,0 -0.42,0.19 -0.42,0.43 0,0.23 0.19,0.42 0.42,0.42 h 0.22 c 0.23,0 0.9,-0.19 0.42,-0.42 0,-0.24 -0.19,-0.43 -0.42,-0.43 z m 14.24,0 H 661 c -0.23,0 -0.42,0.19 -0.42,0.43 0,0.23 0.19,0.42 0.42,0.42 h 0.21 c 0.24,0 0.43,-0.19 0.43,-0.42 0,-0.24 -0.19,-0.43 -0.43,-0.43 m -12.03,-4.98 c -0.17,-0.17 -0.43,-0.17 -0.6,0 -0.17,0.17 -0.17,0.43 0,0.6 l 0.15,0.15 c 0.09,0.08 0.19,0.13 0.3,0.13 0.11,0 0.19,-0.05 0.3,-0.13 0.17,-0.17 0.17,-0.43 0,-0.6 l -0.15,-0.15 m -0.45,10.06 -0.15,0.15 c -0.17,0.17 -0.17,0.43 0,0.6 0.09,0.08 0.19,0.12 0.3,0.12 0.11,0 0.21,-0.04 0.3,-0.12 l 0.15,-0.15 c 0.17,-0.17 0.17,-0.43 0,-0.6 -0.17,-0.17 -0.43,-0.17 -0.6,0 m 10.06,-10.06 -0.15,0.15 c -0.17,0.17 -0.17,0.43 0,0.6 0.09,0.08 0.19,0.13 0.3,0.13 0.1,0 0.21,-0.05 0.3,-0.13 l 0.14,-0.15 c 0.17,-0.17 0.17,-0.43 0,-0.6 -0.17,-0.17 -0.42,-0.17 -0.59,0 m -4.38,5.24 v -3.87 c 0,-0.24 -0.19,-0.43 -0.43,-0.43 -0.23,0 -0.42,0.19 -0.42,0.43 v 4.04 c 0,0.1 0.04,0.21 0.13,0.29 l 4.65,4.66 c 0.09,0.08 0.19,0.13 0.3,0.13 0.11,0 0.21,-0.05 0.3,-0.13 0.17,-0.17 0.17,-0.43 0,-0.6 l -4.53,-4.52 m -0.43,-9.62 c -5.4,0 -9.78,4.38 -9.78,9.79 0,5.4 4.38,9.78 9.78,9.78 5.4,0 9.78,-4.38 9.78,-9.78 0,-5.41 -4.38,-9.79 -9.78,-9.79 m 0,18.72 c -4.93,0 -8.93,-4 -8.93,-8.93 0,-4.94 4,-8.94 8.93,-8.94 4.94,0 8.93,4 8.93,8.94 0,4.93 -3.99,8.93 -8.93,8.93"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           id="path112670" />
+        <text
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           style="text-align:left;white-space:pre;inline-size:92.2695;overflow:visible"
+           x="593"
+           y="614"
+           transform="translate(19,77)"
+           id="text112672"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="593"
+             y="614"
+             id="tspan1417">Delay 6 days from
+</tspan><tspan
+             x="593"
+             y="627.74997"
+             id="tspan1419">Announcement</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-user-task"
+         data-bpmn-id="user_task_4"
+         id="g271995">
+        <rect
+           x="884.17999"
+           y="390.20999"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           width="101"
+           height="70.699997"
+           id="rect112675" />
+        <path
+           d="m 898.4,404.83 -1.82,-0.68 c -0.19,-0.07 -0.31,-0.25 -0.31,-0.45 v -0.32 c 1.1,-0.63 1.77,-1.79 1.77,-3.05 V 399 c 0,-1.08 -0.5,-2.11 -1.35,-2.77 0.02,-0.11 0.03,-0.22 0.03,-0.34 -0.03,-1.19 -1,-2.14 -2.19,-2.14 -1.2,0 -2.17,0.95 -2.19,2.14 0,0.12 0.01,0.23 0.02,0.34 -0.85,0.66 -1.35,1.68 -1.35,2.77 v 1.33 c 0,1.26 0.68,2.42 1.77,3.05 v 0.32 c 0,0.2 -0.12,0.38 -0.3,0.45 l -1.83,0.68 c -0.85,0.32 -1.41,1.13 -1.41,2.04 v 4.1 c -0.01,0.15 0.07,0.29 0.2,0.37 0.13,0.08 0.29,0.08 0.42,0 0.13,-0.08 0.21,-0.22 0.2,-0.37 v -4.1 c 0.01,-0.07 0.01,-0.14 0.02,-0.21 l 0.66,0.66 c 0.17,0.17 0.27,0.41 0.27,0.65 v 3 c -0.01,0.15 0.07,0.29 0.2,0.37 0.13,0.08 0.3,0.08 0.43,0 0.13,-0.08 0.2,-0.22 0.2,-0.37 v -3 c 0,-0.46 -0.18,-0.9 -0.51,-1.23 l -0.84,-0.84 c 0.13,-0.13 0.28,-0.23 0.46,-0.3 l 1.5,-0.56 1.66,1.66 v 4.27 c 0,0.15 0.07,0.29 0.2,0.37 0.14,0.08 0.3,0.08 0.43,0 0.13,-0.08 0.21,-0.22 0.2,-0.37 v -4.26 l 1.67,-1.67 1.5,0.56 c 0.17,0.07 0.33,0.17 0.46,0.3 l -0.84,0.84 c -0.33,0.33 -0.51,0.77 -0.51,1.23 v 3 c -0.01,0.15 0.07,0.29 0.2,0.37 0.13,0.08 0.29,0.08 0.42,0 0.13,-0.08 0.21,-0.22 0.21,-0.37 v -3 c -0.01,-0.24 0.09,-0.47 0.26,-0.64 l 0.66,-0.66 c 0.01,0.07 0.02,0.14 0.02,0.21 v 4.09 c 0.01,0.22 0.19,0.4 0.41,0.4 0.23,0 0.41,-0.18 0.42,-0.4 v -4.1 c -0.01,-0.91 -0.57,-1.72 -1.42,-2.04 z m -3.87,-10.29 c 0.69,0 1.27,0.52 1.35,1.21 -0.87,-0.36 -1.84,-0.36 -2.7,0 0.07,-0.69 0.65,-1.21 1.35,-1.21 z m -2.69,4.46 c 0,-1.49 1.2,-2.69 2.69,-2.69 1.48,0 2.69,1.2 2.69,2.69 v 0.45 c -1.94,-0.14 -3.79,-1.24 -3.81,-1.25 -0.1,-0.06 -0.22,-0.08 -0.33,-0.04 -0.11,0.03 -0.2,0.11 -0.25,0.21 -0.19,0.37 -0.62,0.68 -0.99,0.88 z m 0,1.33 v -0.16 c 0.38,-0.17 1.06,-0.52 1.49,-1.07 0.68,0.36 2.23,1.08 3.89,1.18 v 0.05 c 0,1.48 -1.21,2.69 -2.69,2.69 -1.49,0 -2.69,-1.21 -2.69,-2.69 z m 2.69,5.62 -1.31,-1.31 c 0.24,-0.24 0.38,-0.57 0.39,-0.92 0.6,0.17 1.23,0.17 1.83,0 0.01,0.35 0.15,0.68 0.4,0.92 z"
+           fill="#000000"
+           stroke="none"
+           id="path112677" />
+        <text
+           font-size="11px"
+           style="text-align:center;white-space:pre;inline-size:82.8811;overflow:visible"
+           font-family="Arial, Helvetica"
+           x="900"
+           y="420"
+           id="text112679"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="900"
+             y="420"
+             id="tspan1421">Moderate
+</tspan><tspan
+             x="900"
+             y="433.75"
+             id="tspan1423">Conference Call
+</tspan><tspan
+             x="900"
+             y="447.5"
+             id="tspan1425">Discussion</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-send-task"
+         data-bpmn-id="send_task_2"
+         id="g272002">
+        <rect
+           x="732.67999"
+           y="622.51001"
+           width="101"
+           height="75.75"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect112682" />
+        <rect
+           x="739.75"
+           y="629.58002"
+           width="20.200001"
+           height="13.39"
+           fill="#000000"
+           stroke="#000000"
+           id="rect112684" />
+        <path
+           d="m 739.75,629.58 10.1,8.03 10.1,-8.03 m -20.2,13.39 6.73,-7.36 m 13.47,7.36 -6.73,-7.36"
+           fill="none"
+           stroke="#ffffff"
+           stroke-miterlimit="10"
+           id="path112686" />
+        <text
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           style="text-align:left;white-space:pre;inline-size:81.9559;overflow:visible"
+           x="751.72412"
+           y="660.91956"
+           transform="translate(13.793103,-14.942529)"
+           id="text112688"
+           xml:space="preserve"
+           fill="#000000"><tspan
+             x="751.72412"
+             y="660.91956"
+             id="tspan1427">E-mail
+</tspan><tspan
+             x="751.72412"
+             y="674.66953"
+             id="tspan1429">discussion
+</tspan><tspan
+             x="751.72412"
+             y="688.41953"
+             id="tspan1431">Deadline
+</tspan><tspan
+             x="751.72412"
+             y="702.16953"
+             id="tspan1433">Warning</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-exclusive-gateway"
+         data-bpmn-id="exclusive_gateway_3"
+         id="g272006">
+        <path
+           d="m 1017.5,484.14 21.21,21.21 -21.21,21.21 -21.21,-21.21 z"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           stroke-miterlimit="10"
+           pointer-events="all"
+           id="path12634" />
+        <path
+           d="m 1014.95,494.75 h 5.09 v 8.06 h 8.06 v 5.09 h -8.06 v 8.06 h -5.09 v -8.06 h -8.06 v -5.09 h 8.06 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           transform="rotate(45,1017.5,505.35)"
+           pointer-events="all"
+           id="path12636" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-parallel-gateway"
+         data-bpmn-id="parallel_gateway_2"
+         id="g272010">
+        <path
+           d="m 1088.2,361.93 21.21,21.21 -21.21,21.21 -21.21,-21.21 z"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           stroke-miterlimit="10"
+           pointer-events="all"
+           id="path12640" />
+        <path
+           d="m 1085.65,372.54 h 5.09 v 8.06 h 8.06 v 5.09 h -8.06 v 8.06 h -5.09 v -8.06 h -8.06 v -5.09 h 8.06 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           pointer-events="all"
+           id="path12642" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-task"
+         data-bpmn-id="task_1"
+         id="g112701">
+        <rect
+           x="1146.78"
+           y="348.79999"
+           width="83.830002"
+           height="68.68"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect112697" />
+        <text
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           style="text-align:left;white-space:pre;inline-size:70.8398;overflow:visible"
+           x="1159.7701"
+           y="370.11493"
+           transform="translate(1.1494253,3.4482759)"
+           id="text112699"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="1159.7701"
+             y="370.11493"
+             id="tspan1435">Evaluate
+</tspan><tspan
+             x="1159.7701"
+             y="383.86493"
+             id="tspan1437">Discussion
+</tspan><tspan
+             x="1159.7701"
+             y="397.61493"
+             id="tspan1439">Progress</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-text-annotation"
+         data-bpmn-id="text_annotation_1"
+         id="g112707">
+        <path
+           d="m 873.07,574.03 h -10.1 v 36.36 h 10.1"
+           fill="none"
+           stroke="#000000"
+           stroke-width="2.02"
+           stroke-miterlimit="10"
+           id="path112703" />
+        <text
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           style="text-align:left;overflow:visible"
+           x="874.71265"
+           y="595.40228"
+           id="text112705"
+           fill="#000000">Conference Calls are every two weeks</text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-text-annotation"
+         data-bpmn-id="text_annotation_2"
+         id="g112716">
+        <path
+           d="m 1148.8,547.77 h -10.1 v 87.87 h 10.1"
+           fill="none"
+           stroke="#000000"
+           stroke-width="2.02"
+           stroke-miterlimit="10"
+           pointer-events="all"
+           id="path12670" />
+        <text
+           x="1136.3636"
+           y="562.55627"
+           style="white-space:pre;inline-size:89.7432"
+           transform="translate(13.636363,4.5454545)"
+           font-size="11px"
+           font-family="Arial, Helvetica"
+           id="text12674"
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="1136.3636"
+             y="562.55627"
+             id="tspan1441">The Process will </tspan><tspan
+             x="1136.3636"
+             y="576.30625"
+             id="tspan1443">loop if there is no </tspan><tspan
+             x="1136.3636"
+             y="590.05625"
+             id="tspan1445">discussion of the </tspan><tspan
+             x="1136.3636"
+             y="603.80625"
+             id="tspan1447">issues or </tspan><tspan
+             x="1136.3636"
+             y="617.55625"
+             id="tspan1449">sufficient solutions</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_36"
+         id="g112722">
+        <path
+           d="m 1038.36,505 h 0.32 q 0.32,0 2.85,0 h 43.95 q 2.52,0 2.52,-2.52 v -83"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           pointer-events="stroke"
+           id="path112718" />
+        <path
+           d="m 1088,405.85 4.55,13.63 h -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           pointer-events="all"
+           id="path112720" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_35"
+         id="g112728">
+        <path
+           d="m 985.18,425 h 29.3 q 2.52,0 2.52,2.52 v 41.79"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112724" />
+        <path
+           d="m 1017,482.95 -4.54,-13.64 h 9.08 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112726" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_34"
+         id="g112734">
+        <path
+           d="m 900.34,257 h 185.14 q 2.52,0 2.52,2.52 v 87.28"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           pointer-events="stroke"
+           id="path112730" />
+        <path
+           d="m 1088,360.44 -4.54,-13.64 h 9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112732" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_33"
+         id="g112740">
+        <path
+           d="m 821.55,425 h 0.23 q 0.22,0 2.74,0 h 44.33"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112736" />
+        <path
+           d="m 882.48,425 -13.63,4.55 v -9.1 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112738" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_32"
+         id="g112748">
+        <path
+           d="m 805,484.54 v -0.27 q 0,-0.27 0.02,-2.79 l 0.24,-25.44"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112742" />
+        <path
+           d="m 805.38,442.4 4.42,13.68 -9.09,-0.08 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112744" />
+        <text
+           style="text-align:left;overflow:visible"
+           font-size="11px"
+           font-family="Arial, Helvetica"
+           x="770.11493"
+           y="481.60922"
+           id="text112746"
+           fill="#000000">Yes</text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_31"
+         id="g112756">
+        <path
+           d="m 826.26,505 h 0.37 q 0.37,0 2.89,0 h 163.96 q 2.52,0 0,0 h -6.54"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           pointer-events="stroke"
+           id="path112750" />
+        <path
+           d="m 995.57,505 -8.63,2.88 v -5.76 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112752" />
+        <text
+           style="text-align:left;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="841.37933"
+           y="494.25287"
+           id="text112754"
+           fill="#000000">No</text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_30"
+         id="g112762">
+        <path
+           d="m 712.48,508.89 h 59.91"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112758" />
+        <path
+           d="m 786.03,508.89 -13.64,4.54 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112760" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_29"
+         id="g112768">
+        <path
+           d="m 1109.41,383.14 h 22.04"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112764" />
+        <path
+           d="m 1145.08,383.14 -13.63,4.55 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112766" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_28"
+         id="g112774">
+        <path
+           d="m 833.68,657 h 0.16 q 0.16,0 2.68,0 h 248.96 q 2.52,0 2.52,-2.52 v -235"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112770" />
+        <path
+           d="m 1088,405.85 4.55,13.63 h -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112772" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_27"
+         id="g112780">
+        <path
+           d="m 670.06,656.85 h 47.29"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112776" />
+        <path
+           d="m 730.98,656.85 -13.63,4.55 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112778" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_26"
+         id="g112786">
+        <path
+           d="m 573,427.58 v 226.9 q 0,2.52 2.52,2.52 h 46.89"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112782" />
+        <path
+           d="m 636.05,657 -13.64,4.55 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112784" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_25"
+         id="g112792">
+        <path
+           d="m 604.41,394 h 47.07 q 2.52,0 2.52,2.52 v 59.16"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112788" />
+        <path
+           d="m 654,469.32 -4.54,-13.64 h 9.08 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112790" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_24"
+         id="g112798">
+        <path
+           d="M 573,348.8 V 248.53 q 0,-2.53 2.52,-2.53 h 192.33"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112794" />
+        <path
+           d="m 781.48,246 -13.63,4.54 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112796" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-association"
+         data-bpmn-id="association_1"
+         id="g112802">
+        <path
+           d="m 1177.08,547.77 v 0 -127.76 q 0,-2.53 0,-2.53 v 0"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           stroke-dasharray="1.515, 3.03"
+           id="path112800" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-association"
+         data-bpmn-id="association_2"
+         id="g112806">
+        <path
+           d="m 916.5,574.03 v 0 -45.95 q 0,-2.53 -2.51,-2.84 l -92.96,-11.5 q -2.5,-0.31 -2.5,-0.31 v 0"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           stroke-dasharray="1.515, 3.03"
+           id="path112804" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-send-task"
+         data-bpmn-id="send_task_3"
+         id="g112818">
+        <rect
+           x="1377.0601"
+           y="377.07999"
+           width="93.93"
+           height="68.68"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect112808" />
+        <rect
+           x="1384.13"
+           y="384.14999"
+           width="18.790001"
+           height="12.45"
+           fill="#000000"
+           stroke="#000000"
+           id="rect112810" />
+        <path
+           d="m 1384.13,384.15 9.39,7.47 9.39,-7.47 m -18.78,12.45 6.26,-6.85 m 12.52,6.85 -6.26,-6.85"
+           fill="none"
+           stroke="#ffffff"
+           stroke-miterlimit="10"
+           id="path112814" />
+        <text
+           style="white-space:pre;inline-size:73.2889;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="1397.7012"
+           y="413.79309"
+           transform="translate(-6.8965517,1.1494253)"
+           text-align="center"
+           id="text112816"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="1397.7012"
+             y="413.79309"
+             id="tspan1451">Announce
+</tspan><tspan
+             x="1397.7012"
+             y="427.54309"
+             id="tspan1453">Issues for Vote</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-start-event"
+         data-bpmn-id="start_event_1"
+         id="g112826">
+        <circle
+           cx="58"
+           cy="411.42001"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="ellipse112820"
+           r="15.15" />
+        <path
+           d="m 58.08,405.32 c 0.22,0 0.4,-0.18 0.4,-0.4 v -0.2 c 0,-0.4 -0.18,-0.4 -0.4,-0.4 -0.22,0 -0.4,0.18 -0.4,0.4 v 0.2 c 0,0.22 0.18,0.4 0.4,0.4 z m 0,12.36 c -0.22,0 -0.4,0.18 -0.4,0.4 v 0.2 c 0,0.22 0.18,0.4 0.4,0.4 0.22,0 0.4,-0.18 0.4,-0.4 v -0.2 c 0,-0.22 -0.18,-0.4 -0.4,-0.4 z M 51.5,411.1 h -0.2 c -0.22,0 -0.4,0.18 -0.4,0.4 0,0.22 0.18,0.4 0.4,0.4 h 0.2 c 0.22,0 0.85,-0.18 0.4,-0.4 0,-0.22 -0.18,-0.4 -0.4,-0.4 z m 13.36,0 h -0.2 c -0.22,0 -0.4,0.18 -0.4,0.4 0,0.22 0.18,0.4 0.4,0.4 h 0.2 c 0.22,0 0.39,-0.18 0.39,-0.4 0,-0.22 -0.17,-0.4 -0.39,-0.4 m -11.29,-4.66 c -0.16,-0.16 -0.4,-0.16 -0.55,0 -0.16,0.16 -0.16,0.4 0,0.55 l 0.13,0.14 c 0.08,0.08 0.18,0.12 0.28,0.12 0.1,0 0.18,-0.04 0.28,-0.12 0.16,-0.15 0.16,-0.39 0,-0.55 l -0.14,-0.14 m -0.42,9.43 -0.13,0.14 c -0.16,0.15 -0.16,0.39 0,0.55 0.07,0.08 0.17,0.12 0.27,0.12 0.1,0 0.2,-0.04 0.28,-0.12 l 0.14,-0.14 c 0.16,-0.16 0.16,-0.39 0,-0.55 -0.16,-0.16 -0.4,-0.16 -0.56,0 m 9.43,-9.43 -0.14,0.14 c -0.16,0.16 -0.16,0.4 0,0.55 0.09,0.08 0.18,0.12 0.28,0.12 0.1,0 0.2,-0.04 0.28,-0.12 l 0.14,-0.14 c 0.16,-0.15 0.16,-0.39 0,-0.55 -0.16,-0.16 -0.4,-0.16 -0.56,0 m -4.1,4.9 v -3.63 c 0,-0.22 -0.18,-0.4 -0.4,-0.4 -0.22,0 -0.4,0.18 -0.4,0.4 v 3.79 c 0,0.1 0.04,0.2 0.12,0.28 l 4.36,4.36 c 0.08,0.08 0.18,0.12 0.28,0.12 0.1,0 0.2,-0.04 0.28,-0.12 0.16,-0.15 0.16,-0.39 0,-0.55 l -4.24,-4.25 m -0.4,-9.01 c -5.06,0 -9.17,4.11 -9.17,9.17 0,5.06 4.11,9.17 9.17,9.17 5.06,0 9.17,-4.11 9.17,-9.17 0,-5.06 -4.11,-9.17 -9.17,-9.17 m 0,17.54 c -4.63,0 -8.37,-3.75 -8.37,-8.37 0,-4.62 3.74,-8.37 8.37,-8.37 4.62,0 8.37,3.75 8.37,8.37 0,4.62 -3.75,8.37 -8.37,8.37"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           id="path112822" />
+        <text
+           style="text-align:left;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="43.678162"
+           y="443.67816"
+           id="text112824"
+           fill="#000000">Friday</text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-user-task"
+         data-bpmn-id="user_task_1"
+         id="g112834">
+        <rect
+           x="146.88"
+           y="377.07999"
+           width="95.950867"
+           height="68.68"
+           rx="10.1"
+           ry="10.1"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           id="rect112828" />
+        <path
+           d="m 160.58,391.28 -1.76,-0.66 c -0.18,-0.07 -0.3,-0.24 -0.3,-0.43 v -0.32 c 1.06,-0.6 1.72,-1.74 1.72,-2.96 v -1.29 c 0,-1.05 -0.49,-2.05 -1.32,-2.7 0.02,-0.1 0.03,-0.21 0.03,-0.32 -0.02,-1.16 -0.97,-2.09 -2.13,-2.09 -1.16,0 -2.1,0.93 -2.12,2.09 0,0.11 0.01,0.22 0.02,0.32 -0.83,0.65 -1.31,1.64 -1.31,2.7 v 1.29 c 0,1.22 0.65,2.35 1.72,2.96 v 0.32 c 0,0.19 -0.12,0.36 -0.3,0.43 l -1.77,0.66 c -0.83,0.31 -1.37,1.1 -1.38,1.99 v 3.97 c 0,0.15 0.07,0.29 0.2,0.37 0.13,0.07 0.28,0.07 0.41,0 0.13,-0.08 0.2,-0.22 0.2,-0.37 v -3.97 c 0,-0.07 0,-0.14 0.01,-0.21 l 0.64,0.64 c 0.17,0.17 0.27,0.4 0.27,0.63 v 2.91 c -0.01,0.15 0.06,0.29 0.19,0.37 0.13,0.07 0.29,0.07 0.41,0 0.13,-0.08 0.21,-0.22 0.2,-0.37 v -2.9 c 0,-0.45 -0.18,-0.89 -0.5,-1.2 l -0.81,-0.82 c 0.13,-0.13 0.28,-0.22 0.44,-0.29 l 1.46,-0.54 1.62,1.61 v 4.14 c -0.01,0.15 0.07,0.29 0.2,0.37 0.12,0.07 0.28,0.07 0.41,0 0.13,-0.08 0.2,-0.22 0.2,-0.37 v -4.13 l 1.61,-1.62 1.46,0.55 c 0.17,0.06 0.32,0.16 0.45,0.28 l -0.82,0.82 c -0.32,0.32 -0.5,0.75 -0.49,1.2 v 2.91 c -0.01,0.14 0.06,0.28 0.19,0.36 0.13,0.07 0.29,0.07 0.41,0 0.13,-0.08 0.21,-0.22 0.2,-0.36 v -2.91 c 0,-0.24 0.09,-0.47 0.26,-0.63 l 0.64,-0.64 c 0.01,0.06 0.02,0.13 0.02,0.2 v 3.98 c 0.01,0.21 0.18,0.38 0.4,0.38 0.22,0 0.39,-0.17 0.4,-0.38 v -3.98 c 0,-0.89 -0.55,-1.68 -1.38,-1.99 z m -3.76,-10 c 0.68,0 1.24,0.51 1.32,1.18 -0.84,-0.35 -1.79,-0.35 -2.63,0 0.07,-0.67 0.64,-1.18 1.31,-1.18 z m -2.61,4.34 c 0,-1.45 1.17,-2.61 2.61,-2.61 1.45,0 2.62,1.16 2.62,2.61 v 0.44 c -1.88,-0.14 -3.68,-1.21 -3.7,-1.22 -0.1,-0.06 -0.21,-0.07 -0.32,-0.04 -0.11,0.03 -0.2,0.11 -0.25,0.21 -0.18,0.36 -0.6,0.65 -0.96,0.85 z m 0,1.29 v -0.16 c 0.37,-0.16 1.03,-0.5 1.45,-1.03 0.66,0.34 2.17,1.04 3.78,1.15 v 0.04 c 0,0.93 -0.5,1.79 -1.31,2.26 -0.81,0.47 -1.8,0.47 -2.61,0 -0.81,-0.47 -1.31,-1.33 -1.31,-2.26 z m 2.61,5.46 -1.27,-1.28 c 0.24,-0.23 0.38,-0.55 0.38,-0.88 0.59,0.16 1.2,0.16 1.78,0 0.01,0.33 0.15,0.65 0.39,0.88 z"
+           fill="#000000"
+           stroke="none"
+           id="path112830" />
+        <text
+           style="text-align:left;white-space:pre;inline-size:81.9105;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="170"
+           y="415"
+           id="text112832"
+           transform="translate(3.4482759,-3.4482759)"
+           fill="#000000"
+           xml:space="preserve"><tspan
+             x="170"
+             y="415"
+             id="tspan1455">Review 
+</tspan><tspan
+             x="170"
+             y="428.75"
+             id="tspan1457">Issue List</tspan></text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-exclusive-gateway"
+         data-bpmn-id="exclusive_gateway_1"
+         id="g112842">
+        <path
+           d="m 340.8,390.21 21.21,21.21 -21.21,21.21 -21.21,-21.21 z"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="2.02"
+           stroke-miterlimit="10"
+           id="path112836" />
+        <path
+           d="m 338.25,400.82 h 5.09 v 8.06 h 8.06 v 5.09 h -8.06 v 8.06 h -5.09 v -8.06 h -8.06 v -5.09 h 8.06 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-miterlimit="10"
+           transform="rotate(45,340.8,411.42)"
+           id="path112838" />
+        <text
+           style="text-align:left;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="297.70114"
+           y="375.86206"
+           id="text112840"
+           fill="#000000">Are issues ready?</text>
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-end-event"
+         data-bpmn-id="end_event_1"
+         transform="translate(0.5,0.5)"
+         id="g112846">
+        <circle
+           cx="340.79999"
+           cy="515.45001"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="5.05"
+           id="ellipse112844"
+           r="16.16" />
+      </g>
+      <g
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_22"
+         transform="matrix(1,0,0,0.86404584,0,51.035832)"
+         id="g112852">
+        <path
+           d="m 1423,81.60801 q 0,-110.964287 0,-108.634036 V 360.63695"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112848" />
+        <path
+           d="m 1423,375.39 -4.55,-13.64 h 9.1 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112850" />
+      </g>
+      <g
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_22"
+         id="g112852-6"
+         transform="matrix(1.0022644,0,0,0.97834234,-2.1981423,0.12176773)">
+        <path
+           d="m 970.73181,109.47694 q 0,0 0,-81.34678 v 0"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112848-6" />
+        <path
+           d="m 970.73181,109.47727 -4.55,-13.639994 h 9.1 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112850-0" />
+      </g>
+      <g
+         class="bpmn-type-flow bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_12"
+         id="g112856">
+        <path
+           d="m 1470.0352,412.72749 v 0 h 34.3855"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112854"
+           sodipodi:nodetypes="ccc" />
+      </g>
+      <g
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_5"
+         id="g112862">
+        <path
+           d="m 1250.81,411 h 0.09 q 0.1,0 2.62,0 h 108.21"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112858" />
+        <path
+           d="m 1375.36,411 -13.63,4.55 v -9.1 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112860" />
+      </g>
+      <g
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_4"
+         id="g112870">
+        <path
+           d="m 362.01,411.42 h 74.56"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112864" />
+        <path
+           d="m 450.2,411.42 -13.63,4.55 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112866" />
+        <text
+           style="text-align:left;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="360.91953"
+           y="433.33334"
+           id="text112868"
+           fill="#000000">Yes</text>
+      </g>
+      <g
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_3"
+         id="g112880">
+        <path
+           d="m 341,432.43 v 0.28 q 0,0.29 -0.01,2.81 l -0.14,48.44"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112872" />
+        <path
+           d="m 344.28,435.71 -6.56,6.57"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112874" />
+        <path
+           d="m 340.8,497.6 -4.5,-13.65 9.09,0.03 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112876" />
+        <text
+           style="text-align:left;overflow:visible"
+           font-family="Arial, Helvetica"
+           font-size="11px"
+           x="311.49426"
+           y="442.52872"
+           id="text112878"
+           fill="#000000">No</text>
+      </g>
+      <g
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_2"
+         id="g112886">
+        <path
+           d="m 242.83,411.42 h 61.43"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112882" />
+        <path
+           d="m 317.89,411.42 -13.63,4.55 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112884" />
+      </g>
+      <g
+         style="visibility:visible"
+         class="bpmn-sequence-flow"
+         data-bpmn-id="sequence_flow_1"
+         id="g112892">
+        <path
+           d="m 73.15,411.42 h 58.4"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112888" />
+        <path
+           d="m 145.18,411.42 -13.63,4.55 v -9.09 z"
+           fill="#000000"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           id="path112890" />
+      </g>
+      <g
+         class="bpmn-message-flow"
+         data-bpmn-id="message_flow_1"
+         id="g112898">
+        <path
+           d="m 552,430.77778 v -1.21606 q 0,-1.21605 0,0.47702 V 800"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           stroke-dasharray="12.12, 7.575"
+           id="path112894" />
+        <circle
+           cx="552"
+           cy="427.57999"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="1.52"
+           id="ellipse112896"
+           r="4.04" />
+      </g>
+      <g
+         class="bpmn-message-flow"
+         data-bpmn-id="message_flow_2"
+         id="g112904">
+        <path
+           d="m 783.18,702.3 v 100"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           stroke-dasharray="12.12, 7.575"
+           id="path112900" />
+        <circle
+           cx="783.17999"
+           cy="698.26001"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="1.52"
+           id="ellipse112902"
+           r="4.04" />
+      </g>
+      <g
+         class="bpmn-message-flow"
+         data-bpmn-id="message_flow_3"
+         id="g112910">
+        <path
+           d="m 1418,448.87119 v -1.25042 q 0,-1.25042 0,0.40803 V 800"
+           fill="none"
+           stroke="#000000"
+           stroke-width="1.52"
+           stroke-miterlimit="10"
+           stroke-dasharray="12.12, 7.575"
+           id="path112906" />
+        <circle
+           cx="1418"
+           cy="445.76001"
+           fill="#ffffff"
+           stroke="#000000"
+           stroke-width="1.52"
+           id="ellipse112908"
+           r="4.04" />
+      </g>
     </g>
+    <g
+       id="g112969">
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_3"
+         id="g272183">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g12970">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="329"
+             y="450"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect12966" />
+          <text
+             x="341"
+             y="467"
+             id="text12968">26</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_4"
+         id="g272188">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g12978">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="385"
+             y="402"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect12974" />
+          <text
+             x="397"
+             y="419.07999"
+             id="text12976">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sub_process_1"
+         id="g272193">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="14.14px"
+           id="g12986">
+          <rect
+             fill="#36a036"
+             stroke="#36a036"
+             x="841"
+             y="104"
+             width="19"
+             height="16"
+             stroke-width="1.01"
+             id="rect12982" />
+          <text
+             x="851"
+             y="117.06"
+             id="text12984">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="send_task_1"
+         id="g272198">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="14.14px"
+           id="g12994">
+          <rect
+             fill="#36a036"
+             stroke="#36a036"
+             x="547"
+             y="342"
+             width="19"
+             height="16"
+             stroke-width="1.01"
+             id="rect12990" />
+          <text
+             x="557"
+             y="355.06"
+             id="text12992">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="user_task_2"
+         id="g272203">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="14.14px"
+           id="g13002">
+          <rect
+             fill="#36a036"
+             stroke="#36a036"
+             x="652"
+             y="464"
+             width="19"
+             height="16"
+             stroke-width="1.01"
+             id="rect12998" />
+          <text
+             x="662"
+             y="477.06"
+             id="text13000">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_34"
+         id="g272208">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g13010">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="1076"
+             y="248"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect13006" />
+          <text
+             x="1088"
+             y="265.07999"
+             id="text13008">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="user_task_3"
+         id="g272213">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="14.14px"
+           id="g13018">
+          <rect
+             fill="#36a036"
+             stroke="#36a036"
+             x="824"
+             y="204"
+             width="19"
+             height="16"
+             stroke-width="1.01"
+             id="rect13014" />
+          <text
+             x="834"
+             y="217.06"
+             id="text13016">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_31"
+         id="g272218">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g13026">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="900"
+             y="496"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect13022" />
+          <text
+             x="912"
+             y="513.08002"
+             id="text13024">30</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_32"
+         id="g272223">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g13034">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="793"
+             y="455"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect13030" />
+          <text
+             x="805"
+             y="472"
+             id="text13032">39</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_36"
+         id="g272228">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g13042">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="1075"
+             y="496"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect13038" />
+          <text
+             x="1087"
+             y="513.08002"
+             id="text13040">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="intermediate_catch_event_2"
+         id="g272233">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="14.14px"
+           id="g13050">
+          <rect
+             fill="#36a036"
+             stroke="#36a036"
+             x="644"
+             y="634"
+             width="19"
+             height="16"
+             stroke-width="1.01"
+             id="rect13046" />
+          <text
+             x="654"
+             y="647.06"
+             id="text13048">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="send_task_2"
+         id="g272238">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="14.14px"
+           id="g13058">
+          <rect
+             fill="#36a036"
+             stroke="#36a036"
+             x="773"
+             y="616"
+             width="19"
+             height="16"
+             stroke-width="1.01"
+             id="rect13054" />
+          <text
+             x="783"
+             y="629.06"
+             id="text13056">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_28"
+         id="g272243">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g13066">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="1075"
+             y="648"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect13062" />
+          <text
+             x="1087"
+             y="665.08002"
+             id="text13064">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="sequence_flow_28"
+         id="g272243-3">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="18.18px"
+           id="g13066-5">
+          <rect
+             fill="#aa6bd1"
+             stroke="#aa6bd1"
+             x="1300"
+             y="400"
+             width="24"
+             height="21"
+             stroke-width="1.01"
+             id="rect13062-2" />
+          <text
+             x="1312"
+             y="417"
+             id="text13064-5">69</text>
+        </g>
+      </g>
+      <g
+         style="visibility:visible"
+         class="overlay-badge"
+         data-bpmn-id="task_1"
+         id="g272248">
+        <g
+           fill="#ffffff"
+           font-family="Arial, Helvetica"
+           text-anchor="middle"
+           font-size="14.14px"
+           id="g13074">
+          <rect
+             fill="#36a036"
+             stroke="#36a036"
+             x="1179"
+             y="342"
+             width="19"
+             height="16"
+             stroke-width="1.01"
+             id="rect13070" />
+          <text
+             x="1189"
+             y="355.06"
+             id="text13072">69</text>
+        </g>
+      </g>
+    </g>
+  </g>
 </svg>
