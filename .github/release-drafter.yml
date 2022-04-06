@@ -40,7 +40,7 @@ template: |
   Thanks to all the contributors of this release 🌈: $CONTRIBUTORS
 
   **TODO: add milestone id when publishing**
-  See [milestone $NEXT_PATCH_VERSION](https://github.com/process-analytics/bpmn-visualization-js/milestone/x?closed=1) to get the list of issues covered by this release.
+  See [milestone $NEXT_PATCH_VERSION](https://github.com/process-analytics/bpmn-visualization-R/milestone/x?closed=1) to get the list of issues covered by this release.
 
   # Highlights
 
