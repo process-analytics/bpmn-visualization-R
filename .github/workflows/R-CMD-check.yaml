@@ -98,7 +98,7 @@ jobs:
 
       - name: Upload check results
         if: failure()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-check-results
           path: check
@@ -112,7 +112,7 @@ jobs:
           R CMD build .
           ls -la
       - name: Upload the source package
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package
           path: bpmnVisualization_*.tar.gz
@@ -128,7 +128,7 @@ jobs:
 
       - name: Upload source package check results
         if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package-check-results
           path: bpmnVisualization.Rcheck
