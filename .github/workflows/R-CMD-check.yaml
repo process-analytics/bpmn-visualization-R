@@ -79,11 +79,8 @@ jobs:
 
       - name: Check the source package
         id: source_package_checks
-        run: R CMD check --as-cran bpmnVisualization_*.tar.gz
-
-      - name: Upload source package check results
-        if: ${{ failure() && steps.source_package_checks.outcome == 'failure' }}
-        uses: actions/upload-artifact@v3
+        uses: r-lib/actions/check-r-package@v2
         with:
-          name: ${{ matrix.config.os }}-r${{ matrix.config.r }}-source-package-check-results
-          path: bpmnVisualization.Rcheck
+          args: 'c("--as-cran", "bpmnVisualization_*.tar.gz")'
+          build_args: 'c()'
+          check-dir: '"bpmnVisualization.Rcheck"'
