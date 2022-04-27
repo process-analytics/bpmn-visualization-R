@@ -115,8 +115,15 @@ devtools::document()
 
 ### bpmn-visualization-js update
 
+The dependency [BPMN Visualization](https://github.com/process-analytics/bpmn-visualization-js) is automatically updated by the job [Update BPMN Visualization version](https://github.com/process-analytics/bpmn-visualization-js) when a new version of this library is released.
+This will generate a new Pull Request and notify the reviewers.
+
+___
+⚠️⚠️⚠️ _**Manual procedure - Only if the job does NOT work!**_  ⚠️⚠️⚠️
+
 - Change [bpmn-visualization.min.js](inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js). The file can be retrieved from [jsdelivr](https://www.jsdelivr.com/package/npm/bpmn-visualization) or [unpkg](https://unpkg.com/browse/bpmn-visualization/).
 - Update the version of `bpmn-visualization` in [bpmnVisualization.yaml](inst/htmlwidgets/bpmnVisualization.yaml)
+___
 
 ## Maintainers
 
