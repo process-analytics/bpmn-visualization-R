@@ -40,7 +40,7 @@ jobs:
           author: "process-analytics-bot <62586190+process-analytics-bot@users.noreply.github.com>"
           branch: "infra/bump_bpmn_visualization_from_${{ env.OLD_VERSION }}_to_${{ env.VERSION }}"
           delete-branch: true
-          base: "master"
+          base: "main"
           title: "[INFRA] Bump BPMN Visualization version from ${{ env.OLD_VERSION }} to ${{ env.VERSION }}"
           body: "BPMN Visualization is updated from https://cdn.jsdelivr.net/npm/bpmn-visualization@${{ env.VERSION }}/dist/bpmn-visualization.min.js."
           labels: "dependencies"
