@@ -27,63 +27,26 @@
 #' @import xml2
 #'
 #' @export
-display <- function(bpmnXML, overlays = NULL, width = NULL, height = NULL, elementId = NULL) {
-  # load bpmn content
-  if (inherits(bpmnXML, "xml_document")) {
-    bpmnContent <- as.character(bpmnXML)
-  } else if (inherits(bpmnXML, "character")) {
-    if (substring(bpmnXML, 1, 38) == "<?xml version=\"1.0\" encoding=\"UTF-8\"?>") {
-      # this must be a string corresponding to the BPMN content of a file
-      bpmnContent <- bpmnXML
-    } else {
-      # this must be a file name
-      xml <- xml2::read_xml(bpmnXML)
-      bpmnContent <- as.character(xml)
-    }
-  } else {
-    stop("bpmnXML must be a absolute path of BPMN file or the string of the BPMN content !!")
-  }
-
-  # widget parameters
-  x <- list(bpmnContent = bpmnContent)
-  if(length(overlays)) {
-    # In case the user passes a single parameter as overlays (instead of a list), we wrap it into a list so the js can work
-    x$overlays <- if (is.list(overlays[[1]])) {
-      overlays
-    } else {
-      list(overlays)
-    }
-  }
-
+display <- function(
+  bpmnXML,
+  overlays = NULL,
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+) {
+  x <- build_bpmnContent(
+    bpmnXML,
+    overlays = overlays
+  )
   # create widget
   htmlwidgets::createWidget(
-    name = 'bpmnVisualization',
+    name = "bpmnVisualization",
     x,
     width = width,
     height = height,
-    package = 'bpmnVisualization',
+    package = "bpmnVisualization",
     elementId = elementId
   )
-}
-
-#' create_overlay
-#'
-#' An overlay can be added to existing elements in the diagram.
-#' See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
-#' Use this structure to create correct overlay structure.
-#'
-#' @param elementId The bpmn element id to which the overlay will be attached
-#' @param label HTML element to use as an overlay
-#'
-#' @return An overlay object
-#'
-#' @export
-create_overlay <- function(elementId, label) {
-  ret <-
-    .not_null_list(
-      elementId = elementId,
-      label = label
-    )
 }
 
 #' Shiny bindings for bpmnVisualization
@@ -103,21 +66,34 @@ create_overlay <- function(elementId, label) {
 #' @name bpmnVisualization-shiny
 #'
 #' @export
-bpmnVisualizationOutput <- function(outputId, width = '100%', height = '400px') {
-  htmlwidgets::shinyWidgetOutput(outputId, 'bpmnVisualization', width, height, package = 'bpmnVisualization')
+bpmnVisualizationOutput <- function(
+  outputId,
+  width = "100%",
+  height = "400px"
+) {
+  htmlwidgets::shinyWidgetOutput(
+    outputId,
+    "bpmnVisualization",
+    width,
+    height,
+    package = "bpmnVisualization"
+  )
 }
 
 #' @rdname bpmnVisualization-shiny
 #' @export
-renderBpmnVisualization <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, bpmnVisualizationOutput, env, quoted = TRUE)
-}
-
-
-
-.not_null_list <- function(...) {
-  ret <- list(...)
-  ret[lengths(ret) == 0] <- NULL
-  ret
+renderBpmnVisualization <- function(
+  expr,
+  env = parent.frame(),
+  quoted = FALSE
+) {
+  if (!quoted) {
+    expr <- substitute(expr)
+  } # force quoted
+  htmlwidgets::shinyRenderWidget(
+    expr,
+    bpmnVisualizationOutput,
+    env,
+    quoted = TRUE
+  )
 }
