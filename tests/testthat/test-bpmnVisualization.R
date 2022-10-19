@@ -63,6 +63,7 @@ test_that("bpmnVisualizationOutput works", {
 
 
 test_that("renderBpmnVisualization works", {
+  skip_if_not_installed("shiny")
   res <- renderBpmnVisualization({
     display(
       system.file(
@@ -75,6 +76,12 @@ test_that("renderBpmnVisualization works", {
     inherits(
       res,
       "shiny.render.function"
+    )
+  )
+  expect_true(
+    inherits(
+      res(),
+      "json"
     )
   )
 })

@@ -87,6 +87,8 @@ renderBpmnVisualization <- function(
   env = parent.frame(),
   quoted = FALSE
 ) {
+  # Checking that shiny is installed
+  rlang::check_installed("shiny")
   if (!quoted) {
     expr <- substitute(expr)
   } # force quoted
