@@ -14,4 +14,9 @@ LazyData: true
 RoxygenNote: 7.1.2
 Imports:
     htmlwidgets,
+    rlang,
     xml2
+Suggests: 
+    shiny,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
