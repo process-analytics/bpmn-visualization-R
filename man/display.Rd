@@ -44,5 +44,5 @@ display(bpmn_file, overlays)
 
 }
 \seealso{
-[bpmnVisualization::create_overlay()] to create an overlay
+\code{\link{create_overlay}} to create an overlay
 }

@@ -38,7 +38,7 @@
 #' overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn_element_id_2", "9"))
 #' display(bpmn_file, overlays)
 #' 
-#' @seealso [bpmnVisualization::create_overlay()] to create an overlay
+#' @seealso \code{\link{create_overlay}} to create an overlay
 #'
 #' @import htmlwidgets
 #' @import xml2
@@ -67,7 +67,8 @@ display <- function(
 }
 
 #' @title Shiny output binding for 'bpmnVisualization' HTML widget
-#' 
+#'
+#' @name bpmnVisualization-shiny-output
 #' @description 
 #' Helper to create output function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
 #' 
@@ -77,8 +78,6 @@ display <- function(
 #'   string and have \code{'px'} appended.
 #'   
 #' @returns An output function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
-#'
-#' @name bpmnVisualization-shiny-output
 #'
 #' @export
 bpmnVisualizationOutput <- function(
@@ -97,6 +96,7 @@ bpmnVisualizationOutput <- function(
 
 #' @title Shiny render binding for 'bpmnVisualization' HTML widget
 #' 
+#' @rdname bpmnVisualization-shiny-render
 #' @description 
 #' Helper to create render function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
 #' 
@@ -107,7 +107,6 @@ bpmnVisualizationOutput <- function(
 #'
 #' @returns A render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
 #'
-#' @rdname bpmnVisualization-shiny-render
 #' @export
 renderBpmnVisualization <- function(
   expr,
