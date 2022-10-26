@@ -39,7 +39,11 @@ bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisual
 display(bpmn_file, width='auto', height='auto')
 
 # Display the BPMN diagram with overlays
-overlays <- list(create_overlay("start_event_1_1", "42"), create_overlay("sequence_flow_1_1", "42"), create_overlay("task_1_1", "9"))
+overlays <- list(
+  create_overlay("start_event_1_1", "42"), 
+  create_overlay("sequence_flow_1_1", "42"), 
+  create_overlay("task_1_1", "9")
+)
 display(bpmn_file, overlays, width='auto', height='auto')
 
 }
