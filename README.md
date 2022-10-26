@@ -79,6 +79,7 @@ bpmn_file <- "<?xml version="1.0" encoding="UTF-8"?> ...xml_content"
 They are taken from the [BPMN 2.0 examples non-normative machine readable files](https://www.omg.org/spec/BPMN/2.0).
 - Email_Voting.bpmn
 - Nobel_Prize_Process.bpmn
+- Order_Management.bpmn
 - Order_Process_for_Pizza_V4.bpmn
 - Travel_Booking.bpmn
 
