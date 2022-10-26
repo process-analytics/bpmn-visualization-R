@@ -2,7 +2,7 @@
 % Please edit documentation in R/bpmnVisualization.R
 \name{display}
 \alias{display}
-\title{Display BPMN diagram}
+\title{Display BPMN diagram in an HTML Widget}
 \usage{
 display(
   bpmnXML,
@@ -18,14 +18,17 @@ display(
 \item{overlays}{An element or a list of elements to be added to the diagram's existing elements.
 Use overlay function to create an overlay object with content and relative position.}
 
-\item{width}{The width used to display the widget}
+\item{width}{Fixed width for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
-\item{height}{The height used to display the widget}
+\item{height}{Fixed height for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
-\item{elementId}{The id of the HTML element to enclose the widget}
+\item{elementId}{The id of the HTML element to enclose the widget.
+Use an explicit element ID for the widget (rather than an automatically
+generated one). Useful if you have other JavaScript that needs to explicitly
+discover and interact with a specific widget instance.}
 }
 \value{
-A 'bpmnVisualization' htmlwidget that will intelligently print itself into HTML in a variety of contexts 
+A \code{bpmnVisualization} Widget that will intelligently print itself into HTML in a variety of contexts 
      including the R console, within R Markdown documents, and within Shiny output bindings.
 }
 \description{
@@ -40,8 +43,8 @@ display(bpmn_file, width='auto', height='auto')
 
 # Display the BPMN diagram with overlays
 overlays <- list(
-  create_overlay("start_event_1_1", "42"), 
-  create_overlay("sequence_flow_1_1", "42"), 
+  create_overlay("start_event_1_1", "42"),
+  create_overlay("sequence_flow_1_1", "42"),
   create_overlay("task_1_1", "9")
 )
 display(bpmn_file, overlays, width='auto', height='auto')

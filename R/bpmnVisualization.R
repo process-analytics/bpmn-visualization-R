@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' @title Display BPMN diagram
+#' @title Display BPMN diagram in an HTML Widget
 #'
 #' @name display
 #' @description Display BPMN diagram based on BPMN definition in XML format
@@ -20,11 +20,14 @@
 #' @param bpmnXML A file name or xml document or string in BPMN XML format
 #' @param overlays An element or a list of elements to be added to the diagram's existing elements.
 #'      Use overlay function to create an overlay object with content and relative position.
-#' @param width The width used to display the widget
-#' @param height The height used to display the widget
-#' @param elementId The id of the HTML element to enclose the widget
+#' @param width Fixed width for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
+#' @param height Fixed height for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
+#' @param elementId The id of the HTML element to enclose the widget.
+#'      Use an explicit element ID for the widget (rather than an automatically
+#'      generated one). Useful if you have other JavaScript that needs to explicitly
+#'      discover and interact with a specific widget instance.
 #' 
-#' @returns A 'bpmnVisualization' htmlwidget that will intelligently print itself into HTML in a variety of contexts 
+#' @returns A \code{bpmnVisualization} Widget that will intelligently print itself into HTML in a variety of contexts 
 #'      including the R console, within R Markdown documents, and within Shiny output bindings.
 #'      
 #' @examples 
@@ -36,8 +39,8 @@
 #' 
 #' # Display the BPMN diagram with overlays
 #' overlays <- list(
-#'   create_overlay("start_event_1_1", "42"), 
-#'   create_overlay("sequence_flow_1_1", "42"), 
+#'   create_overlay("start_event_1_1", "42"),
+#'   create_overlay("sequence_flow_1_1", "42"),
 #'   create_overlay("task_1_1", "9")
 #' )
 #' display(bpmn_file, overlays, width='auto', height='auto')
