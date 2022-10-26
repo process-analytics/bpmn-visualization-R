@@ -29,13 +29,13 @@
 #'      
 #' @examples 
 #' # Load the BPMN file
-#' bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization")
+#' bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisualization")
 #' 
 #' # Display the BPMN diagram
 #' display(bpmn_file)
 #' 
 #' # Display the BPMN diagram with overlays
-#' overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn_element_id_2", "9"))
+#' overlays <- list(create_overlay("start_event_1_1", "42"), create_overlay("sequence_flow_1_1", "42"), create_overlay("task_1_1", "9"))
 #' display(bpmn_file, overlays)
 #' 
 #' @seealso \code{\link{create_overlay}} to create an overlay
