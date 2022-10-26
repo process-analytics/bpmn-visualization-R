@@ -6,3 +6,6 @@
 ^.*\.md$
 ^doc$
 ^LICENSE$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
