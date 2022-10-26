@@ -1,9 +1,14 @@
-#' Create an overlay
+#' @title Create an overlay
 #'
+#' @description 
 #' An overlay can be added to existing elements in the diagram.
+#' 
 #' See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
+#' 
 #' Use this structure to create correct overlay structure.
 #'
+#' @name create_overlay
+#' 
 #' @param elementId The bpmn element id to which the overlay will be attached
 #' @param label HTML element to use as an overlay
 #'

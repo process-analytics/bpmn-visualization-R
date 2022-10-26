@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' display
+#' @title Display BPMN diagram
 #'
-#' Display BPMN diagram based on BPMN definition in XML format
-#'
+#' @name display
+#' @description Display BPMN diagram based on BPMN definition in XML format
+#' 
 #' @param bpmnXML A file name or xml document or string in BPMN XML format
 #' @param overlays An element or a list of elements to be added to the diagram's existing elements.
 #'      Use overlay function to create an overlay object with content and relative position.
@@ -37,7 +38,7 @@
 #' overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn_element_id_2", "9"))
 #' display(bpmn_file, overlays)
 #' 
-#' @seealso {[create_overlay()]}
+#' @seealso [bpmnVisualization::create_overlay()] to create an overlay
 #'
 #' @import htmlwidgets
 #' @import xml2
@@ -65,19 +66,17 @@ display <- function(
   )
 }
 
-#' Shiny bindings for bpmnVisualization: 
-#'   Helpers to create output functions for using 'bpmnVisualization' HTML widgets within Shiny applications and interactive Rmd documents.
+#' @title Shiny output binding for 'bpmnVisualization' HTML widget
+#' 
+#' @description 
+#' Helper to create output function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
 #' 
 #' @param outputId output variable to read from
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
-#' @param expr An expression that generates a bpmnVisualization
-#' @param env The environment in which to evaluate \code{expr}.
-#' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
-#'   is useful if you want to save an expression in a variable.
 #'   
-#' @returns An output or render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
+#' @returns An output function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
 #'
 #' @name bpmnVisualization-shiny-output
 #'
@@ -96,14 +95,17 @@ bpmnVisualizationOutput <- function(
   )
 }
 
-#' Shiny bindings for bpmnVisualization:
-#'   Helpers to create render functions for using 'bpmnVisualization' HTML widgets within Shiny applications and interactive Rmd documents.
+#' @title Shiny render binding for 'bpmnVisualization' HTML widget
 #' 
-#' @param expr An expression that generates an 'bpmnVisualization' HTML widget (or a promise of an 'bpmnVisualization' HTML widget).
-#' @param env The environment in which to evaluate expr.
-#' @param quoted Is expr a quoted expression (with quote())? This is useful if you want to save an expression in a variable.
+#' @description 
+#' Helper to create render function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
 #' 
-#' @returns An output or render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
+#' @param expr An expression that generates a 'bpmnVisualization' HTML widget
+#' @param env The environment in which to evaluate \code{expr}.
+#' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
+#'   is useful if you want to save an expression in a variable.
+#'
+#' @returns A render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
 #'
 #' @rdname bpmnVisualization-shiny-render
 #' @export

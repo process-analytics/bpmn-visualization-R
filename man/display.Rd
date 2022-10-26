@@ -2,7 +2,7 @@
 % Please edit documentation in R/bpmnVisualization.R
 \name{display}
 \alias{display}
-\title{display}
+\title{Display BPMN diagram}
 \usage{
 display(
   bpmnXML,
@@ -44,5 +44,5 @@ display(bpmn_file, overlays)
 
 }
 \seealso{
-{[create_overlay()]}
+[bpmnVisualization::create_overlay()] to create an overlay
 }

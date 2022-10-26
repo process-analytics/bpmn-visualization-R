@@ -2,7 +2,7 @@
 % Please edit documentation in R/funs.R
 \name{create_overlay}
 \alias{create_overlay}
-\title{create_overlay}
+\title{Create an overlay}
 \usage{
 create_overlay(elementId, label)
 }
@@ -16,6 +16,8 @@ An overlay object
 }
 \description{
 An overlay can be added to existing elements in the diagram.
+
 See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
+
 Use this structure to create correct overlay structure.
 }
