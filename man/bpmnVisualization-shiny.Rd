@@ -17,14 +17,19 @@ renderBpmnVisualization(expr, env = parent.frame(), quoted = FALSE)
 \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 string and have \code{'px'} appended.}
 
-\item{expr}{An expression that generates a bpmnVisualization}
+\item{expr}{An expression that generates an 'bpmnVisualization' HTML widget (or a promise of an 'bpmnVisualization' HTML widget).}
 
-\item{env}{The environment in which to evaluate \code{expr}.}
+\item{env}{The environment in which to evaluate expr.}
 
-\item{quoted}{Is \code{expr} a quoted expression (with \code{quote()})? This
-is useful if you want to save an expression in a variable.}
+\item{quoted}{Is expr a quoted expression (with quote())? This is useful if you want to save an expression in a variable.}
+}
+\value{
+An output or render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
+
+An output or render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
 }
 \description{
-Output and render functions for using bpmnVisualization within Shiny
-applications and interactive Rmd documents.
+Helpers to create output functions for using 'bpmnVisualization' HTML widgets within Shiny applications and interactive Rmd documents.
+
+Helpers to create render functions for using 'bpmnVisualization' HTML widgets within Shiny applications and interactive Rmd documents.
 }

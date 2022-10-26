@@ -24,6 +24,25 @@ Use overlay function to create an overlay object with content and relative posit
 
 \item{elementId}{The id of the HTML element to enclose the widget}
 }
+\value{
+A 'bpmnVisualization' htmlwidget that will intelligently print itself into HTML in a variety of contexts 
+     including the R console, within R Markdown documents, and within Shiny output bindings.
+}
 \description{
 Display BPMN diagram based on BPMN definition in XML format
+}
+\examples{
+# Load the BPMN file
+bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization")
+
+# Display the BPMN diagram
+display(bpmn_file)
+
+# Display the BPMN diagram with overlays
+overlays <- list(create_overlay("bpmn_element_id_1", "42"), create_overlay("bpmn_element_id_2", "9"))
+display(bpmn_file, overlays)
+
+}
+\seealso{
+{[create_overlay()]}
 }
