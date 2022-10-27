@@ -11,11 +11,10 @@ on:
       - '.github/workflows/publish-documentation.yml'
       - 'inst/**'
       - 'man/**'
+      - '.Rbuildignore'
       - '_pkgdown.yml'
       - 'CONTRIBUTING.md'
       - 'DESCRIPTION'
-      - ''
-      - ''
       - 'README.md' # TODO use the right file, the repo from the repo cannot be included (wrong format, too much info)
 jobs:
   generate:
