@@ -2,12 +2,12 @@
 % Please edit documentation in R/bpmnVisualization.R
 \name{renderBpmnVisualization}
 \alias{renderBpmnVisualization}
-\title{Shiny render binding for 'bpmnVisualization' HTML widget}
+\title{Shiny render binding for the \code{bpmn-visualization} HTML widget}
 \usage{
 renderBpmnVisualization(expr, env = parent.frame(), quoted = FALSE)
 }
 \arguments{
-\item{expr}{An expression that generates a 'bpmnVisualization' HTML widget}
+\item{expr}{An expression that generates a \code{bpmn-visualization} HTML widget}
 
 \item{env}{The environment in which to evaluate \code{expr}.}
 
@@ -15,8 +15,8 @@ renderBpmnVisualization(expr, env = parent.frame(), quoted = FALSE)
 is useful if you want to save an expression in a variable.}
 }
 \value{
-A render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
+A render function that enables the use of the \code{bpmn-visualization} widget within Shiny applications.
 }
 \description{
-Helper to create render function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
+Helper to create render function for using the \code{bpmn-visualization} HTML widget within Shiny applications and interactive Rmd documents.
 }

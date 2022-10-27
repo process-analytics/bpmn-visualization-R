@@ -3,7 +3,7 @@
 \name{bpmnVisualization-shiny-output}
 \alias{bpmnVisualization-shiny-output}
 \alias{bpmnVisualizationOutput}
-\title{Shiny output binding for 'bpmnVisualization' HTML widget}
+\title{Shiny output binding for the \code{bpmn-visualization} HTML widget}
 \usage{
 bpmnVisualizationOutput(outputId, width = "100\%", height = "400px")
 }
@@ -15,8 +15,8 @@ bpmnVisualizationOutput(outputId, width = "100\%", height = "400px")
 string and have \code{'px'} appended.}
 }
 \value{
-An output function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
+An output function that enables the use of the \code{bpmn-visualization} widget within Shiny applications.
 }
 \description{
-Helper to create output function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
+Helper to create output function for using the \code{bpmn-visualization} HTML widget within Shiny applications and interactive Rmd documents.
 }

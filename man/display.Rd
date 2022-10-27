@@ -28,7 +28,7 @@ generated one). Useful if you have other JavaScript that needs to explicitly
 discover and interact with a specific widget instance.}
 }
 \value{
-A \code{bpmnVisualization} Widget that will intelligently print itself into HTML in a variety of contexts 
+A \code{bpmn-visualization} Widget that will intelligently print itself into HTML in a variety of contexts 
      including the R console, within R Markdown documents, and within Shiny output bindings.
 }
 \description{
