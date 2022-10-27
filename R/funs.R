@@ -1,13 +1,17 @@
-#' create_overlay
+#' @title Create an overlay
 #'
+#' @name create_overlay
+#' @description 
 #' An overlay can be added to existing elements in the diagram.
-#' See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
+#' 
+#' See \code{overlays} argument in the \code{\link{display}} function.
+#' 
 #' Use this structure to create correct overlay structure.
-#'
+#' 
 #' @param elementId The bpmn element id to which the overlay will be attached
 #' @param label HTML element to use as an overlay
 #'
-#' @return An overlay object
+#' @returns An overlay object
 #'
 #' @export
 create_overlay <- function(elementId, label) {
@@ -18,10 +22,10 @@ create_overlay <- function(elementId, label) {
     )
 }
 
-#' Internal fun to build the htmlwidget content
+#' @description Internal fun to build the htmlwidget content
 #'
 #' @inheritParams display
-#' @return A list
+#' @returns A list
 #'
 #' @noRd
 build_bpmnContent <- function(
