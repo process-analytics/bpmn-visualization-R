@@ -7,10 +7,10 @@ The information provided here are for the maintainers of the project. Contributo
 
 A PR can only be merged into master by a maintainer, if all of these conditions are met:
 
-* It is passing CI.
-* It has been approved by at least two maintainers. If it was a maintainer who opened the PR, only one extra approval is needed.
-* It has no requested changes.
-* It is up to date with current master.
+- The CI Checks are passing.
+- It has been approved by at least two maintainers. If it was a maintainer who opened the PR, only one extra approval is needed.
+- It has no requested changes.
+- It is up to date with current `main` branch.
 
 ## Release process
 
