@@ -73,7 +73,7 @@ display <- function(
   )
 }
 
-#' @title Shiny output binding for 'bpmnVisualization' HTML widget
+#' @title Shiny output binding for the \code{bpmn-visualization} HTML widget
 #'
 #' @name bpmnVisualization-shiny-output
 #' @description 
