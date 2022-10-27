@@ -1,0 +1,75 @@
+name: Publish Documentation
+
+on:
+  pull_request:
+    # To manage 'surge-preview' action teardown, add default event types + closed event type
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+    paths:
+      #      - '.github/actions/build-setup/**/*'
+      - '.github/workflows/publish-documentation.yml'
+      - 'inst/**'
+      - 'man/**'
+      - '_pkgdown.yml'
+      - 'CONTRIBUTING.md'
+      - 'DESCRIPTION'
+      - ''
+      - ''
+      - 'README.md' # TODO use the right file, the repo from the repo cannot be included (wrong format, too much info)
+jobs:
+  generate:
+    if: github.event.action != 'closed' # on PR closed, only teardown the surge deployment
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: r-lib/actions/setup-r@v2
+#        default r version: release
+#        with:
+#          use-public-rspm: true
+#          r-version: ${{ matrix.config.r }}
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::pkgdown, local::.
+          needs: website
+      - uses: r-lib/actions/setup-tinytex@v2
+      - uses: r-lib/actions/setup-pandoc@v2
+      - name: Install package
+        run: R CMD INSTALL .
+      - name: Build website
+        shell: Rscript {0}
+        run: |
+          pkgdown::build_site()
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: documentation-${{github.sha}}
+          path: docs
+
+  publish_preview: # keep unique across jobs using surge preview (preview url and PR comment id)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-20.04
+    needs: generate # TODO test on PR closed, as 'generate' is not run in this case
+    permissions:
+      pull-requests: write # surge-preview: PR comments
+    steps:
+      - name: Download documentation
+        if: github.event.action != 'closed'
+        uses: actions/download-artifact@v3
+        with:
+          name: documentation-${{github.sha}}
+      - uses: bonitasoft/actions/packages/surge-preview-tools@v1
+        id: surge-preview-tools
+        with:
+          surge-token: ${{ secrets.SURGE_TOKEN }}
+      - name: Manage surge preview
+        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
+        uses: afc163/surge-preview@v1
+        with:
+          surge_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.SURGE_TOKEN }}
+          dist: ./docs
+          failOnError: true
+          teardown: 'true'
+          build: echo 'already built!'
