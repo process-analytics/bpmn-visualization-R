@@ -4,7 +4,7 @@
 #' @description 
 #' An overlay can be added to existing elements in the diagram.
 #' 
-#' See \code{overlays} argument in \code{\link{bpmnVisualization}} function.
+#' See \code{overlays} argument in the \code{\link{display}} function.
 #' 
 #' Use this structure to create correct overlay structure.
 #' 

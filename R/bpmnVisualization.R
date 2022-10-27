@@ -27,7 +27,7 @@
 #'      generated one). Useful if you have other JavaScript that needs to explicitly
 #'      discover and interact with a specific widget instance.
 #' 
-#' @returns A \code{bpmnVisualization} Widget that will intelligently print itself into HTML in a variety of contexts 
+#' @returns A \code{bpmn-visualization} Widget that will intelligently print itself into HTML in a variety of contexts 
 #'      including the R console, within R Markdown documents, and within Shiny output bindings.
 #'      
 #' @examples 
@@ -77,14 +77,14 @@ display <- function(
 #'
 #' @name bpmnVisualization-shiny-output
 #' @description 
-#' Helper to create output function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
+#' Helper to create output function for using the \code{bpmn-visualization} HTML widget within Shiny applications and interactive Rmd documents.
 #' 
 #' @param outputId output variable to read from
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
 #'   
-#' @returns An output function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
+#' @returns An output function that enables the use of the \code{bpmn-visualization} widget within Shiny applications.
 #'
 #' @export
 bpmnVisualizationOutput <- function(
@@ -101,18 +101,18 @@ bpmnVisualizationOutput <- function(
   )
 }
 
-#' @title Shiny render binding for 'bpmnVisualization' HTML widget
+#' @title Shiny render binding for the \code{bpmn-visualization} HTML widget
 #' 
 #' @rdname bpmnVisualization-shiny-render
 #' @description 
-#' Helper to create render function for using 'bpmnVisualization' HTML widget within Shiny applications and interactive Rmd documents.
+#' Helper to create render function for using the \code{bpmn-visualization} HTML widget within Shiny applications and interactive Rmd documents.
 #' 
-#' @param expr An expression that generates a 'bpmnVisualization' HTML widget
+#' @param expr An expression that generates a \code{bpmn-visualization} HTML widget
 #' @param env The environment in which to evaluate \code{expr}.
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
 #'
-#' @returns A render function that enables the use of the 'bpmnVisualization' widget within Shiny applications.
+#' @returns A render function that enables the use of the \code{bpmn-visualization} widget within Shiny applications.
 #'
 #' @export
 renderBpmnVisualization <- function(
