@@ -48,7 +48,7 @@ jobs:
           path: docs
 
   publish_preview: # keep unique across jobs using surge preview (preview url and PR comment id)
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && (jobs.generate.result == 'success' || jobs.generate.result == 'skipped')
     runs-on: ubuntu-20.04
     needs: generate # TODO test on PR closed, as 'generate' is not run in this case
     permissions:
