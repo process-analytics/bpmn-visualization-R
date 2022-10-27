@@ -39,7 +39,7 @@ install.packages('devtools')
 
 To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
 ```r
-devtools::install_github("process-analytics/bpmn-visualization-R@v0.2.0")
+devtools::install_github("process-analytics/bpmn-visualization-R@v0.2.1")
 ```
 
 Or install the development version:
