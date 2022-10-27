@@ -45,12 +45,14 @@ build_bpmnContent <- function(bpmnXML,
       bpmnContent <- as.character(xml)
     }
   } else {
-    stop("bpmnXML must be a absolute path of BPMN file or the string of the BPMN content !!")
+    stop("bpmnXML must be a absolute path of BPMN file or the string of the BPMN
+         content !!")
   }
   x <- list(bpmnContent = bpmnContent)
   
   if (length(overlays)) {
-    # In case the user passes a single parameter as overlays (instead of a list), we wrap it into a list so the js can work
+    # In case the user passes a single parameter as overlay (instead of a list),
+    # we wrap it into a list, so the js can work.
     x$overlays <- if (is.list(overlays[[1]])) {
       overlays
     } else {
