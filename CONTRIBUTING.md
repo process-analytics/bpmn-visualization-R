@@ -106,6 +106,15 @@ At this point, you're ready to make your changes! Feel free to ask for help. Eve
 devtools::install()
 ```
 
+### Install the `goodpractice` package
+[`goodpractice`](https://github.com/mangothecat/goodpractice) is an R package used to have advice about good practices when building R packages.  
+It can be installed from the R console:
+```r
+install.packages('goodpractice')
+library('goodpractice')
+```
+Then, follow the `goodpractice` documentation to execute the package.
+
 ### Regenerate the R documentation
 The **R documentation** (.Rd) format is generated from the function comments thanks to [roxygen2](https://roxygen2.r-lib.org/). \
 To regenerate this documentation after function comment updating, run this command:
