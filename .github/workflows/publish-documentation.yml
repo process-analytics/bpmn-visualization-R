@@ -52,7 +52,7 @@ jobs:
         with:
           name: documentation-${{github.sha}}
           path: docs
-      - uses: bonitasoft/actions/packages/surge-preview-tools@v1
+      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
         id: surge-preview-tools
         with:
           surge-token: ${{ secrets.SURGE_TOKEN }}
@@ -86,7 +86,7 @@ jobs:
 #        uses: actions/download-artifact@v3
 #        with:
 #          name: documentation-${{github.sha}}
-#      - uses: bonitasoft/actions/packages/surge-preview-tools@v1
+#      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
 #        id: surge-preview-tools
 #        with:
 #          surge-token: ${{ secrets.SURGE_TOKEN }}
