@@ -44,4 +44,6 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Generated documentation
 docs
