@@ -20,7 +20,7 @@ The DESCRIPTION file:
 Maintainer: \packageMaintainer{bpmnVisualization}
 }
 \examples{
-\dontrun{
+\donttest{
 
 bpmnVisualization::display(bpmn_xml)
 
