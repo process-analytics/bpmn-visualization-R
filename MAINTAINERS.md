@@ -48,7 +48,9 @@ if some files require changes. The PR/commit message should be `[RELEASE] Set ve
     - create a new release if it is missing or rename the existing one to match.
 - Assign the new tag as release target and save the draft (this should have already been managed by `release-drafter`)
 - Ensure that `This is a pre-release` is unchecked (except if we are releasing alpha, beta, rc, ...)
-- In the release description (check previous releases as a source of inspiration), put screenshots/gif of the new features.
+- In the release description (check previous releases as a source of inspiration)
+  - If the bpmn-visualization TypeScript library was updated, add a phrase about it (see [Release 0.2.1](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.2.1) for instance.): `The R package now uses [bpmn-visualization@0.26.2](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.26.2).`
+  - put screenshots/gif of the new features.
 - At any time, you can save the draft.
 
 ### Release on GitHub (tag)
