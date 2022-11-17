@@ -56,6 +56,11 @@ jobs:
         id: surge-preview-tools
         with:
           surge-token: ${{ secrets.SURGE_TOKEN }}
+      - name: echo node environment
+        run: |
+          node --version
+          npm --version
+          npx --version
       - name: Manage surge preview
         if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
         uses: afc163/surge-preview@v1
