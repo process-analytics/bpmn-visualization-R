@@ -25,6 +25,11 @@ jobs:
           echo "domain-exist: ${{ steps.surge-preview-tools.outputs.domain-exist }}" 
           echo "preview-url: ${{ steps.surge-preview-tools.outputs.preview-url }}" 
           echo "surge-token-valid: ${{ steps.surge-preview-tools.outputs.surge-token-valid }}"
+      - name: echo node environment
+        run: |
+          node --version
+          npm --version
+          npx --version
       - name: Build fake demo
         if: ${{ github.event.action != 'closed' }}
         env:
@@ -32,7 +37,9 @@ jobs:
         run: |
           mkdir docs
           echo "This is a preview site for <b>PR #${PR_NUMBER}</b>" > docs/index.html
-      - name: Publish Demo preview
+      - name: Echo docs content
+        run: ls -lh docs
+      - name: Manage surge preview
         if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
         id: doc_preview
         uses: afc163/surge-preview@v1
