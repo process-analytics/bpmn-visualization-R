@@ -29,7 +29,7 @@ name: R-CMD-check
 
 jobs:
   R-CMD-check:
-    if: ${{ matrix.config.os == 'unknown' }} # TMP disable the workflow run
+    if: ${{ runner.os == 'unknown' }} # TMP disable the workflow run
     runs-on: ${{ matrix.config.os }}
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
