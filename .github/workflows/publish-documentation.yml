@@ -19,35 +19,41 @@ on:
 
 jobs:
   # for Pull Request
-  # TODO manage close pr for surge teardown if: github.event.action != 'closed'
   pr_preview: # the id is used by surge to generate the surge url
-    # TODO test Ubuntu 22
-    runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-22.04
     permissions:
       pull-requests: write # surge-preview: PR comments
     steps:
       - uses: actions/checkout@v3
-# TODO the following is duplicated with the R-CMD-check.yaml workflow
+        if: github.event.action != 'closed'
+# TODO the following is duplicated with the R-CMD-check.yaml workflow. Only the setup-r (r-version) setup-r-dependencies inputs change
       - uses: r-lib/actions/setup-r@v2
-      #        default r version: release
-      #        with:
-      #          use-public-rspm: true
-      #          r-version: ${{ matrix.config.r }}
+        if: github.event.action != 'closed'
+        with:
+          use-public-rspm: true
+          r-version: release
       - uses: r-lib/actions/setup-r-dependencies@v2
+        if: github.event.action != 'closed'
         with:
           extra-packages: any::pkgdown, local::.
           needs: website
       - uses: r-lib/actions/setup-tinytex@v2
+        if: github.event.action != 'closed'
       - uses: r-lib/actions/setup-pandoc@v2
+        if: github.event.action != 'closed'
 # end of duplication
       - name: Install package
+        if: github.event.action != 'closed'
         run: R CMD INSTALL .
-      - name: Build website
+      - name: Build documentation website
+        if: github.event.action != 'closed'
         shell: Rscript {0}
         run: |
           pkgdown::build_site()
-# TODO only if we cannot publish to surge or always?
-      - name: Upload
+      # Always upload the website for local browsing and when it cannot be deployed to surge
+      - name: Upload documentation
+        if: github.event.action != 'closed'
         uses: actions/upload-artifact@v3
         with:
           name: documentation-${{github.sha}}
@@ -56,26 +62,6 @@ jobs:
         id: surge-preview-tools
         with:
           surge-token: ${{ secrets.SURGE_TOKEN }}
-#      - name: Echo surge preview tools output
-#        run: |
-#          echo "can-run-surge-command: ${{ steps.surge-preview-tools.outputs.can-run-surge-command }}"
-#          echo "domain-exist: ${{ steps.surge-preview-tools.outputs.domain-exist }}"
-#          echo "preview-url: ${{ steps.surge-preview-tools.outputs.preview-url }}"
-#          echo "surge-token-valid: ${{ steps.surge-preview-tools.outputs.surge-token-valid }}"
-#      - name: echo node environment
-#        run: |
-#          node --version
-#          npm --version
-#          npx --version
-#      - name: Build fake demo
-#        if: ${{ github.event.action != 'closed' }}
-#        env:
-#          PR_NUMBER: ${{ github.event.pull_request.number }}
-#        run: |
-#          mkdir docs
-#          echo "This is a preview site for <b>PR #${PR_NUMBER}</b> on $(date)" > docs/index.html
-#      - name: Echo docs content
-#        run: ls -lh docs
       - name: Manage surge preview
         if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
         id: doc_preview
@@ -87,93 +73,3 @@ jobs:
           failOnError: true
           teardown: true
           build: ls -lh docs
-
-
-
-  # for Pull Request
-# TODO manage close pr for surge teardown if: github.event.action != 'closed'
-#  pr_preview:
-#    # TODO test Ubuntu 22
-#    runs-on: ubuntu-20.04
-#    permissions:
-#      pull-requests: write # surge-preview: PR comments
-#    steps:
-#      - uses: actions/checkout@v3
-## TODO the following is duplicated with the R-CMD-check.yaml workflow
-#      - uses: r-lib/actions/setup-r@v2
-#      #        default r version: release
-#      #        with:
-#      #          use-public-rspm: true
-#      #          r-version: ${{ matrix.config.r }}
-#      - uses: r-lib/actions/setup-r-dependencies@v2
-#        with:
-#          extra-packages: any::pkgdown, local::.
-#          needs: website
-#      - uses: r-lib/actions/setup-tinytex@v2
-#      - uses: r-lib/actions/setup-pandoc@v2
-## end of duplication
-#      - name: Install package
-#        run: R CMD INSTALL .
-#      - name: Build website
-#        shell: Rscript {0}
-#        run: |
-#          pkgdown::build_site()
-## TODO only if we cannot publish to surge
-#      - name: Upload
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: documentation-${{github.sha}}
-#          path: docs
-#      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
-#        id: surge-preview-tools
-#        with:
-#          surge-token: ${{ secrets.SURGE_TOKEN }}
-#      - name: echo node environment
-#        run: |
-#          node --version
-#          npm --version
-#          npx --version
-#      - name: Manage surge preview
-#        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
-#        uses: afc163/surge-preview@v1
-#        with:
-#          surge_token: ${{ secrets.GITHUB_TOKEN }}
-#          github_token: ${{ secrets.SURGE_TOKEN }}
-#          dist: ./docs
-#          failOnError: true
-#          teardown: 'true'
-#          build: ls -lh docs
-
-#  generate:
-#    if: github.event.action != 'closed' # on PR closed, only teardown the surge deployment
-#
-#  publish_preview:
-#    # on PR close, the 'generate' dependent job is skipped. So, without adding extra 'if' conditions, the job would be skipped as well
-#    # see https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-not-requiring-successful-dependent-jobs
-#    # TODO the following is NOT WORKING!!
-##    if: github.event_name == 'pull_request' && (needs.generate.result == 'success' || needs.generate.result == 'skipped')
-#    if: github.event_name == 'pull_request' && always()
-#    runs-on: ubuntu-20.04
-#    needs: generate
-#    permissions:
-#      pull-requests: write # surge-preview: PR comments
-#    steps:
-#      - name: Download documentation
-#        if: github.event.action != 'closed'
-#        uses: actions/download-artifact@v3
-#        with:
-#          name: documentation-${{github.sha}}
-#      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
-#        id: surge-preview-tools
-#        with:
-#          surge-token: ${{ secrets.SURGE_TOKEN }}
-#      - name: Manage surge preview
-#        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
-#        uses: afc163/surge-preview@v1
-#        with:
-#          surge_token: ${{ secrets.GITHUB_TOKEN }}
-#          github_token: ${{ secrets.SURGE_TOKEN }}
-#          dist: ./docs
-#          failOnError: true
-#          teardown: 'true'
-#          build: echo 'already built!'
