@@ -29,6 +29,12 @@ jobs:
         id: surge-preview-tools
         with:
           surge-token: ${{ secrets.SURGE_TOKEN }}
+      - name: Echo surge preview tools output
+        run: |
+          echo "can-run-surge-command: ${{ steps.surge-preview-tools.outputs.can-run-surge-command }}"
+          echo "domain-exist: ${{ steps.surge-preview-tools.outputs.domain-exist }}" 
+          echo "preview-url: ${{ steps.surge-preview-tools.outputs.preview-url }}" 
+          echo "surge-token-valid: ${{ steps.surge-preview-tools.outputs.surge-token-valid }}"
       - name: echo node environment
         run: |
           node --version
