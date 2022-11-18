@@ -7,12 +7,11 @@ on:
     branches:
       - main
 
-permissions:
-  pull-requests: write
-
 jobs:
   pr_preview:  # the id is used by surge to generate the surge url
     runs-on: ubuntu-20.04
+    permissions:
+      pull-requests: write # surge-preview: PR comments
     steps:
       - uses: actions/checkout@v3
       - uses: bonitasoft/actions/packages/surge-preview-tools@v2
@@ -36,7 +35,7 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           mkdir docs
-          echo "This is a preview site for <b>PR #${PR_NUMBER}</b>" > docs/index.html
+          echo "This is a preview site for <b>PR #${PR_NUMBER}</b> on $(date)" > docs/index.html
       - name: Echo docs content
         run: ls -lh docs
       - name: Manage surge preview
