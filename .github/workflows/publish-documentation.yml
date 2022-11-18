@@ -17,8 +17,7 @@ on:
       - 'DESCRIPTION'
       - 'README.md' # TODO use the right file, the repo from the repo cannot be included (wrong format, too much info)
 jobs:
-  # for Pull Request
-# TODO manage close pr for surge teardown if: github.event.action != 'closed'
+  # TODO temp to debug surge deploy error
   pr_preview:
     # TODO test Ubuntu 22
     runs-on: ubuntu-20.04
@@ -26,32 +25,6 @@ jobs:
       pull-requests: write # surge-preview: PR comments
     steps:
       - uses: actions/checkout@v3
-
-# TODO the following is duplicated with the R-CMD-check.yaml workflow
-      - uses: r-lib/actions/setup-r@v2
-      #        default r version: release
-      #        with:
-      #          use-public-rspm: true
-      #          r-version: ${{ matrix.config.r }}
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages: any::pkgdown, local::.
-          needs: website
-      - uses: r-lib/actions/setup-tinytex@v2
-      - uses: r-lib/actions/setup-pandoc@v2
-# end of duplication
-      - name: Install package
-        run: R CMD INSTALL .
-      - name: Build website
-        shell: Rscript {0}
-        run: |
-          pkgdown::build_site()
-# TODO only if we cannot publish to surge
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: documentation-${{github.sha}}
-          path: docs
       - uses: bonitasoft/actions/packages/surge-preview-tools@v2
         id: surge-preview-tools
         with:
@@ -61,6 +34,13 @@ jobs:
           node --version
           npm --version
           npx --version
+      - name: Build fake demo
+        if: ${{ github.event.action != 'closed' }}
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          mkdir docs
+          echo "This is a preview site for <b>PR #${PR_NUMBER}</b>" > docs/index.html
       - name: Manage surge preview
         if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
         uses: afc163/surge-preview@v1
@@ -70,7 +50,63 @@ jobs:
           dist: ./docs
           failOnError: true
           teardown: 'true'
-          build: echo 'already built!'
+          build: ls -lh docs
+
+
+
+  # for Pull Request
+# TODO manage close pr for surge teardown if: github.event.action != 'closed'
+#  pr_preview:
+#    # TODO test Ubuntu 22
+#    runs-on: ubuntu-20.04
+#    permissions:
+#      pull-requests: write # surge-preview: PR comments
+#    steps:
+#      - uses: actions/checkout@v3
+## TODO the following is duplicated with the R-CMD-check.yaml workflow
+#      - uses: r-lib/actions/setup-r@v2
+#      #        default r version: release
+#      #        with:
+#      #          use-public-rspm: true
+#      #          r-version: ${{ matrix.config.r }}
+#      - uses: r-lib/actions/setup-r-dependencies@v2
+#        with:
+#          extra-packages: any::pkgdown, local::.
+#          needs: website
+#      - uses: r-lib/actions/setup-tinytex@v2
+#      - uses: r-lib/actions/setup-pandoc@v2
+## end of duplication
+#      - name: Install package
+#        run: R CMD INSTALL .
+#      - name: Build website
+#        shell: Rscript {0}
+#        run: |
+#          pkgdown::build_site()
+## TODO only if we cannot publish to surge
+#      - name: Upload
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: documentation-${{github.sha}}
+#          path: docs
+#      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
+#        id: surge-preview-tools
+#        with:
+#          surge-token: ${{ secrets.SURGE_TOKEN }}
+#      - name: echo node environment
+#        run: |
+#          node --version
+#          npm --version
+#          npx --version
+#      - name: Manage surge preview
+#        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
+#        uses: afc163/surge-preview@v1
+#        with:
+#          surge_token: ${{ secrets.GITHUB_TOKEN }}
+#          github_token: ${{ secrets.SURGE_TOKEN }}
+#          dist: ./docs
+#          failOnError: true
+#          teardown: 'true'
+#          build: ls -lh docs
 
 #  generate:
 #    if: github.event.action != 'closed' # on PR closed, only teardown the surge deployment
