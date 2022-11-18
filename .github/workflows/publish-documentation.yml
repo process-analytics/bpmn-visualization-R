@@ -47,16 +47,18 @@ jobs:
         run: |
           mkdir docs
           echo "This is a preview site for <b>PR #${PR_NUMBER}</b>" > docs/index.html
-      - name: Manage surge preview
-        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
-        uses: afc163/surge-preview@v1
-        with:
-          surge_token: ${{ secrets.GITHUB_TOKEN }}
-          github_token: ${{ secrets.SURGE_TOKEN }}
-          dist: ./docs
-          failOnError: true
-          teardown: 'true'
-          build: ls -lh docs
+      - name: Echo docs content
+        run: ls -lh docs
+#      - name: Manage surge preview
+#        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
+#        uses: afc163/surge-preview@v1
+#        with:
+#          surge_token: ${{ secrets.GITHUB_TOKEN }}
+#          github_token: ${{ secrets.SURGE_TOKEN }}
+#          dist: ./docs
+#          failOnError: true
+#          teardown: 'true'
+#          build: ls -lh docs
 
 
 
