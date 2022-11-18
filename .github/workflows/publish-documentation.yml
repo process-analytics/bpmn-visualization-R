@@ -16,9 +16,9 @@ on:
       - 'CONTRIBUTING.md'
       - 'DESCRIPTION'
       - 'README.md' # TODO use the right file, the repo from the repo cannot be included (wrong format, too much info)
+
 jobs:
-  # TODO temp to debug surge deploy error
-  pr_preview:
+  pr_preview: # the id is used by surge to generate the surge url
     # TODO test Ubuntu 22
     runs-on: ubuntu-20.04
     permissions:
@@ -46,19 +46,20 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: |
           mkdir docs
-          echo "This is a preview site for <b>PR #${PR_NUMBER}</b>" > docs/index.html
+          echo "This is a preview site for <b>PR #${PR_NUMBER}</b> on $(date)" > docs/index.html
       - name: Echo docs content
         run: ls -lh docs
-#      - name: Manage surge preview
-#        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
-#        uses: afc163/surge-preview@v1
-#        with:
-#          surge_token: ${{ secrets.GITHUB_TOKEN }}
-#          github_token: ${{ secrets.SURGE_TOKEN }}
-#          dist: ./docs
-#          failOnError: true
-#          teardown: 'true'
-#          build: ls -lh docs
+      - name: Manage surge preview
+        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
+        id: doc_preview
+        uses: afc163/surge-preview@v1
+        with:
+          surge_token: ${{ secrets.SURGE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dist: docs
+          failOnError: true
+          teardown: true
+          build: ls -lh docs
 
 
 
