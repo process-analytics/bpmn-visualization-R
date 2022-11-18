@@ -63,12 +63,11 @@ if some files require changes. The PR/commit message should be `[RELEASE] Set ve
 
 **NOTE**: this is a very manual process today. For improvements, see [#131](https://github.com/process-analytics/bpmn-visualization-R/issues/131)
 
-Update the [DESCRIPTION](./DESCRIPTION) file to use a development version (for more explanations, see the [R documentation](https://r-pkgs.org/release.html#post-release):
-- bump the current version. For instance, if the released version was `0.3.0`, bump it to `0.3.1`
-- add a postfix to the version to state that it is a development version. For instance, `0.3.1.9000`
+Add the `.9000` suffix to the `Version` field in the [DESCRIPTION](./DESCRIPTION) file to indicate that this is a development version (for more explanations, see the [R documentation](https://r-pkgs.org/release.html#post-release)).  
+For instance, if the released version was `0.3.0`, the `Version` field in the `DESCRIPTION` file should be `0.3.O.9000`.
 
 Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it.
-The PR/commit message should be `[INFRA] Set the development version to x.y.z`.
+The PR/commit message should be `[INFRA] Set the development version to x.y.z.9000`.
 
 ### Publish the new version on CRAN
 
