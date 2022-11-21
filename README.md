@@ -24,7 +24,7 @@
 
 This project is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
 
-It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provides an easy-to-use framework for bringing together R and the [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) TypeScript library.
+It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provides an easy-to-use framework for bringing together R and the [BPMN Visualization](https://github.com/process-analytics/bpmn-visualization-js) TypeScript library.
 
 ## ♻️ Usage
 ### Installation

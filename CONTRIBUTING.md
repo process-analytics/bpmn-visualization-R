@@ -127,9 +127,9 @@ pkgdown::build_site(devel = TRUE, lazy = TRUE, preview = FALSE)
 ```
 For more details about the available options, see https://pkgdown.r-lib.org/reference/build_site.html
 
-### bpmn-visualization TypeScript library update
+### bpmn-visualization-js update
 
-The [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update_bpmn_visualization_version.yml) workflow when a new version of this library is released.
+The  [bpmn-visualization-js](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update BPMN Visualization version](.github/workflows/update_bpmn_visualization_version.yml) worklow when a new version of this library is released.
 
 This generates a new Pull Request and notifies the reviewers.
 
