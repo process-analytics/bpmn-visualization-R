@@ -1,0 +1,17 @@
+template:
+  bootstrap: 5
+
+home:
+  # shorten the title of the DESCRIPTION file
+  title: Visualize Process Execution Data on BPMN Diagrams
+
+# TODO create the News menu entry, but also a reference to the news/index.html page that is not generated (because we don't have a NEWS.md file)
+news:
+  releases:
+    # 0.2.1
+    # 0.2.0
+    # 0.1.2
+    - text: "Version 0.1.1"
+      href: https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.1.1
+    - text: "Version 0.1.0"
+      href: https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.1.0
