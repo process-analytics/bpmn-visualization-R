@@ -26,7 +26,7 @@ Maintainer: \packageMaintainer{bpmnVisualization}
 bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisualization")
 
 # Display the BPMN diagram
-display(bpmn_file, width='auto', height='auto')
+bpmnVisualization::display(bpmn_file, width='auto', height='auto')
 }
 }
 
