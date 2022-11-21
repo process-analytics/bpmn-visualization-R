@@ -1,0 +1,30 @@
+name: 'Build Setup'
+description: 'Setup R and install dependencies'
+inputs:
+  dependencies-extra-packages:
+    description: '`extra-packages` input for the `setup-r-dependencies` action.'
+    required: true
+  dependencies-needs:
+    description: '`needs` input for the `setup-r-dependencies` action.'
+    required: true
+  r-version:
+    description: 'The R version to use.'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+# build
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        r-version: ${{ inputs.r-version }}
+        use-public-rspm: true
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+        extra-packages: ${{ inputs.dependencies-extra-packages }}
+        needs: ${{ inputs.dependencies-needs }}
+    # to generate documentation
+    - uses: r-lib/actions/setup-pandoc@v2
+    #  Sets up LaTeX with tinytex, for PDF generation
+    - uses: r-lib/actions/setup-tinytex@v2
+
+

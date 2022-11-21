@@ -7,7 +7,7 @@ on:
     branches:
       - main
     paths:
-      #      - '.github/actions/build-setup/**/*'
+      - '.github/actions/build-setup/**/*'
       - '.github/workflows/publish-documentation.yml'
       - 'inst/**'
       - 'man/**'
@@ -27,22 +27,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         if: github.event.action != 'closed'
-# TODO the following is duplicated with the R-CMD-check.yaml workflow. Only the setup-r (r-version) setup-r-dependencies inputs change
-      - uses: r-lib/actions/setup-r@v2
+      - uses: ./.github/actions/build-setup
         if: github.event.action != 'closed'
         with:
-          use-public-rspm: true
+          dependencies-extra-packages: any::pkgdown, local::.
+          dependencies-needs: website
           r-version: release
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        if: github.event.action != 'closed'
-        with:
-          extra-packages: any::pkgdown, local::.
-          needs: website
-      - uses: r-lib/actions/setup-tinytex@v2
-        if: github.event.action != 'closed'
-      - uses: r-lib/actions/setup-pandoc@v2
-        if: github.event.action != 'closed'
-# end of duplication
+      # TODO find how to install package in the R script to have a single R step
       - name: Install package
         if: github.event.action != 'closed'
         run: R CMD INSTALL .
