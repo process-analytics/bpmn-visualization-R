@@ -28,7 +28,7 @@ generated one). Useful if you have other JavaScript that needs to explicitly
 discover and interact with a specific widget instance.}
 }
 \value{
-A \code{bpmn-visualization} Widget that will intelligently print itself into HTML in a variety of contexts
+A \code{bpmn-visualization} Widget that will intelligently print itself into HTML in a variety of contexts 
      including the R console, within R Markdown documents, and within Shiny output bindings.
 }
 \description{
@@ -39,7 +39,7 @@ Display BPMN diagram based on BPMN definition in XML format
 bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisualization")
 
 # Display the BPMN diagram
-bpmnVisualization::display(bpmn_file, width='auto', height='auto')
+display(bpmn_file, width='auto', height='auto')
 
 # Display the BPMN diagram with overlays
 overlays <- list(
@@ -47,7 +47,7 @@ overlays <- list(
   create_overlay("sequence_flow_1_1", "42"),
   create_overlay("task_1_1", "9")
 )
-bpmnVisualization::display(bpmn_file, overlays, width='auto', height='auto')
+display(bpmn_file, overlays, width='auto', height='auto')
 
 }
 \seealso{
