@@ -8,8 +8,8 @@ All members of our community are expected to follow our [Code of Conduct](https:
 
 There are many ways to contribute:
 
-- help people with the questions they ask on the [GitHub Issues](https://github.com/process-analytics/bpmn-visualization-R/issues)
-- submitting bug reports and feature requests in the [GitHub Issues](https://github.com/process-analytics/bpmn-visualization-R/issues/new)
+- help people with the questions they ask on the [Github Issues](https://github.com/process-analytics/bpmn-visualization-R/issues)
+- submitting bug reports and feature requests in the [Github Issues](https://github.com/process-analytics/bpmn-visualization-R/issues/new)
 - improving the README & documentation
 - writing code which can be incorporated into `bpmn-visualization-R` itself
 
@@ -23,12 +23,12 @@ For all contributions, please respect the following guidelines:
 
 3. Do not commit changes to files that are irrelevant to your feature or bugfix (eg: `.gitignore`).
 
-4. Open a [GitHub Pull Request](CONTRIBUTING.md#open-a-pull-request) with your patches. (**1** pull request = **1** feature or bug)
+7. Open a [GitHub Pull Request](CONTRIBUTING.md#open-a-pull-request) with your patches. (**1** pull request = **1** feature or bug)
    We will review your contribution and respond as quickly as possible. Keep in mind that this is an open source project, and it may take us some time to get back to you. Your patience is very much appreciated.
 
-5. If this is your 1st Pull Request, sign the [Contributor License Agreement](CONTRIBUTING.md#sign-the-contributor-license-agreement)
+8. If this is your 1st Pull Request, sign the [Contributor License Agreement](CONTRIBUTING.md#sign-the-contributor-license-agreement)
 
-6. Be willing to accept criticism and work on improving your code. 
+9. Be willing to accept criticism and work on improving your code. 
 
 **Working on your first Pull Request?** You can learn how from this *free* series [How to Contribute to an Open Source Project on  GitHub](https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github)    
 
@@ -45,26 +45,26 @@ git checkout -b 25-customize_overlays
 ### Commit in the Pull Request
 There is no convention for the commit message in the Pull Request.
 The most important part is the title of the Pull Request, because:
-- Everyone must use Pull Request, no direct commit allowed on main branch
+- Everyone must use Pull Request, no direct commit allowed on master branch
 - The commits of a Pull Request are almost always squashed
 - The title of the Pull Request is used as proposal for the maintainer merging the Pull Request
 
 ### Open a Pull Request
 
-At this point, you should switch back to your main branch and make sure it's up-to-date with `bpmn-visualization-R`
-`main` branch:
+At this point, you should switch back to your master branch and make sure it's up to date with `bpmn-visualization-R`
+`master` branch:
 
 ```sh
 git remote add upstream git@github.com:process-analytics/bpmn-visualization-R.git
-git checkout main
-git pull upstream main
+git checkout master
+git pull upstream master
 ```
 
-Then update your feature branch from your local copy of main, and push it!
+Then update your feature branch from your local copy of master, and push it!
 
 ```sh
 git checkout 25-customize_overlays
-git rebase main
+git rebase master
 git push --set-upstream origin 25-customize_overlays
 ```
 
@@ -94,7 +94,7 @@ Here's the suggested workflow:
 
 ```sh
 git checkout 25-customize_overlays
-git pull --rebase upstream main
+git pull --rebase upstream master
 git push --force-with-lease 25-customize_overlays
 ```
 
