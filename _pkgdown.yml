@@ -1,6 +1,10 @@
 template:
   bootstrap: 5
 
+home:
+  # shorten the title of the DESCRIPTION file
+  title: Visualize Process Execution Data on BPMN Diagrams
+
 # TODO create the News menu entry, but also a reference to the news/index.html page that is not generated (because we don't have a NEWS.md file)
 news:
   releases:
