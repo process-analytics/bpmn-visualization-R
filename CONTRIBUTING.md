@@ -113,6 +113,22 @@ To regenerate this documentation after function comment updating, run this comma
 devtools::document()
 ```
 
+### Generate the HTML documentation (site)
+
+The HTML documentation is generated with [pkgdown](https://pkgdown.r-lib.org).
+
+If you need to test locally changes in the configuration or content of this documentation, install `pkgdown` following the [official documentation](https://pkgdown.r-lib.org/#installation).
+
+**Note**: on Ubuntu, you may encounter errors during the installation of `pkgdown`. In particular, the installation of some dependent packages may fail:
+- `systemfonts`: run `sudo apt -y install libfontconfig1-dev` (see [systemfonts#35](https://github.com/r-lib/systemfonts/issues/35#issuecomment-633560151) )
+- `textshapping`: `run sudo apt -y install libharfbuzz-dev libfribidi-dev` 
+
+Once `pkgdown` is installed, you can generate the HTML documentation quickly with this command:
+```
+pkgdown::build_site(devel = TRUE, lazy = TRUE, preview = FALSE)
+```
+For more details about the available options, see [the official documentation](https://pkgdown.r-lib.org/reference/build_site.html).
+
 ### bpmn-visualization TypeScript library update
 
 The [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update_bpmn_visualization_version.yml) workflow when a new version of this library is released.
