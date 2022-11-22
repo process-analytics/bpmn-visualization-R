@@ -121,11 +121,11 @@ Generate the HTML documentation with [pkgdown](https://pkgdown.r-lib.org)
 - `systemfonts`: run `sudo apt -y install libfontconfig1-dev` (see [systemfonts#35](https://github.com/r-lib/systemfonts/issues/35#issuecomment-633560151) )
 - `textshapping`: `run sudo apt -y install libharfbuzz-dev libfribidi-dev` 
 
-To quickly iterate when changing the site configuration or content, run
+Once `pkgdown` is installed, you can generate the HTML documentation quickly with this command:
 ```
 pkgdown::build_site(devel = TRUE, lazy = TRUE, preview = FALSE)
 ```
-For more details about the available options, see https://pkgdown.r-lib.org/reference/build_site.html
+For more details about the available options, see [the official documentation](https://pkgdown.r-lib.org/reference/build_site.html).
 
 ### bpmn-visualization TypeScript library update
 
