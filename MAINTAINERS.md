@@ -16,17 +16,6 @@ A PR can only be merged into master by a maintainer, if all of these conditions 
 
 Maintainers need to perform the following actions **in the order described here** to push out a release.
 
-### Verify the version in files
-
-**NOTE**: this is a very manual process today. For improvements, see [#131](https://github.com/process-analytics/bpmn-visualization-R/issues/131)
-
-Check that the files are using the version to be released:
-- [DESCRIPTION](./DESCRIPTION)
-- [README](./README.md)
-
-Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it,
-if some files require changes. The PR/commit message should be `[RELEASE] Set version to x.y.z`.
-
 ### GitHub issues and milestones update
 
 **Note:** we always put issues related to a version in a Milestone whose name matches the version.
@@ -38,37 +27,60 @@ if some files require changes. The PR/commit message should be `[RELEASE] Set ve
 
 ### Prepare the GitHub Release Notes
 
-- Open [github releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
+- Open [GitHub releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
 - Create a new draft release and name it `Next` (the name is not relevant and will be replaced automatically later).
   This ensures that development can continue without impacting the writing of the content of the in progress release. That way,
   if a PR is merged, `release-drafter` will update the `Next` draft release keeping the in-progress release untouched.
 - The draft release for the newly tagged version should already exist:
-    - [release-drafter](https://github.com/release-drafter/release-drafter) creates or updates draft release for the
-      next version each time a pull request is merged to the `master` branch.
-    - create a new release if it is missing or rename the existing one to match.
-- Assign the new tag as release target and save the draft (this should have already been managed by `release-drafter`)
+  - [release-drafter](https://github.com/release-drafter/release-drafter) creates or updates draft release for the
+    next version each time a pull request is merged to the `master` branch.
+  - create a new release if it is missing or rename the existing one to match.
 - Ensure that `This is a pre-release` is unchecked (except if we are releasing alpha, beta, rc, ...)
+
+### Initiate the Release
+
+- Open the [Release GitHub Actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/release.yml)
+- Click on the 'Run workflow' dropdown located on the right side of the page
+- Provide parameter value for New version type (default is patch, but you can choose one of the [major | minor | patch])
+- Click on the button 'Run workflow'
+- Make sure job execution was successful by checking the status
+- The new git tag should have been created and available on GitHub
+
+___
+
+### Manual procedure
+
+⚠️⚠️⚠️ _**Only if the GitHub job that release this repository fails after manual re-run!**_  ⚠️⚠️⚠️
+
+#### Verify the version in files
+
+Check that the files are using the version to be released:
+- [DESCRIPTION](./DESCRIPTION)
+- [README](./README.md)
+
+Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it,
+if some files require changes. The PR/commit message should be `[RELEASE] Set version to x.y.z`.
+
+#### Use a development version
+
+Add the `.9000` suffix to the `Version` field in the [DESCRIPTION](./DESCRIPTION) file to indicate that this is a development version (for more explanations, see the [R documentation](https://r-pkgs.org/release.html#post-release)).  
+For instance, if the released version was `0.3.0`, the `Version` field in the `DESCRIPTION` file should be `0.3.O.9000`.
+
+Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it.
+The PR/commit message should be `[INFRA] Set the development version to x.y.z.9000`.
+
+___
+
+#### Publish the GitHub Release Notes
+
+- Open the draft release note in [GitHub releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
 - In the release description (check previous releases as a source of inspiration)
   - If the bpmn-visualization TypeScript library was updated, add a phrase about it (see [Release 0.2.1](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.2.1) for instance.): `The R package now uses [bpmn-visualization@0.26.2](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.26.2).`
   - put screenshots/gif of the new features.
 - At any time, you can save the draft.
-
-### Release on GitHub (tag)
-
-- Open the draft release note in [github releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
-- Verify the tag version as the same as the release note.
-- Published the release **only when you are done** with the release content.
-
-### Use a development version
-
-**NOTE**: this is a very manual process today. For improvements, see [#131](https://github.com/process-analytics/bpmn-visualization-R/issues/131)
-
-Update the [DESCRIPTION](./DESCRIPTION) file to use a development version (for more explanations, see the [R documentation](https://r-pkgs.org/release.html#post-release):
-- bump the current version. For instance, if the released version was `0.3.0`, bump it to `0.3.1`
-- add a postfix to the version to state that it is a development version. For instance, `0.3.1.9000`
-
-Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it.
-The PR/commit message should be `[INFRA] Set the development version to x.y.z`.
+- **Only when you are done**:
+  - Assign the tag of the new version as release target and save the draft (doing it as later as possible ensure that `release-drafter` doesn't interfer with the writing of the Release Notes)
+  - Publish the release.
 
 ### Publish the new version on CRAN
 
