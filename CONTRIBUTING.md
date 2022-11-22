@@ -115,7 +115,9 @@ devtools::document()
 
 ### Generate the HTML documentation (site)
 
-Generate the HTML documentation with [pkgdown](https://pkgdown.r-lib.org)
+The HTML documentation is generated with [pkgdown](https://pkgdown.r-lib.org).
+
+If you need to test locally changes in the configuration or content of this documentation, install `pkgdown` following the [official documentation](https://pkgdown.r-lib.org/#installation).
 
 **Note**: on Ubuntu, you may encounter errors during the installation of `pkgdown`. In particular, the installation of some dependent packages may fail:
 - `systemfonts`: run `sudo apt -y install libfontconfig1-dev` (see [systemfonts#35](https://github.com/r-lib/systemfonts/issues/35#issuecomment-633560151) )
