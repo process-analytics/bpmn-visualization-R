@@ -33,10 +33,6 @@ jobs:
           dependencies-extra-packages: any::pkgdown, local::.
           dependencies-needs: website
           r-version: release
-      # TODO find how to install package in the R script to have a single R step
-#      - name: Install package
-#        if: github.event.action != 'closed'
-#        run: R CMD INSTALL .
       - name: Build documentation website
         if: github.event.action != 'closed'
         shell: Rscript {0}
