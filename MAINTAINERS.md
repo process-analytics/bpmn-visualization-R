@@ -50,7 +50,7 @@ ___
 
 ### Manual procedure
 
-⚠️⚠️⚠️ _**Only if the GitHub job that publish the npm package fails after manual re-run!**_  ⚠️⚠️⚠️
+⚠️⚠️⚠️ _**Only if the GitHub job that release this repository fails after manual re-run!**_  ⚠️⚠️⚠️
 
 #### Verify the version in files
 
