@@ -1,0 +1,62 @@
+name: Publish Documentation
+
+on:
+  pull_request:
+    # To manage 'surge-preview' action teardown, add default event types + closed event type
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+    paths:
+      - '.github/actions/build-setup/**/*'
+      - '.github/workflows/publish-documentation.yml'
+      - 'inst/**'
+      - 'man/**'
+      - '.Rbuildignore'
+      - '_pkgdown.yml'
+      - 'CONTRIBUTING.md'
+      - 'DESCRIPTION'
+      - 'README.md' # TODO use the right file, the repo from the repo cannot be included (wrong format, too much info)
+
+jobs:
+  # for Pull Request
+  pr_preview: # the id is used by surge to generate the surge url
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-22.04
+    permissions:
+      pull-requests: write # surge-preview: PR comments
+    steps:
+      - uses: actions/checkout@v3
+        if: github.event.action != 'closed'
+      - uses: ./.github/actions/build-setup
+        if: github.event.action != 'closed'
+        with:
+          dependencies-extra-packages: any::pkgdown, local::.
+          dependencies-needs: website
+          r-version: release
+      - name: Build documentation website
+        if: github.event.action != 'closed'
+        shell: Rscript {0}
+        run: |
+          pkgdown::build_site()
+      # Always upload the website for local browsing and when it cannot be deployed to surge
+      - name: Upload documentation
+        if: github.event.action != 'closed'
+        uses: actions/upload-artifact@v3
+        with:
+          name: documentation-${{github.sha}}
+          path: docs
+      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
+        id: surge-preview-tools
+        with:
+          surge-token: ${{ secrets.SURGE_TOKEN }}
+      - name: Manage surge preview
+        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
+        id: doc_preview
+        uses: afc163/surge-preview@v1
+        with:
+          surge_token: ${{ secrets.SURGE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dist: docs
+          failOnError: true
+          teardown: true
+          build: ls -lh docs
