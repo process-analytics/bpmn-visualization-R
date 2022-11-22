@@ -10,7 +10,7 @@ A PR can only be merged into master by a maintainer, if all of these conditions 
 - The CI Checks are passing.
 - It has been approved by at least two maintainers. If it was a maintainer who opened the PR, only one extra approval is needed.
 - It has no requested changes.
-- It is up to date with current `main` branch.
+- It is up-to-date with current `main` branch.
 
 ## Release process
 
@@ -76,19 +76,26 @@ The PR/commit message should be `[INFRA] Set the development version to x.y.z`.
 - CRAN publishing is `in-progress`, see [#10](https://github.com/process-analytics/bpmn-visualization-R/issues/10)
 - This is a very manual process today. For improvements, see [#11](https://github.com/process-analytics/bpmn-visualization-R/issues/11)
 
-- Pull the new version created by the release workflow: `git pull origin`
-- Ensure you are on the last tag locally: `git checkout vX.Y.Z`
-- Build the source package. Please read [the CRAN Submission policies first](https://cran.r-project.org/web/packages/policies.html#Submission)
-    - Solution 1: Build the source package with RStudio
-        - Open the project in RStudio
-        - On the **Build** tab, click on **More** > **Build Source Package**
-        - Go to the parent folder of the project. You should find a file named like `bpmnVisualization_X.Y.Z.tgz`.
-    - Solution 2.
-        - from the project directory, run `R CMD build .
-        - You should find a file named like `bpmnVisualization_X.Y.Z.tgz` in the project directory.
-- Do the actual submission
-    - Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualization_X.Y.Z.tgz` file.
-    - Submit
+#### Generate and retrieve the source package
+
+It conforms to [the CRAN Submission policies first](https://cran.r-project.org/web/packages/policies.html#Submission)
+
+- Open [GitHub Actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml)
+- Find the execution related to the newly created tag
+  - If it doesn't exist, click on the 'Run workflow' dropdown located on the right side of the page
+  - Choose the **tag that has just been created**, do not use the main branch!
+  - Click on the button 'Run workflow'
+- Download the source package
+  - in the artifact section, choose the source package built with the `r-release` version, as shown in the screenshot below 👇
+  - unzip the artifact to retrieve the tar.gz file that will submit be later
+
+![source package selection](./doc/maintainers/release_cran_source_package.png)
+
+
+#### Do the submission
+
+- Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualization_X.Y.Z.tgz` file.
+- Submit
 
 ## Communicate about the release
 
