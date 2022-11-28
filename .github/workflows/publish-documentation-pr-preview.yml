@@ -22,7 +22,6 @@ on:
 jobs:
   # for Pull Request
   pr_preview: # the id is used by surge to generate the surge url
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-22.04
     permissions:
       pull-requests: write # surge-preview: PR comments
