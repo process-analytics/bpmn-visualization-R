@@ -1,4 +1,4 @@
-name: Publish Documentation
+name: Publish Documentation PR preview
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
       - main
     paths:
       - '.github/actions/build-setup/**/*'
-      - '.github/workflows/publish-documentation.yml'
+      - '.github/workflows/publish-documentation-pr-preview.yml'
       - 'inst/**'
       - 'man/**'
       - '.Rbuildignore'
