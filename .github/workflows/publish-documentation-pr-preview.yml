@@ -1,0 +1,54 @@
+name: Publish Documentation PR preview
+
+on:
+  pull_request:
+    # To manage 'surge-preview' action teardown, add default event types + closed event type
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+    # keep in sync with publish-documentation-pr-preview
+    paths:
+      - '.github/actions/build-documentation-site/**/*'
+      - '.github/actions/build-setup/**/*'
+      - '.github/workflows/publish-documentation-pr-preview.yml'
+      - 'inst/**'
+      - 'man/**'
+      - '.Rbuildignore'
+      - '_pkgdown.yml'
+      - 'CONTRIBUTING.md'
+      - 'DESCRIPTION'
+      - 'index.md'
+
+jobs:
+  # for Pull Request
+  pr_preview: # the id is used by surge to generate the surge url
+    runs-on: ubuntu-22.04
+    permissions:
+      pull-requests: write # surge-preview: PR comments
+    steps:
+      - uses: actions/checkout@v3
+        if: github.event.action != 'closed'
+      - uses: ./.github/actions/build-documentation-site
+        if: github.event.action != 'closed'
+      # Always upload the website for local browsing and when it cannot be deployed to surge
+      - name: Upload documentation
+        if: github.event.action != 'closed'
+        uses: actions/upload-artifact@v3
+        with:
+          name: documentation-${{github.sha}}
+          path: docs
+      - uses: bonitasoft/actions/packages/surge-preview-tools@v2
+        id: surge-preview-tools
+        with:
+          surge-token: ${{ secrets.SURGE_TOKEN }}
+      - name: Manage surge preview
+        if: steps.surge-preview-tools.outputs.can-run-surge-command == 'true'
+        id: doc_preview
+        uses: afc163/surge-preview@v1
+        with:
+          surge_token: ${{ secrets.SURGE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dist: docs
+          failOnError: true
+          teardown: true
+          build: ls -lh docs
