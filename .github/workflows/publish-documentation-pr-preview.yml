@@ -7,6 +7,7 @@ on:
     branches:
       - main
     paths:
+      - '.github/actions/build-documentation-site/**/*'
       - '.github/actions/build-setup/**/*'
       - '.github/workflows/publish-documentation-pr-preview.yml'
       - 'inst/**'
@@ -15,7 +16,7 @@ on:
       - '_pkgdown.yml'
       - 'CONTRIBUTING.md'
       - 'DESCRIPTION'
-      - 'README.md' # TODO use the right file, the repo from the repo cannot be included (wrong format, too much info)
+      - 'index.md'
 
 jobs:
   # for Pull Request
@@ -27,17 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         if: github.event.action != 'closed'
-      - uses: ./.github/actions/build-setup
+      - uses: ./.github/actions/build-documentation-site
         if: github.event.action != 'closed'
-        with:
-          dependencies-extra-packages: any::pkgdown, local::.
-          dependencies-needs: website
-          r-version: release
-      - name: Build documentation website
-        if: github.event.action != 'closed'
-        shell: Rscript {0}
-        run: |
-          pkgdown::build_site()
       # Always upload the website for local browsing and when it cannot be deployed to surge
       - name: Upload documentation
         if: github.event.action != 'closed'
