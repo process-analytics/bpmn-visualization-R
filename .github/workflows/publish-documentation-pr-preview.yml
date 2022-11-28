@@ -6,6 +6,7 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+    # keep in sync with publish-documentation-pr-preview
     paths:
       - '.github/actions/build-documentation-site/**/*'
       - '.github/actions/build-setup/**/*'

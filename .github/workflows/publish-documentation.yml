@@ -7,7 +7,7 @@ on:
 # TODO temp, switch to main when ok
     branches: ["19-publish_gh-pages"]
 #    branches: ["main"]
-# TODO duplication with PR preview
+    # keep in sync with publish-documentation-pr-preview
     paths:
       - '.github/actions/build-documentation-site/**/*'
       - '.github/actions/build-setup/**/*'
