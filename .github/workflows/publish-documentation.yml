@@ -1,5 +1,5 @@
 # Deploy the documentation to GitHub Pages
-name: Publish documentation
+name: Publish Documentation
 
 on:
   # Runs on pushes targeting the default branch
