@@ -56,6 +56,7 @@ ___
 
 Check that the files are using the version to be released:
 - [DESCRIPTION](./DESCRIPTION)
+- [index](./index.md) (used in the HTML documentation)
 - [README](./README.md)
 
 Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it,
