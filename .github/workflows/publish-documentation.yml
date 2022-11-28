@@ -11,7 +11,7 @@ on:
     paths:
       - '.github/actions/build-documentation-site/**/*'
       - '.github/actions/build-setup/**/*'
-      - '.github/workflows/publish-documentation-pr-preview.yml'
+      - '.github/workflows/publish-documentation.yml'
       - 'inst/**'
       - 'man/**'
       - '.Rbuildignore'
