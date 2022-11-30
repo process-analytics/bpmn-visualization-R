@@ -11,6 +11,7 @@ To visualize the execution data of the processes on BPMN (Business Process Model
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://process-analytics.github.io/bpmn-visualization-R/}
   \item \url{https://github.com/process-analytics/bpmn-visualization-R}
   \item Report bugs at \url{https://github.com/process-analytics/bpmn-visualization-R/issues}
 }
