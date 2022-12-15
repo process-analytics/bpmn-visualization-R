@@ -43,7 +43,7 @@ that will render it.
 bpmnVisualization::display(bpmn_content)
 ```
 
-Read `?display` for more details.
+Read `display` for more details.
 
 
 ## Code of conduct
