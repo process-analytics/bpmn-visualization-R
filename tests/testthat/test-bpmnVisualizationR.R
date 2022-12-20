@@ -2,13 +2,13 @@ test_that("display works", {
   res <- display(
     system.file(
       "examples/Email_Voting.bpmn",
-      package = "bpmnVisualization"
+      package = "bpmnVisualizationR"
     )
   )
   expect_true(
     inherits(
       res,
-      "bpmnVisualization"
+      "bpmnVisualizationR"
     )
   )
   expect_true(
@@ -23,7 +23,7 @@ test_that("display works", {
     readLines(
       system.file(
         "examples/Email_Voting.bpmn",
-        package = "bpmnVisualization"
+        package = "bpmnVisualizationR"
       )
     ),
     collapse = " "
@@ -44,8 +44,8 @@ test_that("display works", {
   )
 })
 
-test_that("bpmnVisualizationOutput works", {
-  res <- bpmnVisualizationOutput("xyz")
+test_that("bpmnVisualizationROutput works", {
+  res <- bpmnVisualizationROutput("xyz")
   expect_true(
     inherits(
       res,
@@ -55,20 +55,20 @@ test_that("bpmnVisualizationOutput works", {
 
   expect_true(
     grepl(
-      "bpmnVisualization",
+      "bpmnVisualizationR",
       res
     )
   )
 })
 
 
-test_that("renderBpmnVisualization works", {
+test_that("renderBpmnVisualizationR works", {
   skip_if_not_installed("shiny")
-  res <- renderBpmnVisualization({
+  res <- renderBpmnVisualizationR({
     display(
       system.file(
         "examples/Email_Voting.bpmn",
-        package = "bpmnVisualization"
+        package = "bpmnVisualizationR"
       )
     )
   })
