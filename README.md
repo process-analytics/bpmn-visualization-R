@@ -22,9 +22,11 @@
 </div>  
 <br>
 
-This project is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
+<!-- duplicated with README.md -->
+`bpmnVisualization` is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
 
 It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provides an easy-to-use framework for bringing together R and the [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) TypeScript library.
+<!-- END OF duplicated with README.md -->
 
 ## ♻️ Usage
 ### Installation
@@ -35,11 +37,12 @@ It can be installed from the R console:
 install.packages('devtools')
 ```
 
+<!-- duplicated with README.md -->
 #### Install _BPMN Visualization - R Package_ from GitHub
 
 To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
 ```r
-devtools::install_github("process-analytics/bpmn-visualization-R@v0.2.1")
+devtools::install_github("process-analytics/bpmn-visualization-R@v0.2.2")
 ```
 
 Or install the development version:
@@ -51,6 +54,7 @@ Then, make the library available to the current R project:
 ```r
 library(bpmnVisualization)
 ```
+<!-- END OF duplicated with README.md -->
 
 ### Load the BPMN file
 `bpmnVisualization` accepts a BPMN file (or an XML document):

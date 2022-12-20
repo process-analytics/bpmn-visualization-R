@@ -1,0 +1,16 @@
+name: 'Build Documentation Site'
+description: 'Setup R and build the documentation'
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: ./.github/actions/build-setup
+      with:
+        dependencies-extra-packages: any::pkgdown, local::.
+        dependencies-needs: website
+        r-version: release
+    - name: Build documentation website
+      if: github.event.action != 'closed'
+      shell: Rscript {0}
+      run: |
+        pkgdown::build_site()

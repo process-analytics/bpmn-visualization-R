@@ -9,7 +9,7 @@ on:
         default: 'patch'
 jobs:
   bumpVersion:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - run: |
           echo "New version type: ${{ github.event.inputs.type }}"
@@ -48,11 +48,13 @@ jobs:
       - name: Update with the release version
         run: |
           CURRENT_VERSION=$(grep Version DESCRIPTION | sed 's/Version: \(.*\).9000/\1/g')
+          sed -i -E "s/$CURRENT_VERSION/${{ steps.release_version.outputs.version }}/g" index.md
           sed -i -E "s/$CURRENT_VERSION/${{ steps.release_version.outputs.version }}/g" README.md
           sed -i -E 's/Version: .*/Version: ${{ steps.release_version.outputs.version }}/g' DESCRIPTION
 
       - name: Commit with the release version
         run: |
+          git add index.md
           git add README.md
           git add DESCRIPTION
           git commit -m "[RELEASE] Set the release version to ${{ steps.release_version.outputs.version }}"

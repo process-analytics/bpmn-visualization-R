@@ -56,10 +56,17 @@ ___
 
 Check that the files are using the version to be released:
 - [DESCRIPTION](./DESCRIPTION)
+- [index](./index.md) (used in the HTML documentation)
 - [README](./README.md)
 
 Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it,
 if some files require changes. The PR/commit message should be `[RELEASE] Set version to x.y.z`.
+
+Once this is done, tag manually with the following command (**do not forget** to replace `x.y.z` by the actual version):
+``` 
+git tag -a vx.y.z -m "[RELEASE] x.y.z"
+git push && git push --tags
+```
 
 #### Use a development version
 
@@ -86,7 +93,6 @@ ___
 
 **NOTES**:
 - CRAN publishing is `in-progress`, see [#10](https://github.com/process-analytics/bpmn-visualization-R/issues/10)
-- This is a very manual process today. For improvements, see [#11](https://github.com/process-analytics/bpmn-visualization-R/issues/11)
 
 #### Generate and retrieve the source package
 
@@ -107,6 +113,8 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
 #### Do the submission
 
 - Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualization_X.Y.Z.tgz` file.
+  - upload the package `tar.gz` source previously retrieved
+  - for all required fields, use the value from the DESCRIPTION file of the `tar.gz` source (in particular, the name and email of the maintainer of the package are available at the end of the file)
 - Submit
 
 ## Communicate about the release
