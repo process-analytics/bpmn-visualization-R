@@ -130,7 +130,7 @@ For more details about the available options, see [the official documentation](h
 
 ### bpmn-visualization TypeScript library update
 
-The [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update_bpmn_visualization_version.yml) workflow when a new version of this library is released.
+The [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update-bpmn-visualization-version.yml) workflow when a new version of this library is released.
 
 This generates a new Pull Request and notifies the reviewers.
 
@@ -138,6 +138,6 @@ ___
 ⚠️⚠️⚠️ _**Manual procedure - Only if the job does NOT work!**_  ⚠️⚠️⚠️
 
 - Change [bpmn-visualization.min.js](inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js). The file can be retrieved from [jsdelivr](https://www.jsdelivr.com/package/npm/bpmn-visualization) or [unpkg](https://unpkg.com/browse/bpmn-visualization/).
-- Update the version of `bpmn-visualization` in [bpmnVisualization.yaml](inst/htmlwidgets/bpmnVisualization.yaml)
+- Update the version of `bpmn-visualization` TypeScript library in [bpmnVisualizationR.yaml](inst/htmlwidgets/bpmnVisualizationR.yaml)
 ___
 
