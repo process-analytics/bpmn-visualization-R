@@ -45,13 +45,13 @@ git checkout -b 25-customize_overlays
 ### Commit in the Pull Request
 There is no convention for the commit message in the Pull Request.
 The most important part is the title of the Pull Request, because:
-- Everyone must use Pull Request, no direct commit allowed on main branch
-- The commits of a Pull Request are almost always squashed
-- The title of the Pull Request is used as proposal for the maintainer merging the Pull Request
+- Everyone must use Pull Request, no direct commit allowed on the `main` branch.
+- The commits of a Pull Request are almost always squashed.
+- The title of the Pull Request is used as proposal for the maintainer merging the Pull Request.
 
 ### Open a Pull Request
 
-At this point, you should switch back to your main branch and make sure it's up-to-date with the `main` branch of the `bpmn-visualization-R` repository:
+At this point, you should switch back to your own branch and make sure it's up-to-date with the `main` branch of the `bpmn-visualization-R` repository:
 
 ```sh
 git remote add upstream git@github.com:process-analytics/bpmn-visualization-R.git
@@ -59,7 +59,7 @@ git checkout main
 git pull upstream main
 ```
 
-Then update your feature branch from your local copy of main, and push it!
+Then update your feature branch from your local copy of the `main` branch, and push it!
 
 ```sh
 git checkout 25-customize_overlays
@@ -67,9 +67,8 @@ git rebase main
 git push --set-upstream origin 25-customize_overlays
 ```
 
-Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) with labels :smile:
+Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) with labels :smile:  
 For the title, follow the directives of the Pull Request template.
-Add a screenshot of the rendering of your examples/bpmn-file. 
 
 :warning: We care about quality. So your PR won't be merged until all tests pass.
 
@@ -128,9 +127,9 @@ pkgdown::build_site(devel = TRUE, lazy = TRUE, preview = FALSE)
 ```
 For more details about the available options, see [the official documentation](https://pkgdown.r-lib.org/reference/build_site.html).
 
-### bpmn-visualization TypeScript library update
+### Update of the `bpmn-visualization` TypeScript library
 
-The [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update-bpmn-visualization-version.yml) workflow when a new version of this library is released.
+The [`bpmn-visualization`](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update-bpmn-visualization-version.yml) workflow when a new version of this library is released.
 
 This generates a new Pull Request and notifies the reviewers.
 
