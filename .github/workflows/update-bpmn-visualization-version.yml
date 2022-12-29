@@ -21,7 +21,7 @@ jobs:
         with:
           cmd: yq '.dependencies[] | select(.name == "bpmn-visualization") | .version' inst/htmlwidgets/bpmnVisualizationR.yaml
       - run: echo "OLD_VERSION=${{ steps.lookupOldBPMNVisuVersion.outputs.result }}" >> $GITHUB_ENV
-      - name: Delete the old file of bpmn-visualization
+      - name: Delete the old bpmn-visualization
         run: rm inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js
       - name: Download bpmn-visualization@${{ env.VERSION }}
         uses: carlosperate/download-file-action@v2
