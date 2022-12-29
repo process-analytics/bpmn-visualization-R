@@ -1,6 +1,6 @@
 <!-- This page is processed by pkgdown to create the home page of the HTML documentation -->
 
-# BPMN Visualization - R Package
+# bpmnVisualizationR
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/process-analytics/bpmn-visualization-R/workflows/R-CMD-check/badge.svg)](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml)
@@ -8,7 +8,7 @@
 
 
 <!-- duplicated with README.md -->
-`bpmnVisualization` is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
+`bpmnVisualizationR` is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
 
 It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provides an easy-to-use framework for bringing together R and the [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) TypeScript library.
 <!-- END OF duplicated with README.md -->
@@ -29,7 +29,7 @@ devtools::install_github("process-analytics/bpmn-visualization-R")
 
 Then, make the library available to the current R project:
 ```r
-library(bpmnVisualization)
+library(bpmnVisualizationR)
 ```
 <!-- END OF duplicated with README.md -->
 
@@ -40,7 +40,7 @@ You first need to retrieve the content of the BPMN diagram. Once you are done, y
 that will render it.
 
 ```r
-bpmnVisualization::display(bpmn_content)
+bpmnVisualizationR::display(bpmn_content)
 ```
 
 Read `?display` for more details.

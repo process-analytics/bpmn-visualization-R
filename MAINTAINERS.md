@@ -132,7 +132,7 @@ ___
 
 You can use this template:
 
-> 📣 bpmn-visualization R package {version} is out! 🎉
+> 📣 bpmnVisualizationR {version} is out! 🎉
 >
 > ===> some short description here <===
 >
@@ -146,7 +146,7 @@ Channel: [news](https://discord.com/channels/1011911769607913562/102432915903349
 
 You can use this template:
 
-> 📣 bpmn-visualization R package {version} is out! 🎉
+> 📣 bpmnVisualizationR {version} is out! 🎉
 >
 > ===> some short description here <===
 >

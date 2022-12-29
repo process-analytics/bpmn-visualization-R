@@ -1,6 +1,6 @@
 # Contributing
 
-You are here to help on `bpmn-visualization-R`? Awesome, feel welcome and read the following guidelines in order to know how to contribute, to ask questions and to make `bpmn-visualization-R` such a great tool.
+You are here to help on `bpmnVisualizationR`? Awesome, feel welcome and read the following guidelines in order to know how to contribute, to ask questions and to make `bpmnVisualizationR` such a great tool.
 
 All members of our community are expected to follow our [Code of Conduct](https://github.com/process-analytics/.github/blob/main/CODE_OF_CONDUCT.md). Please make sure you are welcoming and friendly in all of our spaces.
 
@@ -11,7 +11,7 @@ There are many ways to contribute:
 - help people with the questions they ask on the [GitHub Issues](https://github.com/process-analytics/bpmn-visualization-R/issues)
 - submitting bug reports and feature requests in the [GitHub Issues](https://github.com/process-analytics/bpmn-visualization-R/issues/new)
 - improving the README & documentation
-- writing code which can be incorporated into `bpmn-visualization-R` itself
+- writing code which can be incorporated into `bpmnVisualizationR` itself
 
 ### Code and documentation changes guidelines
 
@@ -34,7 +34,7 @@ For all contributions, please respect the following guidelines:
 
 ### Fork & create a branch
 
-[Fork bpmn-visualization-R](https://help.github.com/articles/fork-a-repo) and create a branch with a descriptive name. 
+[Fork the bpmn-visualization-R repository](https://help.github.com/articles/fork-a-repo) and create a branch with a descriptive name. 
 
 A good branch name would be (where issue #25 is the ticket you're working on): **25-customize_overlays**
 
@@ -45,14 +45,13 @@ git checkout -b 25-customize_overlays
 ### Commit in the Pull Request
 There is no convention for the commit message in the Pull Request.
 The most important part is the title of the Pull Request, because:
-- Everyone must use Pull Request, no direct commit allowed on main branch
-- The commits of a Pull Request are almost always squashed
-- The title of the Pull Request is used as proposal for the maintainer merging the Pull Request
+- Everyone must use Pull Request, no direct commit allowed on the `main` branch.
+- The commits of a Pull Request are almost always squashed.
+- The title of the Pull Request is used as proposal for the maintainer merging the Pull Request.
 
 ### Open a Pull Request
 
-At this point, you should switch back to your main branch and make sure it's up-to-date with `bpmn-visualization-R`
-`main` branch:
+At this point, you should switch back to your own branch and make sure it's up-to-date with the `main` branch of the `bpmn-visualization-R` repository:
 
 ```sh
 git remote add upstream git@github.com:process-analytics/bpmn-visualization-R.git
@@ -60,7 +59,7 @@ git checkout main
 git pull upstream main
 ```
 
-Then update your feature branch from your local copy of main, and push it!
+Then update your feature branch from your local copy of the `main` branch, and push it!
 
 ```sh
 git checkout 25-customize_overlays
@@ -68,11 +67,10 @@ git rebase main
 git push --set-upstream origin 25-customize_overlays
 ```
 
-Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) with labels :smile:
+Finally, go to GitHub and [make a Pull Request](https://help.github.com/articles/creating-a-pull-request) with labels 😄   
 For the title, follow the directives of the Pull Request template.
-Add a screenshot of the rendering of your examples/bpmn-file. 
 
-:warning: We care about quality. So your PR won't be merged until all tests pass.
+⚠️ We care about quality. So your PR won't be merged until all tests pass.
 
 ### Sign the Contributor License Agreement
 
@@ -88,7 +86,7 @@ You only need to sign the CLA once or when the CLA terms have changed.
 
 ### Keeping your Pull Request updated
 
-If a maintainer asks you to [rebase](http://git-scm.com/book/en/Git-Branching-Rebasing) your PR, they're saying that a lot of code has changed, and that you need to update your branch so it's easier to merge.
+If a maintainer asks you to [rebase](http://git-scm.com/book/en/Git-Branching-Rebasing) your PR, they're saying that a lot of code has changed, and that you need to update your branch, so it's easier to merge.
 
 Here's the suggested workflow:
 
@@ -129,9 +127,9 @@ pkgdown::build_site(devel = TRUE, lazy = TRUE, preview = FALSE)
 ```
 For more details about the available options, see [the official documentation](https://pkgdown.r-lib.org/reference/build_site.html).
 
-### bpmn-visualization TypeScript library update
+### Update of the `bpmn-visualization` TypeScript library
 
-The [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update_bpmn_visualization_version.yml) workflow when a new version of this library is released.
+The [`bpmn-visualization`](https://github.com/process-analytics/bpmn-visualization-js) dependency is automatically updated by the [Update bpmn-visualization version](.github/workflows/update-bpmn-visualization-version.yml) workflow when a new version of this library is released.
 
 This generates a new Pull Request and notifies the reviewers.
 
@@ -139,6 +137,6 @@ ___
 ⚠️⚠️⚠️ _**Manual procedure - Only if the job does NOT work!**_  ⚠️⚠️⚠️
 
 - Change [bpmn-visualization.min.js](inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js). The file can be retrieved from [jsdelivr](https://www.jsdelivr.com/package/npm/bpmn-visualization) or [unpkg](https://unpkg.com/browse/bpmn-visualization/).
-- Update the version of `bpmn-visualization` in [bpmnVisualization.yaml](inst/htmlwidgets/bpmnVisualization.yaml)
+- Update the version of `bpmn-visualization` TypeScript library in [bpmnVisualizationR.yaml](inst/htmlwidgets/bpmnVisualizationR.yaml)
 ___
 

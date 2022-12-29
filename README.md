@@ -1,4 +1,4 @@
-<h1 align="center">BPMN Visualization - R Package</h1>
+<h1 align="center">bpmnVisualizationR</h1>
 <div align="center">
     <p align="center"> <img title="Email Voting BPMN Diagram with overlays" src="doc/example_email_voting_with_overlays.svg" alt="Email Voting BPMN Diagram with overlays"></p>
     <p align="center">
@@ -23,7 +23,7 @@
 <br>
 
 <!-- duplicated with README.md -->
-`bpmnVisualization` is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
+`bpmnVisualizationR` is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
 
 It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provides an easy-to-use framework for bringing together R and the [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) TypeScript library.
 <!-- END OF duplicated with README.md -->
@@ -38,7 +38,7 @@ install.packages('devtools')
 ```
 
 <!-- duplicated with README.md -->
-#### Install _BPMN Visualization - R Package_ from GitHub
+#### Install _bpmnVisualizationR_ from GitHub
 
 To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
 ```r
@@ -52,16 +52,16 @@ devtools::install_github("process-analytics/bpmn-visualization-R")
 
 Then, make the library available to the current R project:
 ```r
-library(bpmnVisualization)
+library(bpmnVisualizationR)
 ```
 <!-- END OF duplicated with README.md -->
 
 ### Load the BPMN file
-`bpmnVisualization` accepts a BPMN file (or an XML document):
+`bpmnVisualizationR` accepts a BPMN file (or an XML document):
 
 ```r
 # File from the package
-bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualization")
+bpmn_file <- system.file("examples/Email_Voting.bpmn", package = "bpmnVisualizationR")
 ```
 
 Or
@@ -89,16 +89,16 @@ They are taken from the [BPMN 2.0 examples non-normative machine readable files]
 
 ### Display the BPMN diagram
 ```r
-bpmnVisualization::display(bpmn_file)
+bpmnVisualizationR::display(bpmn_file)
 ```
 
 
 ### Display the BPMN diagram with overlays
 
 ```r
-overlays <- list(bpmnVisualization::create_overlay("bpmn_element_id_1", "42"), 
-                 bpmnVisualization::create_overlay("bpmn_element_id_2", "9"))
-bpmnVisualization::display(bpmn_file, overlays)
+overlays <- list(bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42"), 
+                 bpmnVisualizationR::create_overlay("bpmn_element_id_2", "9"))
+bpmnVisualizationR::display(bpmn_file, overlays)
 ```
 
 
@@ -113,20 +113,20 @@ library(shiny)
 
 
 displayBpmn <- function() {
-    bpmn_file <- system.file("examples/Travel_Booking.bpmn", package = "bpmnVisualization")
-    overlays <- list(bpmnVisualization::create_overlay("_6-203", "9"))
-    bpmnVisualization::display(bpmn_file, overlays)
+    bpmn_file <- system.file("examples/Travel_Booking.bpmn", package = "bpmnVisualizationR")
+    overlays <- list(bpmnVisualizationR::create_overlay("_6-203", "9"))
+    bpmnVisualizationR::display(bpmn_file, overlays)
 }
 
 ui <- shinyUI(fluidPage(
     titlePanel("Display bpmn diagrams with execution data"),
-    bpmnVisualization::bpmnVisualizationOutput('bpmnContainer')
+    bpmnVisualizationR::bpmnVisualizationROutput('bpmnContainer')
   )
 )
 
 server = function(input, output) {
     # renderBpmnVisualization is the R bridge function to the html widgets
-    output$bpmnContainer <- bpmnVisualization::renderBpmnVisualization({ displayBpmn() })
+    output$bpmnContainer <- bpmnVisualizationR::renderBpmnVisualizationR({ displayBpmn() })
 }
 
 shinyApp(ui, server)
@@ -134,7 +134,7 @@ shinyApp(ui, server)
 
 ## 🔧 Contributing
 
-To contribute to `bpmn-visualization-R`, fork and clone this repository locally and commit your code on a separate branch. \
+To contribute to `bpmnVisualizationR`, fork and clone this repository locally and commit your code on a separate branch. \
 Please write tests for your code before opening a pull-request.
 
 You can find more detail in our [Contributing guide](CONTRIBUTING.md). Participation in this open source project is subject to a [Code of Conduct](CODE_OF_CONDUCT.md).
@@ -143,5 +143,5 @@ You can find more detail in our [Contributing guide](CONTRIBUTING.md). Participa
 
 ## 📃 License
 
-`bpmn-visualization-R` is released under the [Apache 2.0](LICENSE) license. \
+`bpmnVisualizationR` is released under the [Apache 2.0](LICENSE) license. \
 Copyright &copy; from 2021, Bonitasoft S.A.

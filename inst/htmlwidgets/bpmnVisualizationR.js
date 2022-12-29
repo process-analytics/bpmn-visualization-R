@@ -15,7 +15,7 @@ limitations under the License.
 */
 
 HTMLWidgets.widget({
-    name: "bpmnVisualization",
+    name: "bpmnVisualizationR",
     type: "output",
 
     factory: function(containerElt, width, height) {

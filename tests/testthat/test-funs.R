@@ -42,7 +42,7 @@ test_that("build_bpmnContent works", {
     xml2::read_xml(
       system.file(
         "examples/Email_Voting.bpmn",
-        package = "bpmnVisualization"
+        package = "bpmnVisualizationR"
       )
     )
   )
@@ -58,7 +58,7 @@ test_that("build_bpmnContent works", {
     xml2::read_xml(
       system.file(
         "examples/Email_Voting.bpmn",
-        package = "bpmnVisualization"
+        package = "bpmnVisualizationR"
       )
     ),
     overlays = "this"
@@ -81,7 +81,7 @@ test_that("build_bpmnContent works", {
     xml2::read_xml(
       system.file(
         "examples/Email_Voting.bpmn",
-        package = "bpmnVisualization"
+        package = "bpmnVisualizationR"
       )
     ),
     overlays = list(
@@ -103,7 +103,7 @@ test_that("build_bpmnContent works", {
       readLines(
         system.file(
           "examples/Email_Voting.bpmn",
-          package = "bpmnVisualization"
+          package = "bpmnVisualizationR"
         )
       ),
       collapse = " "
@@ -121,7 +121,7 @@ test_that("build_bpmnContent works", {
   res <- build_bpmnContent(
     system.file(
       "examples/Email_Voting.bpmn",
-      package = "bpmnVisualization"
+      package = "bpmnVisualizationR"
     )
   )
   expect_true(
