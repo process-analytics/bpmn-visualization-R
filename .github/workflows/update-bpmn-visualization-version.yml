@@ -23,12 +23,12 @@ jobs:
       - run: echo "OLD_VERSION=${{ steps.lookupOldBPMNVisuVersion.outputs.result }}" >> $GITHUB_ENV
       - name: Delete the old file of bpmn-visualization
         run: rm inst/htmlwidgets/lib/bpmn-visualization/bpmn-visualization.min.js
-      - name: Download the ${{ env.VERSION }} file of bpmn-visualization
+      - name: Download bpmn-visualization@${{ env.VERSION }}
         uses: carlosperate/download-file-action@v2
         with:
           file-url: 'https://cdn.jsdelivr.net/npm/bpmn-visualization@${{ env.VERSION }}/dist/bpmn-visualization.min.js'
           location: 'inst/htmlwidgets/lib/bpmn-visualization'
-      - name: Update the version of bpmn-visualization in the YAML file
+      - name: Update the bpmn-visualization version in the YAML file
         run: |
           sed -i -E 's/version: ".*"/version: "${{ env.VERSION }}"/' inst/htmlwidgets/bpmnVisualizationR.yaml
       - name: Create Pull Request
