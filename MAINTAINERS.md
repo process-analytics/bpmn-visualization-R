@@ -119,8 +119,15 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
 
 ## Communicate about the release
 
-**NOTE**: this is a very manual process today. For improvements, see [#130](https://github.com/process-analytics/bpmn-visualization-R/issues/130)
+- Open [github actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml)
+- Click on the 'Run workflow' dropdown located on the right side of the page
+- Provide parameter values for _version_ and _description_
+- Click on the button 'Run workflow'
+- Make sure job execution was successful by checking the status
+- If all is good, you should see a new tweet on [ProcessAnalyti1](https://twitter.com/ProcessAnalyti1) and a new message on the [news](https://discord.com/channels/1011911769607913562/1024329159033499780) channel of Process Analytics server on Discord.
 
+___
+⚠️⚠️⚠️ _**Only if the [jobs](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml) does NOT work!**_  ⚠️⚠️⚠️
 ### Twitter
 
 You can use this template:
@@ -144,3 +151,6 @@ You can use this template:
 > ===> some short description here <===
 >
 > https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v{version}
+
+⚠️⚠️⚠️ _**End of the manual steps**_ ⚠️⚠️⚠️
+___
