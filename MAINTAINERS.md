@@ -84,7 +84,7 @@ ___
 - In the release description (check previous releases as a source of inspiration)
   - If the bpmn-visualization TypeScript library was updated, add a phrase about it (see [Release 0.2.1](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.2.1) for instance.): `The R package now uses [bpmn-visualization@0.26.2](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.26.2).`
   - Put screenshots/gif of the new features.
-  - If the package won't be published to CRAN, please make it explicit by adding a sentence in bold! The sentence must explain why the is not published on CRAN and remind to install it using the GitHub way.
+  - If the package will not be published on CRAN (see below), please specify it by adding a sentence in bold! The sentence should explain why the new version is not available on CRAN and remind to install it using GitHub.
 - At any time, you can save the draft.
 - **Only when you are done**:
   - Assign the tag of the new version as release target and save the draft (doing it as later as possible ensure that `release-drafter` doesn't interfer with the writing of the Release Notes)
