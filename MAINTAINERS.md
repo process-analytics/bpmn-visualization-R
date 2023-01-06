@@ -83,7 +83,8 @@ ___
 - Open the draft release note in [GitHub releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
 - In the release description (check previous releases as a source of inspiration)
   - If the bpmn-visualization TypeScript library was updated, add a phrase about it (see [Release 0.2.1](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.2.1) for instance.): `The R package now uses [bpmn-visualization@0.26.2](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.26.2).`
-  - put screenshots/gif of the new features.
+  - Put screenshots/gif of the new features.
+  - If the package won't be published to CRAN, please make it explicit by adding a sentence in bold! The sentence must explain why the is not published on CRAN and remind to install it using the GitHub way.
 - At any time, you can save the draft.
 - **Only when you are done**:
   - Assign the tag of the new version as release target and save the draft (doing it as later as possible ensure that `release-drafter` doesn't interfer with the writing of the Release Notes)
@@ -93,6 +94,10 @@ ___
 
 **NOTES**:
 - CRAN publishing is `in-progress`, see [#10](https://github.com/process-analytics/bpmn-visualization-R/issues/10)
+
+⚠️⚠️ Decide whether to publish on CRAN ⚠️⚠️
+The CRAN policies state (see https://r-pkgs.org/release.html#cran-policies and https://cran.r-project.org/web/packages/policies.html)
+> Submitting updates should be done responsibly and with respect for the volunteers’ time. Once a package is established (which may take several rounds), “no more than every 1–2 months” seems appropriate. 
 
 #### Generate and retrieve the source package
 
@@ -116,10 +121,11 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
   - upload the package `tar.gz` source previously retrieved
   - for all required fields, use the value from the DESCRIPTION file of the `tar.gz` source (in particular, the name and email of the maintainer of the package are available at the end of the file)
 - Submit
+- **Don't forget to confirm the submission**: a few minutes after the submission, the package manager should have received an email asking to confirm the submission.
 
 ## Communicate about the release
 
-- Open [github actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml)
+- Open [GitHub Actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml)
 - Click on the 'Run workflow' dropdown located on the right side of the page
 - Provide parameter values for _version_ and _description_
 - Click on the button 'Run workflow'
