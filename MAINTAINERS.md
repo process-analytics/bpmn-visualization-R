@@ -95,9 +95,12 @@ ___
 **NOTES**:
 - CRAN publishing is `in-progress`, see [#10](https://github.com/process-analytics/bpmn-visualization-R/issues/10)
 
-⚠️⚠️ Decide whether to publish on CRAN ⚠️⚠️
+#### ⚠️⚠️ First decide whether to publish on CRAN ⚠️⚠️
+
 The CRAN policies state (see https://r-pkgs.org/release.html#cran-policies and https://cran.r-project.org/web/packages/policies.html)
 > Submitting updates should be done responsibly and with respect for the volunteers’ time. Once a package is established (which may take several rounds), “no more than every 1–2 months” seems appropriate. 
+
+However, on our side, we can provide more frequent versions. In this case, do not publish no CRAN. The new version will be available only via an installation from GitHub.
 
 #### Generate and retrieve the source package
 
