@@ -124,7 +124,10 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
   - upload the package `tar.gz` source previously retrieved
   - for all required fields, use the value from the DESCRIPTION file of the `tar.gz` source (in particular, the name and email of the maintainer of the package are available at the end of the file)
 - Submit
-- **Don't forget to confirm the submission**: a few minutes after the submission, the package manager should have received an email asking to confirm the submission.
+- **Don't forget to confirm the submission**:
+  - A few minutes after the submission, the package manager should have received an email asking to confirm the submission. The email object looks like `CRAN Submission of bpmnVisualizationR 0.3.0 - Confirmation Link`
+  - Confirm the submission by clicking on the link provided in the email
+  - The submission is only effective when a new email is received from CRAN confirming the submission. The email object looks like `CRAN Submission of bpmnVisualizationR 0.3.0`
 
 ## Communicate about the release
 
