@@ -120,7 +120,7 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
 
 #### Do the submission
 
-- Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualization_X.Y.Z.tgz` file.
+- Fill all the fields of this [web form](https://xmpalantir.wu.ac.at/cransubmit/), and load `bpmnVisualizationR_X.Y.Z.tar.gz` file.
   - upload the package `tar.gz` source previously retrieved
   - for all required fields, use the value from the DESCRIPTION file of the `tar.gz` source (in particular, the name and email of the maintainer of the package are available at the end of the file)
 - Submit
