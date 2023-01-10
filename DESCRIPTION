@@ -10,7 +10,6 @@ Copyright: Bonitasoft S.A.
 URL: https://process-analytics.github.io/bpmn-visualization-R/, https://github.com/process-analytics/bpmn-visualization-R/
 BugReports: https://github.com/process-analytics/bpmn-visualization-R/issues/
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.2.3
 Imports:
     htmlwidgets,
