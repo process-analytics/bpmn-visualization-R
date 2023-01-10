@@ -16,6 +16,73 @@ A PR can only be merged into master by a maintainer, if all of these conditions 
 
 Maintainers need to perform the following actions **in the order described here** to push out a release.
 
+### Prepare a CRAN submission with `rhub`
+
+Before starting a release, verify that the result of `rhub` package is stored in [cran-comments.md](cran-comments.md) (the recent result is on top of the file, and the oldest on the bottom).
+If not, you need to do the next steps.
+
+#### First installation
+```R
+install.packages("rhub")
+library(rhub)
+```
+
+For the email address of the maintainer (described on [DESCRIPTION](DESCRIPTION)), `rhub` will ask you to generate a token (on the first check), or you can [reuse one](https://r-hub.github.io/rhub/reference/validate_email.html).
+
+#### Check
+Follow this procedure: https://r-hub.github.io/rhub/articles/rhub.html#prepare-a-cran-submission.
+
+```R
+cran_prep <- check_for_cran()
+```
+
+⚠️ In local, you can only see one environment execution.
+To see the other, you can get the URLs from the top of the local execution, and open it on a browser.
+
+Example:
+```R
+─  Preparing build, see status at
+https://builder.r-hub.io/status/bpmnVisualizationR_X.Y.Z.tar.gz-A
+https://builder.r-hub.io/status/bpmnVisualizationR_X.Y.Z.tar.gz-B
+https://builder.r-hub.io/status/bpmnVisualizationR_X.Y.Z.tar.gz-C
+```
+
+#### Post traitement
+In [cran-comments.md](cran-comments.md):
+- On the top, add this template:
+```mdxjs
+# bpmnVisualizationR <X.Y.Z>.9000
+
+This is a <resubmission | new submission>. In this version, we have:
+
+* <NEW CHANGE>
+
+## Test environments
+<RESULT OF check_for_cran()>
+
+## R CMD check results
+<RESULT OF check_for_cran()>
+
+## Reply from CRAN for the last submission
+
+> <CITATION>
+```
+- Choose if it is a `resubmission` or a `new submission`.
+- Add the new change of this release.
+- Copy-paste the result of the following command, after receiving the emails for all environments on the [email address](DESCRIPTION) of the maintainer from `check_for_cran()`:
+```R
+cran_prep$cran_summary()
+```
+- Remove all `Version contains large components (X.Y.Z.9000)"`
+- If it is a `resubmission`, copy-paste the result for the last CRAN submission, and reply to false NOTES.  
+If not, remove the part:
+```mdxjs
+## Reply from CRAN for the last submission
+
+> <CITATION>
+```
+
+
 ### GitHub issues and milestones update
 
 **Note:** we always put issues related to a version in a Milestone whose name matches the version.
