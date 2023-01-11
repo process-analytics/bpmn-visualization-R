@@ -2,7 +2,7 @@
 
 This is a re-submission. In this version, we have:
 
-* Corrected the URLs in the DESCRIPTION file.
+* Corrected the URLs and removed the `LazyData` field in the [DESCRIPTION](DESCRIPTION) file.
 * Added a new file ([WORDLIST](inst/WORDLIST)) to allow custom words.
 
 
