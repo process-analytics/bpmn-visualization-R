@@ -1,9 +1,9 @@
 # bpmnVisualizationR 0.3.0.9000
 
-This is a resubmission. In this version, we have:
+This is a re-submission. In this version, we have:
 
-* Fixed the URLs in the DESCRIPTION file.
-* Added a new file ([WORDLIST](inst/WORDLIST)) to allow custom words
+* Corrected the URLs in the DESCRIPTION file.
+* Added a new file ([WORDLIST](inst/WORDLIST)) to allow custom words.
 
 
 ## Test environments
@@ -40,7 +40,7 @@ This is a resubmission. In this version, we have:
 
 0 errors ✔ | 0 warnings ✔ | 3 notes ✖
 
-## Reply from CRAN for the last submission
+## Response to CRAN for last submission
 
 > Possibly misspelled words in DESCRIPTION:  
 >  BPMN (3:44, 7:66)  
