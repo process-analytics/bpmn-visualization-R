@@ -16,7 +16,8 @@ This is a new submission. In this version, we have:
 - additional tests were also run on [GitHub Actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml).
 
 ## R CMD check results
-❯ On ubuntu-gcc-release (r-release)
+
+❯ On windows-x86_64-devel (r-devel), ubuntu-gcc-release (r-release)
   checking CRAN incoming feasibility ... NOTE
   Maintainer: ‘Celine Souchet <process.analytics.dev+CRAN@gmail.com>’
   
@@ -27,8 +28,10 @@ This is a new submission. In this version, we have:
     BPMN (3:44, 7:66)
     TypeScript (7:201)
 
+0 errors ✔ | 0 warnings ✔ | 3 notes ✖
+
 ❯ On fedora-clang-devel (r-devel)
-  checking CRAN incoming feasibility ... [5s/16s] NOTE
+  checking CRAN incoming feasibility ... [6s/25s] NOTE
   Maintainer: ‘Celine Souchet <process.analytics.dev+CRAN@gmail.com>’
   
   New submission
@@ -37,10 +40,6 @@ This is a new submission. In this version, we have:
     BPMN (3:44, 7:66)
     TypeScript (7:201)
     bpmn (7:182)
-
-❯ On fedora-clang-devel (r-devel)
-  checking HTML version of manual ... NOTE
-  Skipping checking HTML validation: no command 'tidy' found
 
 0 errors ✔ | 0 warnings ✔ | 3 notes ✖
 
