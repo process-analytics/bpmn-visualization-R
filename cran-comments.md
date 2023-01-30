@@ -7,9 +7,9 @@ This is a new submission. In this version, we have:
 
 
 ## Test environments
-- R-hub windows-x86_64-devel (r-devel)
-- R-hub ubuntu-gcc-release (r-release)
-- R-hub fedora-clang-devel (r-devel)
+- R-hub windows-x86_64-devel (r-devel). Platform: Windows Server 2022, R-devel, 64 bit
+- R-hub ubuntu-gcc-release (r-release). Platform: Ubuntu Linux 20.04.1 LTS, R-release, GCC
+- R-hub fedora-clang-devel (r-devel). Platform: Fedora Linux, R-devel, clang, gfortran
 
 **Notes**:
 - the tests presented here were run on [rhub](https://r-hub.github.io/rhub/articles/rhub.html#prepare-a-cran-submission).
