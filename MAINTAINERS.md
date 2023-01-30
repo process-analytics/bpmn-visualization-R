@@ -73,6 +73,8 @@ This is a <re-submission | new submission>. In this version, we have:
 ```R
 cran_prep$cran_summary()
 ```
+- In the "Test environments" paragraph, also provides the details of the environment as mentioned in the build status email.
+For instance, add "Platform: Windows Server 2022, R-devel, 64 bit".
 - Remove all `Version contains large components (X.Y.Z.9000)"` and update the counter of detected `NOTE` in the summary of all environments
 - If this is a `re-submission`, copy and paste the result for the last CRAN submission, and answer to false NOTES.  
 Otherwise, remove the part:
