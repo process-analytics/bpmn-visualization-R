@@ -50,7 +50,7 @@ https://builder.r-hub.io/status/bpmnVisualizationR_X.Y.Z.tar.gz-C
 #### Post processing
 In [cran-comments.md](cran-comments.md):
 - At the top, add this template:
-```mdxjs
+```markdown
 # bpmnVisualizationR <X.Y.Z>.9000
 
 This is a <re-submission | new submission>. In this version, we have:
@@ -73,10 +73,10 @@ This is a <re-submission | new submission>. In this version, we have:
 ```R
 cran_prep$cran_summary()
 ```
-- Remove all `Version contains large components (X.Y.Z.9000)"`
+- Remove all `Version contains large components (X.Y.Z.9000)"` and update the counter of detected `NOTE` in the summary of all environments
 - If this is a `re-submission`, copy and paste the result for the last CRAN submission, and answer to false NOTES.  
 Otherwise, remove the part:
-```mdxjs
+```markdown
 ## Response to CRAN for last submission
 
 > <CITATION>
