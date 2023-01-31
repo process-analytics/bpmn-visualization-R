@@ -27,7 +27,11 @@ install.packages("rhub")
 library(rhub)
 ```
 
-For the email address of the maintainer (described in [DESCRIPTION](DESCRIPTION)), `rhub` will prompt you to generate a token (on the first check), or you can [reuse one](https://r-hub.github.io/rhub/reference/validate_email.html).
+Locally, configure the email address of the maintainer (described in [DESCRIPTION](DESCRIPTION)):
+  - retrieve the token you previously received by email
+  - call the [validate_email.html](https://r-hub.github.io/rhub/reference/validate_email.html) by passing the maintainer email and the token 
+
+If you don't have any token, `rhub` will prompt you to generate a token (on the first check).
 
 #### Check
 Follow this procedure: https://r-hub.github.io/rhub/articles/rhub.html#prepare-a-cran-submission.
@@ -50,7 +54,7 @@ https://builder.r-hub.io/status/bpmnVisualizationR_X.Y.Z.tar.gz-C
 #### Post processing
 In [cran-comments.md](cran-comments.md):
 - At the top, add this template:
-```mdxjs
+```markdown
 # bpmnVisualizationR <X.Y.Z>.9000
 
 This is a <re-submission | new submission>. In this version, we have:
@@ -73,10 +77,12 @@ This is a <re-submission | new submission>. In this version, we have:
 ```R
 cran_prep$cran_summary()
 ```
-- Remove all `Version contains large components (X.Y.Z.9000)"`
+- In the "Test environments" paragraph, also provides the details of the environment as mentioned in the build status email.
+For instance, add "Platform: Windows Server 2022, R-devel, 64 bit".
+- Remove all `Version contains large components (X.Y.Z.9000)"` and update the counter of detected `NOTE` in the summary of all environments
 - If this is a `re-submission`, copy and paste the result for the last CRAN submission, and answer to false NOTES.  
 Otherwise, remove the part:
-```mdxjs
+```markdown
 ## Response to CRAN for last submission
 
 > <CITATION>
