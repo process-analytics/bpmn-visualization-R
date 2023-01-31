@@ -155,7 +155,7 @@ ___
 
 - Open the draft release note in [GitHub releases](https://github.com/process-analytics/bpmn-visualization-R/releases)
 - In the release description (check previous releases as a source of inspiration)
-  - If the bpmn-visualization TypeScript library was updated, add a phrase about it (see [Release 0.2.1](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.2.1) for instance.): `The R package now uses [bpmn-visualization@0.26.2](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.26.2).`
+  - If the bpmn-visualization TypeScript library was updated, add a phrase about it (for example, see [Release 0.3.0](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.3.0) for instance.): `The bpmnVisualizationR package now uses [bpmn-visualization@0.29.0](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.29.0).`
   - Put screenshots/gif of the new features.
   - If the package will not be published on CRAN (see below), please specify it by adding a sentence in bold! The sentence should explain why the new version is not available on CRAN and remind to install it using GitHub.
 - At any time, you can save the draft.
@@ -181,9 +181,10 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
 
 - Open [GitHub Actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml)
 - Find the execution related to the newly created tag
-  - If it doesn't exist, click on the 'Run workflow' dropdown located on the right side of the page
   - Choose the **tag that has just been created**, do not use the main branch!
-  - Click on the button 'Run workflow'
+  - If it doesn't exist, click on the 'Run workflow' dropdown located on the right side of the page
+    - Remember to choose the tag that has just been created, **do not use the main branch!**
+    - Click on the button 'Run workflow' and wait for the end of the execution
 - Download the source package
   - in the artifact section, choose the source package built with the `r-release` version, as shown in the screenshot below 👇
   - unzip the artifact to retrieve the tar.gz file that will submit be later
