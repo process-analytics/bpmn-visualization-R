@@ -27,7 +27,7 @@ install.packages("rhub")
 library(rhub)
 ```
 
-Locally, configure the email address of the maintainer (described in [DESCRIPTION](DESCRIPTION))
+Locally, configure the email address of the maintainer (described in [DESCRIPTION](DESCRIPTION)):
   - retrieve the token you previously received by email
   - call the [validate_email.html](https://r-hub.github.io/rhub/reference/validate_email.html) by passing the maintainer email and the token 
 
