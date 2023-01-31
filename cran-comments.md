@@ -45,7 +45,7 @@ This is a new submission. In this version, we have:
 
 ## Response to CRAN for last submission
 
-**Note**: the previous submission was done for version 0.3.0 of bpmnVisualizationR (commit 0cb72a6)
+**Note**: the previous submission was done for version 0.3.1 of bpmnVisualizationR (commit 0cb72a6)
 
 > Possibly misspelled words in DESCRIPTION:  
 >  BPMN (3:44, 7:66)  
