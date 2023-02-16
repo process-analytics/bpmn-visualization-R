@@ -1,3 +1,36 @@
+# bpmnVisualizationR 0.3.1.9000
+
+This is a re-submission. In this version, we have:
+
+* Added single quotes for package names, software names and API, in `title` and `description` on the [DESCRIPTION](DESCRIPTION) file.
+* Added single quotes for package names, software names and API, in the documentation of the methods of this package.
+
+## Test environments
+<RESULT OF check_for_cran()>
+
+## R CMD check results
+<RESULT OF check_for_cran()>
+
+## Response to CRAN for last submission
+
+> If there are references describing the methods in your package, please
+> add these in the description field of your DESCRIPTION file in the form
+> authors (year) <doi:...>
+> authors (year) <arXiv:...>
+> authors (year, ISBN:...)
+> or if those are not available: <https:...>
+> with no space after 'doi:', 'arXiv:', 'https:' and angle brackets for
+> auto-linking. (If you want to add a title as well please put it in quotes: "Title")
+
+There is no reference describing the methods in this package.
+
+> Please always write package names, software names and API (application
+> programming interface) names in single quotes in title and description.
+> e.g: --> 'TypeScript'
+> Please note that package names are case-sensitive.
+
+✅ Done on the [DESCRIPTION](DESCRIPTION) file and the documentation of the methods of this package.
+
 # bpmnVisualizationR 0.3.1
 
 This is a new submission. In this version, we have:
