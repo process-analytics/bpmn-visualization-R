@@ -4,9 +4,9 @@
 \name{bpmnVisualizationR-package}
 \alias{bpmnVisualizationR}
 \alias{bpmnVisualizationR-package}
-\title{bpmnVisualizationR: Visualize Process Execution Data on BPMN Diagrams}
+\title{bpmnVisualizationR: Visualize Process Execution Data on 'BPMN' Diagrams}
 \description{
-To visualize the execution data of the processes on BPMN (Business Process Model and Notation) diagrams, using overlays, style customization and interactions, with the bpmn-visualization TypeScript library.
+To visualize the execution data of the processes on 'BPMN' (Business Process Model and Notation) diagrams, using overlays, style customization and interactions, with the 'bpmn-visualization' 'TypeScript' library.
 }
 \seealso{
 Useful links:

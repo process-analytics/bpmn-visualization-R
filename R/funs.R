@@ -9,7 +9,7 @@
 #' Use this structure to create correct overlay structure.
 #' 
 #' @param elementId The bpmn element id to which the overlay will be attached
-#' @param label HTML element to use as an overlay
+#' @param label 'HTML' element to use as an overlay
 #'
 #' @returns An overlay object
 #'
@@ -22,7 +22,7 @@ create_overlay <- function(elementId, label) {
     )
 }
 
-#' @description Internal fun to build the htmlwidget content
+#' @description Internal fun to build the 'htmlwidget' content
 #'
 #' @inheritParams display
 #' @returns A list

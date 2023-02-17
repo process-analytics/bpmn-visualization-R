@@ -2,7 +2,7 @@
 % Please edit documentation in R/bpmnVisualizationR.R
 \name{display}
 \alias{display}
-\title{Display BPMN diagram in an HTML Widget}
+\title{Display 'BPMN' diagram in an 'HTML' Widget}
 \usage{
 display(
   bpmnXML,
@@ -13,7 +13,7 @@ display(
 )
 }
 \arguments{
-\item{bpmnXML}{A file name or xml document or string in BPMN XML format}
+\item{bpmnXML}{A file name or 'XML' document or string in 'BPMN' 'XML' format}
 
 \item{overlays}{An element or a list of elements to be added to the diagram's existing elements.
 Use overlay function to create an overlay object with content and relative position.}
@@ -22,17 +22,17 @@ Use overlay function to create an overlay object with content and relative posit
 
 \item{height}{Fixed height for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
-\item{elementId}{The id of the HTML element to enclose the widget.
+\item{elementId}{The id of the 'HTML' element to enclose the widget.
 Use an explicit element ID for the widget (rather than an automatically
-generated one). Useful if you have other JavaScript that needs to explicitly
+generated one). Useful if you have other 'JavaScript' that needs to explicitly
 discover and interact with a specific widget instance.}
 }
 \value{
-A \code{bpmnVisualizationR} Widget that will intelligently print itself into HTML in a variety of contexts
-     including the R console, within R Markdown documents, and within Shiny output bindings.
+A \code{bpmnVisualizationR} Widget that will intelligently print itself into 'HTML' in a variety of contexts
+     including the 'R' console, within 'R Markdown' documents, and within 'Shiny' output bindings.
 }
 \description{
-Display BPMN diagram based on BPMN definition in XML format
+Display 'BPMN' diagram based on 'BPMN' definition in 'XML' format
 }
 \examples{
 # Load the BPMN file
