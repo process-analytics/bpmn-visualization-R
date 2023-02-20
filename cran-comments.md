@@ -1,4 +1,4 @@
-# bpmnVisualizationR 0.3.1.9000
+# bpmnVisualizationR 0.3.2
 
 This is a new submission. In this version, we have:
 
