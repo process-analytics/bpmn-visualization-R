@@ -133,11 +133,11 @@ Check that the files are using the version to be released:
 - [README](./README.md)
 
 Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it,
-if some files require changes. The PR/commit message should be `[RELEASE] Set version to x.y.z`.
+if some files require changes. The PR/commit message should be `chore(release): set version to x.y.z`.
 
 Once this is done, tag manually with the following command (**do not forget** to replace `x.y.z` by the actual version):
 ``` 
-git tag -a vx.y.z -m "[RELEASE] x.y.z"
+git tag -a vx.y.z -m "chore(release): x.y.z"
 git push && git push --tags
 ```
 
@@ -147,7 +147,7 @@ Add the `.9000` suffix to the `Version` field in the [DESCRIPTION](./DESCRIPTION
 For instance, if the released version was `0.3.0`, the `Version` field in the `DESCRIPTION` file should be `0.3.O.9000`.
 
 Create a new PR (it must have the `skip-changelog` label as we don't want it to appear in the release notes) and merge it.
-The PR/commit message should be `[INFRA] Set the development version to x.y.z.9000`.
+The PR/commit message should be `chore(release): set the development version to x.y.z.9000`.
 
 ___
 
