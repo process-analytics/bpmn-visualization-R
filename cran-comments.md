@@ -2,6 +2,22 @@
 
 This is a new submission. In this version, we have:
 
+* Updated `bpmn-visualization` TypeScript library from 0.29.2 to 0.31.0.
+
+## Test environments
+<RESULT OF check_for_cran()>
+
+## R CMD check results
+<RESULT OF check_for_cran()>
+
+## Response to CRAN for last submission
+
+> <CITATION>
+
+# bpmnVisualizationR 0.3.2
+
+This is a new submission. In this version, we have:
+
 * Added single quotes for package names, software names and API, in `title` and `description` on the [DESCRIPTION](DESCRIPTION) file.
 * Added single quotes for package names, software names and API, in the documentation of the methods of this package.
 
