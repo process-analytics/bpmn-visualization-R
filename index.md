@@ -3,6 +3,7 @@
 # bpmnVisualizationR
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/bpmnVisualizationR)](https://cran.r-project.org/package=bpmnVisualizationR)
 [![R-CMD-check](https://github.com/process-analytics/bpmn-visualization-R/workflows/R-CMD-check/badge.svg)](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 

@@ -5,6 +5,9 @@
         <a href="https://github.com/process-analytics/bpmn-visualization-R/releases">
           <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/process-analytics/bpmn-visualization-R?label=changelog&include_prereleases"> 
         </a>
+        <a href="https://cran.r-project.org/package=bpmnVisualizationR">
+          <img alt="CRAN release (latest by date)" src="https://www.r-pkg.org/badges/version/bpmnVisualizationR"> 
+        </a>
         <a href="https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml">
           <img alt="Build" src="https://github.com/process-analytics/bpmn-visualization-R/workflows/R-CMD-check/badge.svg"> 
         </a>
@@ -22,11 +25,11 @@
 </div>  
 <br>
 
-<!-- duplicated with README.md -->
+<!-- duplicated with index.md -->
 `bpmnVisualizationR` is an R package for visualizing process execution data on BPMN diagrams, using overlays, style customization and interactions.
 
 It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provides an easy-to-use framework for bringing together R and the [bpmn-visualization](https://github.com/process-analytics/bpmn-visualization-js) TypeScript library.
-<!-- END OF duplicated with README.md -->
+<!-- END OF duplicated with index.md -->
 
 ## ♻️ Usage
 ### Installation
@@ -37,7 +40,7 @@ It can be installed from the R console:
 install.packages('devtools')
 ```
 
-<!-- duplicated with README.md -->
+<!-- duplicated with index.md -->
 #### Install _bpmnVisualizationR_ from GitHub
 
 To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
@@ -54,7 +57,7 @@ Then, make the library available to the current R project:
 ```r
 library(bpmnVisualizationR)
 ```
-<!-- END OF duplicated with README.md -->
+<!-- END OF duplicated with index.md -->
 
 ### Load the BPMN file
 `bpmnVisualizationR` accepts a BPMN file (or an XML document):
