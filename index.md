@@ -18,6 +18,14 @@ It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provide
 <!-- duplicated with README.md -->
 ## Installation
 
+### From CRAN
+The latest stable version of the `bpmnVisualizationR` package can be obtained from [CRAN](https://cran.r-project.org/web/packages/bpmnVisualizationR/index.html) with the command:
+```
+install.packages("bpmnVisualizationR")
+```
+
+### From GitHub
+
 To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
 ```r
 devtools::install_github("process-analytics/bpmn-visualization-R@v0.3.2")

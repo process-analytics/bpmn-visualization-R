@@ -41,7 +41,15 @@ install.packages('devtools')
 ```
 
 <!-- duplicated with index.md -->
-#### Install _bpmnVisualizationR_ from GitHub
+#### Install _bpmnVisualizationR_
+
+##### From CRAN
+The latest stable version of the `bpmnVisualizationR` package can be obtained from [CRAN](https://cran.r-project.org/web/packages/bpmnVisualizationR/index.html) with the command:
+```
+install.packages("bpmnVisualizationR")
+```
+
+##### From GitHub
 
 To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
 ```r
