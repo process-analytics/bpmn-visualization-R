@@ -3,6 +3,7 @@
 # bpmnVisualizationR
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/bpmnVisualizationR)](https://cran.r-project.org/package=bpmnVisualizationR)
 [![R-CMD-check](https://github.com/process-analytics/bpmn-visualization-R/workflows/R-CMD-check/badge.svg)](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -16,6 +17,14 @@ It is made possible by [htmlwidgets](http://www.htmlwidgets.org/), which provide
 
 <!-- duplicated with README.md -->
 ## Installation
+
+### From CRAN
+The latest stable version of the `bpmnVisualizationR` package can be obtained from [CRAN](https://cran.r-project.org/web/packages/bpmnVisualizationR/index.html) with the command:
+```
+install.packages("bpmnVisualizationR")
+```
+
+### From GitHub
 
 To install a dedicated version (available versions can be found in the [GitHub releases page](https://github.com/process-analytics/bpmn-visualization-R/releases)), run:
 ```r
