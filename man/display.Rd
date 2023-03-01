@@ -16,7 +16,7 @@ display(
 \item{bpmnXML}{A file name or 'XML' document or string in 'BPMN' 'XML' format}
 
 \item{overlays}{An element or a list of elements to be added to the diagram's existing elements.
-Use overlay function to create an overlay object with content and relative position.}
+Use \code{create_overlay} function to create an overlay object with content and relative position.}
 
 \item{width}{Fixed width for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
@@ -42,10 +42,22 @@ bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisual
 bpmnVisualizationR::display(bpmn_file, width='auto', height='auto')
 
 # Display the BPMN diagram with overlays
+taskStyle <- bpmnVisualizationR::create_style(
+  font = bpmnVisualizationR::create_font(color = 'White', size = 14), 
+  fill = bpmnVisualizationR::create_fill(color = 'rgba(54,160,54)'), 
+  stroke = bpmnVisualizationR::create_stroke(color = 'rgba(54,160,54)')
+)
+
+flowStyle <- bpmnVisualizationR::create_style(
+  font = bpmnVisualizationR::create_font(color = 'White', size = 18), 
+  fill = bpmnVisualizationR::create_fill(color = 'rgba(170,107,209)'),
+  stroke = bpmnVisualizationR::create_stroke(color = 'rgba(170,107,209)')
+)
+
 overlays <- list(
   bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
-  bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42"),
-  bpmnVisualizationR::create_overlay("task_1_1", "9")
+  bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle),
+  bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle)
 )
 bpmnVisualizationR::display(bpmn_file, overlays, width='auto', height='auto')
 

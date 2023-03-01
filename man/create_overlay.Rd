@@ -4,12 +4,15 @@
 \alias{create_overlay}
 \title{Create an overlay}
 \usage{
-create_overlay(elementId, label)
+create_overlay(elementId, label, style = NULL)
 }
 \arguments{
 \item{elementId}{The bpmn element id to which the overlay will be attached}
 
 \item{label}{'HTML' element to use as an overlay}
+
+\item{style}{The style of the overlay
+Use \code{\link{create_style}} function to create the style of an overlay object.}
 }
 \value{
 An overlay object
