@@ -24,42 +24,22 @@ HTMLWidgets.widget({
         return {
             renderValue: function(x) {
                 bpmnVisualization.load(x.bpmnContent, { fit: {type: bpmnvisu.FitType.Center, margin: 30} });
-
+                
                 // Add overlays
-                x.overlays && x.overlays.map(overlay => {
+                x.overlays?.map(overlay => {
                     const elementsByIds = bpmnVisualization.bpmnElementsRegistry.getElementsByIds(overlay.elementId);
+                    
+                     console.log(overlay.style);
 
                     if (elementsByIds.length) {
                         const overlayConfig = elementsByIds[0].bpmnSemantic.isShape ? {
                             position: 'top-center',
                             label: overlay.label,
-                            style: {
-                                font: {
-                                    color: 'White',
-                                    size: 14,
-                                },
-                                fill: {
-                                    color: 'rgba(54,160,54)',
-                                },
-                                stroke: {
-                                    color: 'rgba(54,160,54)',
-                                }
-                            }
+                            style: overlay.style
                         } : {
                             position: 'middle',
                             label: overlay.label,
-                            style: {
-                                font: {
-                                    color: 'White',
-                                    size: 18,
-                                },
-                                fill: {
-                                    color: 'rgba(170,107,209)',
-                                },
-                                stroke: {
-                                    color: 'rgba(170,107,209)',
-                                }
-                            }
+                            style: overlay.style
                         };
 
                         bpmnVisualization.bpmnElementsRegistry.addOverlays(overlay.elementId, overlayConfig);
