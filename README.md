@@ -112,6 +112,16 @@ overlays <- list(bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42"),
 bpmnVisualizationR::display(bpmn_file, overlays)
 ```
 
+### Style an overlay
+
+```r
+font <- bpmnVisualizationR::create_font(color = 'White', size = 14)
+fill <- bpmnVisualizationR::create_fill(color = 'rgba(54,160,54)')
+stroke <- bpmnVisualizationR::create_stroke(color = 'rgba(54,160,54)')
+
+style <- bpmnVisualizationR::create_style(font, fill, stroke)
+overlay <- bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42", style)
+```
 
 ### Integrate in Shiny Applications
 
@@ -125,7 +135,12 @@ library(shiny)
 
 displayBpmn <- function() {
     bpmn_file <- system.file("examples/Travel_Booking.bpmn", package = "bpmnVisualizationR")
-    overlays <- list(bpmnVisualizationR::create_overlay("_6-203", "9"))
+    style <- bpmnVisualizationR::create_style(
+      font = bpmnVisualizationR::create_font(color = 'White', size = 14), 
+      fill = bpmnVisualizationR::create_fill(color = 'rgba(54,160,54)'), 
+      stroke = bpmnVisualizationR::create_stroke(color = 'rgba(54,160,54)')
+    )
+    overlays <- list(bpmnVisualizationR::create_overlay("_6-203", "9", sty))
     bpmnVisualizationR::display(bpmn_file, overlays)
 }
 
