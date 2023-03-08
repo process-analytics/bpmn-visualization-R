@@ -120,8 +120,10 @@ fill <- bpmnVisualizationR::create_fill(color = 'Teal')
 stroke <- bpmnVisualizationR::create_stroke(color = 'SpringGreen')
 
 style <- bpmnVisualizationR::create_style(font, fill, stroke)
-overlay <- bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42", style)
+overlay <- bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42", style, "middle-right")
 ```
+
+ℹ️ To see more information about the value of `position` in bpmn-visualization-js library, please visit https://process-analytics.github.io/bpmn-visualization-js/api/types/OverlayPosition.html.
 
 ### Disable the default styles of the overlays
 
@@ -146,7 +148,7 @@ displayBpmn <- function() {
       fill = bpmnVisualizationR::create_fill(color = 'MediumSpringGreen'), 
       stroke = bpmnVisualizationR::create_stroke(color = 'MediumSpringGreen')
     )
-    overlays <- list(bpmnVisualizationR::create_overlay("_6-203", "9", style))
+    overlays <- list(bpmnVisualizationR::create_overlay("_6-203", "9", style, "bottom-right"))
     bpmnVisualizationR::display(bpmn_file, overlays)
 }
 

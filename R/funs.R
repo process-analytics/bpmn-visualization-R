@@ -1,5 +1,37 @@
-# Custom data types
+#' @title The overlay positions on \code{Shape}
+#'
+#' @description
+#' To specify the position when creating an overlay object that will be attached to BPMN \code{Shape} elements in the diagram.
+#'
+#' \code{OverlayShapePosition} includes the following positions:
+#'
+#' - \code{"top-left"}
+#' - \code{"top-right"}
+#' - \code{"top-center"}
+#' - \code{"bottom-left"}
+#' - \code{"bottom-right"}
+#' - \code{"bottom-center"}
+#' - \code{"middle-left"}
+#' - \code{"middle-right"}
+#'
+#' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
+#'
+#' @export
 OverlayShapePosition <- c("top-left", "top-right", "top-center", "bottom-left", "bottom-right","bottom-center", "middle-left", "middle-right")
+
+#' @title The overlay positions on \code{Edge}
+#'
+#' @description
+#' To specify the position when creating an overlay object that will be attached to BPMN \code{Edge} elements in the diagram.
+#'
+#' \code{OverlayEdgePosition} includes the following positions:
+#' - \code{"start"}
+#' - \code{"end"}
+#' - \code{"middle"}
+#'
+#' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
+#' 
+#' @export
 OverlayEdgePosition <- c("start", "end", "middle")
 
 #' @title Create an overlay
@@ -21,6 +53,31 @@ OverlayEdgePosition <- c("start", "end", "middle")
 #'      Otherwise, use \code{\link{OverlayEdgePosition}}.
 #'
 #' @returns An overlay object
+#'
+#' @examples
+#' # Create an overlay with shape position "top-left"
+#' overlay <- create_overlay(
+#'   "my-element-id", 
+#'   "My Overlay Label", 
+#'   create_style(
+#'     font = create_font(color = 'DarkSlateGray', size = 23),
+#'     fill = create_fill(color = 'MistyRose'),
+#'     stroke = create_stroke(color = 'Red')
+#'   ),
+#'   OverlayShapePosition[1]
+#' )
+#'
+#' # Create an overlay with edge position "end"
+#' overlay <- create_overlay(
+#'   "my-edge-id", 
+#'   "My Overlay Label", 
+#'   create_style(
+#'     font = create_font(color = 'DarkSlateGray', size = 23),
+#'     fill = create_fill(color = 'MistyRose'),
+#'     stroke = create_stroke(color = 'Red')
+#'   ),
+#'   OverlayEdgePosition[2]
+#' )
 #'
 #' @export
 create_overlay <- function(elementId, label, style = NULL, position = NULL) {
@@ -199,54 +256,3 @@ build_bpmnContent <- function(
   ret[lengths(ret) == 0] <- NULL
   ret
 }
-
-
-
-
-
-
-
-
-# Define test values
-shape_element <- "shape_id"
-edge_element <- "edge_id"
-overlay_label <- "<div>Overlay</div>"
-invalid_position <- "invalid_position"
-
-# Test the function with valid input
-test_that("create_overlay returns the expected overlay object for a shape element", {
-  overlay_shape <- create_overlay(elementId = shape_element, label = overlay_label, style = NULL, position = "top-left")
-  expect_equal(names(overlay_shape), c("elementId", "label", "style", "position"))
-  expect_equal(overlay_shape$elementId, shape_element)
-  expect_equal(overlay_shape$label, overlay_label)
-  expect_null(overlay_shape$style)
-  expect_equal(overlay_shape$position, "top-left")
-})
-
-test_that("create_overlay returns the expected overlay object for an edge element", {
-  overlay_edge <- create_overlay(elementId = edge_element, label = overlay_label, style = NULL, position = "start")
-  expect_equal(names(overlay_edge), c("elementId", "label", "style", "position"))
-  expect_equal(overlay_edge$elementId, edge_element)
-  expect_equal(overlay_edge$label, overlay_label)
-  expect_null(overlay_edge$style)
-  expect_equal(overlay_edge$position, "start")
-})
-
-# Test the function with invalid input
-test_that("create_overlay throws an exception when position is not valid", {
-  expect_error(create_overlay(elementId = shape_element, label = overlay_label, style = NULL, position = invalid_position),
-               "position must be")
-})
-
-test_that("create_overlay does not throw an exception when position is null", {
-  expect_no_error(create_overlay(elementId = shape_element, label = overlay_label, style = NULL, position = NULL))
-})
-
-
-# test the function with valid parameter values
-my_function("top")
-my_function("end")
-
-# test the function with an invalid parameter value
-my_function("invalid")
-
