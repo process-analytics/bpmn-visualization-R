@@ -70,6 +70,101 @@ test_that("create_overlay works", {
   )
 })
 
+test_that("create_style works", {
+  # Step 1, testing with font, fill and stroke
+  res <- create_style(
+    "my font",
+    "my fill",
+    "my stroke"
+  )
+  expect_true(
+    length(res) == 3
+  )
+  expect_named(
+    res,
+    c("font", "fill", "stroke")
+  )
+  expect_equal(
+    res$font,
+    "my font"
+  )
+  expect_equal(
+    res$fill,
+    "my fill"
+  )
+  expect_equal(
+    res$stroke,
+    "my stroke"
+  )
+  
+  # Step 2, testing with no font, fill and stroke
+  res <- create_style(
+    NULL,
+    "my fill",
+    "my stroke"
+  )
+  expect_true(
+    length(res) == 2
+  )
+  expect_named(
+    res,
+    c("fill", "stroke")
+  )
+  expect_equal(
+    res$fill,
+    "my fill"
+  )
+  expect_equal(
+    res$stroke,
+    "my stroke"
+  )
+  
+  
+  # Step 3, testing with font, no fill, and stroke
+  res <- create_style(
+    "my font",
+    NULL,
+    "my stroke"
+  )
+  expect_true(
+    length(res) == 2
+  )
+  expect_named(
+    res,
+    c("font", "stroke")
+  )
+  expect_equal(
+    res$font,
+    "my font"
+  )
+  expect_equal(
+    res$stroke,
+    "my stroke"
+  )
+  
+  # Step 4, testing with font, fill and no stroke
+  res <- create_style(
+    "my font",
+    "my fill",
+    NULL
+  )
+  expect_true(
+    length(res) == 2
+  )
+  expect_named(
+    res,
+    c("font", "fill")
+  )
+  expect_equal(
+    res$font,
+    "my font"
+  )
+  expect_equal(
+    res$fill,
+    "my fill"
+  )
+})
+
 
 test_that("build_bpmnContent works", {
   # Step 1, testing xml_doc, no overlays
