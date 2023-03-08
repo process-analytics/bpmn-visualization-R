@@ -44,15 +44,17 @@ test_that("build_bpmnContent works", {
         "examples/Email_Voting.bpmn",
         package = "bpmnVisualizationR"
       )
-    )
+    ), 
+    enableDefaultOverlayStyle = TRUE
   )
   expect_true(
-    length(res) == 1
+    length(res) == 2
   )
   expect_named(
     res,
-    c("bpmnContent")
+    c("bpmnContent", "enableDefaultOverlayStyle")
   )
+  
   # Step 2, testing xml_doc, overlays
   res <- build_bpmnContent(
     xml2::read_xml(
@@ -60,15 +62,16 @@ test_that("build_bpmnContent works", {
         "examples/Email_Voting.bpmn",
         package = "bpmnVisualizationR"
       )
-    ),
+    ), 
+    enableDefaultOverlayStyle = FALSE,
     overlays = "this"
   )
   expect_true(
-    length(res) == 2
+    length(res) == 3
   )
   expect_named(
     res,
-    c("bpmnContent", "overlays")
+    c("bpmnContent", "enableDefaultOverlayStyle", "overlays")
   )
 
   expect_equal(
@@ -84,17 +87,18 @@ test_that("build_bpmnContent works", {
         package = "bpmnVisualizationR"
       )
     ),
+    enableDefaultOverlayStyle = FALSE,
     overlays = list(
       create_overlay("bpmn_element_id_1", "42"),
       create_overlay("bpmn_element_id_2", "9")
     )
   )
   expect_true(
-    length(res) == 2
+    length(res) == 3
   )
   expect_named(
     res,
-    c("bpmnContent", "overlays")
+    c("bpmnContent", "enableDefaultOverlayStyle", "overlays")
   )
 
   # Step 4, testing character, no overlays
@@ -107,14 +111,15 @@ test_that("build_bpmnContent works", {
         )
       ),
       collapse = " "
-    )
+    ),
+    enableDefaultOverlayStyle = TRUE
   )
   expect_true(
-    length(res) == 1
+    length(res) == 2
   )
   expect_named(
     res,
-    c("bpmnContent")
+    c("bpmnContent", "enableDefaultOverlayStyle")
   )
 
   # Step 5, testing character, no overlays
@@ -122,14 +127,15 @@ test_that("build_bpmnContent works", {
     system.file(
       "examples/Email_Voting.bpmn",
       package = "bpmnVisualizationR"
-    )
+    ),
+    enableDefaultOverlayStyle = TRUE
   )
   expect_true(
-    length(res) == 1
+    length(res) == 2
   )
   expect_named(
     res,
-    c("bpmnContent")
+    c("bpmnContent", "enableDefaultOverlayStyle")
   )
 
   # Step 6, error
