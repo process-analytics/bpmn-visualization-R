@@ -126,7 +126,7 @@ overlay <- bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42", style)
 ### Disable the default styles of the overlays
 
 ```r
-bpmnVisualizationR::display(bpmn_file, overlays, enableDefaultOverlayStyle=false)
+bpmnVisualizationR::display(bpmn_file, overlays, enableDefaultOverlayStyle=FALSE)
 ```
 
 ### Integrate in Shiny Applications
