@@ -58,8 +58,6 @@ HTMLWidgets.widget({
                 x.overlays?.map(overlay => {
                     const elementsByIds = bpmnVisualization.bpmnElementsRegistry.getElementsByIds(overlay.elementId);
 
-                    console.log(overlay.style);
-
                     if (elementsByIds.length) {
                         const overlayConfig = {
                             label: overlay.label,
