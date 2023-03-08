@@ -67,7 +67,13 @@
 #'   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle),
 #'   bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle)
 #' )
-#' bpmnVisualizationR::display(bpmn_file, overlays, enableDefaultOverlayStyle=FALSE, width='auto', height='auto')
+#' bpmnVisualizationR::display(
+#'   bpmn_file, 
+#'   overlays, 
+#'   enableDefaultOverlayStyle=FALSE, 
+#'   width='auto', 
+#'   height='auto'
+#' )
 #'
 #'
 #' @seealso \code{\link{create_overlay}} to create an overlay
