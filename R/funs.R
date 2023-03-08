@@ -1,3 +1,7 @@
+# Custom data types
+OverlayShapePosition <- c("top-left", "top-right", "top-center", "bottom-left", "bottom-right","bottom-center", "middle-left", "middle-right")
+OverlayEdgePosition <- c("start", "end", "middle")
+
 #' @title Create an overlay
 #'
 #' @name create_overlay
@@ -12,16 +16,30 @@
 #' @param label 'HTML' element to use as an overlay
 #' @param style The style of the overlay.
 #'      Use \code{\link{create_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.
+#' @param position The position of the overlay
+#'      If the bpmn element where the overlay will be attached is a Shape, use \code{\link{OverlayShapePosition}}.
+#'      Otherwise, use \code{\link{OverlayEdgePosition}}.
 #'
 #' @returns An overlay object
 #'
 #' @export
-create_overlay <- function(elementId, label, style = NULL) {
+create_overlay <- function(elementId, label, style = NULL, position = NULL) {
+  if (!is.null(position) && !(position %in% c(OverlayShapePosition, OverlayEdgePosition))) {
+    stop(
+      paste("Error: position must be:","\n",
+            "\t- NULL","\n",
+            "\t- if the overlay will be attached on a Shape, one of the following values: ", paste(OverlayShapePosition, collapse = ", "), "\n",
+            "\t- if the overlay will be attached on an Edge, one of the following values: ", paste(OverlayEdgePosition, collapse = ", ")
+      )
+    )
+  }
+  
   ret <-
     .not_null_list(
       elementId = elementId,
       label = label,
-      style = style
+      style = style,
+      position = position
     )
 }
 
@@ -181,3 +199,54 @@ build_bpmnContent <- function(
   ret[lengths(ret) == 0] <- NULL
   ret
 }
+
+
+
+
+
+
+
+
+# Define test values
+shape_element <- "shape_id"
+edge_element <- "edge_id"
+overlay_label <- "<div>Overlay</div>"
+invalid_position <- "invalid_position"
+
+# Test the function with valid input
+test_that("create_overlay returns the expected overlay object for a shape element", {
+  overlay_shape <- create_overlay(elementId = shape_element, label = overlay_label, style = NULL, position = "top-left")
+  expect_equal(names(overlay_shape), c("elementId", "label", "style", "position"))
+  expect_equal(overlay_shape$elementId, shape_element)
+  expect_equal(overlay_shape$label, overlay_label)
+  expect_null(overlay_shape$style)
+  expect_equal(overlay_shape$position, "top-left")
+})
+
+test_that("create_overlay returns the expected overlay object for an edge element", {
+  overlay_edge <- create_overlay(elementId = edge_element, label = overlay_label, style = NULL, position = "start")
+  expect_equal(names(overlay_edge), c("elementId", "label", "style", "position"))
+  expect_equal(overlay_edge$elementId, edge_element)
+  expect_equal(overlay_edge$label, overlay_label)
+  expect_null(overlay_edge$style)
+  expect_equal(overlay_edge$position, "start")
+})
+
+# Test the function with invalid input
+test_that("create_overlay throws an exception when position is not valid", {
+  expect_error(create_overlay(elementId = shape_element, label = overlay_label, style = NULL, position = invalid_position),
+               "position must be")
+})
+
+test_that("create_overlay does not throw an exception when position is null", {
+  expect_no_error(create_overlay(elementId = shape_element, label = overlay_label, style = NULL, position = NULL))
+})
+
+
+# test the function with valid parameter values
+my_function("top")
+my_function("end")
+
+# test the function with an invalid parameter value
+my_function("invalid")
+
