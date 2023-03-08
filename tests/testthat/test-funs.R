@@ -244,6 +244,32 @@ test_that("create_fill works", {
   )
 })
 
+test_that("create_stroke works", {
+  # Step 1, testing with color
+  res <- create_stroke(
+    "my color"
+  )
+  expect_true(
+    length(res) == 1
+  )
+  expect_named(
+    res,
+    c("color")
+  )
+  expect_equal(
+    res$color,
+    "my color"
+  )
+  
+  # Step 2, testing with no color
+  res <- create_stroke(
+    NULL
+  )
+  expect_true(
+    length(res) == 0
+  )
+})
+
 test_that("build_bpmnContent works", {
   # Step 1, testing xml_doc, no overlays
   res <- build_bpmnContent(
