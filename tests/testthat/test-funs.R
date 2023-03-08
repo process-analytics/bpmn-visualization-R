@@ -1,7 +1,57 @@
 test_that("create_overlay works", {
+  # Step 1, testing with label and style
   res <- create_overlay(
     "xyz",
+    "this",
+    "my style"
+  )
+  expect_true(
+    length(res) == 3
+  )
+  expect_named(
+    res,
+    c("elementId", "label", "style")
+  )
+  expect_equal(
+    res$elementId,
+    "xyz"
+  )
+  expect_equal(
+    res$label,
     "this"
+  )
+  expect_equal(
+    res$style,
+    "my style"
+  )
+
+  # Step 2, testing with no label, and style
+  res <- create_overlay(
+    "this",
+    NULL,
+    "my style"
+  )
+  expect_true(
+    length(res) == 2
+  )
+  expect_named(
+    res,
+    c("elementId", "style")
+  )
+  expect_equal(
+    res$elementId,
+    "this"
+  )
+  expect_equal(
+    res$style,
+    "my style"
+  )
+  
+  # Step 3, testing with label and no style
+  res <- create_overlay(
+    "this",
+    "my label",
+    NULL
   )
   expect_true(
     length(res) == 2
@@ -12,29 +62,14 @@ test_that("create_overlay works", {
   )
   expect_equal(
     res$elementId,
-    "xyz"
+    "this"
   )
   expect_equal(
     res$label,
-    "this"
-  )
-
-  res <- create_overlay(
-    "this",
-    NULL
-  )
-  expect_true(
-    length(res) == 1
-  )
-  expect_named(
-    res,
-    c("elementId")
-  )
-  expect_equal(
-    res$elementId,
-    "this"
+    "my label"
   )
 })
+
 
 test_that("build_bpmnContent works", {
   # Step 1, testing xml_doc, no overlays
