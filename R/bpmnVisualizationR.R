@@ -19,17 +19,19 @@
 #'
 #' @param bpmnXML A file name or 'XML' document or string in 'BPMN' 'XML' format
 #' @param overlays An element or a list of elements to be added to the diagram's existing elements.
-#'      Use \code{create_overlay} function to create an overlay object with content and relative position.
-#' @param enableDefaultOverlayStyle If no style is set on an overlay and this parameter is \code{true}, the default style is set to it.
-#'      By default, \code{enableDefaultOverlayStyle} is set to \code{true}.
-#' @param width Fixed width for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
-#' @param height Fixed height for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
-#' @param elementId The id of the 'HTML' element to enclose the widget.
-#'      Use an explicit element ID for the widget (rather than an automatically
-#'      generated one). Useful if you have other 'JavaScript' that needs to explicitly
+#'      Use \code{create_overlay} function to create an overlay object with content and a relative position.
+#' @param enableDefaultOverlayStyle If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
+#'      By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.
+#' @param width A fixed width for the widget (in CSS units). 
+#'      The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
+#' @param height A fixed height for the widget (in CSS units). 
+#'      The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
+#' @param elementId The ID of the 'HTML' element to enclose the widget.
+#'      Use an explicit element ID for the widget (rather than an automatically generated one). 
+#'      This is useful if you have other 'JavaScript' that needs to explicitly
 #'      discover and interact with a specific widget instance.
 #'
-#' @returns A \code{bpmnVisualizationR} Widget that will intelligently print itself into 'HTML' in a variety of contexts
+#' @returns A \code{bpmnVisualizationR} widget that will intelligently print itself into 'HTML' in a variety of contexts
 #'      including the 'R' console, within 'R Markdown' documents, and within 'Shiny' output bindings.
 #'
 #' @examples

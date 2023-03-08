@@ -7,22 +7,22 @@
 create_style(font = NULL, fill = NULL, stroke = NULL)
 }
 \arguments{
-\item{font}{The font style of an overlay
-Use \code{\link{create_font}} function to create the style of an overlay object.}
+\item{font}{The font style of the overlay
+Use \code{\link{create_font}} function to create the font style object for the overlay.}
 
-\item{fill}{The fill style of an overlay
-Use \code{\link{create_fill}} function to create the style of an overlay object.}
+\item{fill}{The fill style of the overlay
+Use \code{\link{create_fill}} function to create the fill style object for the overlay.}
 
-\item{stroke}{The stroke style of an overlay
-Use \code{\link{create_stroke}} function to create the style of an overlay object.}
+\item{stroke}{The stroke style of the overlay
+Use \code{\link{create_stroke}} function to create the stroke style object for the overlay.}
 }
 \value{
-The style object of an overlay
+The style object of the overlay
 }
 \description{
-When an overlay is added to an existing element in the diagram, it's possible to style it.
+When adding an overlay to an existing element in a diagram, it's possible to customize its style.
 
-See \code{style} argument in the \code{\link{create_overlay}} function.
+Refer to the \code{style} parameter in the \code{\link{create_overlay}} function for more information.
 
-Use this structure to create correct style structure.
+Use this function to create the correct style structure for an overlay.
 }

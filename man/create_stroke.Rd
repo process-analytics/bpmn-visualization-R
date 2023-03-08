@@ -7,15 +7,15 @@
 create_stroke(color)
 }
 \arguments{
-\item{color}{The color of the stroke of an overlay}
+\item{color}{The color of the stroke of the overlay}
 }
 \value{
-The stroke style object of an overlay
+The stroke style object of the overlay
 }
 \description{
-When an overlay is added to an existing element in the diagram, it's possible to style its stroke.
+When adding an overlay to an existing element in a diagram, it's possible to customize its stroke. style.
 
-See \code{stroke} argument in the \code{\link{create_style}} function.
+Refer to the \code{stroke.} parameter in the \code{\link{create_style}} function for more information.
 
-Use this structure to create correct stroke structure.
+Use this function to create the correct stroke structure for an overlay.
 }

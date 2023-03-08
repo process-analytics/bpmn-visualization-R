@@ -17,22 +17,24 @@ display(
 \item{bpmnXML}{A file name or 'XML' document or string in 'BPMN' 'XML' format}
 
 \item{overlays}{An element or a list of elements to be added to the diagram's existing elements.
-Use \code{create_overlay} function to create an overlay object with content and relative position.}
+Use \code{create_overlay} function to create an overlay object with content and a relative position.}
 
-\item{enableDefaultOverlayStyle}{If no style is set on an overlay and this parameter is \code{true}, the default style is set to it.
-By default, \code{enableDefaultOverlayStyle} is set to \code{true}.}
+\item{enableDefaultOverlayStyle}{If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
+By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.}
 
-\item{width}{Fixed width for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
+\item{width}{A fixed width for the widget (in CSS units). 
+The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
-\item{height}{Fixed height for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
+\item{height}{A fixed height for the widget (in CSS units). 
+The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
-\item{elementId}{The id of the 'HTML' element to enclose the widget.
-Use an explicit element ID for the widget (rather than an automatically
-generated one). Useful if you have other 'JavaScript' that needs to explicitly
+\item{elementId}{The ID of the 'HTML' element to enclose the widget.
+Use an explicit element ID for the widget (rather than an automatically generated one). 
+This is useful if you have other 'JavaScript' that needs to explicitly
 discover and interact with a specific widget instance.}
 }
 \value{
-A \code{bpmnVisualizationR} Widget that will intelligently print itself into 'HTML' in a variety of contexts
+A \code{bpmnVisualizationR} widget that will intelligently print itself into 'HTML' in a variety of contexts
      including the 'R' console, within 'R Markdown' documents, and within 'Shiny' output bindings.
 }
 \description{

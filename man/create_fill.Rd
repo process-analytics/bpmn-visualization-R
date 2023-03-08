@@ -7,15 +7,15 @@
 create_fill(color)
 }
 \arguments{
-\item{color}{The color of the background of an overlay}
+\item{color}{The color of the background of the overlay}
 }
 \value{
-The fill style object of an overlay
+The fill style object of the overlay
 }
 \description{
-When an overlay is added to an existing element in the diagram, it's possible to style how it is filled.
+When adding an overlay to an existing element in a diagram, it's possible to customize how it is filled.
 
-See \code{fill} argument in the \code{\link{create_style}} function.
+Refer to the \code{fill} parameter in the \code{\link{create_style}} function for more information.
 
-Use this structure to create correct fill structure.
+Use this function to create the correct fill structure for an overlay.
 }

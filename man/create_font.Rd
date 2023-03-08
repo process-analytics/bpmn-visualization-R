@@ -7,17 +7,17 @@
 create_font(color = NULL, size = NULL)
 }
 \arguments{
-\item{color}{The color of the font of an overlay}
+\item{color}{The color of the font of the overlay}
 
-\item{size}{The size of the font of an overlay}
+\item{size}{The size of the font of the overlay}
 }
 \value{
-The font style object of an overlay
+The font style object of the overlay
 }
 \description{
-When an overlay is added to an existing element in the diagram, it's possible to style its font.
+When adding an overlay to an existing element in a diagram, it's possible to customize its font style.
 
-See \code{font} argument in the \code{\link{create_style}} function.
+Refer to the \code{font} parameter in the \code{\link{create_style}} function for more information.
 
-Use this structure to create correct font structure.
+Use this function to create the correct font structure for an overlay.
 }

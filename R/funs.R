@@ -6,12 +6,12 @@
 #' 
 #' See \code{overlays} argument in the \code{\link{display}} function.
 #' 
-#' Use this structure to create correct overlay structure.
+#' Use this function to create the correct overlay structure.
 #' 
 #' @param elementId The bpmn element id to which the overlay will be attached
 #' @param label 'HTML' element to use as an overlay
 #' @param style The style of the overlay
-#'      Use \code{\link{create_style}} function to create the style of an overlay object.
+#'      Use \code{\link{create_style}} function to create the style object of an overlay.
 #'
 #' @returns An overlay object
 #'
@@ -29,20 +29,20 @@ create_overlay <- function(elementId, label, style = NULL) {
 #'
 #' @name create_style
 #' @description
-#' When an overlay is added to an existing element in the diagram, it's possible to style it.
+#' When adding an overlay to an existing element in a diagram, it's possible to customize its style.
 #'
-#' See \code{style} argument in the \code{\link{create_overlay}} function.
+#' Refer to the \code{style} parameter in the \code{\link{create_overlay}} function for more information.
 #'
-#' Use this structure to create correct style structure.
+#' Use this function to create the correct style structure for an overlay.
 #'
-#' @param font The font style of an overlay
-#'      Use \code{\link{create_font}} function to create the style of an overlay object.
-#' @param fill The fill style of an overlay
-#'      Use \code{\link{create_fill}} function to create the style of an overlay object.
-#' @param stroke The stroke style of an overlay
-#'      Use \code{\link{create_stroke}} function to create the style of an overlay object.
+#' @param font The font style of the overlay
+#'      Use \code{\link{create_font}} function to create the font style object for the overlay.
+#' @param fill The fill style of the overlay
+#'      Use \code{\link{create_fill}} function to create the fill style object for the overlay.
+#' @param stroke The stroke style of the overlay
+#'      Use \code{\link{create_stroke}} function to create the stroke style object for the overlay.
 #'
-#' @returns The style object of an overlay
+#' @returns The style object of the overlay
 #'
 #' @export
 create_style <- function(font = NULL, fill = NULL, stroke = NULL) {
@@ -58,16 +58,16 @@ create_style <- function(font = NULL, fill = NULL, stroke = NULL) {
 #'
 #' @name create_font
 #' @description
-#' When an overlay is added to an existing element in the diagram, it's possible to style its font.
+#' When adding an overlay to an existing element in a diagram, it's possible to customize its font style.
 #'
-#' See \code{font} argument in the \code{\link{create_style}} function.
+#' Refer to the \code{font} parameter in the \code{\link{create_style}} function for more information.
 #'
-#' Use this structure to create correct font structure.
+#' Use this function to create the correct font structure for an overlay.
 #'
-#' @param color The color of the font of an overlay
-#' @param size The size of the font of an overlay
+#' @param color The color of the font of the overlay
+#' @param size The size of the font of the overlay
 #'
-#' @returns The font style object of an overlay
+#' @returns The font style object of the overlay
 #'
 #' @export
 create_font <- function(color = NULL, size = NULL) {
@@ -82,15 +82,15 @@ create_font <- function(color = NULL, size = NULL) {
 #'
 #' @name create_fill
 #' @description
-#' When an overlay is added to an existing element in the diagram, it's possible to style how it is filled.
+#' When adding an overlay to an existing element in a diagram, it's possible to customize how it is filled.
 #'
-#' See \code{fill} argument in the \code{\link{create_style}} function.
+#' Refer to the \code{fill} parameter in the \code{\link{create_style}} function for more information.
 #'
-#' Use this structure to create correct fill structure.
+#' Use this function to create the correct fill structure for an overlay.
 #'
-#' @param color The color of the background of an overlay
+#' @param color The color of the background of the overlay
 #'
-#' @returns The fill style object of an overlay
+#' @returns The fill style object of the overlay
 #'
 #' @export
 create_fill <- function(color) {
@@ -104,15 +104,15 @@ create_fill <- function(color) {
 #'
 #' @name create_stroke
 #' @description
-#' When an overlay is added to an existing element in the diagram, it's possible to style its stroke.
+#' When adding an overlay to an existing element in a diagram, it's possible to customize its stroke. style.
 #'
-#' See \code{stroke} argument in the \code{\link{create_style}} function.
+#' Refer to the \code{stroke.} parameter in the \code{\link{create_style}} function for more information.
+#' 
+#' Use this function to create the correct stroke structure for an overlay.
 #'
-#' Use this structure to create correct stroke structure.
+#' @param color The color of the stroke of the overlay
 #'
-#' @param color The color of the stroke of an overlay
-#'
-#' @returns The stroke style object of an overlay
+#' @returns The stroke style object of the overlay
 #'
 #' @export
 create_stroke <- function(color) {
