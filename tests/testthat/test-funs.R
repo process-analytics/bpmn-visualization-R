@@ -165,6 +165,59 @@ test_that("create_style works", {
   )
 })
 
+test_that("create_font works", {
+  # Step 1, testing with color and size
+  res <- create_font(
+    "my color",
+    "my size"
+  )
+  expect_true(
+    length(res) == 2
+  )
+  expect_named(
+    res,
+    c("color", "size")
+  )
+  expect_equal(
+    res$color,
+    "my color"
+  )
+  expect_equal(
+    res$size,
+    "my size"
+  )
+  
+  # Step 2, testing with no color, and size
+  res <- create_font(
+    NULL,
+    "my size"
+  )
+  expect_true(
+    length(res) == 1
+  )
+  expect_named(
+    res,
+    c("size")
+  )
+  expect_equal(
+    res$size,
+    "my size"
+  )
+  
+  # Step 3, testing with color and no stroke
+  res <- create_font(
+    "my color",
+    NULL 
+  )
+  expect_true(
+    length(res) == 1
+  )
+  expect_named(
+    res,
+    c("color")
+  )
+})
+
 
 test_that("build_bpmnContent works", {
   # Step 1, testing xml_doc, no overlays
