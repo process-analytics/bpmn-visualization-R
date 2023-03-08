@@ -15,8 +15,8 @@ create_overlay(elementId, label, style = NULL, position = NULL)
 Use \code{\link{create_style}} function to create the style object of an overlay.}
 
 \item{position}{The position of the overlay
-If the bpmn element where the overlay will be attached is a Shape, use \code{\link{OverlayShapePosition}}.
-Otherwise, use \code{\link{OverlayEdgePosition}}.}
+If the bpmn element where the overlay will be attached is a Shape, use \code{\link{overlay_shape_position}}.
+Otherwise, use \code{\link{overlay_edge_position}}.}
 }
 \value{
 An overlay object
@@ -38,7 +38,7 @@ overlay <- create_overlay(
     fill = create_fill(color = 'MistyRose'),
     stroke = create_stroke(color = 'Red')
   ),
-  OverlayShapePosition[1]
+  overlay_shape_position[1]
 )
 
 # Create an overlay with edge position "end"
@@ -50,7 +50,7 @@ overlay <- create_overlay(
     fill = create_fill(color = 'MistyRose'),
     stroke = create_stroke(color = 'Red')
   ),
-  OverlayEdgePosition[2]
+  overlay_edge_position[2]
 )
 
 }

@@ -3,7 +3,7 @@
 #' @description
 #' To specify the position when creating an overlay object that will be attached to BPMN \code{Shape} elements in the diagram.
 #'
-#' \code{OverlayShapePosition} includes the following positions:
+#' \code{overlay_shape_position} includes the following positions:
 #'
 #' - \code{"top-left"}
 #' - \code{"top-right"}
@@ -17,14 +17,14 @@
 #' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
 #'
 #' @export
-OverlayShapePosition <- c("top-left", "top-right", "top-center", "bottom-left", "bottom-right","bottom-center", "middle-left", "middle-right")
+overlay_shape_position <- c("top-left", "top-right", "top-center", "bottom-left", "bottom-right", "bottom-center", "middle-left", "middle-right")
 
 #' @title The overlay positions on \code{Edge}
 #'
 #' @description
 #' To specify the position when creating an overlay object that will be attached to BPMN \code{Edge} elements in the diagram.
 #'
-#' \code{OverlayEdgePosition} includes the following positions:
+#' \code{overlay_edge_position} includes the following positions:
 #' - \code{"start"}
 #' - \code{"end"}
 #' - \code{"middle"}
@@ -32,7 +32,7 @@ OverlayShapePosition <- c("top-left", "top-right", "top-center", "bottom-left", 
 #' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
 #' 
 #' @export
-OverlayEdgePosition <- c("start", "end", "middle")
+overlay_edge_position <- c("start", "end", "middle")
 
 #' @title Create an overlay
 #'
@@ -49,8 +49,8 @@ OverlayEdgePosition <- c("start", "end", "middle")
 #' @param style The style of the overlay.
 #'      Use \code{\link{create_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.
 #' @param position The position of the overlay
-#'      If the bpmn element where the overlay will be attached is a Shape, use \code{\link{OverlayShapePosition}}.
-#'      Otherwise, use \code{\link{OverlayEdgePosition}}.
+#'      If the bpmn element where the overlay will be attached is a Shape, use \code{\link{overlay_shape_position}}.
+#'      Otherwise, use \code{\link{overlay_edge_position}}.
 #'
 #' @returns An overlay object
 #'
@@ -64,7 +64,7 @@ OverlayEdgePosition <- c("start", "end", "middle")
 #'     fill = create_fill(color = 'MistyRose'),
 #'     stroke = create_stroke(color = 'Red')
 #'   ),
-#'   OverlayShapePosition[1]
+#'   overlay_shape_position[1]
 #' )
 #'
 #' # Create an overlay with edge position "end"
@@ -76,17 +76,17 @@ OverlayEdgePosition <- c("start", "end", "middle")
 #'     fill = create_fill(color = 'MistyRose'),
 #'     stroke = create_stroke(color = 'Red')
 #'   ),
-#'   OverlayEdgePosition[2]
+#'   overlay_edge_position[2]
 #' )
 #'
 #' @export
 create_overlay <- function(elementId, label, style = NULL, position = NULL) {
-  if (!is.null(position) && !(position %in% c(OverlayShapePosition, OverlayEdgePosition))) {
+  if (!is.null(position) && !(position %in% c(overlay_shape_position, overlay_edge_position))) {
     stop(
-      paste("Error: position must be:","\n",
-            "\t- NULL","\n",
-            "\t- if the overlay will be attached on a Shape, one of the following values: ", paste(OverlayShapePosition, collapse = ", "), "\n",
-            "\t- if the overlay will be attached on an Edge, one of the following values: ", paste(OverlayEdgePosition, collapse = ", ")
+      paste("Error: position must be:", "\n",
+            "\t- NULL", "\n",
+            "\t- if the overlay will be attached on a Shape, one of the following values: ", paste(overlay_shape_position, collapse = ", "), "\n",
+            "\t- if the overlay will be attached on an Edge, one of the following values: ", paste(overlay_edge_position, collapse = ", ")
       )
     )
   }
