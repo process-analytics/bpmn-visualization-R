@@ -115,12 +115,18 @@ bpmnVisualizationR::display(bpmn_file, overlays)
 ### Style an overlay
 
 ```r
-font <- bpmnVisualizationR::create_font(color = 'White', size = 14)
-fill <- bpmnVisualizationR::create_fill(color = 'rgba(54,160,54)')
-stroke <- bpmnVisualizationR::create_stroke(color = 'rgba(54,160,54)')
+font <- bpmnVisualizationR::create_font(color = 'WhiteSmoke', size = 19)
+fill <- bpmnVisualizationR::create_fill(color = 'Teal')
+stroke <- bpmnVisualizationR::create_stroke(color = 'SpringGreen')
 
 style <- bpmnVisualizationR::create_style(font, fill, stroke)
 overlay <- bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42", style)
+```
+
+### Disable the default styles of the overlays
+
+```r
+bpmnVisualizationR::display(bpmn_file, overlays, enableDefaultOverlayStyle=false)
 ```
 
 ### Integrate in Shiny Applications
@@ -136,11 +142,11 @@ library(shiny)
 displayBpmn <- function() {
     bpmn_file <- system.file("examples/Travel_Booking.bpmn", package = "bpmnVisualizationR")
     style <- bpmnVisualizationR::create_style(
-      font = bpmnVisualizationR::create_font(color = 'White', size = 14), 
-      fill = bpmnVisualizationR::create_fill(color = 'rgba(54,160,54)'), 
-      stroke = bpmnVisualizationR::create_stroke(color = 'rgba(54,160,54)')
+      font = bpmnVisualizationR::create_font(color = 'Black', size = 25), 
+      fill = bpmnVisualizationR::create_fill(color = 'MediumSpringGreen'), 
+      stroke = bpmnVisualizationR::create_stroke(color = 'MediumSpringGreen')
     )
-    overlays <- list(bpmnVisualizationR::create_overlay("_6-203", "9", sty))
+    overlays <- list(bpmnVisualizationR::create_overlay("_6-203", "9", style))
     bpmnVisualizationR::display(bpmn_file, overlays)
 }
 

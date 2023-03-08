@@ -130,7 +130,8 @@ create_stroke <- function(color) {
 #' @noRd
 build_bpmnContent <- function(
   bpmnXML,
-  overlays = NULL
+  overlays = NULL,
+  enableDefaultOverlayStyle
 ) {
   # load bpmn content
   if (inherits(
@@ -160,7 +161,8 @@ build_bpmnContent <- function(
     stop("bpmnXML must be a absolute path of BPMN file or the string of the BPMN content !!")
   }
   x <- list(
-    bpmnContent = bpmnContent
+    bpmnContent = bpmnContent,
+    enableDefaultOverlayStyle = enableDefaultOverlayStyle
   )
 
   if (length(overlays)) {
