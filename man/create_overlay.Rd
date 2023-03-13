@@ -4,15 +4,19 @@
 \alias{create_overlay}
 \title{Create an overlay}
 \usage{
-create_overlay(elementId, label, style = NULL)
+create_overlay(elementId, label, style = NULL, position = NULL)
 }
 \arguments{
 \item{elementId}{The bpmn element id to which the overlay will be attached}
 
 \item{label}{'HTML' element to use as an overlay}
 
-\item{style}{The style of the overlay
-Use \code{\link{create_style}} function to create the style object of an overlay.}
+\item{style}{The style of the overlay.
+Use \code{\link{create_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.}
+
+\item{position}{The position of the overlay
+If the bpmn element where the overlay will be attached is a Shape, use \code{\link{overlay_shape_position}}.
+Otherwise, use \code{\link{overlay_edge_position}}.}
 }
 \value{
 An overlay object
@@ -20,7 +24,33 @@ An overlay object
 \description{
 An overlay can be added to existing elements in the diagram.
 
-See \code{overlays} argument in the \code{\link{display}} function.
+See the \code{overlays} argument in the \code{\link{display}} function.
 
 Use this function to create the correct overlay structure.
+}
+\examples{
+# Create an overlay with shape position "top-left"
+overlay <- create_overlay(
+  "my-element-id", 
+  "My Overlay Label", 
+  create_style(
+    font = create_font(color = 'DarkSlateGray', size = 23),
+    fill = create_fill(color = 'MistyRose'),
+    stroke = create_stroke(color = 'Red')
+  ),
+  overlay_shape_position[1]
+)
+
+# Create an overlay with edge position "end"
+overlay <- create_overlay(
+  "my-edge-id", 
+  "My Overlay Label", 
+  create_style(
+    font = create_font(color = 'DarkSlateGray', size = 23),
+    fill = create_fill(color = 'MistyRose'),
+    stroke = create_stroke(color = 'Red')
+  ),
+  overlay_edge_position[2]
+)
+
 }

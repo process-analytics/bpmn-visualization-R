@@ -1,30 +1,50 @@
 describe("create_overlay works", {
-  test_that("with label and style", {
-    res <- create_overlay("xyz", "this", "my style")
+  test_that("with label, style and position", {
+    res <- create_overlay("xyz", "this", "my style", "start")
     
-    expect_true(length(res) == 3)
-    expect_named(res, c("elementId", "label", "style"))
+    expect_true(length(res) == 4)
+    expect_named(res, c("elementId", "label", "style", "position"))
     expect_equal(res$elementId, "xyz")
     expect_equal(res$label, "this")
     expect_equal(res$style, "my style")
+    expect_equal(res$position, "start")
   })
   
-  test_that("with no label, and style", {
-    res <- create_overlay("this", NULL, "my style")
+  test_that("with no label, style and position", {
+    res <- create_overlay("this", NULL, "my style", "middle")
     
-    expect_true(length(res) == 2)
-    expect_named(res,  c("elementId", "style"))
+    expect_true(length(res) == 3)
+    expect_named(res,  c("elementId", "style", "position"))
     expect_equal(res$elementId, "this")
+    expect_equal(res$style, "my style")
+    expect_equal(res$position, "middle")
+  })
+  
+  test_that("with label, no style, and position", {
+    res <- create_overlay("this", "my label", NULL, "top-center")
+    
+    expect_true(length(res) == 3)
+    expect_named(res, c("elementId", "label", "position"))
+    expect_equal(res$elementId, "this")
+    expect_equal(res$label, "my label")
+    expect_equal(res$position, "top-center")
+  })
+  
+  test_that("with label, style, and no position", {
+    res <- create_overlay("this", "my label", "my style", NULL)
+    
+    expect_true(length(res) == 3)
+    expect_named(res, c("elementId", "label", "style"))
+    expect_equal(res$elementId, "this")
+    expect_equal(res$label, "my label")
     expect_equal(res$style, "my style")
   })
   
-  test_that("with label and no style", {
-    res <- create_overlay("this", "my label", NULL)
-    
-    expect_true(length(res) == 2)
-    expect_named(res, c("elementId", "label"))
-    expect_equal(res$elementId, "this")
-    expect_equal(res$label, "my label")
+  test_that("throws an exception when position is not valid", {
+    expect_error(
+      create_overlay("this", "my label", "my style", position = "invalid_position"), 
+      "position must be"
+    )
   })
 })
 

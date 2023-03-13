@@ -41,7 +41,7 @@
 #' # Display the BPMN diagram
 #' bpmnVisualizationR::display(bpmn_file, width='auto', height='auto')
 #'
-#' # Display the BPMN diagram featuring overlays and their default style
+#' # Display the BPMN diagram featuring overlays and their default style/position
 #' taskStyle <- bpmnVisualizationR::create_style(
 #'   font = bpmnVisualizationR::create_font(color = 'DarkSlateGray', size = 23),
 #'   fill = bpmnVisualizationR::create_fill(color = 'MistyRose'),
@@ -55,17 +55,20 @@
 #' )
 #'
 #' overlays <- list(
-#'   bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
-#'   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle),
-#'   bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle)
+#'   bpmnVisualizationR::create_overlay("start_event_1_1", "42", position = "middle-left"),
+#'   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle, "end"),
+#'   bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle),
+#'   bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8"),
+#'   bpmnVisualizationR::create_overlay("call_activity_1_1", "7")
 #' )
 #' bpmnVisualizationR::display(bpmn_file, overlays, width='auto', height='auto')
 #'
-#' # Display the BPMN diagram featuring overlays, but exclude their default style
+#' # Display the BPMN diagram featuring overlays, but exclude their default style/position
 #' overlays <- list(
-#'   bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
-#'   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle),
-#'   bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle)
+#'   bpmnVisualizationR::create_overlay("start_event_1_1", "42", position = "middle-left"),
+#'   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle, "end"),
+#'   bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle, "bottom-right"),
+#'   bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8",  position = 'start')
 #' )
 #' bpmnVisualizationR::display(
 #'   bpmn_file, 
@@ -74,7 +77,6 @@
 #'   width='auto', 
 #'   height='auto'
 #' )
-#'
 #'
 #' @seealso \code{\link{create_overlay}} to create an overlay
 #'
