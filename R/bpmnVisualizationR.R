@@ -19,7 +19,7 @@
 #'
 #' @param bpmnXML A file name or 'XML' document or string in 'BPMN' 'XML' format
 #' @param overlays An element or a list of elements to be added to the diagram's existing elements.
-#'      Use \code{create_overlay} function to create an overlay object with content and a relative position.
+#'      Use the \code{create_overlay} function to create an overlay object with content and a relative position.
 #' @param enableDefaultOverlayStyle If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
 #'      By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.
 #' @param width A fixed width for the widget (in CSS units). 

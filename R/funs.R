@@ -4,14 +4,14 @@
 #' @description 
 #' An overlay can be added to existing elements in the diagram.
 #' 
-#' See \code{overlays} argument in the \code{\link{display}} function.
+#' See the \code{overlays} argument in the \code{\link{display}} function.
 #' 
 #' Use this function to create the correct overlay structure.
 #' 
 #' @param elementId The bpmn element id to which the overlay will be attached
 #' @param label 'HTML' element to use as an overlay
-#' @param style The style of the overlay
-#'      Use \code{\link{create_style}} function to create the style object of an overlay.
+#' @param style The style of the overlay.
+#'      Use \code{\link{create_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.
 #'
 #' @returns An overlay object
 #'
