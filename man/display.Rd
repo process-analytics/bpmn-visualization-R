@@ -69,6 +69,12 @@ overlays <- list(
 bpmnVisualizationR::display(bpmn_file, overlays, width='auto', height='auto')
 
 # Display the BPMN diagram featuring overlays, but exclude their default style/position
+overlays <- list(
+  bpmnVisualizationR::create_overlay("start_event_1_1", "42", position = "middle-left"),
+  bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle, "end"),
+  bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle, "bottom-right"),
+  bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8",  position = 'start')
+)
 bpmnVisualizationR::display(
   bpmn_file, 
   overlays, 
