@@ -7,6 +7,7 @@
 display(
   bpmnXML,
   overlays = NULL,
+  enableDefaultOverlayStyle = TRUE,
   width = NULL,
   height = NULL,
   elementId = NULL
@@ -16,19 +17,24 @@ display(
 \item{bpmnXML}{A file name or 'XML' document or string in 'BPMN' 'XML' format}
 
 \item{overlays}{An element or a list of elements to be added to the diagram's existing elements.
-Use overlay function to create an overlay object with content and relative position.}
+Use \code{create_overlay} function to create an overlay object with content and a relative position.}
 
-\item{width}{Fixed width for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
+\item{enableDefaultOverlayStyle}{If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
+By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.}
 
-\item{height}{Fixed height for widget (in css units). The default is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
+\item{width}{A fixed width for the widget (in CSS units). 
+The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
-\item{elementId}{The id of the 'HTML' element to enclose the widget.
-Use an explicit element ID for the widget (rather than an automatically
-generated one). Useful if you have other 'JavaScript' that needs to explicitly
+\item{height}{A fixed height for the widget (in CSS units). 
+The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
+
+\item{elementId}{The ID of the 'HTML' element to enclose the widget.
+Use an explicit element ID for the widget (rather than an automatically generated one). 
+This is useful if you have other 'JavaScript' that needs to explicitly
 discover and interact with a specific widget instance.}
 }
 \value{
-A \code{bpmnVisualizationR} Widget that will intelligently print itself into 'HTML' in a variety of contexts
+A \code{bpmnVisualizationR} widget that will intelligently print itself into 'HTML' in a variety of contexts
      including the 'R' console, within 'R Markdown' documents, and within 'Shiny' output bindings.
 }
 \description{
@@ -41,13 +47,40 @@ bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisual
 # Display the BPMN diagram
 bpmnVisualizationR::display(bpmn_file, width='auto', height='auto')
 
-# Display the BPMN diagram with overlays
+# Display the BPMN diagram featuring overlays and their default style
+taskStyle <- bpmnVisualizationR::create_style(
+  font = bpmnVisualizationR::create_font(color = 'DarkSlateGray', size = 23),
+  fill = bpmnVisualizationR::create_fill(color = 'MistyRose'),
+  stroke = bpmnVisualizationR::create_stroke(color = 'Red')
+)
+
+flowStyle <- bpmnVisualizationR::create_style(
+  font = bpmnVisualizationR::create_font(color = 'WhiteSmoke', size = 19),
+  fill = bpmnVisualizationR::create_fill(color = 'Teal'),
+  stroke = bpmnVisualizationR::create_stroke(color = 'SpringGreen')
+)
+
 overlays <- list(
   bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
-  bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42"),
-  bpmnVisualizationR::create_overlay("task_1_1", "9")
+  bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle),
+  bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle)
 )
 bpmnVisualizationR::display(bpmn_file, overlays, width='auto', height='auto')
+
+# Display the BPMN diagram featuring overlays, but exclude their default style
+overlays <- list(
+  bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
+  bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle),
+  bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle)
+)
+bpmnVisualizationR::display(
+  bpmn_file, 
+  overlays, 
+  enableDefaultOverlayStyle=FALSE, 
+  width='auto', 
+  height='auto'
+)
+
 
 }
 \seealso{

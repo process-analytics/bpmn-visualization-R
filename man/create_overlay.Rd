@@ -4,12 +4,15 @@
 \alias{create_overlay}
 \title{Create an overlay}
 \usage{
-create_overlay(elementId, label)
+create_overlay(elementId, label, style = NULL)
 }
 \arguments{
 \item{elementId}{The bpmn element id to which the overlay will be attached}
 
 \item{label}{'HTML' element to use as an overlay}
+
+\item{style}{The style of the overlay
+Use \code{\link{create_style}} function to create the style object of an overlay.}
 }
 \value{
 An overlay object
@@ -19,5 +22,5 @@ An overlay can be added to existing elements in the diagram.
 
 See \code{overlays} argument in the \code{\link{display}} function.
 
-Use this structure to create correct overlay structure.
+Use this function to create the correct overlay structure.
 }
