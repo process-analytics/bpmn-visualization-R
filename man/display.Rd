@@ -22,14 +22,14 @@ Use the \code{create_overlay} function to create an overlay object with content 
 \item{enableDefaultOverlayStyle}{If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
 By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.}
 
-\item{width}{A fixed width for the widget (in CSS units). 
+\item{width}{A fixed width for the widget (in CSS units).
 The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
-\item{height}{A fixed height for the widget (in CSS units). 
+\item{height}{A fixed height for the widget (in CSS units).
 The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
 
 \item{elementId}{The ID of the 'HTML' element to enclose the widget.
-Use an explicit element ID for the widget (rather than an automatically generated one). 
+Use an explicit element ID for the widget (rather than an automatically generated one).
 This is useful if you have other 'JavaScript' that needs to explicitly
 discover and interact with a specific widget instance.}
 }
@@ -47,7 +47,21 @@ bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisual
 # Display the BPMN diagram
 bpmnVisualizationR::display(bpmn_file, width='auto', height='auto')
 
-# Display the BPMN diagram featuring overlays and their default style/position
+# Display the BPMN diagram featuring overlays with their default positions and styles
+bpmnVisualizationR::display(
+  bpmn_file,
+  list(
+    bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
+    bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42"),
+    bpmnVisualizationR::create_overlay("task_1_1", "9"),
+    bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8"),
+    bpmnVisualizationR::create_overlay("call_activity_1_1", "7")
+  ),
+  width='auto',
+  height='auto'
+)
+
+# Display the BPMN diagram featuring overlays using custom styles and positions
 taskStyle <- bpmnVisualizationR::create_style(
   font = bpmnVisualizationR::create_font(color = 'DarkSlateGray', size = 23),
   fill = bpmnVisualizationR::create_fill(color = 'MistyRose'),
@@ -69,7 +83,7 @@ overlays <- list(
 )
 bpmnVisualizationR::display(bpmn_file, overlays, width='auto', height='auto')
 
-# Display the BPMN diagram featuring overlays, but exclude their default style/position
+# Display the BPMN diagram featuring overlays, but exclude their default styles and positions
 overlays <- list(
   bpmnVisualizationR::create_overlay("start_event_1_1", "42", position = "middle-left"),
   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle, "end"),
@@ -77,10 +91,10 @@ overlays <- list(
   bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8",  position = 'start')
 )
 bpmnVisualizationR::display(
-  bpmn_file, 
-  overlays, 
-  enableDefaultOverlayStyle=FALSE, 
-  width='auto', 
+  bpmn_file,
+  overlays,
+  enableDefaultOverlayStyle=FALSE,
+  width='auto',
   height='auto'
 )
 
