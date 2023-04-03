@@ -42,15 +42,16 @@
 #' bpmnVisualizationR::display(bpmn_file, width='auto', height='auto')
 #'
 #' # Display the BPMN diagram featuring overlays with their default positions and styles
+#' overlays <- list(
+#'   bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
+#'   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42"),
+#'   bpmnVisualizationR::create_overlay("task_1_1", "9"),
+#'   bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8"),
+#'   bpmnVisualizationR::create_overlay("call_activity_1_1", "7")
+#' )
 #' bpmnVisualizationR::display(
 #'   bpmn_file,
-#'   list(
-#'     bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
-#'     bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42"),
-#'     bpmnVisualizationR::create_overlay("task_1_1", "9"),
-#'     bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8"),
-#'     bpmnVisualizationR::create_overlay("call_activity_1_1", "7")
-#'   ),
+#'   overlays,
 #'   width='auto',
 #'   height='auto'
 #' )
