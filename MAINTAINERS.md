@@ -18,17 +18,19 @@ Maintainers need to perform the following actions **in the order described here*
 
 ### ⚠️⚠️ First decide whether to publish on CRAN ⚠️⚠️
 
-The CRAN policies state (see https://r-pkgs.org/release.html#cran-policies and https://cran.r-project.org/web/packages/policies.html)
+The CRAN policy states the following:
 > Submitting updates should be done responsibly and with respect for the volunteers’ time. Once a package is established (which may take several rounds), “no more than every 1–2 months” seems appropriate. 
+ℹ️ For more information, see https://r-pkgs.org/release.html#cran-policies and https://cran.r-project.org/web/packages/policies.html.
 
-However, on our side, we can provide more frequent versions. In this case, do not publish no CRAN. The new version will be available only via an installation from GitHub.
+But on our end, we can provide more frequent releases. In this case, do not publish to CRAN. 
+The new version will only be available via an installation from GitHub.
 
 
 ### Preparing a CRAN submission with `rhub`
 
-**NOTES**: only required when we decide to publish to CRAN
+**NOTES**: required only if we decide to publish to CRAN
 
-Before starting a release, check that the output of `rhub` package is stored in [cran-comments.md](cran-comments.md) (the recent output is at the top of the file, and the oldest at the bottom).
+Before starting a release, check that the output of the `rhub` package is stored in [cran-comments.md](cran-comments.md) (the most recent output is at the top of the file, and the oldest at the bottom).
 If this is not the case, you must perform the following steps.
 
 #### First installation
@@ -167,7 +169,8 @@ ___
 - In the release description (check previous releases as a source of inspiration)
   - If the bpmn-visualization TypeScript library was updated, add a phrase about it (for example, see [Release 0.3.0](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.3.0) for instance.): `The bpmnVisualizationR package now uses [bpmn-visualization@0.29.0](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.29.0).`
   - Put screenshots/gif of the new features.
-  - If the package is not published on CRAN (see the 1st paragraph of the release process), please specify it by adding a sentence in bold! The sentence should explain why the new version is not available on CRAN and remind to install it using GitHub.
+- If the package is not published on CRAN (see the 1st paragraph of the release process), please specify this by adding a sentence in bold! 
+The sentence should explain why the new version is not available on CRAN. It should also remind people to install it from GitHub.
 - At any time, you can save the draft.
 - **Only when you are done**:
   - Assign the tag of the new version as release target and save the draft (doing it as later as possible ensure that `release-drafter` doesn't interfer with the writing of the Release Notes)
@@ -175,7 +178,7 @@ ___
 
 ### Publish the new version on CRAN
 
-**NOTES**: only required when we decide to publish to CRAN
+**NOTES**: required only if we decide to publish to CRAN
 
 #### Generate and retrieve the source package
 
