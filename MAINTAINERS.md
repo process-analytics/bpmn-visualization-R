@@ -215,11 +215,13 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
 - Provide parameter values for _version_ and _description_
 - Click on the button 'Run workflow'
 - Make sure job execution was successful by checking the status
-- If all is good, you should see a new tweet on [ProcessAnalyti1](https://twitter.com/ProcessAnalyti1) and a new message on the [news](https://discord.com/channels/1011911769607913562/1024329159033499780) channel of Process Analytics server on Discord.
+- If all is good, you should see a new message on the [news](https://discord.com/channels/1011911769607913562/1024329159033499780) channel of Process Analytics server on Discord.
 
-___
-⚠️⚠️⚠️ _**Only if the [jobs](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml) does NOT work!**_  ⚠️⚠️⚠️
 ### Twitter
+
+It is no longer possible to post a tweet with the API without a paid plan (and we only have a free plan). See [#239](https://github.com/process-analytics/bpmn-visualization-R/issues/239) for more details.
+
+So, create the tweet manually on [ProcessAnalyti1](https://twitter.com/ProcessAnalyti1).
 
 You can use this template:
 
@@ -231,6 +233,8 @@ You can use this template:
 >
 > https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v{version}
 
+___
+⚠️⚠️⚠️ _**Only if the [jobs](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml) does NOT work!**_  ⚠️⚠️⚠️
 ### Discord
 
 Channel: [news](https://discord.com/channels/1011911769607913562/1024329159033499780)
