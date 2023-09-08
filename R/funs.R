@@ -17,7 +17,17 @@
 #' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
 #'
 #' @export
-overlay_shape_position <- c("top-left", "top-right", "top-center", "bottom-left", "bottom-right", "bottom-center", "middle-left", "middle-right")
+overlay_shape_position <-
+  c(
+    "top-left",
+    "top-right",
+    "top-center",
+    "bottom-left",
+    "bottom-right",
+    "bottom-center",
+    "middle-left",
+    "middle-right"
+  )
 
 #' @title The overlay positions on \code{Edge}
 #'
@@ -47,7 +57,7 @@ overlay_edge_position <- c("start", "end", "middle")
 #' @param elementId The bpmn element id to which the overlay will be attached
 #' @param label 'HTML' element to use as an overlay
 #' @param style The style of the overlay.
-#'      Use \code{\link{create_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.
+#'      Use \code{\link{create_overlay_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.
 #' @param position The position of the overlay
 #'      If the bpmn element where the overlay will be attached is a Shape, use \code{\link{overlay_shape_position}}.
 #'      Otherwise, use \code{\link{overlay_edge_position}}.
@@ -56,27 +66,33 @@ overlay_edge_position <- c("start", "end", "middle")
 #'
 #' @examples
 #' # Create an overlay with shape position "top-left"
+#' overlay_style <- create_overlay_style(
+#'   font_color = 'DarkSlateGray',
+#'   font_size = 23,
+#'   fill_color = 'MistyRose',
+#'   stroke_color = 'Red'
+#' )
+#'
 #' overlay <- create_overlay(
-#'   "my-element-id", 
-#'   "My Overlay Label", 
-#'   create_style(
-#'     font = create_font(color = 'DarkSlateGray', size = 23),
-#'     fill = create_fill(color = 'MistyRose'),
-#'     stroke = create_stroke(color = 'Red')
-#'   ),
-#'   overlay_shape_position[1]
+#'   "my-shape-id",
+#'   "My Overlay Label",
+#'   style = overlay_style,
+#'   position = overlay_shape_position[1]
 #' )
 #'
 #' # Create an overlay with edge position "end"
+#' overlay_style <- create_overlay_style(
+#'   font_color = 'DarkSlateGray',
+#'   font_size = 23,
+#'   fill_color = 'MistyRose',
+#'   stroke_color = 'Red'
+#' )
+#'
 #' overlay <- create_overlay(
-#'   "my-edge-id", 
-#'   "My Overlay Label", 
-#'   create_style(
-#'     font = create_font(color = 'DarkSlateGray', size = 23),
-#'     fill = create_fill(color = 'MistyRose'),
-#'     stroke = create_stroke(color = 'Red')
-#'   ),
-#'   overlay_edge_position[2]
+#'   "my-edge-id",
+#'   "My Overlay Label",
+#'   style = overlay_style,
+#'   position = overlay_edge_position[2]
 #' )
 #'
 #' @export
@@ -102,7 +118,7 @@ create_overlay <- function(elementId, label, style = NULL, position = NULL) {
 
 #' @title Create the style of an overlay
 #'
-#' @name create_style
+#' @name create_overlay_style
 #' @description
 #' When adding an overlay to an existing element in a diagram, it's possible to customize its style.
 #'
@@ -110,32 +126,36 @@ create_overlay <- function(elementId, label, style = NULL, position = NULL) {
 #'
 #' Use this function to create the correct style structure for an overlay.
 #'
-#' @param font The font style of the overlay
-#'      Use \code{\link{create_font}} function to create the font style object for the overlay.
-#' @param fill The fill style of the overlay
-#'      Use \code{\link{create_fill}} function to create the fill style object for the overlay.
-#' @param stroke The stroke style of the overlay
-#'      Use \code{\link{create_stroke}} function to create the stroke style object for the overlay.
+#' @param font_color The font color of the overlay. Use a custom color string.
+#' @param font_size The font size of the overlay. Specify a numeric font size.
+#' @param fill_color The color of the background of the overlay. Use a custom color string.
+#' @param stroke_color The color of the stroke of the overlay. Use a custom color string.
+#'      If you don't want to display a stroke, you can set the color to:
+#'      - \code{transparent},
+#'      - the same value as for the \code{fill_color}. This increases the \code{padding}/\code{margin}.
 #'
 #' @returns The style object of the overlay
 #'
 #' @export
-create_style <- function(font = NULL, fill = NULL, stroke = NULL) {
+create_overlay_style <- function(font_color = NULL,
+                                 font_size = NULL,
+                                 fill_color = NULL,
+                                 stroke_color = NULL) {
   ret <-
     .not_null_list(
-      font = font,
-      fill = fill,
-      stroke = stroke
+      font = create_font(color = font_color, size = font_size),
+      fill = create_fill(fill_color),
+      stroke = create_stroke(stroke_color)
     )
 }
 
-#' @title Create the font style of an overlay
+#' @title Internal fun to create the font style of an overlay
 #'
 #' @name create_font
 #' @description
 #' When adding an overlay to an existing element in a diagram, it's possible to customize its font style.
 #'
-#' Refer to the \code{font} parameter in the \code{\link{create_style}} function for more information.
+#' Refer to the \code{font} parameter in the \code{\link{create_overlay_style}} function for more information.
 #'
 #' Use this function to create the correct font structure for an overlay.
 #'
@@ -144,7 +164,7 @@ create_style <- function(font = NULL, fill = NULL, stroke = NULL) {
 #'
 #' @returns The font style object of the overlay
 #'
-#' @export
+#' @noRd
 create_font <- function(color = NULL, size = NULL) {
   ret <-
     .not_null_list(
@@ -153,13 +173,13 @@ create_font <- function(color = NULL, size = NULL) {
     )
 }
 
-#' @title Create the fill style of an overlay
+#' @title Internal fun to create the fill style of an overlay
 #'
 #' @name create_fill
 #' @description
 #' When adding an overlay to an existing element in a diagram, it's possible to customize how it is filled.
 #'
-#' Refer to the \code{fill} parameter in the \code{\link{create_style}} function for more information.
+#' Refer to the \code{fill} parameter in the \code{\link{create_overlay_style}} function for more information.
 #'
 #' Use this function to create the correct fill structure for an overlay.
 #'
@@ -167,7 +187,7 @@ create_font <- function(color = NULL, size = NULL) {
 #'
 #' @returns The fill style object of the overlay
 #'
-#' @export
+#' @noRd
 create_fill <- function(color) {
   ret <-
     .not_null_list(
@@ -175,13 +195,13 @@ create_fill <- function(color) {
     )
 }
 
-#' @title Create the stroke style of an overlay
+#' @title Internal fun to create the stroke style of an overlay
 #'
 #' @name create_stroke
 #' @description
 #' When adding an overlay to an existing element in a diagram, it's possible to customize its stroke. style.
 #'
-#' Refer to the \code{stroke.} parameter in the \code{\link{create_style}} function for more information.
+#' Refer to the \code{stroke.} parameter in the \code{\link{create_overlay_style}} function for more information.
 #' 
 #' Use this function to create the correct stroke structure for an overlay.
 #'
@@ -189,7 +209,7 @@ create_fill <- function(color) {
 #'
 #' @returns The stroke style object of the overlay
 #'
-#' @export
+#' @noRd
 create_stroke <- function(color) {
   ret <-
     .not_null_list(
