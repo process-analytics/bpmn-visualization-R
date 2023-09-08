@@ -44,10 +44,10 @@ Display 'BPMN' diagram based on 'BPMN' definition in 'XML' format
 # Load the BPMN file
 bpmn_file <- system.file("examples/Order_Management.bpmn", package = "bpmnVisualizationR")
 
-# Display the BPMN diagram
+# Example 1: Display the BPMN diagram
 bpmnVisualizationR::display(bpmn_file, width='auto', height='auto')
 
-# Display the BPMN diagram featuring overlays with their default positions and styles
+# Example 2: Display the BPMN diagram featuring overlays with their default positions and styles
 overlays <- list(
   bpmnVisualizationR::create_overlay("start_event_1_1", "42"),
   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42"),
@@ -55,6 +55,7 @@ overlays <- list(
   bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8"),
   bpmnVisualizationR::create_overlay("call_activity_1_1", "7")
 )
+
 bpmnVisualizationR::display(
   bpmn_file,
   overlays,
@@ -62,17 +63,19 @@ bpmnVisualizationR::display(
   height='auto'
 )
 
-# Display the BPMN diagram featuring overlays using custom styles and positions
-taskStyle <- bpmnVisualizationR::create_style(
-  font = bpmnVisualizationR::create_font(color = 'DarkSlateGray', size = 23),
-  fill = bpmnVisualizationR::create_fill(color = 'MistyRose'),
-  stroke = bpmnVisualizationR::create_stroke(color = 'Red')
+# Example 3: Display the BPMN diagram featuring overlays using custom styles and positions
+taskStyle <- bpmnVisualizationR::create_overlay_style(
+  font_color = 'DarkSlateGray',
+  font_size = 23,
+  fill_color = 'MistyRose',
+  stroke_color = 'Red'
 )
 
-flowStyle <- bpmnVisualizationR::create_style(
-  font = bpmnVisualizationR::create_font(color = 'WhiteSmoke', size = 19),
-  fill = bpmnVisualizationR::create_fill(color = 'Teal'),
-  stroke = bpmnVisualizationR::create_stroke(color = 'SpringGreen')
+flowStyle <- bpmnVisualizationR::create_overlay_style(
+  font_color = 'WhiteSmoke',
+  font_size = 19,
+  fill_color = 'Teal',
+  stroke_color = 'SpringGreen'
 )
 
 overlays <- list(
@@ -84,13 +87,15 @@ overlays <- list(
 )
 bpmnVisualizationR::display(bpmn_file, overlays, width='auto', height='auto')
 
-# Display the BPMN diagram featuring overlays, but exclude their default styles and positions
+# Example 4: Display the BPMN diagram featuring overlays, 
+# but exclude their default styles and positions
 overlays <- list(
   bpmnVisualizationR::create_overlay("start_event_1_1", "42", position = "middle-left"),
   bpmnVisualizationR::create_overlay("sequence_flow_1_1", "42", flowStyle, "end"),
   bpmnVisualizationR::create_overlay("task_1_1", "9", taskStyle, "bottom-right"),
   bpmnVisualizationR::create_overlay("sequence_flow_1_2", "8",  position = 'start')
 )
+
 bpmnVisualizationR::display(
   bpmn_file,
   overlays,
