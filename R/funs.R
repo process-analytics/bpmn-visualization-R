@@ -149,15 +149,14 @@ create_overlay_style <- function(font_color = NULL,
     )
 }
 
-#' @title Internal fun to create the font style of an overlay
+#' @title Internal fun to create the font style of an overlay or a 'BPMN' element
 #'
 #' @name create_font
 #' @description
-#' When adding an overlay to an existing element in a diagram, it's possible to customize its font style.
-#'
-#' Refer to the \code{font} parameter in the \code{\link{create_overlay_style}} function for more information.
-#'
-#' Use this function to create the correct font structure for an overlay.
+#' - Overlay:
+#'  When adding an overlay to an existing element in a diagram, it's possible to customize its font style.
+#'  Refer to the \code{font} parameter in the \code{\link{create_overlay_style}} function for more information.
+#'  Use this function to create the correct font structure for an overlay.
 #'
 #' @param color The color of the font of the overlay
 #' @param size The size of the font of the overlay
@@ -173,15 +172,14 @@ create_font <- function(color = NULL, size = NULL) {
     )
 }
 
-#' @title Internal fun to create the fill style of an overlay
+#' @title Internal fun to create the fill style of an overlay or a 'BPMN' element
 #'
 #' @name create_fill
 #' @description
-#' When adding an overlay to an existing element in a diagram, it's possible to customize how it is filled.
-#'
-#' Refer to the \code{fill} parameter in the \code{\link{create_overlay_style}} function for more information.
-#'
-#' Use this function to create the correct fill structure for an overlay.
+#' - Overlay:
+#'  When adding an overlay to an existing element in a diagram, it's possible to customize how it is filled.
+#'  Refer to the \code{fill} parameter in the \code{\link{create_overlay_style}} function for more information.
+#'  Use this function to create the correct fill structure for an overlay.
 #'
 #' @param color The color of the background of the overlay
 #'
@@ -195,15 +193,14 @@ create_fill <- function(color) {
     )
 }
 
-#' @title Internal fun to create the stroke style of an overlay
+#' @title Internal fun to create the stroke style of an overlay or a 'BPMN' element
 #'
 #' @name create_stroke
 #' @description
-#' When adding an overlay to an existing element in a diagram, it's possible to customize its stroke. style.
-#'
-#' Refer to the \code{stroke.} parameter in the \code{\link{create_overlay_style}} function for more information.
-#' 
-#' Use this function to create the correct stroke structure for an overlay.
+#' - Overlay:
+#'  When adding an overlay to an existing element in a diagram, it's possible to customize its stroke. style.
+#'  Refer to the \code{stroke.} parameter in the \code{\link{create_overlay_style}} function for more information.
+#'  Use this function to create the correct stroke structure for an overlay.
 #'
 #' @param color The color of the stroke of the overlay
 #'
