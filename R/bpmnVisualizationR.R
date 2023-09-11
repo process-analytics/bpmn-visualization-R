@@ -19,19 +19,19 @@
 #'
 #' @param bpmnXML A file name or 'XML' document or string in 'BPMN' 'XML' format
 #' @param overlays An element or a list of elements to be added to the diagram's existing elements.
-#'      Use the \code{create_overlay} function to create an overlay object with content and a relative position.
-#' @param enableDefaultOverlayStyle If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
-#'      By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.
+#'      Use the [`create_overlay`] function to create an overlay object with content and a relative position.
+#' @param enableDefaultOverlayStyle If no style is set on an overlay, and this parameter is set to `TRUE`, the default style will be applied to the overlay.
+#'      By default, [`enableDefaultOverlayStyle`] is set to `TRUE`.
 #' @param width A fixed width for the widget (in CSS units).
-#'      The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
+#'      The default value is `NULL`, which results in intelligent automatic sizing based on the widget's container.
 #' @param height A fixed height for the widget (in CSS units).
-#'      The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.
+#'      The default value is `NULL`, which results in intelligent automatic sizing based on the widget's container.
 #' @param elementId The ID of the 'HTML' element to enclose the widget.
 #'      Use an explicit element ID for the widget (rather than an automatically generated one).
 #'      This is useful if you have other 'JavaScript' that needs to explicitly
 #'      discover and interact with a specific widget instance.
 #'
-#' @returns A \code{bpmnVisualizationR} widget that will intelligently print itself into 'HTML' in a variety of contexts
+#' @returns A `bpmnVisualizationR` widget that will intelligently print itself into 'HTML' in a variety of contexts
 #'      including the 'R' console, within 'R Markdown' documents, and within 'Shiny' output bindings.
 #'
 #' @examples
@@ -98,7 +98,7 @@
 #'   height='auto'
 #' )
 #'
-#' @seealso \code{\link{create_overlay}} to create an overlay
+#' @seealso [`create_overlay`] to create an overlay
 #'
 #' @import htmlwidgets
 #' @import xml2
@@ -128,18 +128,17 @@ display <- function(
   )
 }
 
-#' @title Shiny output binding for the \code{bpmnVisualizationR} 'HTML' widget
+#' @title Shiny output binding for the `bpmnVisualizationR` 'HTML' widget
 #'
 #' @name bpmnVisualizationR-shiny-output
 #' @description
-#' Helper to create output function for using the \code{bpmnVisualizationR} 'HTML' widget within 'Shiny' applications and interactive 'Rmd' documents.
+#' Helper to create output function for using the `bpmnVisualizationR` 'HTML' widget within 'Shiny' applications and interactive 'Rmd' documents.
 #'
 #' @param outputId output variable to read from
-#' @param width,height Must be a valid CSS unit (like \code{'100\%'},
-#'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
-#'   string and have \code{'px'} appended.
+#' @param width,height Must be a valid CSS unit (like `100%`, `400px`, `auto`) or a number,
+#'  which will be coerced to a string and have `px` appended.
 #'
-#' @returns An output function that enables the use of the \code{bpmnVisualizationR} widget within 'Shiny' applications.
+#' @returns An output function that enables the use of the `bpmnVisualizationR` widget within 'Shiny' applications.
 #'
 #' @export
 bpmnVisualizationROutput <- function(
@@ -156,18 +155,18 @@ bpmnVisualizationROutput <- function(
   )
 }
 
-#' @title 'Shiny' render binding for the \code{bpmnVisualizationR} 'HTML' widget
+#' @title 'Shiny' render binding for the `bpmnVisualizationR` 'HTML' widget
 #'
 #' @rdname bpmnVisualizationR-shiny-render
 #' @description
-#' Helper to create render function for using the \code{bpmnVisualizationR} 'HTML' widget within 'Shiny' applications and interactive 'Rmd' documents.
+#' Helper to create render function for using the `bpmnVisualizationR` 'HTML' widget within 'Shiny' applications and interactive 'Rmd' documents.
 #'
-#' @param expr An expression that generates a \code{bpmnVisualizationR} 'HTML' widget
-#' @param env The environment in which to evaluate \code{expr}.
-#' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
+#' @param expr An expression that generates a `bpmnVisualizationR` 'HTML' widget
+#' @param env The environment in which to evaluate [`expr`].
+#' @param quoted Is [`expr`] a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
 #'
-#' @returns A render function that enables the use of the \code{bpmnVisualizationR} widget within 'Shiny' applications.
+#' @returns A render function that enables the use of the `bpmnVisualizationR` widget within 'Shiny' applications.
 #'
 #' @export
 renderBpmnVisualizationR <- function(

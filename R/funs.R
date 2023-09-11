@@ -1,25 +1,22 @@
-#' @title The overlay positions on \code{Shape}
+#' @title The overlay positions on `Shape`
 #'
 #' @description
-#' To specify the position when creating an overlay object that will be attached to BPMN \code{Shape} elements in the diagram.
+#' To specify the position when creating an overlay object that will be attached to BPMN `Shape` elements in the diagram.
 #'
 #' @details
-#' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
+#' Use these constants as the `position` argument in the [`create_overlay`] function.
 #'
-#' @section Positions:
-#'  \itemize{
-#'    \item{\code{top-left}}{}
-#'    \item{\code{top-right}}{}
-#'    \item{\code{top-center}}{}
-#'    \item{\code{bottom-left}}{}
-#'    \item{\code{bottom-right}}{}
-#'    \item{\code{bottom-center}}{}
-#'    \item{\code{middle-left}}{}
-#'    \item{\code{middle-right}}{}
-#'  }
-#'  
-#' @seealso
-#' \code{\link{create_overlay}}
+#' **Positions**:
+#'  * `top-left`
+#'  * `top-right`
+#'  * `top-center`
+#'  * `bottom-left`
+#'  * `bottom-right`
+#'  * `bottom-center`
+#'  * `middle-left`
+#'  * `middle-right`
+#'
+#' @seealso [`create_overlay`]
 #' 
 #' @examples
 #' # Create an overlay at the top-left corner of a shape
@@ -38,23 +35,20 @@ overlay_shape_position <-
     "middle-right"
   )
 
-#' @title The overlay positions on \code{Edge}
+#' @title The overlay positions on `Edge`
 #'
 #' @description
-#' To specify the position when creating an overlay object that will be attached to BPMN \code{Edge} elements in the diagram.
+#' To specify the position when creating an overlay object that will be attached to BPMN `Edge` elements in the diagram.
 #' 
 #' @details
-#' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
+#' Use these constants as the `position` argument in the [`create_overlay`] function.
 #'
-#' @section Positions:
-#'  \itemize{
-#'    \item{\code{start}}{}
-#'    \item{\code{end}}{}
-#'    \item{\code{middle}}{}
-#'  }
+#' **Positions**:
+#'  * `start`
+#'  * `end`
+#'  * `middle`
 #'
-#' @seealso
-#' \code{\link{create_overlay}}
+#' @seealso [`create_overlay`]
 #'
 #' @examples
 #' # Create an overlay at the starting point of an edge
@@ -69,17 +63,17 @@ overlay_edge_position <- c("start", "end", "middle")
 #' @description 
 #' An overlay can be added to existing elements in the diagram.
 #' 
-#' See the \code{overlays} argument in the \code{\link{display}} function.
+#' See the `overlays` argument in the [`display`] function.
 #' 
 #' Use this function to create the correct overlay structure.
 #' 
 #' @param elementId The bpmn element id to which the overlay will be attached
 #' @param label 'HTML' element to use as an overlay
 #' @param style The style of the overlay.
-#'      Use \code{\link{create_overlay_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.
+#'      Use [`create_overlay_style`] function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the [`display`] function.
 #' @param position The position of the overlay
-#'      If the bpmn element where the overlay will be attached is a Shape, use \code{\link{overlay_shape_position}}.
-#'      Otherwise, use \code{\link{overlay_edge_position}}.
+#'      If the bpmn element where the overlay will be attached is a Shape, use [`overlay_shape_position`].
+#'      Otherwise, use [`overlay_edge_position`].
 #'
 #' @returns An overlay object
 #'
@@ -141,17 +135,17 @@ create_overlay <- function(elementId, label, style = NULL, position = NULL) {
 #' @description
 #' When adding an overlay to an existing element in a diagram, it's possible to customize its style.
 #'
-#' Refer to the \code{style} parameter in the \code{\link{create_overlay}} function for more information.
+#' Refer to the `style` parameter in the [`create_overlay`] function for more information.
 #'
 #' Use this function to create the correct style structure for an overlay.
 #'
-#' @param font_color The font color of the overlay. Use all HTML color names or HEX codes.
+#' @param font_color The font color of the overlay. It can be any HTML color name or HEX code.
 #' @param font_size The font size of the overlay. Specify a number in px.
-#' @param fill_color The color of the background of the overlay. Use all HTML color names or HEX codes.
-#' @param stroke_color The color of the stroke of the overlay. Use all HTML color names or HEX codes.
-#'      If you don't want to display a stroke, you can set the color to:
-#'      - \code{transparent},
-#'      - the same value as for the \code{fill_color}. This increases the \code{padding}/\code{margin}.
+#' @param fill_color The color of the background of the overlay. It can be any HTML color name or HEX code.
+#' @param stroke_color The color of the stroke of the overlay. It can be any HTML color name or HEX code.\cr
+#' If you don't want to display a stroke, you can set the color to:
+#' * `transparent`,
+#' * the same value as for the `fill_color`. This increases the `padding`/`margin`.
 #'
 #' @returns The style object of the overlay
 #'
@@ -174,7 +168,7 @@ create_overlay_style <- function(font_color = NULL,
 #' @description
 #' - Overlay:
 #'  When adding an overlay to an existing element in a diagram, it's possible to customize its font style.
-#'  Refer to the \code{font} parameter in the \code{\link{create_overlay_style}} function for more information.
+#'  Refer to the `font` parameter in the [`create_overlay_style`] function for more information.
 #'  Use this function to create the correct font structure for an overlay.
 #'
 #' @param color The color of the font of the overlay
@@ -197,7 +191,7 @@ create_font <- function(color = NULL, size = NULL) {
 #' @description
 #' - Overlay:
 #'  When adding an overlay to an existing element in a diagram, it's possible to customize how it is filled.
-#'  Refer to the \code{fill} parameter in the \code{\link{create_overlay_style}} function for more information.
+#'  Refer to the `fill` parameter in the [`create_overlay_style`] function for more information.
 #'  Use this function to create the correct fill structure for an overlay.
 #'
 #' @param color The color of the background of the overlay
@@ -217,8 +211,8 @@ create_fill <- function(color) {
 #' @name create_stroke
 #' @description
 #' - Overlay:
-#'  When adding an overlay to an existing element in a diagram, it's possible to customize its stroke. style.
-#'  Refer to the \code{stroke.} parameter in the \code{\link{create_overlay_style}} function for more information.
+#'  When adding an overlay to an existing element in a diagram, it's possible to customize its stroke style.
+#'  Refer to the `stroke` parameter in the [`create_overlay_style`] function for more information.
 #'  Use this function to create the correct stroke structure for an overlay.
 #'
 #' @param color The color of the stroke of the overlay
