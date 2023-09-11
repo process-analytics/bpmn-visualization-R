@@ -11,6 +11,7 @@ URL: https://process-analytics.github.io/bpmn-visualization-R/, https://github.c
 BugReports: https://github.com/process-analytics/bpmn-visualization-R/issues/
 Encoding: UTF-8
 RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
 Imports:
     htmlwidgets,
     rlang,
