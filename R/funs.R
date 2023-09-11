@@ -149,7 +149,7 @@ create_overlay_style <- function(font_color = NULL,
     )
 }
 
-#' @title Internal fun to create the font style of an overlay or a 'BPMN' element
+#' @title Internal function to create the font style of an overlay or a 'BPMN' element
 #'
 #' @name create_font
 #' @description
@@ -172,7 +172,7 @@ create_font <- function(color = NULL, size = NULL) {
     )
 }
 
-#' @title Internal fun to create the fill style of an overlay or a 'BPMN' element
+#' @title Internal function to create the fill style of an overlay or a 'BPMN' element
 #'
 #' @name create_fill
 #' @description
@@ -193,7 +193,7 @@ create_fill <- function(color) {
     )
 }
 
-#' @title Internal fun to create the stroke style of an overlay or a 'BPMN' element
+#' @title Internal function to create the stroke style of an overlay or a 'BPMN' element
 #'
 #' @name create_stroke
 #' @description
