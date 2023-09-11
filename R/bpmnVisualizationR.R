@@ -21,7 +21,7 @@
 #' @param overlays An element or a list of elements to be added to the diagram's existing elements.
 #'      Use the [`create_overlay`] function to create an overlay object with content and a relative position.
 #' @param enableDefaultOverlayStyle If no style is set on an overlay, and this parameter is set to `TRUE`, the default style will be applied to the overlay.
-#'      By default, [`enableDefaultOverlayStyle`] is set to `TRUE`.
+#'      By default, `enableDefaultOverlayStyle` is set to `TRUE`.
 #' @param width A fixed width for the widget (in CSS units).
 #'      The default value is `NULL`, which results in intelligent automatic sizing based on the widget's container.
 #' @param height A fixed height for the widget (in CSS units).
@@ -162,8 +162,8 @@ bpmnVisualizationROutput <- function(
 #' Helper to create render function for using the `bpmnVisualizationR` 'HTML' widget within 'Shiny' applications and interactive 'Rmd' documents.
 #'
 #' @param expr An expression that generates a `bpmnVisualizationR` 'HTML' widget
-#' @param env The environment in which to evaluate [`expr`].
-#' @param quoted Is [`expr`] a quoted expression (with \code{quote()})? This
+#' @param env The environment in which to evaluate `expr`.
+#' @param quoted Is `expr` a quoted expression (with `quote()`)? This
 #'   is useful if you want to save an expression in a variable.
 #'
 #' @returns A render function that enables the use of the `bpmnVisualizationR` widget within 'Shiny' applications.

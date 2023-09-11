@@ -20,7 +20,7 @@ display(
 Use the \code{\link{create_overlay}} function to create an overlay object with content and a relative position.}
 
 \item{enableDefaultOverlayStyle}{If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
-By default, \code{\link{enableDefaultOverlayStyle}} is set to \code{TRUE}.}
+By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.}
 
 \item{width}{A fixed width for the widget (in CSS units).
 The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
