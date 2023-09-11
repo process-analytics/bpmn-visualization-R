@@ -9,9 +9,9 @@ renderBpmnVisualizationR(expr, env = parent.frame(), quoted = FALSE)
 \arguments{
 \item{expr}{An expression that generates a \code{bpmnVisualizationR} 'HTML' widget}
 
-\item{env}{The environment in which to evaluate \code{expr}.}
+\item{env}{The environment in which to evaluate \code{\link{expr}}.}
 
-\item{quoted}{Is \code{expr} a quoted expression (with \code{quote()})? This
+\item{quoted}{Is \code{\link{expr}} a quoted expression (with \code{quote()})? This
 is useful if you want to save an expression in a variable.}
 }
 \value{

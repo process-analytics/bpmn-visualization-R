@@ -17,10 +17,10 @@ display(
 \item{bpmnXML}{A file name or 'XML' document or string in 'BPMN' 'XML' format}
 
 \item{overlays}{An element or a list of elements to be added to the diagram's existing elements.
-Use the \code{create_overlay} function to create an overlay object with content and a relative position.}
+Use the \code{\link{create_overlay}} function to create an overlay object with content and a relative position.}
 
 \item{enableDefaultOverlayStyle}{If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
-By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.}
+By default, \code{\link{enableDefaultOverlayStyle}} is set to \code{TRUE}.}
 
 \item{width}{A fixed width for the widget (in CSS units).
 The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
@@ -35,7 +35,7 @@ discover and interact with a specific widget instance.}
 }
 \value{
 A \code{bpmnVisualizationR} widget that will intelligently print itself into 'HTML' in a variety of contexts
-     including the 'R' console, within 'R Markdown' documents, and within 'Shiny' output bindings.
+including the 'R' console, within 'R Markdown' documents, and within 'Shiny' output bindings.
 }
 \description{
 Display 'BPMN' diagram based on 'BPMN' definition in 'XML' format
