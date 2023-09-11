@@ -18,16 +18,16 @@ Use these constants as the \code{position} argument in the \code{\link{create_ov
 }
 \section{Positions}{
 
-\describe{
- \item{\code{"top-left"}}
- \item{\code{"top-right"}}
- \item{\code{"top-center"}}
- \item{\code{"bottom-left"}}
- \item{\code{"bottom-right"}}
- \item{\code{"bottom-center"}}
- \item{\code{"middle-left"}}
- \item{\code{"middle-right"}}
-}
+ \itemize{
+   \item{\code{top-left}}{}
+   \item{\code{top-right}}{}
+   \item{\code{top-center}}{}
+   \item{\code{bottom-left}}{}
+   \item{\code{bottom-right}}{}
+   \item{\code{bottom-center}}{}
+   \item{\code{middle-left}}{}
+   \item{\code{middle-right}}{}
+ }
 }
 
 \examples{

@@ -3,27 +3,27 @@
 #' @description
 #' To specify the position when creating an overlay object that will be attached to BPMN \code{Shape} elements in the diagram.
 #'
-#' @section Positions:
-#' \describe{
-#'  \item{\code{"top-left"}}
-#'  \item{\code{"top-right"}}
-#'  \item{\code{"top-center"}}
-#'  \item{\code{"bottom-left"}}
-#'  \item{\code{"bottom-right"}}
-#'  \item{\code{"bottom-center"}}
-#'  \item{\code{"middle-left"}}
-#'  \item{\code{"middle-right"}}
-#' }
-#'
 #' @details
 #' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
 #'
+#' @section Positions:
+#'  \itemize{
+#'    \item{\code{top-left}}{}
+#'    \item{\code{top-right}}{}
+#'    \item{\code{top-center}}{}
+#'    \item{\code{bottom-left}}{}
+#'    \item{\code{bottom-right}}{}
+#'    \item{\code{bottom-center}}{}
+#'    \item{\code{middle-left}}{}
+#'    \item{\code{middle-right}}{}
+#'  }
+#'  
+#' @seealso
+#' \code{\link{create_overlay}}
+#' 
 #' @examples
 #' # Create an overlay at the top-left corner of a shape
 #' overlay <- create_overlay(elementId = 1, label = "My label", position = overlay_shape_position[1])
-#'
-#' @seealso
-#' \code{\link{create_overlay}}
 #'
 #' @export
 overlay_shape_position <-
@@ -42,24 +42,24 @@ overlay_shape_position <-
 #'
 #' @description
 #' To specify the position when creating an overlay object that will be attached to BPMN \code{Edge} elements in the diagram.
-#'
-#' @section Positions:
-#' \describe{
-#'  \item{\code{"start"}}
-#'  \item{\code{"middle"}}
-#'  \item{\code{"end"}}
-#' }
-#'
+#' 
 #' @details
 #' Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
 #'
-#' @examples
-#' # Create an overlay at the starting point of an edge
-#' overlay <- create_overlay(elementId = 1, label = "My label", position = overlay_edge_position[1])
+#' @section Positions:
+#'  \itemize{
+#'    \item{\code{start}}{}
+#'    \item{\code{end}}{}
+#'    \item{\code{middle}}{}
+#'  }
 #'
 #' @seealso
 #' \code{\link{create_overlay}}
 #'
+#' @examples
+#' # Create an overlay at the starting point of an edge
+#' overlay <- create_overlay(elementId = 1, label = "My label", position = overlay_edge_position[1])
+#' 
 #' @export
 overlay_edge_position <- c("start", "end", "middle")
 

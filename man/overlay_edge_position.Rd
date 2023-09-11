@@ -18,11 +18,11 @@ Use these constants as the \code{position} argument in the \code{\link{create_ov
 }
 \section{Positions}{
 
-\describe{
- \item{\code{"start"}}
- \item{\code{"middle"}}
- \item{\code{"end"}}
-}
+ \itemize{
+   \item{\code{start}}{}
+   \item{\code{end}}{}
+   \item{\code{middle}}{}
+ }
 }
 
 \examples{
