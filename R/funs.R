@@ -65,7 +65,7 @@ overlay_edge_position <- c("start", "end", "middle")
 #' @returns An overlay object
 #'
 #' @examples
-#' # Create an overlay with shape position "top-left"
+#' # Example 1: Create an overlay with shape position "top-left"
 #' overlay_style <- create_overlay_style(
 #'   font_color = 'DarkSlateGray',
 #'   font_size = 23,
@@ -80,7 +80,7 @@ overlay_edge_position <- c("start", "end", "middle")
 #'   position = overlay_shape_position[1]
 #' )
 #'
-#' # Create an overlay with edge position "end"
+#' # Example 2: Create an overlay with edge position "end"
 #' overlay_style <- create_overlay_style(
 #'   font_color = 'DarkSlateGray',
 #'   font_size = 23,
@@ -214,7 +214,7 @@ create_stroke <- function(color) {
     )
 }
 
-#' @description Internal fun to build the 'htmlwidget' content
+#' @description Internal function to build the 'htmlwidget' content
 #'
 #' @inheritParams display
 #' @returns A list
