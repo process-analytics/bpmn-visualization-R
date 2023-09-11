@@ -29,7 +29,7 @@ See the \code{overlays} argument in the \code{\link{display}} function.
 Use this function to create the correct overlay structure.
 }
 \examples{
-# Create an overlay with shape position "top-left"
+# Example 1: Create an overlay with shape position "top-left"
 overlay_style <- create_overlay_style(
   font_color = 'DarkSlateGray',
   font_size = 23,
@@ -44,7 +44,7 @@ overlay <- create_overlay(
   position = overlay_shape_position[1]
 )
 
-# Create an overlay with edge position "end"
+# Example 2: Create an overlay with edge position "end"
 overlay_style <- create_overlay_style(
   font_color = 'DarkSlateGray',
   font_size = 23,

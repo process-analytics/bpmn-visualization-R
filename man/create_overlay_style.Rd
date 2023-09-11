@@ -12,13 +12,13 @@ create_overlay_style(
 )
 }
 \arguments{
-\item{font_color}{The font color of the overlay. Use a custom color string.}
+\item{font_color}{The font color of the overlay. Use all HTML color names or HEX codes.}
 
-\item{font_size}{The font size of the overlay. Specify a numeric font size.}
+\item{font_size}{The font size of the overlay. Specify a number in px.}
 
-\item{fill_color}{The color of the background of the overlay. Use a custom color string.}
+\item{fill_color}{The color of the background of the overlay. Use all HTML color names or HEX codes.}
 
-\item{stroke_color}{The color of the stroke of the overlay. Use a custom color string.
+\item{stroke_color}{The color of the stroke of the overlay. Use all HTML color names or HEX codes.
 If you don't want to display a stroke, you can set the color to:
 - \code{transparent},
 - the same value as for the \code{fill_color}. This increases the \code{padding}/\code{margin}.}

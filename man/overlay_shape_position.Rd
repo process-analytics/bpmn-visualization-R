@@ -12,18 +12,30 @@ overlay_shape_position
 }
 \description{
 To specify the position when creating an overlay object that will be attached to BPMN \code{Shape} elements in the diagram.
-
-\code{overlay_shape_position} includes the following positions:
-
-- \code{"top-left"}
-- \code{"top-right"}
-- \code{"top-center"}
-- \code{"bottom-left"}
-- \code{"bottom-right"}
-- \code{"bottom-center"}
-- \code{"middle-left"}
-- \code{"middle-right"}
-
+}
+\details{
 Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
+}
+\section{Positions}{
+
+\describe{
+ \item{\code{"top-left"}}
+ \item{\code{"top-right"}}
+ \item{\code{"top-center"}}
+ \item{\code{"bottom-left"}}
+ \item{\code{"bottom-right"}}
+ \item{\code{"bottom-center"}}
+ \item{\code{"middle-left"}}
+ \item{\code{"middle-right"}}
+}
+}
+
+\examples{
+# Create an overlay at the top-left corner of a shape
+overlay <- create_overlay(elementId = 1, label = "My label", position = overlay_shape_position[1])
+
+}
+\seealso{
+\code{\link{create_overlay}}
 }
 \keyword{datasets}
