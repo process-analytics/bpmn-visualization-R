@@ -12,12 +12,25 @@ overlay_edge_position
 }
 \description{
 To specify the position when creating an overlay object that will be attached to BPMN \code{Edge} elements in the diagram.
-
-\code{overlay_edge_position} includes the following positions:
-- \code{"start"}
-- \code{"end"}
-- \code{"middle"}
-
+}
+\details{
 Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
+}
+\section{Positions}{
+
+ \itemize{
+   \item{\code{start}}{}
+   \item{\code{end}}{}
+   \item{\code{middle}}{}
+ }
+}
+
+\examples{
+# Create an overlay at the starting point of an edge
+overlay <- create_overlay(elementId = 1, label = "My label", position = overlay_edge_position[1])
+
+}
+\seealso{
+\code{\link{create_overlay}}
 }
 \keyword{datasets}
