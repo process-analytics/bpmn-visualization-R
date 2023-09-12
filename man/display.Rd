@@ -8,6 +8,7 @@ display(
   bpmnXML,
   overlays = NULL,
   enableDefaultOverlayStyle = TRUE,
+  bpmnElementStyles = NULL,
   width = NULL,
   height = NULL,
   elementId = NULL
@@ -21,6 +22,9 @@ Use the \code{\link{create_overlay}} function to create an overlay object with c
 
 \item{enableDefaultOverlayStyle}{If no style is set on an overlay, and this parameter is set to \code{TRUE}, the default style will be applied to the overlay.
 By default, \code{enableDefaultOverlayStyle} is set to \code{TRUE}.}
+
+\item{bpmnElementStyles}{a list of existing elements with their style to apply.
+Use the \code{\link{create_shape_style}} or \code{\link{create_edge_style}} functions to create the style of 'BPMN' elements.}
 
 \item{width}{A fixed width for the widget (in CSS units).
 The default value is \code{NULL}, which results in intelligent automatic sizing based on the widget's container.}
@@ -104,7 +108,51 @@ bpmnVisualizationR::display(
   height='auto'
 )
 
+# Example 5: Display the BPMN diagram featuring bpmnElementStyles
+bpmnElementStyles <- list(
+  bpmnVisualizationR::create_shape_style(
+    elementIds = list("call_activity_1_1"),
+    stroke_color = 'RoyalBlue',
+    font_color = 'DarkOrange',
+    font_family = 'Arial',
+    font_size = 12,
+    font_bold = TRUE,
+    font_italic = TRUE,
+    font_strike_through = TRUE,
+    font_underline = TRUE,
+    opacity = 75,
+    fill_color = 'Yellow',
+    fill_opacity = 50
+  ),
+  bpmnVisualizationR::create_edge_style(
+    elementIds = list("sequence_flow_1_4"),
+    stroke_color = 'DeepPink',
+    stroke_width = 3,
+    stroke_opacity = 70,
+    font_color = 'ForestGreen',
+    font_family = 'Courier New',
+    font_size = 14,
+    font_bold = TRUE,
+    font_italic = TRUE,
+    font_strike_through = FALSE,
+    font_underline = FALSE,
+    font_opacity = 80,
+    opacity = 80
+  )
+)
+
+bpmnVisualizationR::display(
+  bpmn_file,
+  bpmnElementStyles = bpmnElementStyles,
+  width='auto',
+  height='auto'
+)
+
 }
 \seealso{
-\code{\link{create_overlay}} to create an overlay
+\itemize{
+\item \code{\link{create_overlay}} to create an overlay
+\item \code{\link{create_shape_style}} to create the structure style for the shape
+\item \code{\link{create_edge_style}} to create the structure style for the edge
+}
 }
