@@ -100,7 +100,7 @@
 #'   height='auto'
 #' )
 #'
-#' # Example 5: Display the BPMN diagram featuring bpmnElementStyles
+#' # Example 5: Display the BPMN diagram featuring styling for BPMN elements
 #' bpmnElementStyles <- list(
 #'   bpmnVisualizationR::create_shape_style(
 #'     elementIds = list("call_activity_1_1"),
