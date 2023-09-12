@@ -140,7 +140,7 @@ create_overlay <- function(elementId, label, style = NULL, position = NULL) {
 #' Use this function to create the correct style structure for an overlay.
 #'
 #' @param font_color The font color of the overlay. It can be any HTML color name or HEX code.
-#' @param font_size The font size of the overlay. Specify a number in px.
+#' @param font_size The font size of the overlay. Specify a number in pixels.
 #' @param fill_color The color of the background of the overlay. It can be any HTML color name or HEX code.
 #' @param stroke_color The color of the stroke of the overlay. It can be any HTML color name or HEX code.\cr
 #' If you don't want to display a stroke, you can set the color to:
