@@ -15,21 +15,19 @@ To specify the position when creating an overlay object that will be attached to
 }
 \details{
 Use these constants as the \code{position} argument in the \code{\link{create_overlay}} function.
-}
-\section{Positions}{
 
- \itemize{
-   \item{\code{top-left}}{}
-   \item{\code{top-right}}{}
-   \item{\code{top-center}}{}
-   \item{\code{bottom-left}}{}
-   \item{\code{bottom-right}}{}
-   \item{\code{bottom-center}}{}
-   \item{\code{middle-left}}{}
-   \item{\code{middle-right}}{}
- }
+\strong{Positions}:
+\itemize{
+\item \code{top-left}
+\item \code{top-right}
+\item \code{top-center}
+\item \code{bottom-left}
+\item \code{bottom-right}
+\item \code{bottom-center}
+\item \code{middle-left}
+\item \code{middle-right}
 }
-
+}
 \examples{
 # Create an overlay at the top-left corner of a shape
 overlay <- create_overlay(elementId = 1, label = "My label", position = overlay_shape_position[1])

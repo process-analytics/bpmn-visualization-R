@@ -12,7 +12,7 @@ create_overlay(elementId, label, style = NULL, position = NULL)
 \item{label}{'HTML' element to use as an overlay}
 
 \item{style}{The style of the overlay.
-Use \code{\link{create_overlay_style}} function to create the style object of an overlay and be aware of the `enableDefaultOverlayStyle` parameter in the \code{\link{display}} function.}
+Use \code{\link{create_overlay_style}} function to create the style object of an overlay and be aware of the \code{enableDefaultOverlayStyle} parameter in the \code{\link{display}} function.}
 
 \item{position}{The position of the overlay
 If the bpmn element where the overlay will be attached is a Shape, use \code{\link{overlay_shape_position}}.

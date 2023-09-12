@@ -10,9 +10,8 @@ bpmnVisualizationROutput(outputId, width = "100\%", height = "400px")
 \arguments{
 \item{outputId}{output variable to read from}
 
-\item{width, height}{Must be a valid CSS unit (like \code{'100\%'},
-\code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
-string and have \code{'px'} appended.}
+\item{width, height}{Must be a valid CSS unit (like \verb{100\%}, \verb{400px}, \code{auto}) or a number,
+which will be coerced to a string and have \code{px} appended.}
 }
 \value{
 An output function that enables the use of the \code{bpmnVisualizationR} widget within 'Shiny' applications.
