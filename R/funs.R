@@ -208,7 +208,7 @@ create_overlay_style <- function(font_color = NULL,
 #' * If the set value is less than 0, the used value is 0.
 #' * If the set value is greater than 100, the used value is 100.
 #' 
-#' ## ⚠️⚠️⚠️ `stroke_width` property ⚠️⚠️⚠️
+#' ## Warning: `stroke_width` property
 #'  Changing the stroke width of Activities may be misleading, as the default stroke widths have a meaning according to the 'BPMN' Specification.\cr
 #'  For example, updating the stroke width of a task using the same value as the default stroke width of a Call Activity can be confusing.\cr
 #'  In this case, you should also change another property, such as the stroke color, to allow the user to differentiate between them.
