@@ -22,6 +22,8 @@
 #'      Use the [`create_overlay`] function to create an overlay object with content and a relative position.
 #' @param enableDefaultOverlayStyle If no style is set on an overlay, and this parameter is set to `TRUE`, the default style will be applied to the overlay.
 #'      By default, `enableDefaultOverlayStyle` is set to `TRUE`.
+#' @param bpmnElementStyles a list of existing elements with their style to apply.
+#'      Use the [`create_shape_style`] or [`create_edge_style`] functions to create the style of 'BPMN' elements.
 #' @param width A fixed width for the widget (in CSS units).
 #'      The default value is `NULL`, which results in intelligent automatic sizing based on the widget's container.
 #' @param height A fixed height for the widget (in CSS units).
@@ -98,7 +100,50 @@
 #'   height='auto'
 #' )
 #'
-#' @seealso [`create_overlay`] to create an overlay
+#' # Example 5: Display the BPMN diagram featuring bpmnElementStyles
+#' bpmnElementStyles <- list(
+#'   bpmnVisualizationR::create_shape_style(
+#'     elementIds = list("call_activity_1_1"),
+#'     stroke_color = 'RoyalBlue',
+#'     font_color = 'DarkOrange',
+#'     font_family = 'Arial',
+#'     font_size = 12,
+#'     font_bold = TRUE,
+#'     font_italic = TRUE,
+#'     font_strike_through = TRUE,
+#'     font_underline = TRUE,
+#'     opacity = 75,
+#'     fill_color = 'Yellow',
+#'     fill_opacity = 50
+#'   ),
+#'   bpmnVisualizationR::create_edge_style(
+#'     elementIds = list("sequence_flow_1_4"),
+#'     stroke_color = 'DeepPink',
+#'     stroke_width = 3,
+#'     stroke_opacity = 70,
+#'     font_color = 'ForestGreen',
+#'     font_family = 'Courier New',
+#'     font_size = 14,
+#'     font_bold = TRUE,
+#'     font_italic = TRUE,
+#'     font_strike_through = FALSE,
+#'     font_underline = FALSE,
+#'     font_opacity = 80,
+#'     opacity = 80
+#'   )
+#' )
+#'
+#' bpmnVisualizationR::display(
+#'   bpmn_file,
+#'   bpmnElementStyles = bpmnElementStyles,
+#'   width='auto',
+#'   height='auto'
+#' )
+#'
+#' @seealso 
+#' * [`create_overlay`] to create an overlay
+#' * [`create_shape_style`] to create the structure style for the shape
+#' * [`create_edge_style`] to create the structure style for the edge
 #'
 #' @import htmlwidgets
 #' @import xml2
@@ -108,6 +153,7 @@ display <- function(
   bpmnXML,
   overlays = NULL,
   enableDefaultOverlayStyle = TRUE,
+  bpmnElementStyles = NULL,
   width = NULL,
   height = NULL,
   elementId = NULL
@@ -115,7 +161,8 @@ display <- function(
   x <- build_bpmnContent(
     bpmnXML,
     overlays = overlays,
-    enableDefaultOverlayStyle = enableDefaultOverlayStyle
+    enableDefaultOverlayStyle = enableDefaultOverlayStyle,
+    bpmnElementStyles = bpmnElementStyles
   )
   # create widget
   htmlwidgets::createWidget(

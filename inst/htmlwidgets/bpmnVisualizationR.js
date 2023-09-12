@@ -50,19 +50,25 @@ HTMLWidgets.widget({
                 }
             };
         }
-        
+
         function buildDefaultOverlayPosition(isShape) {
             return isShape ? 'top-center' : 'middle';
         }
 
         return {
-            renderValue: function({bpmnContent, overlays, enableDefaultOverlayStyle}) {
+            renderValue: function({bpmnContent, overlays, enableDefaultOverlayStyle, bpmnElementStyles}) {
                 bpmnVisualization.load(bpmnContent, { fit: {type: bpmnvisu.FitType.Center, margin: 30} });
+
+                if(bpmnElementStyles) {
+                    for(const { elementIds, style } of bpmnElementStyles) {
+                        bpmnVisualization.bpmnElementsRegistry.updateStyle(elementIds, style);
+                    }
+                }
 
                 // Add overlays
                 overlays?.map(({elementId, ...rest}) => {
                     const overlayConfig = {...rest};
-                    
+
                     if(enableDefaultOverlayStyle && !(overlayConfig.style && overlayConfig.position)) {
                         const elementsByIds = bpmnVisualization.bpmnElementsRegistry.getElementsByIds(elementId);
                         if (elementsByIds.length) {
