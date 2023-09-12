@@ -162,6 +162,249 @@ create_overlay_style <- function(font_color = NULL,
     )
 }
 
+#' @title Create the style for BPMN element
+#'
+#' @name create_element_style
+#'
+#' @description Internal function to create the correct style structure for the 'BPMN' element.
+#'
+#' @param elementIds The IDs of the BPMN elements to style.
+#' @param stroke_color The stroke color for the element.
+#'  It can be any HTML color name or HEX code, or special keywords.
+#' @param stroke_width The stroke width for the element, in pixels (1 to 50).
+#' * If the set value is less than 1, the used value is 1.
+#' * If the set value is greater than 50, the used value is 50.
+#' * To hide the stroke, set the `stroke_color` property to `none`.
+#' @param stroke_opacity The stroke opacity for the element, ranging from 0 to 100.
+#' @param font_color The font color for the element.
+#'  It can be any HTML color name or HEX code, or special keywords.
+#' @param font_family The font family for the element.
+#' @param font_size The font size for the element, in pixels.
+#' @param font_bold Should the font be bold? (default: `FALSE`)
+#' @param font_italic Should the font be italic? (default: `FALSE`)
+#' @param font_strike_through Should the font have a strike-through style? (default: `FALSE`)
+#' @param font_underline Should the font be underlined? (default: `FALSE`)
+#' @param font_opacity The font opacity for the element, ranging from 0 to 100.
+#' @param opacity The opacity for the element, ranging from 0 to 100.
+#' 
+#' @return A list representing the style for the specified BPMN elements.
+#'
+#' @details
+#' # Special keywords
+#' \describe{
+#'    \item{`default`}{
+#'      \itemize{
+#'        \item This keyword allows you to reset a style property of the BPMN element to its initial value.
+#'        \item When applied to color properties, it bypasses the color specified in the 'BPMN' source if 'BPMN in Color' support is enabled. Instead, it uses the color defined in the default style of the 'BPMN' element..
+#'      }
+#'    }
+#'    \item{`inherit`}{Applies the value from the immediate parent element.}
+#'    \item{`none`}{No color (used to hide strokes). Not available for `font_color`.}
+#'    \item{`swimlane`}{Applies the value from the nearest parent element with type `ShapeBpmnElementKind.LANE` or `ShapeBpmnElementKind.POOL`.}
+#' }
+#' 
+#' # Note
+#' ## Opacity properties
+#' * If the set value is less than 0, the used value is 0.
+#' * If the set value is greater than 100, the used value is 100.
+#' 
+#' ## ⚠️⚠️⚠️ `stroke_width` property ⚠️⚠️⚠️
+#'  Changing the stroke width of Activities may be misleading, as the default stroke widths have a meaning according to the 'BPMN' Specification.\cr
+#'  For example, updating the stroke width of a task using the same value as the default stroke width of a Call Activity can be confusing.\cr
+#'  In this case, you should also change another property, such as the stroke color, to allow the user to differentiate between them.
+#'  
+#' @keywords internal
+create_element_style <- function(elementIds,
+                                 stroke_color = NULL,
+                                 stroke_width = NULL,
+                                 stroke_opacity = NULL,
+                                 font_color = NULL,
+                                 font_family = NULL,
+                                 font_size = NULL,
+                                 font_bold = NULL,
+                                 font_italic = NULL,
+                                 font_strike_through = NULL,
+                                 font_underline = NULL,
+                                 font_opacity = NULL,
+                                 opacity = NULL) {
+  if(!is.list(elementIds)) {
+    stop("elementIds must be a list!!")
+  }
+  
+  style <- .not_null_list(
+    stroke = create_stroke(
+      color = stroke_color,
+      width = stroke_width,
+      opacity = stroke_opacity
+    ),
+    font = create_font(
+      color = font_color,
+      family = font_family,
+      size = font_size,
+      isBold = font_bold,
+      isItalic = font_italic,
+      isStrikeThrough = font_strike_through,
+      isUnderline = font_underline,
+      opacity = font_opacity
+    ),
+    opacity = opacity
+  )
+  ret <- list(elementIds = elementIds, style = style)
+}
+
+
+#' @title Create the style for BPMN edge
+#'
+#' @name create_edge_style
+#'
+#' @description
+#'  Use this function to create the correct style structure for the edge.
+#'
+#' @inherit create_element_style params sections
+#' @return A list representing the style for the BPMN edge.
+#' @examples
+#' # Create a style with a blue stroke and a bold, red font.
+#' edge_style <- create_edge_style(
+#'   elementIds = list('id_1', 'id_2'),
+#'   stroke_color = "blue",
+#'   stroke_width = 2,
+#'   font_color = "red",
+#'   font_bold = TRUE
+#' )
+#' @export
+create_edge_style <- function(elementIds,
+                              stroke_color = NULL,
+                              stroke_width = NULL,
+                              stroke_opacity = NULL,
+                              font_color = NULL,
+                              font_family = NULL,
+                              font_size = NULL,
+                              font_bold = NULL,
+                              font_italic = NULL,
+                              font_strike_through = NULL,
+                              font_underline = NULL,
+                              font_opacity = NULL,
+                              opacity = NULL) {
+  if (all(is.null(
+    c(
+      stroke_color,
+      stroke_width,
+      stroke_opacity,
+      font_color,
+      font_family,
+      font_size,
+      font_bold,
+      font_italic,
+      font_strike_through,
+      font_underline,
+      font_opacity,
+      opacity
+    )
+  ))) {
+    stop(
+      "At least one style property (e.g., stroke_color, font_color, opacity, ...) must be provided!!"
+    )
+  }
+  
+  ret <- create_element_style(
+    elementIds = elementIds,
+    stroke_color = stroke_color,
+    stroke_width = stroke_width,
+    stroke_opacity = stroke_opacity,
+    font_color = font_color,
+    font_family = font_family,
+    font_size = font_size,
+    font_bold = font_bold,
+    font_italic = font_italic,
+    font_strike_through = font_strike_through,
+    font_underline = font_underline,
+    font_opacity = font_opacity,
+    opacity = opacity
+  )
+  return(ret)
+}
+
+
+#' @title Create the style for BPMN shape
+#'
+#' @name create_shape_style
+#'
+#' @description
+#'  Use this function to create the correct style structure for the shape.
+#'
+#' @inherit create_element_style params sections
+#' @param fill_color The fill color for the shape 
+#'  It can be any HTML color name or HEX code, special keywords, or a gradient create with [`create_gradient_fill`].
+#' @param fill_opacity The fill opacity for the shape, ranging from 0 to 100.
+#'
+#' @return A list representing the style for the BPMN shape.
+#' @seealso \code{\link{create_gradient_fill}}
+#'
+#' @examples
+#' # Create a style with a blue stroke, red font, and green fill color.
+#' shape_style <- create_shape_style(
+#'   elementIds = list('id_1', 'id_2'),
+#'   stroke_color = "blue",
+#'   stroke_width = 2,
+#'   font_color = "red",
+#'   fill_color = "green"
+#' )
+#' @export
+create_shape_style <- function(elementIds,
+                               stroke_color = NULL,
+                               stroke_width = NULL,
+                               stroke_opacity = NULL,
+                               font_color = NULL,
+                               font_family = NULL,
+                               font_size = NULL,
+                               font_bold = NULL,
+                               font_italic = NULL,
+                               font_strike_through = NULL,
+                               font_underline = NULL,
+                               font_opacity = NULL,
+                               opacity = NULL,
+                               fill_color = NULL, 
+                               fill_opacity = NULL) {
+  if (is.null(stroke_color) &&
+      is.null(stroke_width) &&
+      is.null(stroke_opacity) &&
+      is.null(font_color) &&
+      is.null(font_family) &&
+      is.null(font_size) &&
+      is.null(font_bold) &&
+      is.null(font_italic) &&
+      is.null(font_strike_through) &&
+      is.null(font_underline) &&
+      is.null(font_opacity) &&
+      is.null(opacity) &&
+      is.null(fill_color) && is.null(fill_opacity)) {
+    stop(
+      "At least one style property (e.g., stroke_color, font_color, fill_opacity, opacity, ...) must be provided!!"
+    )
+  }
+  
+  res <- create_element_style(
+    elementIds = elementIds,
+    stroke_color = stroke_color,
+    stroke_width = stroke_width,
+    stroke_opacity = stroke_opacity,
+    font_color = font_color,
+    font_family = font_family,
+    font_size = font_size,
+    font_bold = font_bold,
+    font_italic = font_italic,
+    font_strike_through = font_strike_through,
+    font_underline = font_underline,
+    font_opacity = font_opacity,
+    opacity = opacity
+  )
+
+  if (!is.null(fill_color) || !is.null(fill_opacity) ) {
+    res$style$fill <- create_fill(color = fill_color, opacity = fill_opacity)
+  }
+  return(res)
+}
+
 #' @title Internal function to create the font style of an overlay or a 'BPMN' element
 #'
 #' @name create_font
@@ -177,11 +420,17 @@ create_overlay_style <- function(font_color = NULL,
 #' @returns The font style object of the overlay
 #'
 #' @noRd
-create_font <- function(color = NULL, size = NULL) {
+create_font <- function(color = NULL, size = NULL, family = NULL, isBold = NULL, isItalic = NULL, isStrikeThrough = NULL, isUnderline = NULL, opacity = NULL) {
   ret <-
     .not_null_list(
       color = color,
-      size = size
+      size = size,
+      family = family,
+      opacity = opacity,
+      isBold = isBold,
+      isItalic = isItalic,
+      isStrikeThrough = isStrikeThrough,
+      isUnderline = isUnderline
     )
 }
 
@@ -199,11 +448,34 @@ create_font <- function(color = NULL, size = NULL) {
 #' @returns The fill style object of the overlay
 #'
 #' @noRd
-create_fill <- function(color) {
+create_fill <- function(color = NULL, opacity = NULL) {
   ret <-
     .not_null_list(
-      color = color
+      color = color,
+      opacity = opacity
     )
+}
+
+#' @title Create a gradient fill style for an element
+#'
+#' @name create_gradient_fill
+#'
+#' @description Create a gradient fill style for an element.
+#'
+#' @param direction The direction of the gradient (e.g., \code{left-to-right}, \code{right-to-left}, \code{bottom-to-top}, \code{top-to-bottom}).
+#'  Taking the example of bottom-to-top, this means that the start color is at the bottom of the paint pattern and the end color is at the top, with a gradient between them.
+#' @param start_color The starting color of the gradient. It can be any HTML color name or HEX code, as well as special keywords such as `inherit`, `none`, `swimlane`.
+#' @param end_color The ending color of the gradient. It can be any HTML color name or HEX code, as well as special keywords such as `inherit`, `none`, `swimlane`.
+#'
+#' @return A gradient fill style object.
+#'
+#' @export
+create_gradient_fill <- function(direction, start_color, end_color) {
+  ret <- .not_null_list(
+    direction = direction,
+    startColor = start_color,
+    endColor = end_color
+  )
 }
 
 #' @title Internal function to create the stroke style of an overlay or a 'BPMN' element
@@ -220,10 +492,12 @@ create_fill <- function(color) {
 #' @returns The stroke style object of the overlay
 #'
 #' @noRd
-create_stroke <- function(color) {
+create_stroke <- function(color = NULL, width = NULL, opacity = NULL) {
   ret <-
     .not_null_list(
-      color = color
+      color = color,
+      width = width,
+      opacity = opacity
     )
 }
 
@@ -236,7 +510,8 @@ create_stroke <- function(color) {
 build_bpmnContent <- function(
   bpmnXML,
   overlays = NULL,
-  enableDefaultOverlayStyle
+  enableDefaultOverlayStyle,
+  bpmnElementStyles = NULL
 ) {
   # load bpmn content
   if (inherits(
@@ -269,13 +544,21 @@ build_bpmnContent <- function(
     bpmnContent = bpmnContent,
     enableDefaultOverlayStyle = enableDefaultOverlayStyle
   )
-
+  
   if (length(overlays)) {
     # In case the user passes a single parameter as overlays (instead of a list), we wrap it into a list so the js can work
     x$overlays <- if (is.list(overlays[[1]])) {
       overlays
     } else {
       list(overlays)
+    }
+  }
+
+  if (length(bpmnElementStyles)) {
+    if(is.list(bpmnElementStyles[[1]]) && !is.null(bpmnElementStyles[[1]]$elementIds) && !is.null(bpmnElementStyles[[1]]$style)) {
+      x$bpmnElementStyles <- bpmnElementStyles
+    } else {
+      stop("bpmnElementStyles must be a list of <elementIds | style> !!")
     }
   }
   return(x)
