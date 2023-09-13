@@ -544,7 +544,6 @@ build_bpmnContent <- function(
     bpmnContent = bpmnContent,
     enableDefaultOverlayStyle = enableDefaultOverlayStyle
   )
-  
   if (length(overlays)) {
     # In case the user passes a single parameter as overlays (instead of a list), we wrap it into a list so the js can work
     x$overlays <- if (is.list(overlays[[1]])) {
