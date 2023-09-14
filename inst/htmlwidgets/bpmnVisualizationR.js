@@ -64,9 +64,9 @@ HTMLWidgets.widget({
                     const overlayConfig = {...rest};
                     
                     if(enableDefaultOverlayStyle && !(overlayConfig.style && overlayConfig.position)) {
-                        const elementsByIds = bpmnVisualization.bpmnElementsRegistry.getElementsByIds(elementId);
-                        if (elementsByIds.length) {
-                            const isShape = elementsByIds[0].bpmnSemantic.isShape;
+                        const elements = bpmnVisualization.bpmnElementsRegistry.getModelElementsByIds(elementId);
+                        if (elements.length) {
+                            const isShape = elements[0].isShape;
                             overlayConfig.style ??= buildDefaultOverlayStyle(isShape);
                             overlayConfig.position ??= buildDefaultOverlayPosition(isShape);
                         }
@@ -80,7 +80,7 @@ HTMLWidgets.widget({
             },
 
             // Make the bpmnVisualization object available as a property on the widget instance we're returning from factory().
-            // This is generally a good idea for extensibility--it helps users of this widget interact directly with bpmnVisualization, if needed.
+            // This is generally a good idea for extensibility: it helps users of this widget to interact directly with bpmnVisualization, if required.
             s: bpmnVisualization
         };
     }
