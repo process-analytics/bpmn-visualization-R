@@ -14,17 +14,12 @@ jobs:
       - run: |
           echo "New version type: ${{ github.event.inputs.type }}"
 
-      - name: Branch Protection Bot - Temporarily disable "include administrators" branch protection
-        uses: benjefferies/branch-protection-bot@1.0.9
-        if: always()
-        with:
-          access_token: ${{ secrets.GH_RELEASE_TOKEN }}
-          enforce_admins: false
-          branch: main
-
       - name: Setup checkout
         uses: actions/checkout@v4
         with:
+          # Use a PAT to ensure that
+          #   commits are authored with a specific user
+          #   workflow run are triggered after git push
           token: ${{ secrets.GH_RELEASE_TOKEN }}
 
       - name: Config git
@@ -78,13 +73,6 @@ jobs:
         run: |
           git push && git push --tags
 
-      - name: Branch Protection Bot - Reenable "include administrators" branch protection
-        uses: benjefferies/branch-protection-bot@1.0.9
-        if: always()  # Force to always run this step to ensure "include administrators" is always turned back on
-        with:
-          access_token: ${{ secrets.GH_RELEASE_TOKEN }}
-          enforce_admins: true
-          branch: main
       - name: Send message to Slack channel
         if: success()
         uses: slackapi/slack-github-action@v1.24.0
