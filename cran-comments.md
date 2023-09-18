@@ -1,18 +1,45 @@
-# bpmnVisualizationR 0.3.2
+# bpmnVisualizationR 0.4.0.9000
 
 This is a new submission. In this version, we have:
 
-* Updated `bpmn-visualization` TypeScript library from 0.29.2 to 0.31.0.
+*  allow to style BPMN Elements
 
 ## Test environments
-<RESULT OF check_for_cran()>
+
+- R-hub windows-x86_64-devel (r-devel). Platform: Windows Server 2022, R-devel, 64 bit
+- R-hub ubuntu-gcc-release (r-release). Platform: Ubuntu Linux 20.04.1 LTS, R-release, GCC
+- R-hub fedora-clang-devel (r-devel). Platform: Fedora Linux, R-devel, clang, gfortran
+
 
 ## R CMD check results
-<RESULT OF check_for_cran()>
+There were no ERRORs or WARNINGs.
 
-## Response to CRAN for last submission
+As noted in [R-hub issue #503](https://github.com/r-hub/rhub/issues/503), this could be due to a bug/crash in MiKTeX and can likely be ignored.
+Also, we cannot change that `Tidy` is not on the path or update `Tidy` on the external Fedora Linux server.
 
-> <CITATION>
+❯ On windows-x86_64-devel (r-devel), ubuntu-gcc-release (r-release)
+checking CRAN incoming feasibility ... NOTE
+Maintainer: 'Celine Souchet <process.analytics.dev+CRAN@gmail.com>'
+
+New submission
+
+❯ On windows-x86_64-devel (r-devel)
+checking for detritus in the temp directory ... NOTE
+Found the following files/directories:
+'lastMiKTeXException'
+
+❯ On fedora-clang-devel (r-devel)
+checking CRAN incoming feasibility ... [6s/25s] NOTE
+Maintainer: ‘Celine Souchet <process.analytics.dev+CRAN@gmail.com>’
+
+New submission
+
+❯ On fedora-clang-devel (r-devel)
+checking HTML version of manual ... NOTE
+Skipping checking HTML validation: no command 'tidy' found
+
+0 errors ✔ | 0 warnings ✔ | 4 notes ✖
+
 
 # bpmnVisualizationR 0.3.2
 
