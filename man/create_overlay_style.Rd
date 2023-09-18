@@ -14,7 +14,7 @@ create_overlay_style(
 \arguments{
 \item{font_color}{The font color of the overlay. It can be any HTML color name or HEX code.}
 
-\item{font_size}{The font size of the overlay. Specify a number in px.}
+\item{font_size}{The font size of the overlay. Specify a number in pixels.}
 
 \item{fill_color}{The color of the background of the overlay. It can be any HTML color name or HEX code.}
 

@@ -91,7 +91,7 @@ bpmn_file <- "<?xml version="1.0" encoding="UTF-8"?> ...xml_content"
 ```
 
 💡 The package provides some [BPMN examples](./inst/examples). \
-They are taken from the [BPMN 2.0 examples non-normative machine readable files](https://www.omg.org/spec/BPMN/2.0).
+They are taken from the [BPMN 2.0 examples non-normative machine-readable files](https://www.omg.org/spec/BPMN/2.0).
 - Email_Voting.bpmn
 - Nobel_Prize_Process.bpmn
 - Order_Management.bpmn
@@ -132,6 +132,96 @@ overlay <- bpmnVisualizationR::create_overlay("bpmn_element_id_1", "42", style, 
 ```r
 bpmnVisualizationR::display(bpmn_file, overlays, enableDefaultOverlayStyle=FALSE)
 ```
+
+### Style BPMN shapes
+
+```r
+bpmnElementStyles <- list(
+  bpmnVisualizationR::create_shape_style(
+    elementIds = list("call_activity_1_1"),
+    stroke_color = 'RoyalBlue',
+    font_color = 'DarkOrange',
+    font_family = 'Arial',
+    font_size = 12,
+    font_bold = TRUE,
+    font_italic = TRUE,
+    font_strike_through = TRUE,
+    font_underline = TRUE,
+    opacity = 75,
+    fill_color = 'Yellow',
+    fill_opacity = 50
+  ),
+  bpmnVisualizationR::create_edge_style(
+    elementIds = list("start_event_1_1"),
+    stroke_color = 'DeepPink',
+    stroke_width = 3,
+    stroke_opacity = 70,
+    font_color = 'ForestGreen',
+    font_family = 'Courier New',
+    font_size = 14,
+    font_bold = TRUE,
+    font_italic = TRUE,
+    font_strike_through = FALSE,
+    font_underline = FALSE,
+    font_opacity = 80,
+    opacity = 80
+  )
+)
+
+bpmnVisualizationR::display(
+  bpmn_file,
+  bpmnElementStyles = bpmnElementStyles,
+  width='auto',
+  height='auto'
+)
+```
+
+ℹ️ It is possible to apply styles to both BPMN edges and shapes simultaneously by adding them to the shared `bpmnElementStyles` list.
+
+### Style BPMN edges
+
+```r
+bpmnElementStyles <- list(
+  bpmnVisualizationR::create_shape_style(
+    elementIds = list("message_flow_1_1"),
+    stroke_color = 'RoyalBlue',
+    font_color = 'DarkOrange',
+    font_family = 'Arial',
+    font_size = 12,
+    font_bold = TRUE,
+    font_italic = TRUE,
+    font_strike_through = TRUE,
+    font_underline = TRUE,
+    opacity = 75,
+    fill_color = 'Yellow',
+    fill_opacity = 50
+  ),
+  bpmnVisualizationR::create_edge_style(
+    elementIds = list("sequence_flow_1_4"),
+    stroke_color = 'DeepPink',
+    stroke_width = 3,
+    stroke_opacity = 70,
+    font_color = 'ForestGreen',
+    font_family = 'Courier New',
+    font_size = 14,
+    font_bold = TRUE,
+    font_italic = TRUE,
+    font_strike_through = FALSE,
+    font_underline = FALSE,
+    font_opacity = 80,
+    opacity = 80
+  )
+)
+
+bpmnVisualizationR::display(
+  bpmn_file,
+  bpmnElementStyles = bpmnElementStyles,
+  width='auto',
+  height='auto'
+)
+```
+
+ℹ️ It is possible to apply styles to both BPMN edges and shapes simultaneously by adding them to the shared `bpmnElementStyles` list.
 
 ### Integrate in Shiny Applications
 
