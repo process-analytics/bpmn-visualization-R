@@ -169,12 +169,15 @@ ___
 - In the release description (check previous releases as a source of inspiration)
   - If the bpmn-visualization TypeScript library was updated, add a phrase about it (for example, see [Release 0.3.0](https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v0.3.0) for instance.): `The bpmnVisualizationR package now uses [bpmn-visualization@0.29.0](https://github.com/process-analytics/bpmn-visualization-js/releases/tag/v0.29.0).`
   - Put screenshots/gif of the new features.
-- If the package is not published on CRAN (see the 1st paragraph of the release process), please specify this by adding a sentence in bold! 
-The sentence should explain why the new version is not available on CRAN. It should also remind people to install it from GitHub.
+- Always mention whether the package is published on CRAN:
+  - If it is published, add a link to https://cran.r-project.org/package=bpmnVisualizationR
+  - If it is not published on CRAN (see the 1st paragraph of the release process), please specify this by adding a sentence in bold! 
+  The sentence may explain why the new version is not available on CRAN. It should also remind people to install it from GitHub.
 - At any time, you can save the draft.
 - **Only when you are done**:
-  - Assign the tag of the new version as release target and save the draft (doing it as later as possible ensure that `release-drafter` doesn't interfer with the writing of the Release Notes)
-  - Publish the release.
+  - Assign the tag of the new version as release target and save the draft (doing it as later as possible ensure that `release-drafter` doesn't interfer with the writing of the Release Notes).
+  - Publish the release. **WARN**: if the package is supposed to be published on CRAN, wait for confirmation that the package is actually available on CRAN (see below) before publishing the release notes.
+
 
 ### Publish the new version on CRAN
 
@@ -207,6 +210,35 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
   - A few minutes after the submission, the package manager should have received an email asking to confirm the submission. The email object looks like `CRAN Submission of bpmnVisualizationR 0.3.0 - Confirmation Link`
   - Confirm the submission by clicking on the link provided in the email
   - The submission is only effective when a new email is received from CRAN confirming the submission. The email object looks like `CRAN Submission of bpmnVisualizationR 0.3.0`
+
+
+#### Follow the submission and the CRAN publishing
+
+Once the submission has been confirmed, a CRAN maintainer review the packages. As it is a long process for new packages, it is much faster for etablished packages
+
+For instance, it took a while and a lot of exchanges with maintainers involving several fixes and explanations to have the first version of bpmnVisualizationR package publised as `0.3.2`.
+
+The maintainers review is sent by email. Please monitor the address used to submit the package.
+
+**Accepted submission**
+
+When accepted, the email content looks like:
+> Dear maintainer,
+thanks, package bpmnVisualizationR_0.5.0.tar.gz is on its way to CRAN.
+
+Then, monitor the package propagation:
+- the version is first pushed at https://github.com/cran/bpmnVisualizationR/commits/main 
+- the version is actually available when it can be seen at https://cran.r-project.org/package=bpmnVisualizationR
+
+The package for Windows is published several hours or days after. As we don't include native code, we can announce the package availability without waiting the Windows flavor.
+
+**Rejected submission**
+
+If the submission is rejected, a new release is generally required as it involves changing the content of the `main` branch.
+
+In this case, update the release notes to mention that the version is not available on CRAN (you can explain why) and publish it.
+
+
 
 ## Communicate about the release
 
