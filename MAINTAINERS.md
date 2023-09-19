@@ -214,11 +214,12 @@ It conforms to [the CRAN Submission policies first](https://cran.r-project.org/w
 
 #### Follow the submission and the CRAN publishing
 
-Once the submission has been confirmed, a CRAN maintainer review the packages. As it is a long process for new packages, it is much faster for etablished packages
+Once the submission has been confirmed, a CRAN manager examines the packages. While the process is lengthy for new packages, it is much quicker for established ones.
 
-For instance, it took a while and a lot of exchanges with maintainers involving several fixes and explanations to have the first version of bpmnVisualizationR package publised as `0.3.2`.
+For example, it took some time and many exchanges with maintainers, involving several corrections and explanations, for the first version of the `bpmnVisualizationR` package to be released as `0.3.2`.
+But the next version, `0.5.0`, was accepted 20 minutes after submission.
 
-The maintainers review is sent by email. Please monitor the address used to submit the package.
+The maintainer review is sent by email. Please keep an eye on the address used to submit the package.
 
 **Accepted submission**
 
@@ -230,14 +231,13 @@ Then, monitor the package propagation:
 - the version is first pushed at https://github.com/cran/bpmnVisualizationR/commits/main 
 - the version is actually available when it can be seen at https://cran.r-project.org/package=bpmnVisualizationR
 
-The package for Windows is published several hours or days after. As we don't include native code, we can announce the package availability without waiting the Windows flavor.
+The package for Windows is published several hours or days after. As `bpmnVisualizationR` doesn't include native code, we can announce the package availability without waiting the Windows flavor.
 
 **Rejected submission**
 
 If the submission is rejected, a new release is generally required as it involves changing the content of the `main` branch.
 
 In this case, update the release notes to mention that the version is not available on CRAN (you can explain why) and publish it.
-
 
 
 ## Communicate about the release
