@@ -34,7 +34,7 @@ jobs:
         uses: ./.github/actions/build-documentation-site
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           # Path of the directory containing the static assets.
           path: ./docs
