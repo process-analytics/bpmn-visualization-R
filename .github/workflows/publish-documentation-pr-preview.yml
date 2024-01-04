@@ -33,7 +33,7 @@ jobs:
       # Always upload the website for local browsing and when it cannot be deployed to surge
       - name: Upload documentation
         if: github.event.action != 'closed'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: documentation-${{github.sha}}
           path: docs
