@@ -32,7 +32,7 @@ jobs:
         run: |
           sed -i -E 's/version: ".*"/version: "${{ env.VERSION }}"/' inst/htmlwidgets/bpmnVisualizationR.yaml
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6.0.0
+        uses: peter-evans/create-pull-request@v6.0.1
         with:
           token: ${{ secrets.GH_RELEASE_TOKEN }}
           commit-message: "chore(deps): bump bpmn-visualization from ${{ env.OLD_VERSION }} to ${{ env.VERSION }}"
