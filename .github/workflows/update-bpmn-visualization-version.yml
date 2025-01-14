@@ -44,5 +44,5 @@ jobs:
           title: "chore(deps): bump bpmn-visualization from ${{ env.OLD_VERSION }} to ${{ env.VERSION }}"
           body: "bpmn-visualization is updated from https://cdn.jsdelivr.net/npm/bpmn-visualization@${{ env.VERSION }}/dist/bpmn-visualization.min.js."
           labels: "dependencies"
-          team-reviewers: process-intelligence
+          team-reviewers: research-and-innovation
           draft: true
