@@ -238,30 +238,3 @@ The package for Windows is published several hours or days after. As `bpmnVisual
 If the submission is rejected, a new release is generally required as it involves changing the content of the `main` branch.
 
 In this case, update the release notes to mention that the version is not available on CRAN (you can explain why) and publish it.
-
-
-## Communicate about the release
-
-- Open [GitHub Actions](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml)
-- Click on the 'Run workflow' dropdown located on the right side of the page
-- Provide parameter values for _version_ and _description_
-- Click on the button 'Run workflow'
-- Make sure job execution was successful by checking the status
-- If all is good, you should see a new message on the [news](https://discord.com/channels/1011911769607913562/1024329159033499780) channel of Process Analytics server on Discord.
-
-___
-⚠️⚠️⚠️ _**Only if the [jobs](https://github.com/process-analytics/bpmn-visualization-R/actions/workflows/announce-new-release.yml) does NOT work!**_  ⚠️⚠️⚠️
-### Discord
-
-Channel: [news](https://discord.com/channels/1011911769607913562/1024329159033499780)
-
-You can use this template:
-
-> 📣 bpmnVisualizationR {version} is out! 🎉
->
-> ===> some short description here <===
->
-> https://github.com/process-analytics/bpmn-visualization-R/releases/tag/v{version}
-
-⚠️⚠️⚠️ _**End of the manual steps**_ ⚠️⚠️⚠️
-___
