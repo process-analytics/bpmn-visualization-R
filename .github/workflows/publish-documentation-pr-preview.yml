@@ -22,7 +22,7 @@ on:
 jobs:
   # for Pull Request
   pr_preview: # the id is used by surge to generate the surge url
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     permissions:
       pull-requests: write # surge-preview: PR comments
     steps:
